@@ -1,13 +1,19 @@
 import java.awt.*;
 
+/**
+ * Represents a car and has all the
+ * common variables and methods needed.
+ */
+
 public abstract class Car implements Movable{
     protected int nrDoors; // Number of doors on the car
     protected double enginePower; // Engine power of the car
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
     protected String modelName; // The car model name
-    protected Point direction;
+    protected Point direction; /** 2D points have double coordinates.*/
     protected Point position;
+    
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
