@@ -13,12 +13,14 @@ public abstract class Car implements Movable{
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
     protected String modelName; // The car model name
-    protected Point2D direction;      /** 2D points have double coordinates.*/
+
+    /** 2D points have double coordinates.*/
+    protected Point2D direction;
     protected Point position;
 
     private final int turnAngle =  90;
 
-    
+
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;

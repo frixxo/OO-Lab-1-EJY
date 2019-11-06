@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="" />
+    <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Saab95.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Volvo240.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -61,6 +97,15 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">

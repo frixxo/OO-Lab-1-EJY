@@ -1,7 +1,7 @@
 /**
  * All movable objects implements this
  * and are supposted to move and turn
- * left and right.
+ * left or right.
  */
 public interface Movable {
     void move();
