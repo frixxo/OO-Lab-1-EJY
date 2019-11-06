@@ -69,7 +69,7 @@ public abstract class Car implements Movable{
         rotate(turnAngle);
     }
     public void turnRight(){
-        rotate(-turnAngle);
+        rotate(360-turnAngle);
     }
 
     private void rotate(double angle)
