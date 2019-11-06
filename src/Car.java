@@ -6,7 +6,8 @@ public abstract class Car implements Movable{
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
     protected String modelName; // The car model name
-
+    protected Point direction;
+    protected Point position;
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
@@ -38,7 +39,7 @@ public abstract class Car implements Movable{
     }
     //endregion
 
-    //region Abstract classes
+    //region speed methods
     public abstract double speedFactor();
 
     public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
@@ -53,6 +54,17 @@ public abstract class Car implements Movable{
     // TODO fix this method according to lab pm
     public void brake(double amount){
         decrementSpeed(amount);
+    }
+    //endregion
+
+    //region move methods
+    public void move(){
+        position.translate((int) (direction.x*currentSpeed),(int)(direction.y*currentSpeed));
+    }
+    public void turnLeft(){
+    }
+    public void turnRight(){
+
     }
     //endregion
 }
