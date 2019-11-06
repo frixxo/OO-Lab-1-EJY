@@ -7,6 +7,17 @@ public abstract class Car {
     protected Color color; // Color of the car
     protected String modelName; // The car model name
 
+    //region Start/Stop engine
+    public void startEngine(){
+        currentSpeed = 0.1;
+    }
+
+    public void stopEngine(){
+        currentSpeed = 0;
+    }
+    //endregion
+
+    //region Getters/Setters
     public int getNrDoors(){
         return nrDoors;
     }
@@ -25,15 +36,9 @@ public abstract class Car {
     public void setColor(Color clr){
         color = clr;
     }
+    //endregion
 
-    public void startEngine(){
-        currentSpeed = 0.1;
-    }
-
-    public void stopEngine(){
-        currentSpeed = 0;
-    }
-
+    //region Abstract classes
     public abstract double speedFactor();
 
     public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
@@ -49,4 +54,5 @@ public abstract class Car {
     public void brake(double amount){
         decrementSpeed(amount);
     }
+    //endregion
 }
