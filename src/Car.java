@@ -17,6 +17,8 @@ public abstract class Car implements Movable{
     protected Point position;
 
     private final int turnAngle =  90;
+
+    
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
