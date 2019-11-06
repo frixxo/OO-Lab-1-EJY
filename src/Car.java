@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.geom.Point2D;
+
 
 public abstract class Car implements Movable{
     protected int nrDoors; // Number of doors on the car
@@ -6,8 +8,10 @@ public abstract class Car implements Movable{
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
     protected String modelName; // The car model name
-    protected Point direction;
+    protected Point2D direction;
     protected Point position;
+
+    private final int turnAngle =  90;
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
@@ -59,12 +63,21 @@ public abstract class Car implements Movable{
 
     //region move methods
     public void move(){
-        position.translate((int) (direction.x*currentSpeed),(int)(direction.y*currentSpeed));
+        position.translate((int) (direction.getX()*currentSpeed),(int)(direction.getY()*currentSpeed));
     }
     public void turnLeft(){
+        rotate(turnAngle);
     }
     public void turnRight(){
+        rotate(-turnAngle);
+    }
 
+    private void rotate(double angle)
+    {
+        angle = angle*(180/Math.PI);
+        double x = direction.getX();
+        double y = direction.getY();
+        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) - y*Math.cos(angle));
     }
     //endregion
 }
