@@ -2,12 +2,20 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 
+/**
+ * Represents a car and has all the
+ * common variables and methods needed.
+ */
+
 public abstract class Car implements Movable{
     protected int nrDoors; // Number of doors on the car
     protected double enginePower; // Engine power of the car
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
     protected String modelName; // The car model name
+    protected Point direction; /** 2D points have double coordinates.*/
+    protected Point position;
+    
     protected Point2D direction;
     protected Point position;
 
