@@ -20,7 +20,7 @@ public abstract class Car implements Movable{
 
     /** How much a car turns when turn method called */
     protected int turnAngle =  90;
-    //region 
+    //region Constructors
     protected Car(Point position, Point2D direction){
         this.position = position;
         this.direction = direction;
@@ -31,6 +31,7 @@ public abstract class Car implements Movable{
         this.direction = new Point(1,0);
         stopEngine();
     };
+    //endregion
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
