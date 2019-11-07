@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 public abstract class Car implements Movable{
     protected int nrDoors;
     protected double enginePower;
-    protected double currentSpeed;
+    private double currentSpeed;
     protected Color color;
     protected String modelName;
 
@@ -20,8 +20,17 @@ public abstract class Car implements Movable{
 
     /** How much a car turns when turn method called */
     protected int turnAngle =  90;
-
-
+    //region 
+    protected Car(Point position, Point2D direction){
+        this.position = position;
+        this.direction = direction;
+        stopEngine();
+    }
+    protected Car(){
+        this.position = new Point(0,0);
+        this.direction = new Point(1,0);
+        stopEngine();
+    };
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
@@ -63,27 +72,27 @@ public abstract class Car implements Movable{
     /** increase speed set amount
      * @param amount how much to decrease
      * */
-    public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
+    private void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
 
     /** decrease speed set amount
      * @param amount how much to decrease
      * */
-    public void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
+    private void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
 
 
-    // TODO fix this method according to lab pm
     /** apply gas
      * @param amount how much to gas
      * */
     public void gas(double amount){
+        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
         incrementSpeed(amount);
     }
 
-    // TODO fix this method according to lab pm
     /** apply brake
      * @param amount how much to brake
      */
     public void brake(double amount){
+        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
         decrementSpeed(amount);
     }
     //endregion
@@ -105,10 +114,10 @@ public abstract class Car implements Movable{
      * */
     private void rotate (double angle)
     {
-        angle = angle*(180/Math.PI);
+        angle = angle*(Math.PI/180);
         double x = direction.getX();
         double y = direction.getY();
-        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) - y*Math.cos(angle));
+        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle));
     }
     //endregion
 }

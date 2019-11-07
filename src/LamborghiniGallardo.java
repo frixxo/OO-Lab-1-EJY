@@ -1,21 +1,32 @@
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 /**
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
 public class LamborghiniGallardo extends Car{
 private boolean spoilerUp;
-public boolean epic;
+private boolean epic;
 
+    //region constructors
+    public LamborghiniGallardo(Point position, Point2D direction){
+        super(position,direction);
+        initialize();
+    }
     public LamborghiniGallardo(){
+        super();
+        initialize();
+    }
+
+    private void initialize(){
         epic = true;
         nrDoors = 2;
         color = Color.yellow;
         enginePower = 320;
         modelName = "Lamborghini Gallardo";
         SetSpoilerUp(false);
-        stopEngine();
     }
+    //endregion
 
     public void SetSpoilerUp(boolean TrueOrFalse) {
         spoilerUp=TrueOrFalse;

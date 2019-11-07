@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testGallardoSpoiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LamborghiniGallardo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OO-Lab-1-EJY.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OO-Lab-1-EJY.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Saab95.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Volvo240.html" afterDir="false" />
@@ -22,6 +18,8 @@
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-14.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
@@ -39,8 +37,16 @@
       <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testGallardoSpoiler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LamborghiniGallardo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/LamborghiniGallardo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/LamborghiniGallardo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Volvo240.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/TestGallardoSpoiler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="223" />
+    <option name="myElementSize" value="250" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -103,13 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestGallardoSpoiler">
-    <configuration name="testGallardoSpoiler (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testGallardoSpoiler" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.MainTester">
     <configuration name="All in OO-Lab-1-EJY" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,28 +118,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGallardoSpoiler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestGallardoSpoiler" />
+      <option name="MAIN_CLASS_NAME" value="MainTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGallardoSpoiler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestGallardoSpoiler" />
+      <option name="MAIN_CLASS_NAME" value="MainTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGallardoSpoiler" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTester (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTester" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTester" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestGallardoSpoiler" />
+      <option name="MAIN_CLASS_NAME" value="MainTester" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -149,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestGallardoSpoiler" />
+        <item itemvalue="TestNG.MainTester" />
+        <item itemvalue="TestNG.MainTester (1)" />
         <item itemvalue="JUnit.All in OO-Lab-1-EJY" />
-        <item itemvalue="JUnit.TestGallardoSpoiler" />
-        <item itemvalue="JUnit.TestGallardoSpoiler (1)" />
-        <item itemvalue="Application.testGallardoSpoiler (1)" />
+        <item itemvalue="JUnit.MainTester" />
+        <item itemvalue="JUnit.MainTester" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +209,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129364475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$TestGallardoSpoiler.ic" NAME="TestGallardoSpoiler Coverage Results" MODIFIED="1573129593335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129816022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester__1_.ic" NAME="MainTester (1) Coverage Results" MODIFIED="1573132129836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$TestGallardoSpoiler.ic" NAME="MainTester Coverage Results" MODIFIED="1573134549975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

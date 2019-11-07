@@ -1,20 +1,30 @@
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 /**
- * represent a Saab95
+ * Represent a Saab95
  */
 public class Saab95 extends Car{
 
     private boolean turboOn;
-    
+
+    //region constructors
+    public Saab95(Point position, Point2D direction){
+        super(position,direction);
+        initialize();
+    }
     public Saab95(){
+        super();
+       initialize();
+    }
+    private void initialize(){
         nrDoors = 4;
         color = Color.red;
         enginePower = 125;
         modelName = "Saab95";
         setTurboOn(false);
-        stopEngine();
     }
+    //endregion
 
     public void setTurboOn(boolean TrueOrFalse){
 	    turboOn = TrueOrFalse;
