@@ -8,17 +8,18 @@ import java.awt.geom.Point2D;
  */
 
 public abstract class Car implements Movable{
-    protected int nrDoors; // Number of doors on the car
-    protected double enginePower; // Engine power of the car
-    protected double currentSpeed; // The current speed of the car
-    protected Color color; // Color of the car
-    protected String modelName; // The car model name
+    protected int nrDoors;
+    protected double enginePower;
+    protected double currentSpeed;
+    protected Color color;
+    protected String modelName;
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
     protected Point position;
 
-    private final int turnAngle =  90;
+    /** How much a car turns when turn method called */
+    protected int turnAngle =  90;
 
 
     //region Start/Stop engine
@@ -53,24 +54,42 @@ public abstract class Car implements Movable{
     //endregion
 
     //region speed methods
+    /** calculates how much the speed should increase with
+     * @return how much the speed increases
+     * */
     public abstract double speedFactor();
 
+
+    /** increase speed set amount
+     * @param amount how much to decrease
+     * */
     public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
 
+    /** decrease speed set amount
+     * @param amount how much to decrease
+     * */
     public void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
 
+
     // TODO fix this method according to lab pm
+    /** apply gas
+     * @param amount how much to gas
+     * */
     public void gas(double amount){
         incrementSpeed(amount);
     }
 
     // TODO fix this method according to lab pm
+    /** apply brake
+     * @param amount how much to brake
+     */
     public void brake(double amount){
         decrementSpeed(amount);
     }
     //endregion
 
     //region move methods
+    /** move car ahead*/
     public void move(){
         position.translate((int) (direction.getX()*currentSpeed),(int)(direction.getY()*currentSpeed));
     }
@@ -81,7 +100,10 @@ public abstract class Car implements Movable{
         rotate(360-turnAngle);
     }
 
-    private void rotate(double angle)
+    /** calculates the rotation of the car when using turn methods
+     * @param angle how much to turn
+     * */
+    private void rotate (double angle)
     {
         angle = angle*(180/Math.PI);
         double x = direction.getX();
