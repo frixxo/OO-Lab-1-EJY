@@ -7,42 +7,43 @@ import java.util.LinkedList;
 public class LoadHandler<T> {
     public enum Principle{FIFO, FILO}
 
-    Deque<T> cargoList = new LinkedList<>();
-    T transport;
+    protected Deque<T> cargoList = new LinkedList<>();
 
-    private boolean loadingPlatform = false; // can be all kind of things, even a kangaroo pouch
+    private boolean dock = false; // simulates all kind of things, truck ramp, actual dock or even a kangaroo pouch
     private final Principle principle;
-    private final int MAX_CARGO_LOAD;
+    protected final int MAX_CARGO_LOAD;
 
-    public LoadHandler(T transport, int maxCargoLoad, Principle principle){
-        this.transport = transport;
+    public LoadHandler(int maxCargoLoad, Principle principle){
         this.MAX_CARGO_LOAD = maxCargoLoad;
         this.principle = principle;
     }
 
     public int getCargoCount(){ return cargoList.size(); }
-    public boolean loadingPlatformStatus(){ return loadingPlatform; }
-    public void setLoadingPlatform(boolean bool){ loadingPlatform = bool; }
+    public boolean dockStatus(){ return dock; }
+    public void setDock(boolean bool){ dock = bool; }
 
-    public boolean load(T car){
-        if (cargoList.size() < MAX_CARGO_LOAD) {
-            cargoList.add(car);
+    public boolean load(T cargo){
+        if (cargoList.size() < MAX_CARGO_LOAD && dockStatus()) {
+            cargoList.add(cargo);
             return true;
         } return false;
     }
 
     public T release(){
-        T cargo;
-        switch (principle){
-            case FILO:
-                cargo = cargoList.pollLast();
-                break;
-            case FIFO:
-                cargo = cargoList.pollFirst();
-                break;
-            default:
-                cargo = null;
-        } return cargo;
+        if (dockStatus()){
+            T cargo;
+            switch (principle){
+                case FILO:
+                    cargo = cargoList.pollLast();
+                    break;
+                case FIFO:
+                    cargo = cargoList.pollFirst();
+                    break;
+                default:
+                    cargo = null;
+            }
+            return cargo;
+        } return null;
     }
 
 }

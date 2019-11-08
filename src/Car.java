@@ -10,4 +10,6 @@ public abstract class Car extends LandVehicle {
     public Car() {
         super();
     }
+
+
 }

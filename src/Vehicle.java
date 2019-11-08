@@ -62,6 +62,7 @@ abstract public class Vehicle implements Movable{
         color = clr;
     }
     public Point getPosition(){ return position; }
+    public Point2D getDirection() { return direction; }
     //endregion
 
     //region speed methods
