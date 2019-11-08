@@ -8,7 +8,7 @@ public class CarTransport extends Truck implements IHandleLast{
     private final byte MAX_LOAD_DISTANCE = 10;
 
     public byte getMaxCarLoaded() { return MAX_CAR_LOADED; }
-    public byte getMaxLoadDistance() { return MAXIMUM_LOAD_DISTANCE; }
+    public byte getMaxLoadDistance() { return MAX_LOAD_DISTANCE; }
 
     @Override
     public void load(Car car) throws Exception {
@@ -22,10 +22,15 @@ public class CarTransport extends Truck implements IHandleLast{
     public Car release() throws Exception {
         if (ramp){
             Car car = this.car.pop();
-            car.position.setLocation((int)(this.position.x + -10 * this.direction.x),
-                    (int)(this.position.y + -10 * this.direction.y));
+            car.position.setLocation((int)(this.position.x + -10 * this.direction.getX()),
+                    (int)(this.position.y + -10 * this.direction.getY()));
             return car;
         } throw new Exception("Ramp not lowered!");
+    }
+
+    @Override
+    public void move(){
+        if (ramp) super.move();
     }
 
     public boolean lowerRamp(){
@@ -34,10 +39,11 @@ public class CarTransport extends Truck implements IHandleLast{
     }
 
     private boolean isCarBehind(Car car){
-        int dX = (int)(this.position.x + -MAX_LOAD_DISTANCE * this.direction.x);
-        int dY = (int)(this.position.y + -MAX_LOAD_DISTANCE * this.direction.y);
+        int dX = (int)(this.position.x + -MAX_LOAD_DISTANCE * this.direction.getX());
+        int dY = (int)(this.position.y + -MAX_LOAD_DISTANCE * this.direction.getY());
 
         Rectangle rec = new Rectangle(dX-10, dY-10, dX+10, dY+10);
         return rec.contains(car.getPosition());
     }
+
 }
