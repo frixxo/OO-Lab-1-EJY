@@ -20,7 +20,7 @@ public class LoadHandler<T> {
         this.principle = principle;
     }
 
-    public int getCargoLoaded(){ return cargoList.size(); }
+    public int getCargoCount(){ return cargoList.size(); }
     public boolean loadingPlatformStatus(){ return loadingPlatform; }
     public void setLoadingPlatform(boolean bool){ loadingPlatform = bool; }
 

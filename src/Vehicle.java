@@ -7,11 +7,6 @@ abstract public class Vehicle implements Movable{
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
-    protected String modelName;
-    protected String RegNr;
-    public static int RegKey=11857;
-    Random r = new Random(RegKey);
-
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -20,12 +15,12 @@ abstract public class Vehicle implements Movable{
     /** How much a car turns when turn method called */
     protected int turnAngle =  90;
     //region Constructors
-    protected LandVehicle(Point position, Point2D direction){
+    protected Vehicle(Point position, Point2D direction){
         this.position = position;
         this.direction = direction;
         stopEngine();
     }
-    protected LandVehicle(){
+    protected Vehicle(){
         this.position = new Point(0,0);
         this.direction = new Point(1,0);
         stopEngine();
@@ -34,56 +29,38 @@ abstract public class Vehicle implements Movable{
      * @param   doors how many doors the vehicle is supposed to havehas
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
-     * @param   modelName the name of the vehicle model
      * */
-    protected void initialize(int doors,Color color, int enginePower,String modelName){
+    protected void initialize(int doors,Color color, int enginePower){
         this.nrDoors = doors;
         this.color = color;
         this.enginePower = enginePower;
-        this.modelName = modelName;
-
-        //RegNr Generator
-        RegKey--;
-        r = new Random(RegKey);
-        this.RegNr=(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+" "+r.nextInt(10)+""+r.nextInt(10)+""+r.nextInt(10);
-
     }
     //endregion
     //region Start/Stop engine
     public void startEngine(){
         currentSpeed = 0.1;
     }
-
     public void stopEngine(){
         currentSpeed = 0;
     }
     //endregion
 
     //region Getters/Setters
-
-    public String getRegNr() {
-        return RegNr;
-    }
-
     public int getNrDoors(){
         return nrDoors;
     }
     public double getEnginePower(){
         return enginePower;
     }
-
     public double getCurrentSpeed(){
         return currentSpeed;
     }
-
     public Color getColor(){
         return color;
     }
-
     public void setColor(Color clr){
         color = clr;
     }
-
     public Point getPosition(){ return position; }
     //endregion
 
@@ -92,7 +69,6 @@ abstract public class Vehicle implements Movable{
      * @return how much the speed increases
      * */
     public abstract double speedFactor();
-
 
     /** increase speed set amount
      * @param amount how much to decrease
@@ -103,7 +79,6 @@ abstract public class Vehicle implements Movable{
      * @param amount how much to decrease
      * */
     private void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
-
 
     /** apply gas
      * @param amount how much to gas
