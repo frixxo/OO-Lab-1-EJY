@@ -2,18 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bilverkstad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LamborghiniGallardo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/LamborghiniGallardo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/LamborghiniGallardo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/MainTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/MainTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Saab95.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Volvo240.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LandVehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

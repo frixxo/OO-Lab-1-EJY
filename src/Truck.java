@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public abstract class Truck extends Vehicle{
+public abstract class Truck extends LandVehicle{
     double TippingAngle=0;  //0 is when the truckbed is flat against the truck.
     double TippingAmount=5;
     public Truck(Point position, Point2D direction) {
@@ -25,7 +25,7 @@ public abstract class Truck extends Vehicle{
     }
     @Override /** Truck is not supposed to move while truckbed is raised*/
     public void move(){
-        if(TippingAngle==0)super.move();
+        if(isMoving())super.move();
     }
 }
 

@@ -8,7 +8,7 @@ import java.util.Random;
  * common variables and methods needed.
  */
 
-public abstract class Vehicle implements Movable{
+public abstract class LandVehicle implements Movable{
     protected int nrDoors;
     protected double enginePower;
     private double currentSpeed;
@@ -26,17 +26,22 @@ public abstract class Vehicle implements Movable{
     /** How much a car turns when turn method called */
     protected int turnAngle =  90;
     //region Constructors
-    protected Vehicle(Point position, Point2D direction){
+    protected LandVehicle(Point position, Point2D direction){
         this.position = position;
         this.direction = direction;
         stopEngine();
     }
-    protected Vehicle(){
+    protected LandVehicle(){
         this.position = new Point(0,0);
         this.direction = new Point(1,0);
         stopEngine();
     }
-    /** has all common variables for the constructors*/
+    /** has all common variables for the constructors
+     * @param   doors how many doors the vehicle is supposed to havehas
+     * @param   color the color the vehicle is supposed to have
+     * @param   enginePower the enginepower the car is supposed to have
+     * @param   modelName the name of the vehicle model
+     * */
     protected void initialize(int doors,Color color, int enginePower,String modelName){
         this.nrDoors = doors;
         this.color = color;
@@ -61,6 +66,11 @@ public abstract class Vehicle implements Movable{
     //endregion
 
     //region Getters/Setters
+
+    public String getRegNr() {
+        return RegNr;
+    }
+
     public int getNrDoors(){
         return nrDoors;
     }
@@ -115,9 +125,11 @@ public abstract class Vehicle implements Movable{
         decrementSpeed(amount);
     }
 
-    /** checks if the vehicle is moving */
-    private boolean isMoving(){
-        return currentSpeed > 0;
+    /** checks if the vehicle is moving
+     * @return if the vehicle is moving
+     * */
+    protected boolean isMoving(){
+        return (Math.abs(currentSpeed)-0.01<0);
     }
     //endregion
 
