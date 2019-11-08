@@ -1,17 +1,17 @@
 import java.util.List;
 
-public class LoadHandler {
-    List<Car> carList;
+public class LoadHandler <T> {
+    List<T> carList;
 
     void add(){
 
     }
 
-    Object pull(){
+    public T pull(){
 
     }
 
-    Object poll(){
+    public T  poll(){
 
     }
 

@@ -2,46 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Bilverkstad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LamborghiniGallardo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/MainTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/MainTester.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Saab95.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Volvo240.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LandVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadHandler.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,18 +27,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="153" />
-    <option name="y" value="-17" />
-    <option name="width" value="1676" />
-    <option name="height" value="1100" />
-  </component>
+  <component name="ProjectId" id="1TKjgBpS8dvL8QUFZRcQ4gNAMgb" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -175,6 +135,13 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="" />
+      <created>1573215789725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573215789725</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +149,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -203,8 +172,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129816022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester__1_.ic" NAME="MainTester (1) Coverage Results" MODIFIED="1573132129836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129816022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$TestGallardoSpoiler.ic" NAME="MainTester Coverage Results" MODIFIED="1573207090206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
