@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/LoadHandlerQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LoadHandlerStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarFerry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IHandleLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IHandleLast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LandVehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Saab95.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Truck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Volvo240.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/META-INF/OO-Lab-1-EJY.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

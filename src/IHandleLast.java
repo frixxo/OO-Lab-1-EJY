@@ -1,4 +1,4 @@
-public interface IHandleLast {
-    void load(Car car) throws Exception;
-    Car release() throws Exception;
+public interface IHandleLast <T> {
+   void load(T object) throws Exception;
+    T release() throws Exception;
 }

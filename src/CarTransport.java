@@ -1,16 +1,18 @@
 import java.awt.*;
 import java.util.Stack;
 
-public class CarTransport extends Truck implements IHandleLast{
+public class CarTransport extends Truck{
     private boolean ramp = false;
-    private Stack<Car> car = new Stack<>();
+   // private Stack<Car> car = new Stack<>();
     private final byte MAX_CAR_LOADED = 5;
     private final byte MAX_LOAD_DISTANCE = 10;
 
     public byte getMaxCarLoaded() { return MAX_CAR_LOADED; }
     public byte getMaxLoadDistance() { return MAX_LOAD_DISTANCE; }
 
-    @Override
+    public IHandleLast<Car> lastHandler = new LoadHandlerStack<Car>(this,MAX_CAR_LOADED, MAX_LOAD_DISTANCE);
+
+    /*
     public void load(Car car) throws Exception {
         if (ramp && this.car.size() < MAX_CAR_LOADED && isCarBehind(car)) {
             this.car.push(car);
@@ -18,7 +20,6 @@ public class CarTransport extends Truck implements IHandleLast{
         } throw new Exception("Cannot load the car!");
     }
 
-    @Override
     public Car release() throws Exception {
         if (ramp){
             Car car = this.car.pop();
@@ -27,7 +28,7 @@ public class CarTransport extends Truck implements IHandleLast{
             return car;
         } throw new Exception("Ramp not lowered!");
     }
-
+*/
     @Override
     public double speedFactor() { return enginePower * 0.01; }
 
