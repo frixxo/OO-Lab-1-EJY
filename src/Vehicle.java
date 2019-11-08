@@ -79,6 +79,8 @@ public abstract class Vehicle implements Movable{
     public void setColor(Color clr){
         color = clr;
     }
+
+    public Point getPosition(){ return position; }
     //endregion
 
     //region speed methods
@@ -116,7 +118,7 @@ public abstract class Vehicle implements Movable{
     }
 
     /** checks if the vehicle is moving */
-    private boolean isMoving(){
+    public boolean isMoving(){
         return currentSpeed > 0;
     }
     //endregion
