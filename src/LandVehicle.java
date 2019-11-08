@@ -8,7 +8,7 @@ import java.util.Random;
  * common variables and methods needed.
  */
 
-public abstract class LandVehicle implements Movable{
+public abstract class LandVehicle extends Vehicle implements Movable{
     protected int nrDoors;
     protected double enginePower;
     private double currentSpeed;
