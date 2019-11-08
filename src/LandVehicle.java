@@ -89,6 +89,8 @@ public abstract class LandVehicle implements Movable{
     public void setColor(Color clr){
         color = clr;
     }
+
+    public Point getPosition(){ return position; }
     //endregion
 
     //region speed methods

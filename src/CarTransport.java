@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class CarTransport extends Truck implements IHandleLast{
     private boolean ramp = false;
-    private Stack<Car> car;
+    private Stack<Car> car = new Stack<>();
     private final byte MAX_CAR_LOADED = 5;
     private final byte MAX_LOAD_DISTANCE = 10;
 
@@ -27,6 +27,9 @@ public class CarTransport extends Truck implements IHandleLast{
             return car;
         } throw new Exception("Ramp not lowered!");
     }
+
+    @Override
+    public double speedFactor() { return enginePower * 0.01; }
 
     @Override
     public void move(){
