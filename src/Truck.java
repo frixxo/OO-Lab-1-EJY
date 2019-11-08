@@ -2,30 +2,31 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public abstract class Truck extends LandVehicle{
-    double TippingAngle=0;  //0 is when the truckbed is flat against the truck.
-    double TippingAmount=5;
+    private double angle = 0;  //0 is when the ramp is flat against the truck.
+    private double tippingAmount = 5;
+    private final double MAX_ANGLE = 70;
+
     public Truck(Point position, Point2D direction) {
         super(position,direction);
     }
-
     public Truck() {
         super();
     }
 
-    public void lowerTruckbed(){
-        increaseTippingAngle(-TippingAmount);
+    public boolean lowerRamp(){
+        return increaseTippingAngle(-tippingAmount);
     }
-    public void raiseTruckbed(){
-        increaseTippingAngle(TippingAmount);
+    public void raiseRamp(){
+        increaseTippingAngle(tippingAmount);
     }
 
-    private void increaseTippingAngle(double amount){
-        if(!(getCurrentSpeed()==0))return;
-        TippingAngle=(TippingAngle+amount>70)?70:(TippingAngle+amount<0)?0:TippingAngle+amount;
+    private boolean increaseTippingAngle(double amount){
+        if(isMoving()) return false;
+        angle=(angle+amount > MAX_ANGLE) ? MAX_ANGLE : (angle+amount < 0) ? 0 : angle+amount;
+        return true;
     }
-    @Override /** Truck is not supposed to move while truckbed is raised*/
-    public void move(){
-        if(isMoving())super.move();
-    }
+
+    @Override
+    public void move(){ if (angle == 0) super.move(); }
 }
 

@@ -11,8 +11,8 @@ public class CarFerry extends Vehicle{
             return true;
         } return false;
     }
-    public void liftRamp(){ load.setDock(false); }
-    public void load(Car car) { load.load(car); }
+    public void raiseRamp(){ load.setDock(false); }
+    public boolean load(Car car) { return load.load(car); }
     public Car release() { return (Car)load.release(); }
     public int getCarLoaded(){ return load.getCargoCount(); }
 
@@ -20,6 +20,6 @@ public class CarFerry extends Vehicle{
     public double speedFactor() { return enginePower * 0.01; }
     @Override
     public void move(){
-        if (load.dockStatus()) super.move();
+        if (!load.dockStatus()) super.move();
     }
 }

@@ -5,6 +5,10 @@ import java.util.LinkedList;
  * simulates transportation for all kinds
  * */
 public class LoadHandler<T> {
+    /**
+     * FIFO = First in, first out
+     * FILO = First in, last out
+     * */
     public enum Principle{FIFO, FILO}
 
     protected Deque<T> cargoList = new LinkedList<>();
