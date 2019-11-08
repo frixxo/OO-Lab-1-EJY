@@ -11,18 +11,11 @@ public class Volvo240 extends Car{
     //region constructors
     public Volvo240(Point position,Point2D direction){
         super(position,direction);
-        initialize();
+        initialize(4,Color.black,100,"Volvo240");
     }
     public Volvo240(){
         super();
-        initialize();
-    }
-    /** has all common initializes for constructors*/
-    private void initialize(){
-        nrDoors = 4;
-        color = Color.black;
-        enginePower = 100;
-        modelName = "Volvo240";
+        initialize(4,Color.black,100,"Volvo240");
     }
     //endregion
     public double speedFactor(){

@@ -11,18 +11,13 @@ public class Saab95 extends Car{
     //region constructors
     public Saab95(Point position, Point2D direction){
         super(position,direction);
-        initialize();
+        initialize(4,Color.red,125,"Saab95");
+        setTurboOn(false);
     }
     public Saab95(){
         super();
-       initialize();
-    }
-    private void initialize(){
-        nrDoors = 4;
-        color = Color.red;
-        enginePower = 125;
-        modelName = "Saab95";
-        setTurboOn(false);
+       initialize(4,Color.red,125,"Saab95");
+       setTurboOn(false);
     }
     //endregion
 

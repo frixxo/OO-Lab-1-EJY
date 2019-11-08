@@ -2,6 +2,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Has all the test
@@ -18,7 +20,7 @@ public class MainTester {
     @Test
     public void TestGallardoSpoilerUp(){
         LamborghiniGallardo x = new LamborghiniGallardo();
-        x.SetSpoilerUp(true);
+        x.setSpoilerUp(true);
         double d=x.speedFactor();
         assertEquals((float)2.88,(float)d,0);
     }
@@ -82,5 +84,21 @@ public class MainTester {
         saab.gas(1);
         saab.move();
         assertEquals(0,saab.position.y,0.01);
+    }
+    @Test
+    public void TestRegNrGenerator(){
+        Saab95 k;
+        ArrayList<String> j= new ArrayList<String>();
+        for(int x=0;x<10000;x++){
+            k=new Saab95();
+            for(int y=0; y<(j.size());y++){
+                if(j.get(y).equals(k.RegNr)){
+                    System.out.println(x+" "+y+" "+k.RegNr);
+                    assertEquals(true,false);
+                }
+            }
+            j.add(k.RegNr);
+        }
+        assertEquals(true,true);
     }
 }

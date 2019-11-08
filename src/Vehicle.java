@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.util.Random;
 
 
 /**
@@ -13,6 +14,10 @@ public abstract class Vehicle implements Movable{
     private double currentSpeed;
     protected Color color;
     protected String modelName;
+    protected String RegNr;
+    public static int RegKey=11857;
+    Random r = new Random(RegKey);
+
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -30,7 +35,20 @@ public abstract class Vehicle implements Movable{
         this.position = new Point(0,0);
         this.direction = new Point(1,0);
         stopEngine();
-    };
+    }
+    /** has all common variables for the constructors*/
+    protected void initialize(int doors,Color color, int enginePower,String modelName){
+        this.nrDoors = doors;
+        this.color = color;
+        this.enginePower = enginePower;
+        this.modelName = modelName;
+
+        //RegNr Generator
+        RegKey--;
+        r = new Random(RegKey);
+        this.RegNr=(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+" "+r.nextInt(10)+""+r.nextInt(10)+""+r.nextInt(10);
+
+    }
     //endregion
     //region Start/Stop engine
     public void startEngine(){

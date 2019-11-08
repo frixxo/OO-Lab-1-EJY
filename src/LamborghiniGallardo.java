@@ -11,24 +11,19 @@ private boolean epic;
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction){
         super(position,direction);
-        initialize();
+        initialize(2,Color.yellow,320,"Lamborghini Gallardo");
+        setSpoilerUp(false);
+        epic = true;
     }
     public LamborghiniGallardo(){
         super();
-        initialize();
-    }
-
-    private void initialize(){
+        initialize(2,Color.yellow,320,"Lamborghini Gallardo");
+        setSpoilerUp(false);
         epic = true;
-        nrDoors = 2;
-        color = Color.yellow;
-        enginePower = 320;
-        modelName = "Lamborghini Gallardo";
-        SetSpoilerUp(false);
     }
     //endregion
 
-    public void SetSpoilerUp(boolean TrueOrFalse) {
+    public void setSpoilerUp(boolean TrueOrFalse) {
         spoilerUp=TrueOrFalse;
         if(TrueOrFalse)turnAngle = 95;
         else turnAngle=90;
