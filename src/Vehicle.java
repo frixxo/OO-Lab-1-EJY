@@ -114,6 +114,11 @@ public abstract class Vehicle implements Movable{
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
         decrementSpeed(amount);
     }
+
+    /** checks if the vehicle is moving */
+    private boolean isMoving(){
+        return currentSpeed > 0;
+    }
     //endregion
 
     //region move methods
