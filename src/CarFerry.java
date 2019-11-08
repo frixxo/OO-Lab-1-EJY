@@ -14,7 +14,7 @@ public class CarFerry extends Vehicle implements IHandleLast{
 
     @Override
     public void move() {
-        
+
     }
 
     @Override
