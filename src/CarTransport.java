@@ -1,7 +1,10 @@
 import java.awt.*;
-import java.util.Stack;
 
 public class CarTransport extends Truck{
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     private boolean ramp = false;
    // private Stack<Car> car = new Stack<>();
     private final byte MAX_CAR_LOADED = 5;
@@ -29,25 +32,26 @@ public class CarTransport extends Truck{
         } throw new Exception("Ramp not lowered!");
     }
 */
+<<<<<<< Updated upstream
+=======
+=======
+    private LoadHandler load;
+
+    public CarTransport(){
+        load = new LoadHandler(this, 5, 10, LoadHandler.Principle.FILO);
+    }
+
+    public boolean lowerRamp(){ return load.lowerRamp(); }
+    public void load(Car car) throws Exception { load.load(car); }
+    public Car release() throws Exception { return load.release(); }
+
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
     @Override
     public double speedFactor() { return enginePower * 0.01; }
-
     @Override
     public void move(){
-        if (ramp) super.move();
-    }
-
-    public boolean lowerRamp(){
-        ramp = !isMoving();
-        return ramp;
-    }
-
-    private boolean isCarBehind(Car car){
-        int dX = (int)(this.position.x + -MAX_LOAD_DISTANCE * this.direction.getX());
-        int dY = (int)(this.position.y + -MAX_LOAD_DISTANCE * this.direction.getY());
-
-        Rectangle rec = new Rectangle(dX-10, dY-10, dX+10, dY+10);
-        return rec.contains(car.getPosition());
+        if (load.getRamp()) super.move();
     }
 
 }

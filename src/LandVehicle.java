@@ -1,21 +1,32 @@
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
-
-
 /**
  * Represents a car and has all the
  * common variables and methods needed.
  */
 
+<<<<<<< Updated upstream
 public abstract class LandVehicle extends Vehicle {
     protected int nrDoors;
+=======
+<<<<<<< HEAD
+public abstract class LandVehicle extends Vehicle {
+    protected int nrDoors;
+=======
+public abstract class LandVehicle extends Vehicle implements Movable{
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
     protected String modelName;
     protected String RegNr;
     public static int RegKey = 11857;
     Random r = new Random(RegKey);
 
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     /**
      * 2D points have double coordinates.
      */
@@ -27,6 +38,7 @@ public abstract class LandVehicle extends Vehicle {
      */
     protected int turnAngle = 90;
 
+<<<<<<< Updated upstream
     //region Constructors
     protected LandVehicle(Point position, Point2D direction) {
         super(position, direction);
@@ -46,22 +58,70 @@ public abstract class LandVehicle extends Vehicle {
      */
     protected void initialize(int doors, Color color, int enginePower, String modelName) {
         this.nrDoors = doors;
-        this.modelName = modelName;
+=======
+    //region Constructors
+    protected LandVehicle(Point position, Point2D direction) {
+        super(position, direction);
+    }
 
+    protected LandVehicle() {
+        super();
+    }
+
+    /**
+     * has all common variables for the constructors
+     *
+     * @param doors       how many doors the vehicle is supposed to havehas
+     * @param color       the color the vehicle is supposed to have
+     * @param enginePower the enginepower the car is supposed to have
+     * @param modelName   the name of the vehicle model
+     */
+    protected void initialize(int doors, Color color, int enginePower, String modelName) {
+        this.nrDoors = doors;
+=======
+    //region Constructors
+    protected LandVehicle(Point position, Point2D direction){
+        super(position, direction);
+    }
+    protected LandVehicle(){
+        super();
+    }
+    /** has all common variables for the constructors
+     * @param   doors how many doors the vehicle is supposed to havehas
+     * @param   color the color the vehicle is supposed to have
+     * @param   enginePower the enginepower the car is supposed to have
+     * @param   modelName the name of the vehicle model
+     * */
+    protected void initialize(int doors,Color color, int enginePower,String modelName){
+        initialize(doors, color, enginePower);
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
+        this.modelName = modelName;
         //RegNr Generator
         RegKey--;
         r = new Random(RegKey);
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
         this.RegNr = (char) (r.nextInt(26) + 'a') + "" + (char) (r.nextInt(26) + 'a') + "" + (char) (r.nextInt(26) + 'a') + " " + r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10);
 
     }
 
+<<<<<<< Updated upstream
+=======
+=======
+        this.RegNr=(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+" "+r.nextInt(10)+""+r.nextInt(10)+""+r.nextInt(10);
+    }
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
     //endregion
 
     //region Getters/Setters
-
     public String getRegNr() {
         return RegNr;
     }
+<<<<<<< HEAD
 
     public int getNrDoors() {
         return nrDoors;
@@ -102,5 +162,12 @@ public abstract class LandVehicle extends Vehicle {
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
         decrementSpeed(amount);
     }
+<<<<<<< Updated upstream
+=======
     //endregion
+=======
+>>>>>>> Stashed changes
+    //endregion
+
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
 }

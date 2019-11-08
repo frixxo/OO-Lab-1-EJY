@@ -3,6 +3,18 @@ import java.awt.geom.Point2D;
 import java.util.Random;
 
 abstract public class Vehicle implements Movable{
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+    protected int nrDoors;
+    protected double enginePower;
+    private double currentSpeed;
+    protected Color color;
+
+    /** 2D points have double coordinates.*/
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
     protected Point2D direction;
     protected Point position;
     protected double enginePower;
@@ -26,9 +38,16 @@ abstract public class Vehicle implements Movable{
      * @param   doors how many doors the vehicle is supposed to havehas
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
-     * @param   modelName the name of the vehicle model
      * */
+<<<<<<< HEAD
     protected void initialize(int doors,Color color, int enginePower,String modelName){
+<<<<<<< Updated upstream
+=======
+=======
+    protected void initialize(int doors,Color color, int enginePower){
+        this.nrDoors = doors;
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
         this.color = color;
         this.enginePower = enginePower;
     }
@@ -37,38 +56,78 @@ abstract public class Vehicle implements Movable{
     public void startEngine(){
         currentSpeed = 0.1;
     }
-
     public void stopEngine(){
         currentSpeed = 0;
     }
     //endregion
 
     //region Getters/Setters
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     public Point2D getDirection() {
         return direction;
     }
 
+<<<<<<< Updated upstream
+=======
+=======
+    public int getNrDoors(){
+        return nrDoors;
+    }
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+>>>>>>> Stashed changes
     public double getEnginePower(){
         return enginePower;
     }
-
     public double getCurrentSpeed(){
         return currentSpeed;
     }
-
     public Color getColor(){
         return color;
     }
-
     public void setColor(Color clr){
         color = clr;
     }
-
     public Point getPosition(){ return position; }
     //endregion
 
+<<<<<<< Updated upstream
 
 
+=======
+
+<<<<<<< HEAD
+=======
+    /** increase speed set amount
+     * @param amount how much to decrease
+     * */
+    private void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
+
+    /** decrease speed set amount
+     * @param amount how much to decrease
+     * */
+    private void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
+
+    /** apply gas
+     * @param amount how much to gas
+     * */
+    public void gas(double amount){
+        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
+        incrementSpeed(amount);
+    }
+
+    /** apply brake
+     * @param amount how much to brake
+     */
+    public void brake(double amount){
+        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
+        decrementSpeed(amount);
+    }
+>>>>>>> 1ba7faeb97736a9023c834c953d78114c256179a
+
+>>>>>>> Stashed changes
     /** checks if the vehicle is moving
      * @return if the vehicle is moving
      * */
