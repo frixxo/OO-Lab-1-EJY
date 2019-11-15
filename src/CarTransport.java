@@ -1,4 +1,4 @@
-public class CarTransport extends Truck implements IHandleLast{
+public class CarTransport extends Truck{
     private LoadHandler<Car> load;
 
     public CarTransport(){

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler<T extends Movable> {
+public class LoadHandler<T extends Movable> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out
@@ -30,7 +30,7 @@ public class LoadHandler<T extends Movable> {
         this.sY = sY;
 
     }
-
+    
     public int getCargoCount(){ return cargoList.size(); }
     public boolean dockStatus(){ return dock; }
     public void setDock(boolean bool){ dock = bool; }
@@ -57,6 +57,7 @@ public class LoadHandler<T extends Movable> {
             return cargo;
         } return null;
     }
+
     private boolean isBehind(Movable obj){
         int dX = (int)(movable.getPosition().x + -MAX_LOAD_DISTANCE * movable.getDirection().getX());
         int dY = (int)(movable.getPosition().y + -MAX_LOAD_DISTANCE * movable.getDirection().getY());

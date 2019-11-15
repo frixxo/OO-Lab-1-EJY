@@ -1,5 +1,5 @@
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends Vehicle implements IHandleLast{
+public class CarFerry extends Vehicle{
     private LoadHandler load;
 
     public CarFerry(){
