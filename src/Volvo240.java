@@ -18,6 +18,7 @@ public class Volvo240 extends Car{
         initialize(4,Color.black,100,"Volvo240");
     }
     //endregion
+    @Override
     public double speedFactor(){
         return enginePower * 0.01 * trimFactor;
     }

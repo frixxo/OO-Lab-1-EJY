@@ -1,5 +1,6 @@
-// TODO: unused, someone should delete this
+/** Describes the methods an unit that is supposed to hadle cargo is supposed to have*/
 public interface IHandleLast {
-    void load(Car car) throws Exception;
+    boolean load(Car car) throws Exception;
     Car release() throws Exception;
+    int getCarsLoaded();
 }

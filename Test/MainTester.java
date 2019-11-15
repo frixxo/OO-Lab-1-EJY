@@ -1,9 +1,11 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.awt.image.ConvolveOp;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Has all the test
@@ -89,16 +91,52 @@ public class MainTester {
     public void TestRegNrGenerator(){
         Saab95 k;
         ArrayList<String> j= new ArrayList<String>();
-        for(int x=0;x<10000;x++){
+        for(int x=0;x<1000;x++){
             k=new Saab95();
             for(int y=0; y<(j.size());y++){
                 if(j.get(y).equals(k.RegNr)){
                     System.out.println(x+" "+y+" "+k.RegNr);
-                    assertEquals(true,false);
+                    assertTrue(false);
                 }
             }
             j.add(k.RegNr);
         }
-        assertEquals(true,true);
+        assertTrue(true);
+    }
+    @Test
+    public void TestbilverkstadAdd(){
+        Bilverkstad<Volvo240> x=new Bilverkstad<Volvo240>(new Point(0,0),5);
+        Volvo240 y=new Volvo240();
+        assertTrue(x.add(y));
+
+    }
+    @Test
+    public void TestbilverkstadGet(){
+        Bilverkstad<Volvo240> x=new Bilverkstad<Volvo240>(new Point(0,0),5);
+        Volvo240 y=new Volvo240();
+        x.add(y);
+        assertTrue(x.get(y.RegNr)==y);
+
+    }
+    @Test
+    public void TestCarTransportloadRampDown(){
+        CarTransport x=new CarTransport();
+        Volvo240 y= new Volvo240();
+        assertFalse(x.load(y));
+    }
+    @Test
+    public void TestCarTransportloadRampUp(){
+        CarTransport x=new CarTransport();
+        Volvo240 y= new Volvo240();
+        x.raiseRamp();
+        assertTrue(x.load(y));
+    }
+    @Test
+    public void TestCarTransportGet(){
+        CarTransport x=new CarTransport();
+        Volvo240 y= new Volvo240();
+        x.raiseRamp();
+        x.load(y);
+        assertTrue(x.release()==y);
     }
 }

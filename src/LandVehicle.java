@@ -6,9 +6,10 @@ import java.util.Random;
  * common variables and methods needed.
  */
 
-public abstract class LandVehicle extends Vehicle implements Movable{
+public abstract class LandVehicle extends Vehicle{
     protected String modelName;
     protected String RegNr;
+    protected int nrDoors;
     public static int RegKey=11857;
     Random r = new Random(RegKey);
 
@@ -27,8 +28,9 @@ public abstract class LandVehicle extends Vehicle implements Movable{
      * @param   modelName the name of the vehicle model
      * */
     protected void initialize(int doors,Color color, int enginePower,String modelName){
-        initialize(doors, color, enginePower);
+        this.nrDoors=doors;
         this.modelName = modelName;
+        initialize(color, enginePower);
         //RegNr Generator
         RegKey--;
         r = new Random(RegKey);
@@ -40,6 +42,8 @@ public abstract class LandVehicle extends Vehicle implements Movable{
     public String getRegNr() {
         return RegNr;
     }
+
+    public int getNrDoors() { return nrDoors; }
     //endregion
 
 }

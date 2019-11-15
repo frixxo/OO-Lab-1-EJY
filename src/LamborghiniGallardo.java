@@ -31,6 +31,8 @@ private boolean epic;
     public boolean getSpoilerUp(){
         return spoilerUp;
     }
+
+    @Override
     public double speedFactor(){
         if(spoilerUp)return enginePower*0.01*0.9;
         return enginePower*0.01;

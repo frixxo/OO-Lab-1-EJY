@@ -3,7 +3,6 @@ import java.awt.geom.Point2D;
 import java.util.Random;
 
 abstract public class Vehicle implements Movable{
-    protected int nrDoors;
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
@@ -26,12 +25,10 @@ abstract public class Vehicle implements Movable{
         stopEngine();
     }
     /** has all common variables for the constructors
-     * @param   doors how many doors the vehicle is supposed to havehas
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
      * */
-    protected void initialize(int doors,Color color, int enginePower){
-        this.nrDoors = doors;
+    protected void initialize(Color color, int enginePower){
         this.color = color;
         this.enginePower = enginePower;
     }
@@ -46,9 +43,6 @@ abstract public class Vehicle implements Movable{
     //endregion
 
     //region Getters/Setters
-    public int getNrDoors(){
-        return nrDoors;
-    }
     public double getEnginePower(){
         return enginePower;
     }

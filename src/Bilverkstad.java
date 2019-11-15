@@ -1,15 +1,26 @@
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
+/** A representation of a car repairshop where you */
+public class Bilverkstad <T  extends  LandVehicle> {
+    private Map<String, T> cars = new HashMap<String, T>();
+    private Point location;
+    private int maxCars = 0;;
+    private final int distToCArDeadzone = 3;
 
-public class Bilverkstad <T> {
-    Map<String, T> cars = new HashMap<String, T>();
 
-    public void add(T car){
+    public boolean add(T car){
+
+        if (cars.size() == maxCars || (Math.abs(car.getPosition().getX() - location.getX()) > distToCArDeadzone
+                || Math.abs(car.getPosition().getY() - location.getY()) > distToCArDeadzone))
+            return false;
         cars.put(((LandVehicle)car).getRegNr(), car);
+        return true;
     }
 
     /** How to remove a car from the bilverkstad
-     * @param 
+     * @param reg reg nr for the sought after car
+     * @return the sought car
      * */
     public T get (String reg) {
 
@@ -19,5 +30,21 @@ public class Bilverkstad <T> {
         else {
             throw new ClassCastException("No car with reg nr "+reg+" in this bilverkstad");
         }
+    }
+
+    public Bilverkstad(Point location, int maxCars){
+        this.location=location;
+        this.maxCars = maxCars;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
+
+    public int getMaxCars() {
+        return maxCars;
+    }
+    public int numberOfCars() {
+        return cars.size();
     }
 }
