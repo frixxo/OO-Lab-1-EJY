@@ -139,4 +139,20 @@ public class MainTester {
         x.load(y);
         assertTrue(x.release()==y);
     }
+    @Test
+    public void TestCarFerryLoad(){
+        CarFerry ferry=new CarFerry();
+        Volvo240 y= new Volvo240();
+        ferry.lowerRamp();
+        assertTrue(ferry.load(y));
+    }
+    @Test
+    public void TestCarFerryGet(){
+        CarFerry ferry=new CarFerry();
+        Volvo240 y= new Volvo240();
+        ferry.lowerRamp();
+        ferry.load(y);
+        ferry.load(new Saab95());
+        assertTrue(ferry.release()==y);
+    }
 }
