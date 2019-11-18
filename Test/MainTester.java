@@ -1,9 +1,8 @@
+import Movables.*;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.awt.image.ConvolveOp;
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,28 +30,28 @@ public class MainTester {
     public void TestTurnleftX(){
         Saab95 saab = new Saab95();
         saab.turnLeft();
-        assertEquals(0,saab.direction.getX(),0.01);
+        assertEquals(0,saab.getDirection().getX(),0.01);
 
     }
     @Test
     public void TestTurnleftY(){
         Saab95 saab = new Saab95();
         saab.turnLeft();
-        assertEquals(1,saab.direction.getY(),0.01);
+        assertEquals(1,saab.getDirection().getY(),0.01);
 
     }
     @Test
     public void TestTurnRightX(){
         Saab95 saab = new Saab95();
         saab.turnRight();
-        assertEquals(0,saab.direction.getX(),0.01);
+        assertEquals(0,saab.getDirection().getX(),0.01);
 
     }
     @Test
     public void TestTurnRightY(){
         Saab95 saab = new Saab95();
         saab.turnRight();
-        assertEquals(-1,saab.direction.getY(),0.01);
+        assertEquals(-1,saab.getDirection().getY(),0.01);
 
     }
     @Test
@@ -78,44 +77,44 @@ public class MainTester {
         Saab95 saab=new Saab95();
         saab.gas(1);
         saab.move();
-        assertEquals(1,saab.position.x,0.01);
+        assertEquals(1,saab.getPosition().getX(),0.01);
     }
     @Test
     public void TestMoveY(){
         Saab95 saab=new Saab95();
         saab.gas(1);
         saab.move();
-        assertEquals(0,saab.position.y,0.01);
+        assertEquals(0,saab.getPosition().getY(),0.01);
     }
-    @Test
+    @Test   //testar 1000 olika kombinationer, klarar över 20000 innan duplicering
     public void TestRegNrGenerator(){
         Saab95 k;
-        ArrayList<String> j= new ArrayList<String>();
+        ArrayList<String> j= new ArrayList<>();
         for(int x=0;x<1000;x++){
             k=new Saab95();
             for(int y=0; y<(j.size());y++){
-                if(j.get(y).equals(k.RegNr)){
-                    System.out.println(x+" "+y+" "+k.RegNr);
-                    assertTrue(false);
+                if(j.get(y).equals(k.getRegNr())){
+                    System.out.println(x+" "+y+" "+k.getRegNr());
+                    fail();
                 }
             }
-            j.add(k.RegNr);
+            j.add(k.getRegNr());
         }
         assertTrue(true);
     }
     @Test
     public void TestbilverkstadAdd(){
-        Bilverkstad<Volvo240> x=new Bilverkstad<Volvo240>(new Point(0,0),5);
+        Bilverkstad<Volvo240> x=new Bilverkstad<>(new Point(0,0),5);
         Volvo240 y=new Volvo240();
         assertTrue(x.add(y));
 
     }
     @Test
     public void TestbilverkstadGet(){
-        Bilverkstad<Volvo240> x=new Bilverkstad<Volvo240>(new Point(0,0),5);
+        Bilverkstad<Volvo240> x=new Bilverkstad<>(new Point(0,0),5);
         Volvo240 y=new Volvo240();
         x.add(y);
-        assertTrue(x.get(y.RegNr)==y);
+        assertSame(x.get(y.getRegNr()), y);
 
     }
     @Test
@@ -137,22 +136,45 @@ public class MainTester {
         Volvo240 y= new Volvo240();
         x.raiseRamp();
         x.load(y);
-        assertTrue(x.release()==y);
+        assertSame(x.release(), y);
+    }
+    @Test
+    public void TestCarFerryLowerRamp(){
+        CarFerry ferry=new CarFerry();
+        Volvo240 y= new Volvo240();
+
+        assertTrue(ferry.lowerRamp());
     }
     @Test
     public void TestCarFerryLoad(){
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
         ferry.lowerRamp();
-        assertTrue(ferry.load(y));
+        assertTrue(ferry.load.load(y));
     }
     @Test
     public void TestCarFerryGet(){
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
         ferry.lowerRamp();
-        ferry.load(y);
-        ferry.load(new Saab95());
-        assertTrue(ferry.release()==y);
+        ferry.load.load(y);
+        ferry.load.load(new Saab95());
+        assertSame(ferry.load.release(), y);
+    }
+    @Test
+    public void TestScaniaMoveRampUpX(){
+        Scania s = new Scania();
+        s.raiseRamp();
+        Point p = s.getPosition();
+        s.move();
+        assertEquals(s.getPosition().getX(),p.x,0.01);
+    }
+    @Test
+    public void TestScaniaMoveRampUpY(){
+        Scania s = new Scania();
+        s.raiseRamp();
+        Point p = s.getPosition();
+        s.move();
+        assertEquals(s.getPosition().getY(),p.y,0.01);
     }
 }

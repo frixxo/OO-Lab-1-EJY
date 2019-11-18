@@ -1,3 +1,4 @@
+package Movables; /** A scania truck*/
 import java.awt.*;
 import java.awt.geom.Point2D;
 

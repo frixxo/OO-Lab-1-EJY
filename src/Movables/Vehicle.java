@@ -1,7 +1,9 @@
+package Movables;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.util.Random;
 
+/** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
     protected double enginePower;
     private double currentSpeed;
@@ -95,7 +97,7 @@ abstract public class Vehicle implements Movable{
      * @return if the vehicle is moving
      * */
     protected boolean isMoving(){
-        return (Math.abs(currentSpeed)-0.01<0);
+        return (Math.abs(currentSpeed)-0.01>0);
     }
     //endregion
 

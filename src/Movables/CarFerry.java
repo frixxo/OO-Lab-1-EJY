@@ -1,9 +1,12 @@
+package Movables;
+import LastHandle.*;
+
 /** A ferry that transports cars over a body of water*/
 public class CarFerry extends Vehicle{
-    private LoadHandler load;
+    public IHandleLast load;
 
     public CarFerry(){
-        load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FILO);
+        load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
 
     public boolean lowerRamp(){
@@ -13,8 +16,7 @@ public class CarFerry extends Vehicle{
         } return false;
     }
     public void raiseRamp(){ load.setDock(false); }
-    public boolean load(Car car) { return load.load(car); }
-    public Car release() { return (Car)load.release(); }
+
     public int getCarsLoaded(){ return load.getCargoCount(); }
 
     @Override

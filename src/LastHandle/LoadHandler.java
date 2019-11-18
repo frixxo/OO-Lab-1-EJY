@@ -1,3 +1,7 @@
+package LastHandle;
+
+import Movables.Movable;
+
 import java.awt.*;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -5,7 +9,7 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler<T extends Movable> implements IHandleLast<T> {
+public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out

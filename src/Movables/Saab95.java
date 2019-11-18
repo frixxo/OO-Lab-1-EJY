@@ -1,8 +1,10 @@
+package Movables;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 /**
- * Represent a Saab95
+ * Represent a Movables.Saab95
  */
 public class Saab95 extends Car{
 
@@ -11,12 +13,12 @@ public class Saab95 extends Car{
     //region constructors
     public Saab95(Point position, Point2D direction){
         super(position,direction);
-        initialize(4,Color.red,125,"Saab95");
+        initialize(4,Color.red,125,"Movables.Saab95");
         setTurboOn(false);
     }
     public Saab95(){
         super();
-       initialize(4,Color.red,125,"Saab95");
+       initialize(4,Color.red,125,"Movables.Saab95");
        setTurboOn(false);
     }
     //endregion

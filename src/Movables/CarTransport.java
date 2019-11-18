@@ -1,3 +1,7 @@
+package Movables;
+import LastHandle.*;
+
+/** A cartransporting truck for delivering cars*/
 public class CarTransport extends Truck{
     private LoadHandler<Car> load;
 

@@ -1,3 +1,5 @@
+package Movables;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
@@ -11,11 +13,11 @@ public class Volvo240 extends Car{
     //region constructors
     public Volvo240(Point position,Point2D direction){
         super(position,direction);
-        initialize(4,Color.black,100,"Volvo240");
+        initialize(4,Color.black,100,"Movables.Volvo240");
     }
     public Volvo240(){
         super();
-        initialize(4,Color.black,100,"Volvo240");
+        initialize(4,Color.black,100,"Movables.Volvo240");
     }
     //endregion
     @Override

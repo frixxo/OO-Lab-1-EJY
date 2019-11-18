@@ -1,8 +1,10 @@
+import Movables.LandVehicle;
+
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 /** A representation of a car repairshop where you */
-public class Bilverkstad <T  extends  LandVehicle> {
+public class Bilverkstad<T  extends  LandVehicle> {
     private Map<String, T> cars = new HashMap<String, T>();
     private Point location;
     private int maxCars = 0;;
@@ -11,9 +13,9 @@ public class Bilverkstad <T  extends  LandVehicle> {
 
     public boolean add(T car){
 
-        if (cars.size() == maxCars || (Math.abs(car.getPosition().getX() - location.getX()) > distToCArDeadzone
-                || Math.abs(car.getPosition().getY() - location.getY()) > distToCArDeadzone))
-            return false;
+        if (cars.size() == maxCars || location.distance(car.getPosition()) > distToCArDeadzone
+                || location.distance(car.getPosition()) > distToCArDeadzone) return false;
+
         cars.put(((LandVehicle)car).getRegNr(), car);
         return true;
     }
