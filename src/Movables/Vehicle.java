@@ -1,7 +1,10 @@
 package Movables;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.io.File;
+import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
@@ -34,7 +37,8 @@ abstract public class Vehicle implements Movable{
     protected void initialize(Color color, int enginePower,String picturePath){
         this.color = color;
         this.enginePower = enginePower;
-        this.picture= Toolkit.getDefaultToolkit().getImage(picturePath);
+        try{this.picture = ImageIO.read(new File(picturePath));}
+        catch (IOException ex){this.picture=Toolkit.getDefaultToolkit().getImage("pics/questionmark.jpeg");}
 
     }
     //endregion
