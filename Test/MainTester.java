@@ -55,7 +55,7 @@ public class MainTester {
 
     }
     @Test
-    public void TestVolvoSpeedfactor(){
+    public void TestVolvoSpeedFactor(){
         Volvo240 volvo = new Volvo240();
         assertEquals(1.25d,volvo.speedFactor(),0.01d);
     }
