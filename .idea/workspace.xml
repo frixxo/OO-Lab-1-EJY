@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pics/questionmark.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/LandVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/LandVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarFerry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarTransport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LamborghiniGallardo.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LamborghiniGallardo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LandVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LandVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Scania.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,8 +188,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Test/MainTester.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
+          <line>32</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

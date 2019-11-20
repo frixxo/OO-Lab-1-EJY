@@ -1,7 +1,9 @@
 import Movables.*;
 import org.testng.annotations.Test;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -176,5 +178,11 @@ public class MainTester {
         Point p = s.getPosition();
         s.move();
         assertEquals(s.getPosition().getY(),p.y,0.01);
+    }
+    @Test
+    public void TestPicture() throws IOException {
+        Image x= ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
+        Volvo240 volvo=new Volvo240();
+        assertTrue(volvo.getPicture()==x);
     }
 }

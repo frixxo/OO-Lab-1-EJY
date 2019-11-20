@@ -37,7 +37,7 @@ abstract public class Vehicle implements Movable{
     protected void initialize(Color color, int enginePower,String picturePath){
         this.color = color;
         this.enginePower = enginePower;
-        try{this.picture = ImageIO.read(new File(picturePath));}
+        try{this.picture = ImageIO.read(DrawPanel.class.getResourceAsStream(picturePath));}
         catch (IOException ex){this.picture=Toolkit.getDefaultToolkit().getImage("pics/questionmark.jpeg");}
 
     }
