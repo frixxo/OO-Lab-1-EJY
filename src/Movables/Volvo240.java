@@ -7,17 +7,16 @@ import java.awt.geom.Point2D;
  * Represents a Volvo 240 raggarbil
  */
 public class Volvo240 extends Car{
-
     public final static double trimFactor = 1.25;
 
     //region constructors
     public Volvo240(Point position,Point2D direction){
         super(position,direction);
-        initialize(4,Color.black,100,"Movables.Volvo240");
+        initialize(4,Color.black,100,"Movables.Volvo240","pics/Volvo240.jpg");
     }
     public Volvo240(){
         super();
-        initialize(4,Color.black,100,"Movables.Volvo240");
+        initialize(4,Color.black,100,"Movables.Volvo240","pics/Volvo240.jpg");
     }
     //endregion
     @Override
