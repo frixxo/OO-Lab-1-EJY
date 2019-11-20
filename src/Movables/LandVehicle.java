@@ -13,7 +13,6 @@ public abstract class LandVehicle extends Vehicle{
     protected String RegNr;
     protected int nrDoors;
     public static int RegKey=11857;
-    private Image picture;
     Random r = new Random(RegKey);
 
 
@@ -33,8 +32,7 @@ public abstract class LandVehicle extends Vehicle{
     protected void initialize(int doors,Color color, int enginePower,String modelName,String picturePath){
         this.nrDoors=doors;
         this.modelName = modelName;
-        this.picture = Toolkit.getDefaultToolkit().getImage(picturePath);
-        initialize(color, enginePower);
+        initialize(color, enginePower,picturePath);
         //RegNr Generator
         RegKey--;
         r = new Random(RegKey);

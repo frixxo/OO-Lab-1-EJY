@@ -1,11 +1,15 @@
 package Movables;
 import LastHandle.*;
 
+import java.awt.*;
+
 /** A ferry that transports cars over a body of water*/
 public class CarFerry extends Vehicle{
     public IHandleLast load;
 
     public CarFerry(){
+        super();
+        initialize(Color.red,200,"pics/Färja.jpeg");
         load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
 

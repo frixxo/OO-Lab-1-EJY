@@ -13,13 +13,13 @@ private boolean epic;
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction){
         super(position,direction);
-        initialize(2,Color.yellow,320,"Lamborghini Gallardo");
+        initialize(2,Color.yellow,320,"Lamborghini Gallardo","pics/Gallardo.jpeg");
         setSpoilerUp(false);
         epic = true;
     }
     public LamborghiniGallardo(){
         super();
-        initialize(2,Color.yellow,320,"Lamborghini Gallardo");
+        initialize(2,Color.yellow,320,"Lamborghini Gallardo","pics/Gallardo.jpeg");
         setSpoilerUp(false);
         epic = true;
     }

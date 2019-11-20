@@ -8,6 +8,7 @@ abstract public class Vehicle implements Movable{
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
+    protected Image picture;
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -30,9 +31,11 @@ abstract public class Vehicle implements Movable{
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
      * */
-    protected void initialize(Color color, int enginePower){
+    protected void initialize(Color color, int enginePower,String picturePath){
         this.color = color;
         this.enginePower = enginePower;
+        this.picture= Toolkit.getDefaultToolkit().getImage(picturePath);
+
     }
     //endregion
     //region Start/Stop engine
