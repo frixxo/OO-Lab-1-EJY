@@ -1,27 +1,25 @@
 package Movables;
-import Flak.Flak2;
+import Flak.Ramp;
 import Flak.IFlak;
 import LastHandle.*;
 
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends Vehicle{
-    public IHandleLast load;
-    private IFlak flak = new Flak2();
+public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
+    public IHandleLast<LandVehicle> load;
+    private IFlak flak = new Ramp();
 
     public CarFerry(){
-        load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
+        load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
 
     public boolean lowerRamp(){
         if(!isMoving()) {
             flak.lowerRamp();
-            load.setDock(flak.loadState());
             return true;
         } return false;
     }
     public void raiseRamp(){
         flak.raiseRamp();
-        load.setDock(flak.loadState());
     }
 
     public int getCarsLoaded(){ return load.getCargoCount(); }
@@ -32,5 +30,22 @@ public class CarFerry extends Vehicle{
     public void move(){
         if (flak.normalState()) super.move();
         load.updatePosition(position);
+    }
+
+    @Override
+    public boolean loadState() {
+        return flak.loadState();
+    }
+
+    @Override
+    public boolean load(LandVehicle landVehicle) {
+        if(loadState()) return load.load(landVehicle);
+        else return false;
+    }
+
+    @Override
+    public LandVehicle release() {
+        if(loadState())return load.release();
+        else return null;
     }
 }

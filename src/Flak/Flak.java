@@ -1,6 +1,6 @@
 package Flak;
 
-public class Flak1 extends NormalFlak {
+public class Flak extends NormalFlak {
     @Override
     public boolean normalState() {
         return getAngle() == 0;

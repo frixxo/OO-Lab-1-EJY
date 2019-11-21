@@ -15,9 +15,6 @@ public abstract class Truck extends LandVehicle{
     }
 
     @Override
-    public double speedFactor(){ return enginePower*0.01; }
-
-    @Override
     public void move(){ if (getFlak().normalState()) super.move(); }
 
     public boolean raiseRamp () {

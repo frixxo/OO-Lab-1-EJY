@@ -36,17 +36,18 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     }
     
     public int getCargoCount(){ return cargoList.size(); }
-    public boolean dockStatus(){ return dock; }
-    public void setDock(boolean bool){ dock = bool; }
 
     public boolean load(T cargo){
-        if (cargoList.size() < MAX_CARGO_LOAD && dockStatus()&&!cargo.getIsLoaded()) {
+        if (cargoList.size() < MAX_CARGO_LOAD
+                &&!cargo.getIsLoaded()
+               // &&isBehind(cargo)     TODO not working
+                ) {
+            cargo.setIsLoaded(true);
             cargoList.add(cargo);
             return true;
         } return false;
     }
     public T release(){
-        if (dockStatus()){
             T cargo;
             switch (principle){
                 case FILO:
@@ -60,16 +61,15 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
             }
             cargo.setIsLoaded(false);
             return cargo;
-        } return null;
     }
 
-    private boolean isBehind(Movable obj){
+    /*private boolean isBehind(Movable obj){                //TODO
         int dX = (int)(movable.getPosition().x + -MAX_LOAD_DISTANCE * movable.getDirection().getX());
         int dY = (int)(movable.getPosition().y + -MAX_LOAD_DISTANCE * movable.getDirection().getY());
 
         Rectangle rec = new Rectangle(dX-sX, dY-sY, dX+sX, dY+sY);
         return rec.contains(obj.getPosition());
-    }
+    }*/
 
     public void updatePosition(Point position){
         for (T cargo : cargoList){

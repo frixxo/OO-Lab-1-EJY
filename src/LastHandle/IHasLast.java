@@ -6,4 +6,5 @@ public interface IHasLast <T extends Movable>{
     boolean load(T t);
     T release();
     void move();
+    boolean loadState();
 }

@@ -9,7 +9,5 @@ public interface IHandleLast<T extends Movable> {
     boolean load(T cargo);
     T release();
     int getCargoCount();
-    void setDock(boolean bool);
-    boolean dockStatus();
     void updatePosition(Point position);
 }

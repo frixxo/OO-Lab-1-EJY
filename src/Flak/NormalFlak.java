@@ -35,4 +35,5 @@ public abstract class NormalFlak implements IFlak {
     public double getAngle() {
         return angle;
     }
+
 }

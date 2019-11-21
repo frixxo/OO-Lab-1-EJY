@@ -115,26 +115,26 @@ public class MainTester {
         Volvo240 y=new Volvo240();
         x.add(y);
         assertSame(x.get(y.getRegNr()), y);
-
     }
     @Test
     public void TestCarTransportloadRampDown(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        assertFalse(x.load(y));
+        x.lowerRamp();
+        assertTrue(x.load(y));
     }
     @Test
     public void TestCarTransportloadRampUp(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.raiseRamp();
-        assertTrue(x.load(y));
+        assertFalse(x.load(y));
     }
     @Test
     public void TestCarTransportGet(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.raiseRamp();
+        x.lowerRamp();
         x.load(y);
         assertSame(x.release(), y);
     }
@@ -157,7 +157,7 @@ public class MainTester {
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
         ferry.lowerRamp();
-        ferry.load.load(y);
+        ferry.load(y);
         ferry.load.load(new Saab95());
         assertSame(ferry.load.release(), y);
     }
@@ -176,5 +176,52 @@ public class MainTester {
         Point p = s.getPosition();
         s.move();
         assertEquals(s.getPosition().getY(),p.y,0.01);
+    }
+    @Test
+    public void TestLoadHandlerUpdatePositionX(){
+        CarTransport t = new CarTransport();
+        Volvo240 v = new Volvo240();
+        t.load(v);
+        t.gas(5);
+        t.move();
+        assertEquals(v.getPosition().x,t.getPosition().x);
+    }
+    @Test
+    public void TestLoadHandlerUpdatePositionY(){
+        CarTransport t = new CarTransport();
+        Volvo240 v = new Volvo240();
+        t.load(v);
+        t.gas(100);
+        t.move();
+        assertEquals(v.getPosition().y,t.getPosition().y);
+    }
+    @Test
+    public void TestLoadSameCarMultipleTimes(){
+        CarTransport t = new CarTransport();
+        Volvo240 v = new Volvo240();
+        t.lowerRamp();
+        t.load(v);
+        assertFalse(t.load(v));
+    }
+    @Test
+    public void TestDriveLoadedCarX() {
+        CarTransport t = new CarTransport();
+        Volvo240 v = new Volvo240();
+        t.lowerRamp();
+        t.load(v);
+        v.gas(100);
+        v.move();
+        System.out.println(v.getIsLoaded());
+        assertEquals(v.getPosition().getX(), t.getPosition().getX(), 0.01);
+    }
+    @Test
+    public void TestDriveLoadedCarY() {
+        CarTransport t = new CarTransport();
+        Volvo240 v = new Volvo240();
+        t.lowerRamp();
+        t.load(v);
+        v.gas(100);
+        v.move();
+        assertEquals(v.getPosition().getY(), t.getPosition().getY(), 0.01);
     }
 }
