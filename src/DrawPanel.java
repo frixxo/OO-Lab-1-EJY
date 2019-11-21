@@ -7,6 +7,7 @@ import javax.swing.*;
 
 public class DrawPanel extends JPanel{
     private Image I;
+    private Point volvoPoint;
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -15,11 +16,15 @@ public class DrawPanel extends JPanel{
         this.setBackground(Color.green);
     }
 
+    public void moveit(int x, int y){
+        volvoPoint.setLocation(x, y);
+    }
+
     // This method is called each time the panel updates/refreshes/repaints itself
     // TODO: Change to suit your needs.
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        //g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
+        g.drawImage(I, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
     }
 }
