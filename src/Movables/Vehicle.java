@@ -36,19 +36,14 @@ abstract public class Vehicle implements Movable{
     /** has all common variables for the constructors
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
-     * @param   picturePath The Path to find the picture for the vehicle
+     * @param   modelname the model of the car
      * */
     protected void initialize(Color color, int enginePower,String modelname){
         this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
-        try{picturePath=picturePath+"/"+modelName+".jpg";}
-        catch (IOException ex){
-            try {
-                this.picture = ImageIO.read(new File(picturePath+ "/questionmark.jpg"));
-            } catch (IOException e) { }
-        }
 
+        this.picturePath=picturePath+"/"+modelName+".jpg";
     }
     //endregion
     //region Start/Stop engine

@@ -25,6 +25,7 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        I=ImageIO.read(new )
         g.drawImage(I, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
     }
 }
