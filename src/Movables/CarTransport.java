@@ -5,7 +5,6 @@ import Flak.*;
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck{
     private LoadHandler<Car> load;
-
     private IFlak flak = new Flak2();
 
     public CarTransport(){
