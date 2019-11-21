@@ -1,5 +1,4 @@
-import Movables.Car;
-import Movables.Volvo240;
+import Movables.Vehicle;
 
 import java.awt.*;
 import java.io.File;
@@ -11,20 +10,14 @@ import javax.swing.*;
 // This panel represent the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel{
-    private Image I;
-    private Volvo240 volvo = new Volvo240();
-    private List<Car> cars;
+    private List<Vehicle> vehicles;
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y, List<Car> cars) {
+    public DrawPanel(int x, int y, List<Vehicle> vehicles) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
-        this.cars=cars;
-    }
-
-    public void moveit(int x, int y){
-        volvo.set(x, y);
+        this.vehicles = vehicles;
     }
 
     // This method is called each time the panel updates/refreshes/repaints itself
@@ -32,11 +25,14 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        try {
-            I=ImageIO.read(new File(volvo.getPicturePath()));
-        } catch (IOException e) {
-            e.printStackTrace();
+        Image I = null;
+        for (Vehicle v : vehicles) {
+            try {
+                I = ImageIO.read(new File(v.getPicturePath()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            g.drawImage(I, v.getPosition().x, v.getPosition().y, null); // see javadoc for more info on the parameters
         }
-        g.drawImage(I, volvo.getPosition().x, volvo.getPosition().y, null); // see javadoc for more info on the parameters
     }
 }
