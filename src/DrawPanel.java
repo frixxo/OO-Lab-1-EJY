@@ -1,5 +1,10 @@
+import Movables.Car;
+import Movables.Volvo240;
+
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -7,17 +12,19 @@ import javax.swing.*;
 
 public class DrawPanel extends JPanel{
     private Image I;
-    private Point volvoPoint;
+    private Volvo240 volvo = new Volvo240();
+    private List<Car> cars;
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y) {
+    public DrawPanel(int x, int y, List<Car> cars) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
+        this.cars=cars;
     }
 
     public void moveit(int x, int y){
-        volvoPoint.setLocation(x, y);
+        volvo.set(x, y);
     }
 
     // This method is called each time the panel updates/refreshes/repaints itself
@@ -25,7 +32,7 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        I=ImageIO.read(new )
-        g.drawImage(I, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
+        I=ImageIO.read(new File(volvo.getPicturePath()));
+        g.drawImage(I, volvo.getPosition().getX(), volvo.getPosition().getY(), null); // see javadoc for more info on the parameters
     }
 }

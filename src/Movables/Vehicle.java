@@ -62,6 +62,9 @@ abstract public class Vehicle implements Movable{
     public double getCurrentSpeed(){
         return currentSpeed;
     }
+    public String getPicturePath(){
+        return picturePath;
+    }
     public Color getColor(){
         return color;
     }
