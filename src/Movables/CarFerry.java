@@ -2,14 +2,20 @@ package Movables;
 import LastHandle.*;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 /** A ferry that transports cars over a body of water*/
 public class CarFerry extends Vehicle{
     public IHandleLast load;
-
+    private String thisPicName="CarFerry";
     public CarFerry(){
         super();
-        initialize(Color.red,200,"pics/Färja.jpeg");
+        initialize(Color.red,200,filePath+"/"+ thisPicName+".jpeg");
+        load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
+    }
+    public CarFerry(Point position,Point2D direction){
+        super(position,direction);
+        initialize(Color.red,200,filePath+ "CarFerry.jpeg");
         load = new LoadHandler<LandVehicle>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
 

@@ -10,7 +10,6 @@ import java.util.Random;
  */
 
 public abstract class LandVehicle extends Vehicle{
-    protected String modelName;
     protected String RegNr;
     protected int nrDoors;
     public static int RegKey=11857;

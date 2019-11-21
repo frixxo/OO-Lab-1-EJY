@@ -3,15 +3,19 @@ package Movables;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
+    protected String modelName;
+    protected File file=new File("pics");
+    protected String filePath= file.getAbsolutePath();
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
-    protected Image picture;
+    protected BufferedImage picture;
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -37,9 +41,12 @@ abstract public class Vehicle implements Movable{
     protected void initialize(Color color, int enginePower,String picturePath){
         this.color = color;
         this.enginePower = enginePower;
-        //TODO fix
-        try{this.picture = ImageIO.read(.class.getResourceAsStream(picturePath));}
-        catch (IOException ex){this.picture=Toolkit.getDefaultToolkit().getImage("pics/questionmark.jpeg");}
+        try{this.picture = ImageIO.read(new File(picturePath));}
+        catch (IOException ex){
+            try {
+                this.picture = ImageIO.read(new File(this.filePath+"/questionmark.jpeg"));
+            } catch (IOException e) { }
+        }
 
     }
     //endregion
