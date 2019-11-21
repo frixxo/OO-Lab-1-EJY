@@ -20,8 +20,14 @@ public class CarTransport extends Truck{
         return super.raiseRamp();
     }
 
-    public boolean load(Car car) { return load.load(car);}
-    public Car release() { return load.release(); }
+    public boolean load(Car car) {
+        if(!getIsLoaded())return load.load(car);
+        else return false;
+    }
+    public Car release() {
+        if(!getIsLoaded())return load.release();
+        else return null;
+    }
     public int getCarsLoaded(){ return load.getCargoCount(); }
 
 }
