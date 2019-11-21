@@ -6,7 +6,7 @@ import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck{
-    private LoadHandler<Car> load;
+    private IHandleLast load;
 
     public CarTransport(){
         super();
@@ -35,5 +35,10 @@ public class CarTransport extends Truck{
     public boolean load(Car car) { return load.load(car);}
     public Car release() { return (Car)load.release(); }
     public int getCarsLoaded(){ return load.getCargoCount(); }
+    @Override
+    public void move(){
+        if (!load.dockStatus()) super.move();
+        load.updatePosition(position);
+    }
 
 }

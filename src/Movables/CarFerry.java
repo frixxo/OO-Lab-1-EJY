@@ -33,5 +33,6 @@ public class CarFerry extends Vehicle{
     @Override
     public void move(){
         if (!load.dockStatus()) super.move();
+        load.updatePosition(position);
     }
 }

@@ -32,12 +32,12 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
         this.MAX_LOAD_DISTANCE = maxLoadDistance;
         this.sX = sX;
         this.sY = sY;
-
     }
     
     public int getCargoCount(){ return cargoList.size(); }
     public boolean dockStatus(){ return dock; }
     public void setDock(boolean bool){ dock = bool; }
+    public Deque<T> getCargoList(){ return new LinkedList<T>(cargoList);}
 
     public boolean load(T cargo){
         if (cargoList.size() < MAX_CARGO_LOAD && dockStatus()) {
@@ -60,6 +60,12 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
             }
             return cargo;
         } return null;
+    }
+
+    public void updatePosition(Point position){
+        for (T cargo : cargoList){
+            cargo.getPosition().setLocation(position.x, position.y);
+        }
     }
 
     private boolean isBehind(Movable obj){
