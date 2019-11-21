@@ -8,6 +8,7 @@ abstract public class Vehicle implements Movable{
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
+    protected boolean IsLoaded=false;
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -45,6 +46,8 @@ abstract public class Vehicle implements Movable{
     //endregion
 
     //region Getters/Setters
+    public boolean getIsLoaded(){return IsLoaded;}
+    public void setIsLoaded(boolean b){IsLoaded = b;}
     public double getEnginePower(){
         return enginePower;
     }
@@ -104,7 +107,7 @@ abstract public class Vehicle implements Movable{
     //region move methods
     /** move car ahead*/
     public void move(){
-        position.translate((int) (direction.getX()*currentSpeed),(int)(direction.getY()*currentSpeed));
+        if(!IsLoaded){ position.translate((int) (direction.getX()*currentSpeed),(int)(direction.getY()*currentSpeed));}
     }
     public void turnLeft(){
         rotate(turnAngle);
