@@ -3,7 +3,7 @@ import LastHandle.*;
 
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck{
-    private LoadHandler<Car> load;
+    private IHandleLast load;
 
     public CarTransport(){
         load = new LoadHandler<>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
@@ -25,9 +25,13 @@ public class CarTransport extends Truck{
         else return false;
     }
     public Car release() {
-        if(!getIsLoaded())return load.release();
+        if(!getIsLoaded())return (Car)load.release();
         else return null;
     }
     public int getCarsLoaded(){ return load.getCargoCount(); }
-
+    @Override
+    public void move(){
+        if (!load.dockStatus()) super.move();
+        load.updatePosition(position);
+    }
 }

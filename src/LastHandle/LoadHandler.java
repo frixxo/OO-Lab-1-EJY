@@ -71,4 +71,10 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
         return rec.contains(obj.getPosition());
     }
 
+    public void updatePosition(Point position){
+        for (T cargo : cargoList){
+            cargo.getPosition().setLocation(position.x, position.y);
+        }
+    }
+
 }
