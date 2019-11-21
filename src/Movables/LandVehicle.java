@@ -45,8 +45,6 @@ public abstract class LandVehicle extends Vehicle{
     }
 
     public int getNrDoors() { return nrDoors; }
-
-    public Image getPicture(){ return picture;}
     //endregion
 
 }

@@ -32,7 +32,11 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        I=ImageIO.read(new File(volvo.getPicturePath()));
-        g.drawImage(I, volvo.getPosition().getX(), volvo.getPosition().getY(), null); // see javadoc for more info on the parameters
+        try {
+            I=ImageIO.read(new File(volvo.getPicturePath()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        g.drawImage(I, volvo.getPosition().x, volvo.getPosition().y, null); // see javadoc for more info on the parameters
     }
 }
