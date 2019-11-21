@@ -11,11 +11,10 @@ import java.io.IOException;
 abstract public class Vehicle implements Movable{
     protected String modelName;
     protected File file=new File("pics");
-    protected String filePath= file.getAbsolutePath();
+    protected String picturePath= file.getAbsolutePath();
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
-    protected BufferedImage picture;
 
     /** 2D points have double coordinates.*/
     protected Point2D direction;
@@ -37,14 +36,16 @@ abstract public class Vehicle implements Movable{
     /** has all common variables for the constructors
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
+     * @param   picturePath The Path to find the picture for the vehicle
      * */
-    protected void initialize(Color color, int enginePower,String picturePath){
+    protected void initialize(Color color, int enginePower,String modelname){
+        this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
-        try{this.picture = ImageIO.read(new File(picturePath));}
+        try{picturePath=picturePath+"/"+modelName+".jpg";}
         catch (IOException ex){
             try {
-                this.picture = ImageIO.read(new File(this.filePath+"/questionmark.jpeg"));
+                this.picture = ImageIO.read(new File(picturePath+ "/questionmark.jpg"));
             } catch (IOException e) { }
         }
 
