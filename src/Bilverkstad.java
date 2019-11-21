@@ -14,8 +14,7 @@ public class Bilverkstad<T  extends  LandVehicle> {
     public boolean add(T car){
 
         if (cars.size() == maxCars || location.distance(car.getPosition()) > distToCArDeadzone
-                || location.distance(car.getPosition()) > distToCArDeadzone) return false;
-
+                || location.distance(car.getPosition()) > distToCArDeadzone||car.getIsLoaded()) return false;
         cars.put (car.getRegNr(), car);
         return true;
     }
@@ -27,6 +26,7 @@ public class Bilverkstad<T  extends  LandVehicle> {
     public T get (String reg) {
 
         if(cars.containsKey(reg)) {
+            cars.get(reg).setIsLoaded(false);
             return cars.get(reg);
         }
         else {

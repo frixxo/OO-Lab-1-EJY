@@ -40,7 +40,7 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     public void setDock(boolean bool){ dock = bool; }
 
     public boolean load(T cargo){
-        if (cargoList.size() < MAX_CARGO_LOAD && dockStatus()) {
+        if (cargoList.size() < MAX_CARGO_LOAD && dockStatus()&&!cargo.getIsLoaded()) {
             cargoList.add(cargo);
             return true;
         } return false;
@@ -58,6 +58,7 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
                 default:
                     cargo = null;
             }
+            cargo.setIsLoaded(false);
             return cargo;
         } return null;
     }

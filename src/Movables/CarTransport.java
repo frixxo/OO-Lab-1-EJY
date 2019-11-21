@@ -6,7 +6,7 @@ public class CarTransport extends Truck{
     private LoadHandler<Car> load;
 
     public CarTransport(){
-        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
+        load = new LoadHandler<>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
         super.setTippingAmount(super.getMAX_ANGLE());
     }
     @Override
@@ -21,7 +21,7 @@ public class CarTransport extends Truck{
     }
 
     public boolean load(Car car) { return load.load(car);}
-    public Car release() { return (Car)load.release(); }
+    public Car release() { return load.release(); }
     public int getCarsLoaded(){ return load.getCargoCount(); }
 
 }
