@@ -234,4 +234,30 @@ public class MainTester {
         T.load(V);
         assertTrue(F.load(T));
     }
+    @Test
+    public void TestMoveCarTransportWithCargoOnFerryCargoUpdateX(){
+        CarFerry F = new CarFerry();
+        CarTransport T = new CarTransport();
+        Volvo240 V = new Volvo240();
+        T.lowerRamp();
+        F.lowerRamp();
+        T.load(V);
+        F.load(T);
+        F.gas(100);
+        F.move();
+        assertEquals(V.getPosition().x,F.getPosition().x);
+    }
+    @Test
+    public void TestMoveCarTransportWithCargoOnFerryCargoUpdateY(){
+        CarFerry F = new CarFerry();
+        CarTransport T = new CarTransport();
+        Volvo240 V = new Volvo240();
+        T.lowerRamp();
+        F.lowerRamp();
+        T.load(V);
+        F.load(T);
+        F.gas(100);
+        F.move();
+        assertEquals(V.getPosition().y,F.getPosition().y);
+    }
 }

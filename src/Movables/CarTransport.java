@@ -2,6 +2,8 @@ package Movables;
 import LastHandle.*;
 import Flak.*;
 
+import java.awt.*;
+
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck implements IHasLast<Car> {
     private LoadHandler<Car> load;
@@ -37,12 +39,12 @@ public class CarTransport extends Truck implements IHasLast<Car> {
         return flak.loadState();
     }
 
+    @Override
+    public void IsLoadedMove(Point p) {
+        load.updatePosition(p);
+    }
+
     public int getCarsLoaded(){ return load.getCargoCount(); }
 
     protected IFlak getFlak (){return flak;}
-
-    @Override
-    public void IsLoadedMove() {
-
-    }
 }
