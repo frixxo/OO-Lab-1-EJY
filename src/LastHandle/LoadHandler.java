@@ -74,6 +74,9 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     public void updatePosition(Point position){
         for (T cargo : cargoList){
             cargo.getPosition().setLocation(position.x, position.y);
+            if (cargo instanceof IHasLast){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
+                ((IHasLast) cargo).IsLoadedMove(position);
+            }
         }
     }
 

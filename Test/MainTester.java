@@ -224,4 +224,14 @@ public class MainTester {
         v.move();
         assertEquals(v.getPosition().getY(), t.getPosition().getY(), 0.01);
     }
+    @Test
+    public void TestLoadCarTransportWithCargoOnFerry(){
+        CarFerry F = new CarFerry();
+        CarTransport T = new CarTransport();
+        Volvo240 V = new Volvo240();
+        T.lowerRamp();
+        F.lowerRamp();
+        T.load(V);
+        assertTrue(F.load(T));
+    }
 }

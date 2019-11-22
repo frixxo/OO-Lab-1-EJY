@@ -3,6 +3,8 @@ import Flak.Ramp;
 import Flak.IFlak;
 import LastHandle.*;
 
+import java.awt.*;
+
 /** A ferry that transports cars over a body of water*/
 public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
     public IHandleLast<LandVehicle> load;
@@ -35,6 +37,11 @@ public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
     @Override
     public boolean loadState() {
         return flak.loadState();
+    }
+
+    @Override
+    public void IsLoadedMove(Point p) {
+        load.updatePosition(p);
     }
 
     @Override

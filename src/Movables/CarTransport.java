@@ -41,4 +41,8 @@ public class CarTransport extends Truck implements IHasLast<Car> {
 
     protected IFlak getFlak (){return flak;}
 
+    @Override
+    public void IsLoadedMove() {
+
+    }
 }
