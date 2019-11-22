@@ -32,7 +32,6 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
         this.MAX_LOAD_DISTANCE = maxLoadDistance;
         this.sX = sX;
         this.sY = sY;
-
     }
     
     public int getCargoCount(){ return cargoList.size(); }
@@ -40,13 +39,14 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     public boolean load(T cargo){
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getIsLoaded()
-               // &&isBehind(cargo)     TODO not working
+                &&isBehind(cargo)
                 ) {
             cargo.setIsLoaded(true);
             cargoList.add(cargo);
             return true;
         } return false;
     }
+
     public T release(){
             T cargo;
             switch (principle){
@@ -63,19 +63,17 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
             return cargo;
     }
 
-    /*private boolean isBehind(Movable obj){                //TODO
-        int dX = (int)(movable.getPosition().x + -MAX_LOAD_DISTANCE * movable.getDirection().getX());
-        int dY = (int)(movable.getPosition().y + -MAX_LOAD_DISTANCE * movable.getDirection().getY());
-
-        Rectangle rec = new Rectangle(dX-sX, dY-sY, dX+sX, dY+sY);
-        return rec.contains(obj.getPosition());
-    }*/
+    private boolean isBehind(Movable obj){
+        if(movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
+                || movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getIsLoaded()) return false;
+        return true;
+    }
 
     public void updatePosition(Point position){
         for (T cargo : cargoList){
             cargo.getPosition().setLocation(position.x, position.y);
             if (cargo instanceof IHasLast){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
-                ((IHasLast) cargo).IsLoadedMove(position);
+                ((IHasLast)cargo).IsLoadedMove(position);
             }
         }
     }

@@ -3,10 +3,67 @@
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/CarFerry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/CarTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Bilverkstad.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Bilverkstad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/Flak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/Flak.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/IFlak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/IFlak.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/NormalFlak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/NormalFlak.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/Ramp.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/Ramp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Flak/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/IHandleLast.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/IHandleLast.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/IHasLast.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/IHasLast.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.Principle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.Principle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/MainTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/MainTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/CarFerry.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/CarFerry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/LamborghiniGallardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/LamborghiniGallardo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/LandVehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/LandVehicle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Movable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Saab95.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Saab95.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Scania.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Scania.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Truck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Vehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Vehicle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Volvo240.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Volvo240.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Movables/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/member-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bilverkstad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LastHandle/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LastHandle/LoadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Bilverkstad.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Bilverkstad.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +72,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="239" />
+    <option name="myElementSize" value="178" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -195,7 +252,7 @@
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129816022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester__1_.ic" NAME="MainTester (1) Coverage Results" MODIFIED="1573132129836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$TestGallardoSpoiler.ic" NAME="MainTester Coverage Results" MODIFIED="1573207090206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester.ic" NAME="MainTester Coverage Results" MODIFIED="1574409268936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester.ic" NAME="MainTester Coverage Results" MODIFIED="1574414413803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
     <states>

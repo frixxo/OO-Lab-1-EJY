@@ -264,4 +264,11 @@ public class MainTester {
         F.move();
         assertEquals(V.getPosition().y,F.getPosition().y);
     }
+    @Test
+    public void TestLoadWhenNotInMaxLoadDistance(){
+        CarTransport c=new CarTransport();
+        Point x=new Point(100,100);
+        Volvo240 v=new Volvo240(x,x);
+        c.load(v);
+    }
 }

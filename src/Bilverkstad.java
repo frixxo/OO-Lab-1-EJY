@@ -13,7 +13,7 @@ public class Bilverkstad<T  extends  LandVehicle> {
 
     public boolean add(T car){
 
-        if (cars.size() == maxCars || location.distance(car.getPosition()) > distToCArDeadzone
+        if (numberOfCars() == getMaxCars() || getLocation().distance(car.getPosition()) > distToCArDeadzone
                 || location.distance(car.getPosition()) > distToCArDeadzone||car.getIsLoaded()) return false;
         cars.put (car.getRegNr(), car);
         return true;
