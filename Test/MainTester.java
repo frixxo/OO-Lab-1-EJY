@@ -269,6 +269,6 @@ public class MainTester {
         CarTransport c=new CarTransport();
         Point x=new Point(100,100);
         Volvo240 v=new Volvo240(x,x);
-        c.load(v);
+        assertFalse(c.load(v));
     }
 }

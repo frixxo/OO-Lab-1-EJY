@@ -41,6 +41,11 @@ public class CarTransport extends Truck implements IHasLast<Car> {
         if(loadState())return load.release();
         else return null;
     }
+    @Override
+    public void move(){
+        if(flak.normalState()) super.move();
+        load.updatePosition(position);
+    }
 
     @Override
     public boolean loadState() {
