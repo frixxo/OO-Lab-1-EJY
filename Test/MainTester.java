@@ -1,5 +1,5 @@
 import Movables.*;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -7,7 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Has all the test
