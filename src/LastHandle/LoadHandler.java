@@ -48,25 +48,19 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     }
 
     public T release(){
-            T cargo;
-            switch (principle){
-                case FILO:
-                    cargo = cargoList.pollLast();
-                    break;
-                case FIFO:
-                    cargo = cargoList.pollFirst();
-                    break;
-                default:
-                    cargo = null;
-            }
-            cargo.setIsLoaded(false);
-            return cargo;
-    }
-
-    public void updatePosition(Point position){
-        for (T cargo : cargoList){
-            cargo.getPosition().setLocation(position.x, position.y);
+        T cargo;
+        switch (principle){
+            case FILO:
+                cargo = cargoList.pollLast();
+                break;
+            case FIFO:
+                cargo = cargoList.pollFirst();
+                break;
+            default:
+                cargo = null;
         }
+        cargo.setIsLoaded(false);
+        return cargo;
     }
 
     private boolean isBehind(Movable obj){
