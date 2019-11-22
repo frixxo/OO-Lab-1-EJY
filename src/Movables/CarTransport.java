@@ -3,6 +3,7 @@ import LastHandle.*;
 import Flak.*;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck implements IHasLast<Car> {
@@ -10,6 +11,13 @@ public class CarTransport extends Truck implements IHasLast<Car> {
     private IFlak flak = new Ramp();
 
     public CarTransport(){
+        super();
+        super.initialize(2,Color.black,100,"CarTransport");
+        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
+    }
+    public CarTransport(Point position, Point2D direction){
+        super(position,direction);
+        super.initialize(2,Color.black,100,"CarTransport");
         load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
     }
 
