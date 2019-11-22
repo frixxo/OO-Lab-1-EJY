@@ -5,6 +5,9 @@ import Flak.*;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
+import java.awt.*;
+import java.awt.geom.Point2D;
+
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends Truck implements IHasLast<Car> {
     private LoadHandler<Car> load;
@@ -58,6 +61,11 @@ public class CarTransport extends Truck implements IHasLast<Car> {
     }
 
     public int getCarsLoaded(){ return load.getCargoCount(); }
+    @Override
+    public void move(){
+        if (!load.dockStatus()) super.move();
+        load.updatePosition(position);
+    }
 
     protected IFlak getFlak (){return flak;}
 }

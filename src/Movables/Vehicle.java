@@ -1,10 +1,17 @@
 package Movables;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
+    protected String modelName;
+    protected File file=new File("pics");
+    protected String picturePath= file.getAbsolutePath();
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
@@ -30,10 +37,14 @@ abstract public class Vehicle implements Movable{
     /** has all common variables for the constructors
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
+     * @param   modelname the model of the car
      * */
-    protected void initialize(Color color, int enginePower){
+    protected void initialize(Color color, int enginePower,String modelname){
+        this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
+
+        this.picturePath=picturePath+"/"+modelName+".jpg";
     }
     //endregion
     //region Start/Stop engine
@@ -53,6 +64,9 @@ abstract public class Vehicle implements Movable{
     }
     public double getCurrentSpeed(){
         return currentSpeed;
+    }
+    public String getPicturePath(){
+        return picturePath;
     }
     public Color getColor(){
         return color;

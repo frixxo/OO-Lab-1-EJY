@@ -174,6 +174,24 @@ implements <a href="Movable.html" title="interface in Movables">Movable</a></pre
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#IsLoaded">IsLoaded</a></span></code></th>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.io.File</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#file">file</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#filePath">filePath</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#modelName">modelName</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.awt.image.BufferedImage</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#picture">picture</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -306,6 +324,11 @@ implements <a href="Movable.html" title="interface in Movables">Movable</a></pre
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(java.awt.Color,int)">initialize</a></span>&#8203;(java.awt.Color&nbsp;color,
           int&nbsp;enginePower)</code></th>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(java.awt.Color,int,java.lang.String)">initialize</a></span>&#8203;(java.awt.Color&nbsp;color,
+          int&nbsp;enginePower,
+          java.lang.String&nbsp;picturePath)</code></th>
 <td class="colLast">
 <div class="block">has all common variables for the constructors</div>
 </td>
@@ -396,15 +419,34 @@ implements <a href="Movable.html" title="interface in Movables">Movable</a></pre
 </a>
 <h3>Field Detail</h3>
 <a id="enginePower">
+<a id="modelName">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>enginePower</h4>
-<pre>protected&nbsp;double enginePower</pre>
+<h4>modelName</h4>
+<pre>protected&nbsp;java.lang.String modelName</pre>
 </li>
 </ul>
-<a id="currentSpeed">
+<a id="file">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>file</h4>
+<pre>protected&nbsp;java.io.File file</pre>
+</li>
+</ul>
+<a id="filePath">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filePath</h4>
+<pre>protected&nbsp;java.lang.String filePath</pre>
+</li>
+</ul>
+<a id="enginePower">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -423,12 +465,15 @@ implements <a href="Movable.html" title="interface in Movables">Movable</a></pre
 </li>
 </ul>
 <a id="IsLoaded">
+<a id="picture">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>IsLoaded</h4>
 <pre>protected&nbsp;boolean IsLoaded</pre>
+<h4>picture</h4>
+<pre>protected&nbsp;java.awt.image.BufferedImage picture</pre>
 </li>
 </ul>
 <a id="direction">
@@ -499,14 +544,15 @@ implements <a href="Movable.html" title="interface in Movables">Movable</a></pre
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="initialize(java.awt.Color,int)">
+<a id="initialize(java.awt.Color,int,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>initialize</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;initialize&#8203;(java.awt.Color&nbsp;color,
-                          int&nbsp;enginePower)</pre>
+                          int&nbsp;enginePower,
+                          java.lang.String&nbsp;picturePath)</pre>
 <div class="block">has all common variables for the constructors</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

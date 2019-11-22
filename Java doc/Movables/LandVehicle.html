@@ -28,7 +28,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -248,6 +248,11 @@ extends <a href="Vehicle.html" title="class in Movables">Vehicle</a></pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor" id="i1">
+<td class="colFirst"><code>java.awt.Image</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPicture()">getPicture</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor" id="i2">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRegNr()">getRegNr</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -258,6 +263,13 @@ extends <a href="Vehicle.html" title="class in Movables">Vehicle</a></pre>
           java.awt.Color&nbsp;color,
           int&nbsp;enginePower,
           java.lang.String&nbsp;modelName)</code></th>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initialize(int,java.awt.Color,int,java.lang.String,java.lang.String)">initialize</a></span>&#8203;(int&nbsp;doors,
+          java.awt.Color&nbsp;color,
+          int&nbsp;enginePower,
+          java.lang.String&nbsp;modelName,
+          java.lang.String&nbsp;picturePath)</code></th>
 <td class="colLast">
 <div class="block">has all common variables for the constructors</div>
 </td>
@@ -390,6 +402,8 @@ extends <a href="Vehicle.html" title="class in Movables">Vehicle</a></pre>
                           java.awt.Color&nbsp;color,
                           int&nbsp;enginePower,
                           java.lang.String&nbsp;modelName)</pre>
+                          java.lang.String&nbsp;modelName,
+                          java.lang.String&nbsp;picturePath)</pre>
 <div class="block">has all common variables for the constructors</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -416,6 +430,15 @@ extends <a href="Vehicle.html" title="class in Movables">Vehicle</a></pre>
 <li class="blockList">
 <h4>getNrDoors</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getNrDoors()</pre>
+</li>
+</ul>
+<a id="getPicture()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPicture</h4>
+<pre class="methodSignature">public&nbsp;java.awt.Image&nbsp;getPicture()</pre>
 </li>
 </ul>
 </li>

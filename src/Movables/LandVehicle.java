@@ -2,6 +2,7 @@ package Movables;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.io.IOException;
 import java.util.Random;
 /**
  * Represents a car and has all the
@@ -9,7 +10,6 @@ import java.util.Random;
  */
 
 public abstract class LandVehicle extends Vehicle{
-    protected String modelName;
     protected String RegNr;
     protected int nrDoors;
     public static int RegKey=11857;
@@ -31,8 +31,7 @@ public abstract class LandVehicle extends Vehicle{
      * */
     protected void initialize(int doors,Color color, int enginePower,String modelName){
         this.nrDoors=doors;
-        this.modelName = modelName;
-        initialize(color, enginePower);
+        super.initialize(color, enginePower,modelName);
         //RegNr Generator
         RegKey--;
         r = new Random(RegKey);

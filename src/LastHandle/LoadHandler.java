@@ -63,6 +63,12 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
             return cargo;
     }
 
+    public void updatePosition(Point position){
+        for (T cargo : cargoList){
+            cargo.getPosition().setLocation(position.x, position.y);
+        }
+    }
+
     private boolean isBehind(Movable obj){
         if(movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
                 || movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getIsLoaded()) return false;

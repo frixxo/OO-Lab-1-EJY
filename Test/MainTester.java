@@ -1,8 +1,11 @@
 import Movables.*;
 import org.testng.annotations.Test;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -87,11 +90,11 @@ public class MainTester {
         saab.move();
         assertEquals(0,saab.getPosition().getY(),0.01);
     }
-    @Test   //testar 1000 olika kombinationer, klarar över 20000 innan duplicering
+    @Test   //testar 500 olika kombinationer, klarar över 20000 innan duplicering
     public void TestRegNrGenerator(){
         Saab95 k;
         ArrayList<String> j= new ArrayList<>();
-        for(int x=0;x<1000;x++){
+        for(int x=0;x<500;x++){
             k=new Saab95();
             for(int y=0; y<(j.size());y++){
                 if(j.get(y).equals(k.getRegNr())){
