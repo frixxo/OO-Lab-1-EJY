@@ -13,12 +13,12 @@ public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
 
     public CarFerry(){
         super();
-        super.initialize(Color.YELLOW,100);
+        super.initialize(Color.YELLOW,100,"CarFerry");
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
     public CarFerry(Point position, Point2D direction){
         super(position,direction);
-        super.initialize(Color.yellow,100);
+        super.initialize(Color.yellow,100,"CarFerry");
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
     public boolean lowerRamp(){
