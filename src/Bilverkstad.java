@@ -16,6 +16,7 @@ public class Bilverkstad<T  extends  LandVehicle> {
         if (numberOfCars() == getMaxCars() || getLocation().distance(car.getPosition()) > distToCArDeadzone
                 || location.distance(car.getPosition()) > distToCArDeadzone||car.getIsLoaded()) return false;
         cars.put (car.getRegNr(), car);
+        car.setIsLoaded(true);
         return true;
     }
 
