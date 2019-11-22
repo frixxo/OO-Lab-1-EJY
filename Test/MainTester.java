@@ -2,6 +2,7 @@ import Movables.*;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,14 +28,14 @@ public class MainTester {
     }
 
     @Test
-    public void TestTurnleftX(){
+    public void TestTurnLeftX(){
         Saab95 saab = new Saab95();
         saab.turnLeft();
         assertEquals(0,saab.getDirection().getX(),0.01);
 
     }
     @Test
-    public void TestTurnleftY(){
+    public void TestTurnLeftY(){
         Saab95 saab = new Saab95();
         saab.turnLeft();
         assertEquals(1,saab.getDirection().getY(),0.01);
@@ -103,29 +104,30 @@ public class MainTester {
         assertTrue(true);
     }
     @Test
-    public void TestbilverkstadAdd(){
+    public void TestBilverkstadAdd(){
         Bilverkstad<Volvo240> x=new Bilverkstad<>(new Point(0,0),5);
         Volvo240 y=new Volvo240();
         assertTrue(x.add(y));
 
     }
     @Test
-    public void TestbilverkstadGet(){
+    public void TestBilverkstadGet(){
         Bilverkstad<Volvo240> x=new Bilverkstad<>(new Point(0,0),5);
         Volvo240 y=new Volvo240();
         x.add(y);
         assertSame(x.get(y.getRegNr()), y);
     }
     @Test
-    public void TestCarTransportloadRampDown(){
+    public void TestCarTransportLoadRampDown(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.lowerRamp();
         assertTrue(x.load(y));
     }
     @Test
-    public void TestCarTransportloadRampUp(){
-        CarTransport x=new CarTransport();
+    public void TestCarTransportLoadRampUp(){
+        Point z=new Point(0,0);
+        CarTransport x=new CarTransport(z,z);
         Volvo240 y= new Volvo240();
         x.raiseRamp();
         assertFalse(x.load(y));
@@ -181,8 +183,9 @@ public class MainTester {
     public void TestLoadHandlerUpdatePositionX(){
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
+        t.lowerRamp();
         t.load(v);
-        t.gas(5);
+        t.gas(100);
         t.move();
         assertEquals(v.getPosition().x,t.getPosition().x);
     }
@@ -190,6 +193,7 @@ public class MainTester {
     public void TestLoadHandlerUpdatePositionY(){
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
+        t.lowerRamp();
         t.load(v);
         t.gas(100);
         t.move();
