@@ -10,8 +10,6 @@ import java.io.IOException;
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
     protected String modelName;
-    protected File file=new File("pics");
-    protected String picturePath= file.getAbsolutePath();
     protected double enginePower;
     private double currentSpeed;
     protected Color color;
@@ -43,8 +41,6 @@ abstract public class Vehicle implements Movable{
         this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
-
-        this.picturePath=picturePath+"/"+modelName+".jpg";
     }
     //endregion
     //region Start/Stop engine
@@ -65,9 +61,7 @@ abstract public class Vehicle implements Movable{
     public double getCurrentSpeed(){
         return currentSpeed;
     }
-    public String getPicturePath(){
-        return picturePath;
-    }
+
     public Color getColor(){
         return color;
     }

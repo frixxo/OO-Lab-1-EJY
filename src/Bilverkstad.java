@@ -1,5 +1,3 @@
-package LastHandle;
-
 import Movables.LandVehicle;
 
 import java.awt.*;

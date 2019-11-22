@@ -12,6 +12,7 @@ public class Volvo240 extends Car{
     public Volvo240(Point position,Point2D direction){
         super(position,direction);
         initialize(4,Color.black,100,"Volvo240");
+
     }
     public Volvo240(){
         super();
