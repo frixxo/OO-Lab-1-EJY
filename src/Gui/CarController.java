@@ -1,7 +1,10 @@
 package Gui;
 
+import Flak.IHasFlak;
+import LastHandle.IHasLast;
 import Movables.*;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -33,6 +36,8 @@ public class CarController {
         CarController cc = new CarController();
 
         cc.cars.add(new Volvo240());
+        cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point(1,0)));
+        cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -62,6 +67,41 @@ public class CarController {
         for (Vehicle car : cars
                 ) {
             car.gas(gas);
+        }
+    }
+    void startEngline() {
+        for (Vehicle car : cars
+        ) {
+            car.startEngine();
+        }
+    }
+    void stopEngline() {
+        for (Vehicle car : cars
+        ) {
+            car.stopEngine();
+        }
+    }
+    void brake(int amount) {
+        double brake = ((double) amount) / 100;
+        for (Vehicle car : cars
+        ) {
+            car.brake(brake);
+        }
+    }
+    void RaiseFlak() {
+        for (Vehicle car : cars
+        ) {
+            if(car instanceof IHasFlak) {
+                ((IHasFlak) car).raiseFlak();
+            }
+        }
+    }
+    void LowerFlak() {
+        for (Vehicle car : cars
+        ) {
+            if(car instanceof IHasFlak) {
+                ((IHasFlak) car).lowerFlak();
+            }
         }
     }
 }

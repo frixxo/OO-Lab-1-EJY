@@ -11,7 +11,7 @@ import java.io.IOException;
 abstract public class Vehicle implements Movable{
     protected String modelName;
     protected double enginePower;
-    private double currentSpeed;
+    protected double currentSpeed;
     protected Color color;
     protected boolean IsLoaded=false;
 
@@ -45,7 +45,7 @@ abstract public class Vehicle implements Movable{
     //endregion
     //region Start/Stop engine
     public void startEngine(){
-        currentSpeed = 0.1;
+        if(currentSpeed<0.1)currentSpeed = 0.1;
     }
     public void stopEngine(){
         currentSpeed = 0;

@@ -3,10 +3,11 @@ package Movables;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import Flak.*;
+import LastHandle.IHasLast;
 
 /** Represents all things common for trucks*/
-public abstract class Truck extends LandVehicle{
-
+public abstract class Truck extends LandVehicle implements IHasFlak {
+    protected IFlak flak = null;
     public Truck(Point position, Point2D direction) {
         super(position,direction);
     }
@@ -17,16 +18,16 @@ public abstract class Truck extends LandVehicle{
     @Override
     public void move(){ if (getFlak().normalState()) super.move(); }
 
-    public boolean raiseRamp () {
+    public boolean raiseFlak () {
         if (isMoving()) return false;
         return getFlak().raiseRamp();
     }
 
-    public boolean lowerRamp () {
+    public boolean lowerFlak () {
         if(isMoving()) return false;
         return getFlak().lowerRamp();
     }
 
-    abstract IFlak getFlak();
+    public IFlak getFlak(){return flak;}
 }
 

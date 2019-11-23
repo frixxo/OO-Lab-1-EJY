@@ -2,39 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Gui/ImageWithSize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Flak/IHasFlak.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Bilverkstad.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Bilverkstad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/CarController.TimerListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarController.TimerListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/CarController.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/CarView.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/DrawPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/DrawPanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/serialized-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LastHandle/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bilverkstad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/CarFerry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/CarTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/LamborghiniGallardo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movables/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/CarController$TimerListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/CarController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/CarView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/CarView$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/CarView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/DrawPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarFerry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/CarTransport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Truck.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/questionmark.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/MainTester.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

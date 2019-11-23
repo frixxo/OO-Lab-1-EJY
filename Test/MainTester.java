@@ -25,7 +25,7 @@ public class MainTester {
     @Test
     public void TestGallardoSpoilerUp(){
         LamborghiniGallardo x = new LamborghiniGallardo();
-        x.setSpoilerUp(true);
+        x.raiseSpoiler();
         double d=x.speedFactor();
         assertEquals((float)2.88,(float)d,0);
     }
@@ -124,7 +124,7 @@ public class MainTester {
     public void TestCarTransportLoadRampDown(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.lowerRamp();
+        x.lowerFlak();
         assertTrue(x.load(y));
     }
     @Test
@@ -132,14 +132,14 @@ public class MainTester {
         Point z=new Point(0,0);
         CarTransport x=new CarTransport(z,z);
         Volvo240 y= new Volvo240();
-        x.raiseRamp();
+        x.raiseFlak();
         assertFalse(x.load(y));
     }
     @Test
     public void TestCarTransportGet(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.lowerRamp();
+        x.lowerFlak();
         x.load(y);
         assertSame(x.release(), y);
     }
@@ -148,20 +148,20 @@ public class MainTester {
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
 
-        assertTrue(ferry.lowerRamp());
+        assertTrue(ferry.lowerFlak());
     }
     @Test
     public void TestCarFerryLoad(){
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
-        ferry.lowerRamp();
+        ferry.lowerFlak();
         assertTrue(ferry.load.load(y));
     }
     @Test
     public void TestCarFerryGet(){
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
-        ferry.lowerRamp();
+        ferry.lowerFlak();
         ferry.load(y);
         ferry.load.load(new Saab95());
         assertSame(ferry.load.release(), y);
@@ -169,7 +169,7 @@ public class MainTester {
     @Test
     public void TestScaniaMoveRampUpX(){
         Scania s = new Scania();
-        s.raiseRamp();
+        s.raiseFlak();
         Point p = s.getPosition();
         s.move();
         assertEquals(s.getPosition().getX(),p.x,0.01);
@@ -177,7 +177,7 @@ public class MainTester {
     @Test
     public void TestScaniaMoveRampUpY(){
         Scania s = new Scania();
-        s.raiseRamp();
+        s.raiseFlak();
         Point p = s.getPosition();
         s.move();
         assertEquals(s.getPosition().getY(),p.y,0.01);
@@ -186,7 +186,7 @@ public class MainTester {
     public void TestLoadHandlerUpdatePositionX(){
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
-        t.lowerRamp();
+        t.lowerFlak();
         t.load(v);
         t.gas(100);
         t.move();
@@ -196,7 +196,7 @@ public class MainTester {
     public void TestLoadHandlerUpdatePositionY(){
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
-        t.lowerRamp();
+        t.lowerFlak();
         t.load(v);
         t.gas(100);
         t.move();
@@ -206,7 +206,7 @@ public class MainTester {
     public void TestLoadSameCarMultipleTimes(){
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
-        t.lowerRamp();
+        t.lowerFlak();
         t.load(v);
         assertFalse(t.load(v));
     }
@@ -214,7 +214,7 @@ public class MainTester {
     public void TestDriveLoadedCarX() {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
-        t.lowerRamp();
+        t.lowerFlak();
         t.load(v);
         v.gas(100);
         v.move();
@@ -225,7 +225,7 @@ public class MainTester {
     public void TestDriveLoadedCarY() {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
-        t.lowerRamp();
+        t.lowerFlak();
         t.load(v);
         v.gas(100);
         v.move();
@@ -236,8 +236,8 @@ public class MainTester {
         CarFerry F = new CarFerry();
         CarTransport T = new CarTransport();
         Volvo240 V = new Volvo240();
-        T.lowerRamp();
-        F.lowerRamp();
+        T.lowerFlak();
+        F.lowerFlak();
         T.load(V);
         assertTrue(F.load(T));
     }
@@ -246,8 +246,8 @@ public class MainTester {
         CarFerry F = new CarFerry();
         CarTransport T = new CarTransport();
         Volvo240 V = new Volvo240();
-        T.lowerRamp();
-        F.lowerRamp();
+        T.lowerFlak();
+        F.lowerFlak();
         T.load(V);
         F.load(T);
         F.gas(100);
@@ -259,8 +259,8 @@ public class MainTester {
         CarFerry F = new CarFerry();
         CarTransport T = new CarTransport();
         Volvo240 V = new Volvo240();
-        T.lowerRamp();
-        F.lowerRamp();
+        T.lowerFlak();
+        F.lowerFlak();
         T.load(V);
         F.load(T);
         F.gas(100);

@@ -1,4 +1,6 @@
 package Movables;
+import Flak.Flak;
+import Flak.IHasFlak;
 import Flak.Ramp;
 import Flak.IFlak;
 import LastHandle.*;
@@ -7,7 +9,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
+public class CarFerry extends Vehicle implements IHasLast<LandVehicle>, IHasFlak {
     public IHandleLast<LandVehicle> load;
     private IFlak flak = new Ramp();
 
@@ -21,14 +23,20 @@ public class CarFerry extends Vehicle implements IHasLast<LandVehicle>{
         super.initialize(Color.yellow,100,"CarFerry");
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
-    public boolean lowerRamp(){
+    public boolean lowerFlak(){
         if(!isMoving()) {
             flak.lowerRamp();
             return true;
         } return false;
     }
-    public void raiseRamp(){
-        flak.raiseRamp();
+
+    @Override
+    public IFlak getFlak() {
+        return flak;
+    }
+
+    public boolean raiseFlak(){
+        return flak.raiseRamp();
     }
 
     public int getCarsLoaded(){ return load.getCargoCount(); }

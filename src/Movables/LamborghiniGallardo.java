@@ -24,8 +24,15 @@ public class LamborghiniGallardo extends Car{
         epic = true;
     }
     //endregion
-
-    public void setSpoilerUp(boolean TrueOrFalse) {
+    public void raiseSpoiler(){
+        if(spoilerUp=false)this.currentSpeed=currentSpeed*1.1;
+        setSpoilerUp(true);
+    }
+    public void lowerSpoiler(){
+        if(spoilerUp=true)this.currentSpeed=currentSpeed*0.9;
+        setSpoilerUp(false);
+    }
+    private void setSpoilerUp(boolean TrueOrFalse) {
         spoilerUp=TrueOrFalse;
         if(TrueOrFalse)turnAngle = 95;
         else turnAngle=90;
