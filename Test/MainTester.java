@@ -146,8 +146,6 @@ public class MainTester {
     @Test
     public void TestCarFerryLowerRamp(){
         CarFerry ferry=new CarFerry();
-        Volvo240 y= new Volvo240();
-
         assertTrue(ferry.lowerFlak());
     }
     @Test
