@@ -94,7 +94,6 @@ public class CarController {
         for (Vehicle car : cars
                 ) {
             car.gas(gas);
-            System.out.println(car.getClass()+" speed:" + car.getCurrentSpeed());
         }
     }
     void startEngline() {
