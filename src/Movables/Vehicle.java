@@ -49,7 +49,7 @@ abstract public class Vehicle implements Movable{
     //endregion
     //region Start/Stop engine
     public void startEngine(){
-        if(currentSpeed<0.1)currentSpeed = 0.1;
+        if(currentSpeed<0.1)currentSpeed = 1;
     }
     public void stopEngine(){
         currentSpeed = 0;
@@ -119,8 +119,8 @@ abstract public class Vehicle implements Movable{
 
     //region move methods
     /** move car ahead*/
-    public void move(){
-        if(!IsLoaded){ position.translate((int) (direction.getX()*currentSpeed),(int)(direction.getY()*currentSpeed));}
+    public void move(){             //Todo if currentSpeed is lower than 0,5 car will never move FIX
+        if(!IsLoaded){ position.translate((int)Math.round(direction.getX()*currentSpeed),(int)Math.round(direction.getY()*currentSpeed));}
     }
     public void turnLeft(){
         rotate(turnAngle);
