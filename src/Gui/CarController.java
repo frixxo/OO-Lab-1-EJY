@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 /*
@@ -25,7 +26,7 @@ public class CarController {
     private Timer timer = new Timer(delay, new TimerListener());
 
     // The frame that represents this instance View of the MVC pattern
-    CarView frame;
+    private CarView frame;
     // A list of cars, modify if needed
     ArrayList<Vehicle> cars = new ArrayList<>();
 
@@ -53,12 +54,25 @@ public class CarController {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle car : cars) {
                 car.move();
-                int x = car.getPosition().x;
-                int y = car.getPosition().y;
+
+                if (hasHitWall(car)){
+                    car.stopEngine();
+
+                    Point2D carDirection = car.getDirection();
+                    carDirection.setLocation(carDirection.getX() * -1, carDirection.getY());
+                }
+
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
+    }
+
+    private boolean hasHitWall(Vehicle vehicle){
+        Point pos = vehicle.getPosition();
+        Point2D dir = vehicle.getDirection();
+        return (dir.getX() > 0 && pos.x + frame.getSize(vehicle).x >= frame.getWidth()) ||
+                dir.getX() < 0 && pos.x <= 0;
     }
 
     // Calls the gas method for each car once

@@ -48,6 +48,8 @@ public class CarView extends JFrame{
         initComponents(framename);
     }
 
+    public <T>Point getSize(T obj){ return drawPanel.getSize(obj); }
+
     // Sets everything in place and fits everything
     // TODO: Take a good look and make sure you understand how these methods and components work
     private void initComponents(String title) {

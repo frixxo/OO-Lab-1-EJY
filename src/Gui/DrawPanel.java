@@ -46,4 +46,6 @@ public class DrawPanel extends JPanel{
         imageMap.put(CarTransport.class,new ImageWithSize("/Cartransport.jpg",new Point (50,50)));
         imageMap.put(CarFerry.class,new ImageWithSize("/CarFerry.jpg",new Point (50,50)));
     }
+
+    public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }
 }
