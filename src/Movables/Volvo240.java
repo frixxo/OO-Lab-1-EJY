@@ -8,15 +8,16 @@ import java.awt.geom.Point2D;
  */
 public class Volvo240 extends Car{
     public final static double trimFactor = 1.25;
+
     //region constructors
     public Volvo240(Point position,Point2D direction){
         super(position,direction);
-        initialize(4,Color.black,100,"Volvo240");
+        initialize(4,Color.black,100,"Volvo240",null);
 
     }
     public Volvo240(){
         super();
-        initialize(4,Color.black,100,"Volvo240");
+        initialize(4,Color.black,100,"Volvo240",null);
     }
     //endregion
     @Override

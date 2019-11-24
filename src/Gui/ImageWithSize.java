@@ -16,15 +16,12 @@ public class ImageWithSize {
         this.size = size;
     }
 
-    public Image getImage() { return image; }
-
     private void setImage(String PicturePath) {
         try{this.image = ImageIO.read(new File(filePath+PicturePath));}
         catch (IOException e) { e.printStackTrace(); }
     }
 
-    public Point getSize() {
-        return size;
-    }
+    public Point getSize() { return size; }
+    public Image getImage(){ return image;}
 
 }

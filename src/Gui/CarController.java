@@ -40,10 +40,16 @@ public class CarController {
         cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point(1,0)));
         cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
         cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1)));
+        cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1)));
+        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
+        // Make sure cars are in frame
+        for (Vehicle car:cc.cars) {
+            car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240));
+        }
         // Start the timer
         cc.timer.start();
     }
@@ -76,7 +82,7 @@ public class CarController {
         }
     }
     private void changeDirection(Vehicle vehicle,int x, int y){
-        vehicle.stopEngine();
+        //vehicle.stopEngine();                                     //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
         vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240));
         Point2D carDirection = vehicle.getDirection();
         carDirection.setLocation(carDirection.getX()*x, carDirection.getY()*y);
@@ -88,6 +94,7 @@ public class CarController {
         for (Vehicle car : cars
                 ) {
             car.gas(gas);
+            System.out.println(car.getClass()+" speed:" + car.getCurrentSpeed());
         }
     }
     void startEngline() {

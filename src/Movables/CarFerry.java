@@ -12,15 +12,16 @@ import java.awt.geom.Point2D;
 public class CarFerry extends Vehicle implements IHasLast<LandVehicle>, IHasFlak {
     public IHandleLast<LandVehicle> load;
     private IFlak flak = new Ramp();
+    private final Point picsize = new Point(140,100);
 
     public CarFerry(){
         super();
-        super.initialize(Color.YELLOW,100,"CarFerry");
+        super.initialize(Color.YELLOW,100,"CarFerry",picsize);
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
     public CarFerry(Point position, Point2D direction){
         super(position,direction);
-        super.initialize(Color.yellow,100,"CarFerry");
+        super.initialize(Color.yellow,100,"CarFerry",picsize);
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
     public boolean lowerFlak(){
@@ -42,7 +43,7 @@ public class CarFerry extends Vehicle implements IHasLast<LandVehicle>, IHasFlak
     public int getCarsLoaded(){ return load.getCargoCount(); }
 
     @Override
-    public double speedFactor() { return enginePower * 0.01; }
+    public double speedFactor() { return enginePower * 0.009; }
     @Override
     public void move(){
         if (flak.normalState()) super.move();
