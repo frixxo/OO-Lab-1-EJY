@@ -39,6 +39,7 @@ public class CarController {
         cc.cars.add(new Volvo240());
         cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point(1,0)));
         cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
+        cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -54,13 +55,7 @@ public class CarController {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle car : cars) {
                 car.move();
-
-                if (hasHitWall(car)){
-                    car.stopEngine();
-
-                    Point2D carDirection = car.getDirection();
-                    carDirection.setLocation(carDirection.getX() * -1, carDirection.getY());
-                }
+                hasHitWall(car);
 
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -68,14 +63,26 @@ public class CarController {
         }
     }
 
-    private boolean hasHitWall(Vehicle vehicle){
+    private void hasHitWall(Vehicle vehicle){
         Point pos = vehicle.getPosition();
         Point2D dir = vehicle.getDirection();
-        return (dir.getX() > 0 && pos.x + frame.getSize(vehicle).x >= frame.getWidth()) ||
-                dir.getX() < 0 && pos.x <= 0;
+        if(dir.getX() > 0 && pos.x + frame.getSize(vehicle).x >= frame.getWidth() ||
+                dir.getX() < 0 && pos.x <= 0){
+            changeDirection(vehicle,-1,1);
+        }
+        if(dir.getY() > 0 && pos.y + frame.getSize(vehicle).y>= frame.getSize().height-240 ||
+                dir.getY() < 0 && pos.y <= 0){
+            changeDirection(vehicle,1,-1);
+        }
     }
-
+    private void changeDirection(Vehicle vehicle,int x, int y){
+        vehicle.stopEngine();
+        vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240));
+        Point2D carDirection = vehicle.getDirection();
+        carDirection.setLocation(carDirection.getX()*x, carDirection.getY()*y);
+    }
     // Calls the gas method for each car once
+    //region Vehicle functionality
     void gas(int amount) {
         double gas = ((double) amount) / 100;
         for (Vehicle car : cars
@@ -118,4 +125,5 @@ public class CarController {
             }
         }
     }
+    //endregion
 }

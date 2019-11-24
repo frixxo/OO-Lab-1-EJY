@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
+    private Point picsize;
     protected String modelName;
     protected double enginePower;
     protected double currentSpeed;
@@ -41,6 +42,7 @@ abstract public class Vehicle implements Movable{
         this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
+        this.picsize=new Point(70,50);
     }
     //endregion
     //region Start/Stop engine
@@ -70,6 +72,7 @@ abstract public class Vehicle implements Movable{
     }
     public Point getPosition(){ return position; }
     public Point2D getDirection() { return direction; }
+    public Point getPicsize(){return picsize;}
     //endregion
 
     //region speed methods
@@ -133,6 +136,25 @@ abstract public class Vehicle implements Movable{
         double x = direction.getX();
         double y = direction.getY();
         direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle));
+    }
+
+    /** Fixes so that the car is not slightly outside of frame when hitting a wall and puts it back on the border
+     * @param windowsize the size of the window
+     * */
+    public void fixPosition(Point windowsize){
+        if(position.x+(picsize.x)>windowsize.x){      //corrects right
+            position.x=(windowsize.x-(picsize.x));
+            return;
+        }if(position.y+(picsize.y)>windowsize.y){     //corrects down
+            position.y=(windowsize.y-(picsize.y));
+            return;
+        }if(position.x<0){                              //corrects left
+            position.x=0;
+            return;
+        }if(position.y<0){                              //corrects up
+            position.y=0;
+            return;
+        }
     }
     //endregion
 }
