@@ -218,7 +218,6 @@ public class MainTester {
         t.load(v);
         v.gas(100);
         v.move();
-        System.out.println(v.getIsLoaded());
         assertEquals(v.getPosition().getX(), t.getPosition().getX(), 0.01);
     }
     @Test
