@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
+    private int fixLowSpeed=1;
     protected Point picsize;
     protected String modelName;
     protected double enginePower;
@@ -119,8 +120,12 @@ abstract public class Vehicle implements Movable{
 
     //region move methods
     /** move car ahead*/
-    public void move(){             //Todo if currentSpeed is lower than 0,5 car will never move FIX
-        if(!IsLoaded){ position.translate((int)Math.round(direction.getX()*currentSpeed),(int)Math.round(direction.getY()*currentSpeed));}
+    public void move(){
+        if(!IsLoaded){
+            if(currentSpeed*fixLowSpeed<0.5)fixLowSpeed++;            //Helps when speed is low so that the car moves every other frame
+            else fixLowSpeed=1;
+            position.translate((int)Math.round(direction.getX()*currentSpeed*fixLowSpeed),(int)Math.round(direction.getY()*currentSpeed*fixLowSpeed));
+        }
     }
     public void turnLeft(){
         rotate(turnAngle);
