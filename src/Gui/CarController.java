@@ -131,5 +131,17 @@ public class CarController {
             }
         }
     }
+    void TurnLeft() {               //Cars turn wrong way
+        for (Vehicle car : cars
+        ) {
+            car.turnLeft();
+        }
+    }
+    void TurnRight() {
+        for (Vehicle car : cars
+        ) {
+            car.turnRight();
+        }
+    }
     //endregion
 }

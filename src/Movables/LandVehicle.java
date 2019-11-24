@@ -5,8 +5,7 @@ import java.awt.geom.Point2D;
 import java.io.IOException;
 import java.util.Random;
 /**
- * Represents a car and has all the
- * common variables and methods needed.
+ * Represents a vehicle moving on land
  */
 
 public abstract class LandVehicle extends Vehicle{

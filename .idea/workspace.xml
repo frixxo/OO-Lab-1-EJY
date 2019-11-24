@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MainTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MainTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movables/LandVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/LandVehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Gui/CarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LandVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/LandVehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CarController" />
+        <item itemvalue="JUnit.MainTester" />
         <item itemvalue="TestNG.MainTester" />
         <item itemvalue="TestNG.MainTester (1)" />
         <item itemvalue="JUnit.All in OO-Lab-1-EJY" />
-        <item itemvalue="JUnit.MainTester" />
       </list>
     </recent_temporary>
   </component>
@@ -201,26 +210,10 @@
     <MESSAGE value="new interface" />
     <option name="LAST_COMMIT_MESSAGE" value="new interface" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Test/MainTester.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Test/MainTester.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1573129816022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester__1_.ic" NAME="MainTester (1) Coverage Results" MODIFIED="1573132129836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$TestGallardoSpoiler.ic" NAME="MainTester Coverage Results" MODIFIED="1573207090206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester.ic" NAME="MainTester Coverage Results" MODIFIED="1574414413803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$MainTester.ic" NAME="MainTester Coverage Results" MODIFIED="1574627514624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

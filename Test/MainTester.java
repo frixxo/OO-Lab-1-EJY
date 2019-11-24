@@ -41,7 +41,7 @@ public class MainTester {
     public void TestTurnLeftY(){
         Saab95 saab = new Saab95();
         saab.turnLeft();
-        assertEquals(1,saab.getDirection().getY(),0.01);
+        assertEquals(-1,saab.getDirection().getY(),0.01);
 
     }
     @Test
@@ -55,7 +55,7 @@ public class MainTester {
     public void TestTurnRightY(){
         Saab95 saab = new Saab95();
         saab.turnRight();
-        assertEquals(-1,saab.getDirection().getY(),0.01);
+        assertEquals(1,saab.getDirection().getY(),0.01);
 
     }
     @Test

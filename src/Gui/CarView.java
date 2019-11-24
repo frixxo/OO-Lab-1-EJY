@@ -33,8 +33,8 @@ public class CarView extends JFrame{
 
     JButton gasButton = new JButton("Gas");
     JButton brakeButton = new JButton("Brake");
-    JButton turboOnButton = new JButton("Saab Turbo on");
-    JButton turboOffButton = new JButton("Saab Turbo off");
+    JButton turnLeftButton = new JButton("Turn Left");
+    JButton turnRightButton = new JButton("Turn Right");
     JButton liftBedButton = new JButton("Scania Lift Bed");
     JButton lowerBedButton = new JButton("Lower Lift Bed");
 
@@ -83,10 +83,10 @@ public class CarView extends JFrame{
         controlPanel.setLayout(new GridLayout(2,4));
 
         controlPanel.add(gasButton, 0);
-        controlPanel.add(turboOnButton, 1);
-        controlPanel.add(liftBedButton, 2);
+        controlPanel.add(turnLeftButton, 1);
+        controlPanel.add(turnRightButton, 2);
         controlPanel.add(brakeButton, 3);
-        controlPanel.add(turboOffButton, 4);
+        controlPanel.add(liftBedButton, 4);
         controlPanel.add(lowerBedButton, 5);
         controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
         this.add(controlPanel);
@@ -140,6 +140,18 @@ public class CarView extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 carC.LowerFlak();
+            }
+        });
+        turnLeftButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.TurnLeft();
+            }
+        });
+        turnRightButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.TurnRight();
             }
         });
 

@@ -50,7 +50,7 @@ abstract public class Vehicle implements Movable{
     //endregion
     //region Start/Stop engine
     public void startEngine(){
-        if(currentSpeed<0.1)currentSpeed = 1;
+        if(currentSpeed<0.1)currentSpeed = 0.1;
     }
     public void stopEngine(){
         currentSpeed = 0;
@@ -134,15 +134,16 @@ abstract public class Vehicle implements Movable{
         rotate(360-turnAngle);
     }
 
-    /** calculates the rotation of the car when using turn methods
+    /** calculates the rotation of the car when using turn methods (Origo is top left so we had to flip the rotation using -x,-y)
      * @param angle how much to turn
      * */
     private void rotate (double angle)
     {
+        if(this.getClass()==Volvo240.class)System.out.println("" +direction);
         angle = angle*(Math.PI/180);
         double x = direction.getX();
         double y = direction.getY();
-        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle));
+        direction.setLocation(-(x*Math.cos(angle) - y*Math.sin(angle)), -(x*Math.sin(angle) + y*Math.cos(angle)));
     }
 
     /** makes sure that the car is not slightly outside of frame when hitting a wall and puts it back on the border
