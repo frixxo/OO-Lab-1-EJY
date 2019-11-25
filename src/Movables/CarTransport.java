@@ -14,13 +14,13 @@ public class CarTransport extends Truck implements IHasLast<Car> {
 
     public CarTransport(){
         super();
-        super.initialize(2,Color.black,100,"CarTransport",null);
+        super.initialize(2,Color.black,100,"CarTransport");
         load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
         flak=new Ramp();
     }
     public CarTransport(Point position, Point2D direction){
         super(position,direction);
-        super.initialize(2,Color.black,100,"CarTransport",null);
+        super.initialize(2,Color.black,100,"CarTransport");
         load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
         flak=new Ramp();
     }

@@ -29,9 +29,9 @@ public abstract class LandVehicle extends Vehicle{
      * @param   modelName the name of the vehicle model
      * @param   picsize the size of the picture
      * */
-    protected void initialize(int doors,Color color, int enginePower,String modelName,Point picsize){
+    protected void initialize(int doors,Color color, int enginePower,String modelName){
         this.nrDoors=doors;
-        super.initialize(color, enginePower,modelName,picsize);
+        super.initialize(color, enginePower,modelName);
         //RegNr Generator
         RegKey--;
         r = new Random(RegKey);
