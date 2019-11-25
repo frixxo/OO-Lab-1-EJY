@@ -60,7 +60,7 @@ public class CarController {
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle car : cars) {
-                car.move();
+                car.move();                                 //TODO some cars will not move after turning at low speeds.
                 hasHitWall(car);
 
                 // repaint() calls the paintComponent method of the panel

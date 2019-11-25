@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ImageWithSize {
     protected File file=new File("pics");
-    protected String filePath= file.getAbsolutePath();
+    private String filePath= file.getAbsolutePath();
     private Image image;
     private Point size;
 
