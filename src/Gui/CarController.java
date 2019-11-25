@@ -1,7 +1,6 @@
 package Gui;
 
 import Flak.IHasFlak;
-import Movables.*;
 import WorldObjects.Movables.*;
 
 import javax.swing.*;
