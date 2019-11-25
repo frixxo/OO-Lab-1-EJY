@@ -27,6 +27,7 @@ public abstract class LandVehicle extends Vehicle{
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
      * @param   modelName the name of the vehicle model
+     * @param   picsize the size of the picture
      * */
     protected void initialize(int doors,Color color, int enginePower,String modelName,Point picsize){
         this.nrDoors=doors;

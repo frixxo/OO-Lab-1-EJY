@@ -44,8 +44,10 @@ abstract public class Vehicle implements Movable{
         this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
-        if(picsize==null)   {this.picsize=new Point(70,50);}
-        else                {this.picsize=picsize;}
+        if(picsize==null){
+            this.picsize=new Point(70,50);}
+        else{
+            this.picsize=picsize;}
     }
     //endregion
     //region Start/Stop engine

@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
  * It initializes with being center on the screen and attaching it's controller in it's state.
  * It communicates with the Controller by calling methods of it when an action fires of in
  * each of it's components.
- * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
 public class CarView extends JFrame{
@@ -61,7 +60,7 @@ public class CarView extends JFrame{
         this.add(drawPanel);
 
 
-
+        //Gas amount input
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
                         0, //min
@@ -81,6 +80,16 @@ public class CarView extends JFrame{
         this.add(gasPanel);
 
         controlPanel.setLayout(new GridLayout(2,4));
+
+        //original buttons
+        /*
+        controlPanel.add(gasButton, 0);
+        controlPanel.add(Turbo On, 1);
+        controlPanel.add(liftbedbutton, 2);
+        controlPanel.add(brakeButton, 3);
+        controlPanel.add(turbooff, 4);
+        controlPanel.add(lowerBedButton, 5);
+        */
 
         controlPanel.add(gasButton, 0);
         controlPanel.add(turnLeftButton, 1);
@@ -104,8 +113,7 @@ public class CarView extends JFrame{
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
 
-        // This actionListener is for the gas button only
-        // TODO: Create more for each component as necessary
+       //region button functionality
         gasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -154,6 +162,7 @@ public class CarView extends JFrame{
                 carC.TurnRight();
             }
         });
+        //endregion
 
         // Make the frame pack all it's components by respecting the sizes if possible.
         this.pack();

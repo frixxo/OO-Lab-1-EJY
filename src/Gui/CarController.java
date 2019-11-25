@@ -131,7 +131,7 @@ public class CarController {
             }
         }
     }
-    void TurnLeft() {               //Cars turn wrong way
+    void TurnLeft() {
         for (Vehicle car : cars
         ) {
             car.turnLeft();
