@@ -6,7 +6,6 @@ import java.awt.geom.Point2D;
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
     private int fixLowSpeed=1;
-    protected Point picsize;
     protected String modelName;
     protected double enginePower;
     protected double currentSpeed;
@@ -34,16 +33,11 @@ abstract public class Vehicle implements Movable{
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have
      * @param   modelname the model of the car
-     * @param   picsize the size of the picture (if (null) size = 70x50)
      * */
-    protected void initialize(Color color, int enginePower,String modelname,Point picsize){
+    protected void initialize(Color color, int enginePower,String modelname){
         this.modelName=modelname;
         this.color = color;
         this.enginePower = enginePower;
-        if(picsize==null){
-            this.picsize=new Point(70,50);}
-        else{
-            this.picsize=picsize;}
     }
     //endregion
     //region Start/Stop engine
@@ -73,7 +67,6 @@ abstract public class Vehicle implements Movable{
     }
     public Point getPosition(){ return position; }
     public Point2D getDirection() { return direction; }
-    public Point getPicsize(){return picsize;}
     //endregion
 
     //region speed methods
@@ -146,7 +139,7 @@ abstract public class Vehicle implements Movable{
     /** makes sure that the car is not slightly outside of frame when hitting a wall and puts it back on the border
      * @param windowsize the size of the window cars are allowed to drive in
      * */
-    public void fixPosition(Point windowsize){
+    public void fixPosition(Point windowsize,Point picsize){
         if(position.x+(picsize.x)>windowsize.x){      //corrects right
             position.x=(windowsize.x-(picsize.x));
         }if(position.y+(picsize.y)>windowsize.y){     //corrects down

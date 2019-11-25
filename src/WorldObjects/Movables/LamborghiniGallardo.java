@@ -14,14 +14,14 @@ public class LamborghiniGallardo extends Car{
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction){
         super(position,direction);
-        initialize(2,Color.yellow,320,"LamborghiniGallardo",null);
+        initialize(2,Color.yellow,320,"LamborghiniGallardo");
         setstartturnangle();
         setSpoilerUp(false);
         epic = true;
     }
     public LamborghiniGallardo(){
         super();
-        initialize(2,Color.yellow,320,"LamborghiniGallardo",null);
+        initialize(2,Color.yellow,320,"LamborghiniGallardo");
         setstartturnangle();
         setSpoilerUp(false);
         epic = true;

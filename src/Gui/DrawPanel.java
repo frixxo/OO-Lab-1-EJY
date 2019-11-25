@@ -35,13 +35,15 @@ public class DrawPanel extends JPanel{
         }
     }
     private void initializeHashmap(){
-        imageMap.put(Volvo240.class,new ImageWithSize("/Volvo240.jpg",new Volvo240().getPicsize()));
-        imageMap.put(Saab95.class,new ImageWithSize("/Saab95.jpg",new Saab95().getPicsize()));
-        imageMap.put(LamborghiniGallardo.class,new ImageWithSize("/LamborghiniGallardo.jpg",new LamborghiniGallardo().getPicsize()));
-        imageMap.put(Scania.class,new ImageWithSize("/Scania.jpg",new Scania().getPicsize()));
-        imageMap.put(CarTransport.class,new ImageWithSize("/Cartransport.jpg",new CarTransport().getPicsize()));
-        imageMap.put(CarFerry.class,new ImageWithSize("/CarFerry.jpg",new CarFerry().getPicsize()));
+        imageMap.put(Volvo240.class,new ImageWithSize("/Volvo240.jpg",new Point(70,50)));
+        imageMap.put(Saab95.class,new ImageWithSize("/Saab95.jpg",new Point(70,50)));
+        imageMap.put(LamborghiniGallardo.class,new ImageWithSize("/LamborghiniGallardo.jpg",new Point(70,50)));
+        imageMap.put(Scania.class,new ImageWithSize("/Scania.jpg",new Point(70,50)));
+        imageMap.put(CarTransport.class,new ImageWithSize("/Cartransport.jpg",new Point(70,50)));
+        imageMap.put(CarFerry.class,new ImageWithSize("/CarFerry.jpg",new Point(140,100)));
     }
 
     public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }
+
+    public HashMap<Object, ImageWithSize> getImageMap() { return imageMap; }
 }

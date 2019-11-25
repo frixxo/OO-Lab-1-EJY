@@ -8,7 +8,7 @@ import java.util.Map;
 public class Bilverkstad<T  extends  LandVehicle> implements WorldObject {
     private Map<String, T> cars = new HashMap<String, T>();
     private Point location;
-    private int maxCars = 0;;
+    private int maxCars = 0;
     private final int distToCArDeadzone = 3;
 
 

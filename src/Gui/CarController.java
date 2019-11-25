@@ -48,7 +48,7 @@ public class CarController {
 
         // Make sure cars are in frame
         for (Vehicle car:cc.cars) {
-            car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240));
+            car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240),cc.frame.drawPanel.getImageMap().get(car.getClass()).getSize());
         }
         // Start the timer
         cc.timer.start();
@@ -83,7 +83,7 @@ public class CarController {
     }
     private void changeDirection(Vehicle vehicle,int x, int y){
         //vehicle.stopEngine();                                     //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
-        vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240));
+        vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
         Point2D carDirection = vehicle.getDirection();
         carDirection.setLocation(carDirection.getX()*x, carDirection.getY()*y);
     }
