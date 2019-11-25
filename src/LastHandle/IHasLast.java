@@ -8,7 +8,7 @@ import java.awt.*;
 public interface IHasLast <T extends Movable>{
     boolean load(T t);
     T release();
-    void move();
+    void move();            //Needs to override and call on updateposition();
     boolean loadState();
     /** Method that is called when the cargo transporter X is the cargo of a greater cargo transporterY, and makes sure that cargo loaded on X also updates their position to
      * @param p The point to which we want to move the cargo.
