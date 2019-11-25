@@ -37,8 +37,8 @@ public class LamborghiniGallardo extends Car{
     }
     private void setSpoilerUp(boolean TrueOrFalse) {
         spoilerUp=TrueOrFalse;
-        if(TrueOrFalse)turnAngle = 95;
-        else turnAngle=;
+        if(TrueOrFalse)turnAngle = startturnangle+10;
+        else turnAngle=startturnangle;
     }
     public boolean getSpoilerUp(){
         return spoilerUp;
