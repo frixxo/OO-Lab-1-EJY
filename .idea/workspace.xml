@@ -4,6 +4,7 @@
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movables/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/production/OO-Lab-1-EJY/Movables/Vehicle.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainTester">
+  <component name="RunManager" selected="Application.CarController">
     <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gui.CarController" />
       <module name="OO-Lab-1-EJY" />
@@ -127,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTester" />
         <item itemvalue="Application.CarController" />
+        <item itemvalue="JUnit.MainTester" />
         <item itemvalue="TestNG.MainTester" />
         <item itemvalue="JUnit.MainTester.TestTurnLeftY" />
         <item itemvalue="TestNG.MainTester (1)" />

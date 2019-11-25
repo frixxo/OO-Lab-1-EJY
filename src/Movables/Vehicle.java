@@ -130,10 +130,10 @@ abstract public class Vehicle implements Movable{
         }
     }
     public void turnLeft(){
-        rotate(turnAngle);
+        rotate(360-turnAngle);
     }
     public void turnRight(){
-        rotate(360-turnAngle);
+        rotate(turnAngle);
     }
 
     /** calculates the rotation of the car when using turn methods (Origo is top left so we had to flip the rotation using -y)
@@ -144,7 +144,7 @@ abstract public class Vehicle implements Movable{
         angle = angle*(Math.PI/180);
         double x = direction.getX();
         double y = direction.getY();
-        direction.setLocation(-(x*Math.cos(angle) - y*Math.sin(angle)), -(x*Math.sin(angle) + y*Math.cos(angle)));
+        direction.setLocation((x*Math.cos(angle) - y*Math.sin(angle)), x*Math.sin(angle) + y*Math.cos(angle));
     }
 
     /** makes sure that the car is not slightly outside of frame when hitting a wall and puts it back on the border
