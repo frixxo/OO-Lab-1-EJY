@@ -1,8 +1,9 @@
 package Gui;
 
 import Flak.IHasFlak;
-import LastHandle.IHasLast;
 import Movables.*;
+import WorldObjects.Movables.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

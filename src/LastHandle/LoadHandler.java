@@ -1,6 +1,6 @@
 package LastHandle;
 
-import Movables.Movable;
+import WorldObjects.Movables.Movable;
 
 import java.awt.*;
 import java.util.Deque;

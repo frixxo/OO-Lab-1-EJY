@@ -1,9 +1,6 @@
-package Movables;
+package WorldObjects.Movables;
 import LastHandle.*;
 import Flak.*;
-
-import java.awt.*;
-import java.awt.geom.Point2D;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

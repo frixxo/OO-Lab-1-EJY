@@ -1,5 +1,4 @@
-package Movables;
-import Flak.Flak;
+package WorldObjects.Movables;
 import Flak.IHasFlak;
 import Flak.Ramp;
 import Flak.IFlak;

@@ -1,11 +1,7 @@
-package Movables;
+package WorldObjects.Movables;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 /** A vehicle, an abstract concept*/
 abstract public class Vehicle implements Movable{
