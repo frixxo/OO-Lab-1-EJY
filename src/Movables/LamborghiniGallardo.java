@@ -9,22 +9,22 @@ import java.awt.geom.Point2D;
 public class LamborghiniGallardo extends Car{
     private boolean spoilerUp;
     private boolean epic;
-    private final int startturnangle;
+    private int startturnangle;
 
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction){
         super(position,direction);
         initialize(2,Color.yellow,320,"LamborghiniGallardo",null);
+        setstartturnangle();
         setSpoilerUp(false);
         epic = true;
-        startturnangle=turnAngle;
     }
     public LamborghiniGallardo(){
         super();
         initialize(2,Color.yellow,320,"LamborghiniGallardo",null);
+        setstartturnangle();
         setSpoilerUp(false);
         epic = true;
-        startturnangle=turnAngle;
     }
     //endregion
     public void raiseSpoiler(){
@@ -39,6 +39,9 @@ public class LamborghiniGallardo extends Car{
         spoilerUp=TrueOrFalse;
         if(TrueOrFalse)turnAngle = startturnangle+10;
         else turnAngle=startturnangle;
+    }
+    private void setstartturnangle(){
+        startturnangle=turnAngle;
     }
     public boolean getSpoilerUp(){
         return spoilerUp;
