@@ -22,7 +22,7 @@ abstract public class Vehicle implements Movable{
     protected Point position;
 
     /** How much a car turns when turn method called */
-    protected int turnAngle =  90;
+    protected int turnAngle =  45;
     //region Constructors
     protected Vehicle(Point position, Point2D direction){
         this.position = position;
@@ -144,7 +144,7 @@ abstract public class Vehicle implements Movable{
         angle = angle*(Math.PI/180);
         double x = direction.getX();
         double y = direction.getY();
-        direction.setLocation(x*Math.cos(angle) - (-y)*Math.sin(angle), -(x*Math.sin(angle) + (-y)*Math.cos(angle)));
+        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle)));
     }
 
     /** makes sure that the car is not slightly outside of frame when hitting a wall and puts it back on the border
