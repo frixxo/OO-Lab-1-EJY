@@ -130,10 +130,10 @@ abstract public class Vehicle implements Movable{
         }
     }
     public void turnLeft(){
-        rotate(turnAngle);
+        rotate(360-turnAngle);
     }
     public void turnRight(){
-        rotate(360-turnAngle);
+        rotate(turnAngle);
     }
 
     /** calculates the rotation of the car when using turn methods (Origo is top left so we had to flip the rotation using -y)
