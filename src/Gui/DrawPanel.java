@@ -1,6 +1,5 @@
 package Gui;
 
-import Movables.*;
 import WorldObjects.Movables.*;
 
 import java.awt.*;
