@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CarController">
+  <component name="RunManager" selected="JUnit.MainTester">
     <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gui.CarController" />
       <module name="OO-Lab-1-EJY" />
@@ -127,9 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTester" />
         <item itemvalue="Application.CarController" />
         <item itemvalue="TestNG.MainTester" />
-        <item itemvalue="JUnit.MainTester" />
         <item itemvalue="JUnit.MainTester.TestTurnLeftY" />
         <item itemvalue="TestNG.MainTester (1)" />
       </list>
