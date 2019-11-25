@@ -1,6 +1,5 @@
-package Movables; /** A scania truck*/
+package WorldObjects.Movables; /** A scania truck*/
 import Flak.Flak;
-import Flak.IFlak;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

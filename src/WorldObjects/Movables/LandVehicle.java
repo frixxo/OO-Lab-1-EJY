@@ -1,8 +1,7 @@
-package Movables;
+package WorldObjects.Movables;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.io.IOException;
 import java.util.Random;
 /**
  * Represents a vehicle moving on land

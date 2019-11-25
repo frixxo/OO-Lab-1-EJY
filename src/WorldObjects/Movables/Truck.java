@@ -1,9 +1,8 @@
-package Movables;
+package WorldObjects.Movables;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 import Flak.*;
-import LastHandle.IHasLast;
 
 /** Represents all things common for trucks*/
 public abstract class Truck extends LandVehicle implements IHasFlak {
