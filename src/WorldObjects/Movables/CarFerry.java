@@ -1,7 +1,9 @@
 package WorldObjects.Movables;
-import Flak.IHasFlak;
+import LableInterfaces.IHasFlak;
 import Flak.Ramp;
 import Flak.IFlak;
+import LableInterfaces.IHasLast;
+import LastHandle.IHandleLast;
 import LastHandle.*;
 
 import java.awt.*;

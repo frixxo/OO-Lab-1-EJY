@@ -1,6 +1,6 @@
 package Flak;
 
-public abstract class NormalFlak implements IFlak {
+abstract class NormalFlak implements IFlak {
     protected double angle = 0;  //0 is when the ramp is flat against the truck.
     protected double tippingAmount = 5;
     protected final double MAX_ANGLE = 70;

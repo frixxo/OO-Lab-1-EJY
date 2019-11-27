@@ -7,7 +7,6 @@ import java.awt.geom.Point2D;
 abstract public class Vehicle implements Movable{
     private int fixLowSpeed=1;
     protected String modelName;
-    protected double enginePower;
     protected double currentSpeed;
     protected Color color;
     protected boolean IsLoaded=false;
@@ -17,7 +16,8 @@ abstract public class Vehicle implements Movable{
     protected Point position;
 
     /** How much a car turns when turn method called */
-    protected int turnAngle =  45;
+    protected int turnAngle =  90;
+
     //region Constructors
     protected Vehicle(Point position, Point2D direction){
         this.position = position;
@@ -41,12 +41,7 @@ abstract public class Vehicle implements Movable{
     }
     //endregion
     //region Start/Stop engine
-    public void startEngine(){
-        if(currentSpeed<0.1)currentSpeed = 0.1;
-    }
-    public void stopEngine(){
-        currentSpeed = 0;
-    }
+
     //endregion
 
     //region Getters/Setters
@@ -58,6 +53,7 @@ abstract public class Vehicle implements Movable{
     public double getCurrentSpeed(){
         return currentSpeed;
     }
+    public int getTurnAngle(){return turnAngle;}
 
     public Color getColor(){
         return color;
@@ -67,57 +63,14 @@ abstract public class Vehicle implements Movable{
     }
     public Point getPosition(){ return position; }
     public Point2D getDirection() { return direction; }
+
     //endregion
 
     //region speed methods
     /** calculates how much the speed should increase with
      * @return how much the speed increases
      * */
-    public abstract double speedFactor();
 
-    /** increase speed set amount
-     * @param amount how much to decrease
-     * */
-    private void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower); }
-
-    /** decrease speed set amount
-     * @param amount how much to decrease
-     * */
-    private void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);}
-
-    /** apply gas
-     * @param amount how much to gas
-     * */
-    public void gas(double amount){
-        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        incrementSpeed(amount);
-    }
-
-    /** apply brake
-     * @param amount how much to brake
-     */
-    public void brake(double amount){
-        amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        decrementSpeed(amount);
-    }
-
-    /** checks if the vehicle is moving
-     * @return if the vehicle is moving
-     * */
-    protected boolean isMoving(){
-        return (Math.abs(currentSpeed)-0.001>0);
-    }
-    //endregion
-
-    //region move methods
-    /** move car ahead*/
-    public void move(){
-        if(!IsLoaded){
-            if(currentSpeed*fixLowSpeed<0.5)fixLowSpeed++;            //Helps when speed is low so that the car moves every other frame instead of not moving at all
-            else { fixLowSpeed=1;}
-            position.translate((int)Math.round(direction.getX()*currentSpeed*fixLowSpeed),(int)Math.round(direction.getY()*currentSpeed*fixLowSpeed));
-        }
-    }
     public void turnLeft(){
         rotate(360-turnAngle);
     }

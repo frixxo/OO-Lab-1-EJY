@@ -1,5 +1,5 @@
 package Flak;
-
+/** A ramp for loading vehicles m.m*/
 public class Ramp extends NormalFlak{
     @Override
     public boolean normalState() {

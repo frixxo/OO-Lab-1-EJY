@@ -1,5 +1,6 @@
 package Flak;
 
+/** all methods a flak has to have*/
 public interface IFlak {
     boolean lowerRamp();
     boolean raiseRamp();

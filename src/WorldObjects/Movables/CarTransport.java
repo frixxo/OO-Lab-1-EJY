@@ -1,4 +1,6 @@
 package WorldObjects.Movables;
+import LableInterfaces.IHasLast;
+import LableInterfaces.Truck;
 import LastHandle.*;
 import Flak.*;
 

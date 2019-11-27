@@ -1,5 +1,6 @@
 package WorldObjects.Movables; /** A scania truck*/
 import Flak.Flak;
+import LableInterfaces.Truck;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

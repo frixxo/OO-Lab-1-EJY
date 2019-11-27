@@ -1,5 +1,6 @@
 package LastHandle;
 
+import LableInterfaces.IHasLast;
 import WorldObjects.Movables.Movable;
 
 import java.awt.*;
