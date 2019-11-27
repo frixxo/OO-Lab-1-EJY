@@ -4,4 +4,5 @@ import java.awt.*;
 
 public interface WorldObject {
     Point getPosition();
+    // Rectangle getSize();
 }
