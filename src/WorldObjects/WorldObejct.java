@@ -3,7 +3,7 @@ package WorldObjects;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-abstract class WorldObejct implements WorldObjectView{
+public abstract class WorldObejct implements WorldObjectView{
     private  Point position;
     private Point2D direction;
     private Point size;
