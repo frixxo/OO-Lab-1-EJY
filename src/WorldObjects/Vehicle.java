@@ -1,45 +1,5 @@
 package WorldObjects;
 
-import java.awt.*;
-import java.awt.geom.Point2D;
-
-/** A vehicle, an abstract concept*/
-abstract public class Vehicle{
-    private int fixLowSpeed=1;
-    protected String modelName;
-    protected double currentSpeed;
-    protected Color color;
-    protected boolean IsLoaded=false;
-
-    /** 2D points have double coordinates.*/
-    protected Point2D direction;
-    protected Point position;
-
-    /** How much a car turns when turn method called */
-    protected int turnAngle =  90;
-
-    //region Constructors
-    protected Vehicle(Point position, Point2D direction){
-        this.position = position;
-        this.direction = direction;
-    }
-    protected Vehicle(){
-        this.position = new Point(0,0);
-        this.direction = new Point(1,0);
-    }
-
-
-    //endregion
-    //region Start/Stop engine
-
-    //endregion
-
-    //region Getters/Setters
-    public boolean getIsLoaded(){return IsLoaded;}
-    public void setIsLoaded(boolean b){IsLoaded = b;}
-
-
-
-
-    //endregion
+public interface Vehicle {
+    String getModelName ();
 }
