@@ -47,12 +47,7 @@ abstract public class Vehicle implements Movable{
     //region Getters/Setters
     public boolean getIsLoaded(){return IsLoaded;}
     public void setIsLoaded(boolean b){IsLoaded = b;}
-    public double getEnginePower(){
-        return enginePower;
-    }
-    public double getCurrentSpeed(){
-        return currentSpeed;
-    }
+
     public int getTurnAngle(){return turnAngle;}
 
     public Color getColor(){

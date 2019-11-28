@@ -19,4 +19,8 @@ public interface Movable extends WorldObject{
     Point2D getDirection();
     boolean getIsLoaded();
     void setIsLoaded(boolean b);
+    /** makes sure the cars picture does not move out of frame
+     * @param windowsize the size of the operating window
+     * @param picsize the size of the cars picture*/
+    void fixPosition(Point windowsize,Point picsize);
 }
