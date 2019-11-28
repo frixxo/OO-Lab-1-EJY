@@ -1,11 +1,11 @@
 package WorldObjects.Movables; /** A scania truck*/
 import Flak.Flak;
-import LableInterfaces.Truck;
+import LableInterfaces.ITruck;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends Truck {
+public class Scania extends ITruck {
 
     public Scania(Point position, Point2D direction) {
         super(position,direction);

@@ -6,7 +6,7 @@ import WorldObjects.Movables.Vehicle;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-abstract class NormalMotor {
+public abstract class NormalMotor implements IMotor{
     double currentSpeed;
     double power;
     int frameCounter=0;
@@ -16,6 +16,7 @@ abstract class NormalMotor {
         currentSpeed=0;
         stopEngine();
     }
+    public abstract double SpeedFactor();
 
     public double getCurrentSpeed() { return currentSpeed; }
 
@@ -29,33 +30,33 @@ abstract class NormalMotor {
     /** increase speed set amount
      * @param amount how much to decrease
      * */
-    private void incrementSpeed(double amount,double speedfactor){  currentSpeed = Math.min(getCurrentSpeed() + speedfactor * amount,power); }
+    public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + SpeedFactor() * amount,power); }
 
     /** decrease speed set amount
      * @param amount how much to decrease
      * */
-    private void decrementSpeed(double amount,double speedfactor){  currentSpeed = Math.max(getCurrentSpeed() - speedfactor * amount,0);}
+    public void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - SpeedFactor() * amount,0);}
 
     /** apply gas
      * @param amount how much to gas
      * */
-    public void gas(double amount,double speedfactor){
+    public void gas(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        incrementSpeed(amount,speedfactor);
+        incrementSpeed(amount);
     }
 
     /** apply brake
      * @param amount how much to brake
      */
-    public void brake(double amount,double speedfactor){
+    public void brake(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        decrementSpeed(amount,speedfactor);
+        decrementSpeed(amount);
     }
 
     /** checks if the vehicle is moving
      * @return if the vehicle is moving
      * */
-    protected boolean isMoving(){
+    public boolean isMoving(){
         return (Math.abs(currentSpeed)-0.001>0);
     }
     //endregion
