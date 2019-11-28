@@ -1,7 +1,5 @@
 package LastHandle;
 
-import WorldObjects.Movables.Movable;
-
 import java.awt.*;
 
 /** Describes the methods an unit that is supposed to handle cargo is supposed to have*/

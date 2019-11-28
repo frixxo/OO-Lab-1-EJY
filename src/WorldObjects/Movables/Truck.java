@@ -4,10 +4,8 @@ import java.awt.*;
 
 import Flak.*;
 import Fuctionality.IMotor;
-import Fuctionality.NormalMotor;
 import LableInterfaces.IHasFlak;
 import LableInterfaces.IHasMotor;
-import WorldObjects.Movables.Movable;
 
 /**
  * Defines what a truck needs to do

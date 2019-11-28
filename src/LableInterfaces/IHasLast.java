@@ -1,7 +1,5 @@
 package LableInterfaces;
 
-import WorldObjects.Movables.Movable;
-
 import java.awt.*;
 
 /** Defines the methods a object that is carrying a movable object T is supposed to do*/
