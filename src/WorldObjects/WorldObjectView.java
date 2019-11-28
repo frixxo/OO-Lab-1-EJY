@@ -8,5 +8,5 @@ public interface WorldObjectView {
     Point getPosition();
     Point2D getDirection();
     Point getSize();
-    boolean getIsLoaded();
+    boolean getStatic();
 }

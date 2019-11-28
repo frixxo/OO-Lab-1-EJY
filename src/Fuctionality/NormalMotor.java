@@ -1,11 +1,5 @@
 package Fuctionality;
 
-import WorldObjects.Movables.Movable;
-import WorldObjects.Movables.Vehicle;
-
-import java.awt.*;
-import java.awt.geom.Point2D;
-
 public abstract class NormalMotor implements IMotor{
     private double power;
     private int frameCounter=0;
