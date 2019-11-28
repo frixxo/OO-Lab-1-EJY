@@ -28,17 +28,17 @@ public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     }
 
     @Override
-    public DriveHandler getDriver() {
-        return driver;
-    }
-
-    @Override
-    public SteerHandler getSteerer() {
-        return steerer;
-    }
-
-    @Override
     public String getModelName() {
         return modelName;
+    }
+
+    @Override
+    public DriveHandler getDriveHandler() {
+        return null;
+    }
+
+    @Override
+    public SteerHandler getSteerHandler() {
+        return null;
     }
 }

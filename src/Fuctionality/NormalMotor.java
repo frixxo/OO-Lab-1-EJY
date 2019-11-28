@@ -1,7 +1,7 @@
 package Fuctionality;
 
 public abstract class NormalMotor implements IMotor{
-    private double power;
+    protected double power;
     private int frameCounter=0;
     private DriveHandler driveHandler;
 
