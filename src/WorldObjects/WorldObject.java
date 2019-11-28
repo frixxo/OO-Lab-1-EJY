@@ -10,7 +10,8 @@ public abstract class WorldObject implements WorldObjectView{
 
     private boolean isStatic;
 
-    protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic)
+    // region Constructor
+    protected WorldObejct(Point position, Point2D direction, Point size, boolean isStatic)
     {
        this.position = position;
        this.direction = direction;
