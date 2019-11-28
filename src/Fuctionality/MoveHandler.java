@@ -1,12 +1,15 @@
 package Fuctionality;
 
+import WorldObjects.Movables.Movable;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class MoveHandler {
+public class MoveHandler implements Movable {
     private Point position;
     private Point2D direction;
     private int turnAngle;
+    private boolean IsLoaded
 
     public MoveHandler(){
         this.position=new Point(0,0);
@@ -18,6 +21,9 @@ public class MoveHandler {
         this.direction=direction;
         this.turnAngle=90;
     }
+    public Point getPosition(){ return position; }
+    public Point2D getDirection() { return direction; }
+
     public void turnLeft(){
         rotate(360-turnAngle);
     }

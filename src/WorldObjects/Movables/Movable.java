@@ -10,7 +10,6 @@ import WorldObjects.WorldObject;
  * left or right.
  */
 public interface Movable extends WorldObject{
-    boolean IsLoaded = false;
     void move();
     //TODO implement rotate() and remove turnLeft(), turnRight()
     void turnLeft();
