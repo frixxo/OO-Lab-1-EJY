@@ -12,7 +12,6 @@ import java.awt.geom.Point2D;
  */
 
 public interface ICar<T extends IMotor>{
-    
     void initialize(int doors,Color color,String modelName,T motor);
-    IMotor getMotor();
+    T getMotor();
 }
