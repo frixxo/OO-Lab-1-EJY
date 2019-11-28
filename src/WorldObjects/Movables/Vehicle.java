@@ -22,12 +22,10 @@ abstract public class Vehicle implements Movable{
     protected Vehicle(Point position, Point2D direction){
         this.position = position;
         this.direction = direction;
-        stopEngine();
     }
     protected Vehicle(){
         this.position = new Point(0,0);
         this.direction = new Point(1,0);
-        stopEngine();
     }
 
 

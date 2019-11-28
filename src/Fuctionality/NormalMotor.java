@@ -9,10 +9,11 @@ import java.awt.geom.Point2D;
 public abstract class NormalMotor implements IMotor{
     private double power;
     private int frameCounter=0;
+    private MoveHandler moveHandler;
 
-    public NormalMotor(double power){
+    public NormalMotor(double power,MoveHandler moveHandler){
         this.power=power;
-        stopEngine();
+        this.moveHandler=moveHandler;
     }
     public abstract double SpeedFactor();
 
@@ -23,38 +24,34 @@ public abstract class NormalMotor implements IMotor{
     /** increase speed set amount
      * @param amount how much to decrease
      * */
-    public double incrementSpeed(double amount){  return Math.min(getCurrentSpeed() + SpeedFactor() * amount,power); }
+    public void incrementSpeed(double amount){  Math.min(moveHandler.getCurrentSpeed() + SpeedFactor() * amount,power); }
 
     /** decrease speed set amount
      * @param amount how much to decrease
      * */
-    public double decrementSpeed(double amount){   return; Math.max(getCurrentSpeed() - SpeedFactor() * amount,0);}
+    public void decrementSpeed(double amount){   Math.max(moveHandler.getCurrentSpeed() - SpeedFactor() * amount,0);}
 
     /** apply gas
      * @param amount how much to gas
      * */
-    public double gas(double amount){
+    public void gas(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        return incrementSpeed(amount);
+        incrementSpeed(amount);
     }
 
     /** apply brake
      * @param amount how much to brake
      */
-    public double brake(double amount){
+    public void brake(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        return decrementSpeed(amount);
+        decrementSpeed(amount);
     }
 
     /** checks if the vehicle is moving
      * @return if the vehicle is moving
      * */
-    public boolean isMoving(){
-        return (Math.abs(currentSpeed)-0.001>0);
+    @Override
+    public MoveHandler getMoveHandler() {
+        return moveHandler;
     }
-    //endregion
-
-    //region move methods
-    /** move car ahead*/
-
 }

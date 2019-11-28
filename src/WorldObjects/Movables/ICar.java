@@ -21,6 +21,4 @@ public interface ICar extends Movable{
     IMotor getMotor();
     /** makes sure every car has an movehandler we can use*/
     MoveHandler getMoveHandler();
-
-
 }
