@@ -7,7 +7,7 @@ import Fuctionality.StandardMotor;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends WorldObejct implements Vehicle {
+public class Scania extends WorldObject implements Vehicle {
     private final static String model = "Scania";
     private StandardMotor engine = new StandardMotor(20);
     private MoveHandler moveHandler;
