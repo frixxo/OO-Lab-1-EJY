@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 /** A representation of a car repairshop where you */
-public class Bilverkstad<T  extends  LandVehicle> extends WorldObejct {
+public class Bilverkstad<T  extends  LandVehicle> extends WorldObject {
     private Map<String, T> cars = new HashMap<String, T>();
     private Point location;
     private int maxCars = 0;

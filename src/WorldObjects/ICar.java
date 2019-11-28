@@ -7,7 +7,7 @@ import Fuctionality.MoveHandler;
  * Defines what a car needs to do
  */
 
-public interface ICar extends Movable{
+public interface ICar{
     /** has all common variables for the constructors
      * @param   color the color the vehicle is supposed to have
      * @param   enginePower the enginepower the car is supposed to have

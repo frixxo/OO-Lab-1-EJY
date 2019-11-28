@@ -1,9 +1,11 @@
 package LableInterfaces;
 
+import WorldObjects.WorldObject;
+
 import java.awt.*;
 
 /** Defines the methods a object that is carrying a movable object T is supposed to do*/
-public interface IHasLast <T extends Movable>{
+public interface IHasLast <T extends WorldObject>{
     boolean load(T t);
     T release();
     void move();            //Needs to override and call on updateposition();

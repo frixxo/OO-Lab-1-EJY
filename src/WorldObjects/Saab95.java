@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 /**
  * Represent a Movables.Saab95
  */
-public class Saab95 extends WorldObejct implements Car, IHasMotor, IHasTurbo {
+public class Saab95 extends WorldObject implements Car, IHasMotor, IHasTurbo {
     private boolean turboOn;
 
     //region constructors

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A vehicle, an abstract concept*/
-abstract public class Vehicle implements Movable{
+abstract public class Vehicle{
     private int fixLowSpeed=1;
     protected String modelName;
     protected double currentSpeed;

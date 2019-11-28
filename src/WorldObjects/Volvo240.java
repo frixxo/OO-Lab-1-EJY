@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Volvo 240 raggarbil
  */
-public class Volvo240 extends WorldObejct implements ICar {
+public class Volvo240 extends WorldObject implements ICar {
     private double trimFactor = 1.25;
     private int NrDoors;
     private Color color;
@@ -21,7 +21,7 @@ public class Volvo240 extends WorldObejct implements ICar {
 
     //region constructors
     public Volvo240(Point position,Point2D direction){
-        movehandler=new MoveHandler(position,direction,currentSpeed);
+        movehandler=new MoveHandler(position,direction);
         initialize(4,Color.black,"Volvo240");
     }
     public Volvo240(){

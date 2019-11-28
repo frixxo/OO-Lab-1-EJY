@@ -3,7 +3,7 @@ package Fuctionality;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class MoveHandler implements Movable {
+public class MoveHandler {
     private Point position;
     private Point2D direction;
     private int turnAngle;
@@ -22,28 +22,12 @@ public class MoveHandler implements Movable {
         this.turnAngle=90;
     }
 
-    public Point getPosition(){ return position; }
-    public Point2D getDirection() { return direction; }
 
-    public void turnLeft(){
-        rotate(360-turnAngle);
-    }
-    public void turnRight(){
-        rotate(turnAngle);
-    }
+
     public double getCurrentSpeed(){return currentSpeed;}
     public void setCurrentSpeed(double speed){this.currentSpeed=speed;}
 
-    /** calculates the rotation of the car when using turn methods (Origo is top left so we had to flip the rotation using -y)
-     * @param angle how much to turn
-     * */
-    private void rotate (double angle)
-    {
-        angle = angle*(Math.PI/180);
-        double x = direction.getX();
-        double y = direction.getY();
-        direction.setLocation(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle));
-    }
+
 
     /** makes sure that the car is not slightly outside of frame when hitting a wall and puts it back on the border
      * @param windowsize the size of the window cars are allowed to drive in

@@ -3,14 +3,14 @@ package WorldObjects;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public abstract class WorldObejct implements WorldObjectView{
+public abstract class WorldObject implements WorldObjectView{
     private  Point position;
     private Point2D direction;
     private Point size;
 
     private boolean isStatic;
 
-    protected WorldObejct(Point position, Point2D direction, Point size, boolean isStatic)
+    protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic)
     {
        this.position = position;
        this.direction = direction;
