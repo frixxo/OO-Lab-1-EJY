@@ -9,6 +9,7 @@ import java.awt.geom.Point2D;
  * left or right.
  */
 public interface Movable extends WorldObject{
+
     void setPosition(Point position);
     void setDirection (Point2D direction);
 

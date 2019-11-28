@@ -7,50 +7,43 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public abstract class NormalMotor implements IMotor{
-    double currentSpeed;
-    double power;
-    int frameCounter=0;
+    private double power;
+    private int frameCounter=0;
 
     public NormalMotor(double power){
         this.power=power;
-        currentSpeed=0;
         stopEngine();
     }
     public abstract double SpeedFactor();
 
-    public double getCurrentSpeed() { return currentSpeed; }
 
     public double getPower() { return power; }
 
-    public void startEngine(){
-        if(currentSpeed<0.1)currentSpeed = 0.1;
-    }
-    public void stopEngine(){ currentSpeed = 0; }
 
     /** increase speed set amount
      * @param amount how much to decrease
      * */
-    public void incrementSpeed(double amount){  currentSpeed = Math.min(getCurrentSpeed() + SpeedFactor() * amount,power); }
+    public double incrementSpeed(double amount){  return Math.min(getCurrentSpeed() + SpeedFactor() * amount,power); }
 
     /** decrease speed set amount
      * @param amount how much to decrease
      * */
-    public void decrementSpeed(double amount){  currentSpeed = Math.max(getCurrentSpeed() - SpeedFactor() * amount,0);}
+    public double decrementSpeed(double amount){   return; Math.max(getCurrentSpeed() - SpeedFactor() * amount,0);}
 
     /** apply gas
      * @param amount how much to gas
      * */
-    public void gas(double amount){
+    public double gas(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        incrementSpeed(amount);
+        return incrementSpeed(amount);
     }
 
     /** apply brake
      * @param amount how much to brake
      */
-    public void brake(double amount){
+    public double brake(double amount){
         amount=(amount>1)? 1:(amount<0)?0:amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        decrementSpeed(amount);
+        return decrementSpeed(amount);
     }
 
     /** checks if the vehicle is moving
@@ -63,11 +56,5 @@ public abstract class NormalMotor implements IMotor{
 
     //region move methods
     /** move car ahead*/
-    public void move(Point position, Point2D direction,boolean IsLoaded){
-        if(!IsLoaded){
-            if(currentSpeed*frameCounter<0.5)frameCounter++;            //Helps when speed is low so that the car moves every other frame instead of not moving at all
-            else { frameCounter=1;}
-            position.translate((int)Math.round(direction.getX()*currentSpeed*frameCounter),(int)Math.round(direction.getY()*currentSpeed*frameCounter));
-        }
-    }
+
 }

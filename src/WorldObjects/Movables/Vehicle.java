@@ -29,16 +29,8 @@ abstract public class Vehicle implements Movable{
         this.direction = new Point(1,0);
         stopEngine();
     }
-    /** has all common variables for the constructors
-     * @param   color the color the vehicle is supposed to have
-     * @param   enginePower the enginepower the car is supposed to have
-     * @param   modelname the model of the car
-     * */
-    protected void initialize(Color color, int enginePower,String modelname){
-        this.modelName=modelname;
-        this.color = color;
-        this.enginePower = enginePower;
-    }
+
+
     //endregion
     //region Start/Stop engine
 
@@ -48,23 +40,7 @@ abstract public class Vehicle implements Movable{
     public boolean getIsLoaded(){return IsLoaded;}
     public void setIsLoaded(boolean b){IsLoaded = b;}
 
-    public int getTurnAngle(){return turnAngle;}
 
-    public Color getColor(){
-        return color;
-    }
-    public void setColor(Color clr){
-        color = clr;
-    }
-    public Point getPosition(){ return position; }
-    public Point2D getDirection() { return direction; }
-
-    //endregion
-
-    //region speed methods
-    /** calculates how much the speed should increase with
-     * @return how much the speed increases
-     * */
 
 
     //endregion

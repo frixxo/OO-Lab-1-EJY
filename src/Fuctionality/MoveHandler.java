@@ -1,12 +1,16 @@
 package Fuctionality;
 
+import WorldObjects.Movables.Movable;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class MoveHandler {
+public class MoveHandler implements Movable {
     private Point position;
     private Point2D direction;
     private int turnAngle;
+    private boolean IsLoaded;
+    private int frameCounter=0;
 
     public MoveHandler(){
         this.position=new Point(0,0);
@@ -18,6 +22,10 @@ public class MoveHandler {
         this.direction=direction;
         this.turnAngle=90;
     }
+
+    public Point getPosition(){ return position; }
+    public Point2D getDirection() { return direction; }
+
     public void turnLeft(){
         rotate(360-turnAngle);
     }
@@ -48,6 +56,13 @@ public class MoveHandler {
             position.x=0;
         }if(position.y<0){                              //corrects up
             position.y=0;
+        }
+    }
+    public void move(double currentSpeed){
+        if(!IsLoaded){
+            if(currentSpeed*frameCounter<0.5)frameCounter++;            //Helps when speed is low so that the car moves every other frame instead of not moving at all
+            else { frameCounter=1;}
+            position.translate((int)Math.round(direction.getX()*currentSpeed*frameCounter),(int)Math.round(direction.getY()*currentSpeed*frameCounter));
         }
     }
 }

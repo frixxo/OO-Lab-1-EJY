@@ -45,4 +45,5 @@ public class Volvo240 implements ICar {
     public MoveHandler getMoveHandler() {
         return movehandler;
     }
+
 }
