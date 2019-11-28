@@ -11,32 +11,16 @@ import java.awt.geom.Point2D;
  * Represents a Volvo 240 raggarbil
  */
 public class Volvo240 extends WorldObejct implements Car, Vehicle{
-    private double trimFactor = 1.25;
-    private int NrDoors;
-    private Color color;
     private String modelName;
-    private IMotor motor=new TrimmedMotor(100,1.25);
+    private IMotor motor = new TrimmedMotor(100,1.25);
     private MoveHandler movehandler;
-    private Double currentSpeed;
 
-    //region constructors
-    public Volvo240(Point position,Point2D direction){
-        movehandler=new MoveHandler(position,direction,currentSpeed);
-        initialize(4,Color.black,"Volvo240");
-    }
-    public Volvo240(){
-        movehandler=new MoveHandler(currentSpeed);
-        initialize(4,Color.black,"Volvo240");
+    //region Constructor
+    public Volvo240(Point position, Point2D direction, Point size)
+    {
+        super(position, direction, size, false);
     }
     //endregion
-
-    @Override
-    public void initialize(int doors, Color color, String modelName) {
-        this.NrDoors=doors;
-        this.color=color;
-        this.modelName=modelName;
-        this.motor=motor;
-    }
 
     @Override
     public IMotor getMotor() {
@@ -46,5 +30,4 @@ public class Volvo240 extends WorldObejct implements Car, Vehicle{
     public MoveHandler getMoveHandler() {
         return movehandler;
     }
-
 }
