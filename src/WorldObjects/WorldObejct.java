@@ -9,7 +9,8 @@ public abstract class WorldObejct implements WorldObjectView{
     private Point size;
 
     private boolean isStatic;
-
+    
+    // region Constructor
     protected WorldObejct(Point position, Point2D direction, Point size, boolean isStatic)
     {
        this.position = position;
@@ -17,6 +18,9 @@ public abstract class WorldObejct implements WorldObjectView{
        this.size = size;
        this.isStatic = isStatic;
     }
+    //endregion
+
+    //region Setters
     public void setStatic(boolean isLoaded)
     {
         this.isStatic = isLoaded;
@@ -36,7 +40,9 @@ public abstract class WorldObejct implements WorldObjectView{
     {
        if(!isStatic) this.size = size;
     }
+    //endregion
 
+    //region Getters
     public Point getPosition ()
     {
        Point p = new Point (position.x, position.y);
@@ -59,4 +65,5 @@ public abstract class WorldObejct implements WorldObjectView{
     {
         return isStatic;
     }
+    //endregion
 }
