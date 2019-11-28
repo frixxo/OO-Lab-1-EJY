@@ -3,11 +3,11 @@ package Fuctionality;
 public abstract class NormalMotor implements IMotor{
     private double power;
     private int frameCounter=0;
-    private MoveHandler moveHandler;
+    private DriveHandler driveHandler;
 
-    public NormalMotor(double power,MoveHandler moveHandler){
+    public NormalMotor(double power,DriveHandler driveHandler){
         this.power=power;
-        this.moveHandler=moveHandler;
+        this.driveHandler=driveHandler;
     }
     public abstract double SpeedFactor();
 
@@ -18,12 +18,12 @@ public abstract class NormalMotor implements IMotor{
     /** increase speed set amount
      * @param amount how much to decrease
      * */
-    public void incrementSpeed(double amount){  Math.min(moveHandler.getCurrentSpeed() + SpeedFactor() * amount,power); }
+    public void incrementSpeed(double amount){  Math.min(driveHandler.getCurrentSpeed() + SpeedFactor() * amount,power); }
 
     /** decrease speed set amount
      * @param amount how much to decrease
      * */
-    public void decrementSpeed(double amount){   Math.max(moveHandler.getCurrentSpeed() - SpeedFactor() * amount,0);}
+    public void decrementSpeed(double amount){   Math.max(driveHandler.getCurrentSpeed() - SpeedFactor() * amount,0);}
 
     /** apply gas
      * @param amount how much to gas
@@ -44,8 +44,5 @@ public abstract class NormalMotor implements IMotor{
     /** checks if the vehicle is moving
      * @return if the vehicle is moving
      * */
-    @Override
-    public MoveHandler getMoveHandler() {
-        return moveHandler;
-    }
+
 }

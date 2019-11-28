@@ -15,5 +15,4 @@ public interface IMotor {
      * @param amount how much to brake*/
      void brake(double amount);
 
-     MoveHandler getMoveHandler();
 }

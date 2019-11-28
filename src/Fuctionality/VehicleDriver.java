@@ -5,16 +5,18 @@ import WorldObjects.WorldObject;
 public class VehicleDriver implements DriveHandler {
     private int currentSpeed=0;
     private WorldObject worldObject;
-    
+    private int frameCounter;               //makes sure the car moves every other frame when speed is slow
+
     public VehicleDriver(WorldObject worldObject){
         this.worldObject=worldObject;
     }
+
     @Override
     public void move(){
-        if(!IsLoaded){
-            if(currentSpeed*frameCounter<0.5)frameCounter++;            //Helps when speed is low so that the car moves every other frame instead of not moving at all
+        if(!worldObject.getStatic()){
+            if(currentSpeed*frameCounter<0.5)frameCounter++;
             else { frameCounter=1;}
-            position.translate((int)Math.round(direction.getX()*currentSpeed*frameCounter),(int)Math.round(direction.getY()*currentSpeed*frameCounter));
+            worldObject.getPosition().translate((int)Math.round(worldObject.getPosition().getX()*currentSpeed*frameCounter),(int)Math.round(worldObject.getDirection().getY()*currentSpeed*frameCounter));
         }
     }
 

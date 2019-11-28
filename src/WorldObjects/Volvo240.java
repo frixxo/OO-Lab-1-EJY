@@ -1,8 +1,6 @@
 package WorldObjects;
 
-import Fuctionality.IMotor;
-import Fuctionality.MoveHandler;
-import Fuctionality.TrimmedMotor;
+import Fuctionality.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -12,8 +10,10 @@ import java.awt.geom.Point2D;
  */
 public class Volvo240 extends WorldObject implements Car, Vehicle{
     private String modelName;
-    private IMotor motor = new TrimmedMotor(100,1.25);
-    private MoveHandler movehandler;
+    private SteerHandler steerer= new VehicleSteerer(this);
+    private DriveHandler driver= new VehicleDriver(this);
+    private IMotor motor = new TrimmedMotor(100,1.25,driver);
+
 
     //region Constructor
     public Volvo240(Point position, Point2D direction, Point size)
@@ -25,6 +25,16 @@ public class Volvo240 extends WorldObject implements Car, Vehicle{
     @Override
     public IMotor getMotor() {
         return motor;
+    }
+
+    @Override
+    public DriveHandler getDriver() {
+        return driver;
+    }
+
+    @Override
+    public SteerHandler getSteerer() {
+        return steerer;
     }
 
 
