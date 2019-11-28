@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/WorldObejct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/WorldObejct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/ICar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Veichle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

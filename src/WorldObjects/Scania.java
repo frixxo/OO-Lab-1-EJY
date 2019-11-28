@@ -4,7 +4,7 @@ import Flak.Flak;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends WorldObejct {
+public class Scania extends WorldObejct implements Vehicle {
 
     public Scania(Point position, Point2D direction) {
         super(position,direction);

@@ -11,7 +11,7 @@ import LableInterfaces.IHasMotor;
  * Defines what a truck needs to do
  */
 
-public abstract class Truck implements IHasFlak, IHasMotor, Movable {
+public abstract class Truck implements Vehicle, IHasFlak, IHasMotor {
 
     protected IFlak flak;
     protected IMotor engine;
