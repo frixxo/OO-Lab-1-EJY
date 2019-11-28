@@ -1,22 +1,26 @@
 package WorldObjects; /** A scania truck*/
 import Flak.Flak;
+import Fuctionality.MoveHandler;
+import Fuctionality.NormalMotor;
+import Fuctionality.StandardMotor;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Scania extends WorldObejct implements Vehicle {
+    private final static String model = "Scania";
+    private StandardMotor engine = new StandardMotor(20);
+    private MoveHandler moveHandler;
+    private Flak = new Flak();
 
-    public Scania(Point position, Point2D direction) {
-        super(position,direction);
-        super.initialize(2,Color.WHITE,100,"Scania");
-        flak = new Flak();
+    public Scania(Point position, Point2D direction, Point size, boolean isStatic) {
+        super(position,direction, size, isStatic);
+        moveHandler = new MoveHandler(position, direction);
     }
-    public Scania() {
-        super();
-        super.initialize(2,Color.WHITE,100,"Scania");
-        flak = new Flak();
-    }
+
+    public MoveHandler getMoveHandler(){ return moveHandler; }
+    public NormalMotor getMotor(){ return engine; }
 
     @Override
-    public double speedFactor(){ return enginePower*0.01;}
+    public String getModelName() { return model; }
 }
