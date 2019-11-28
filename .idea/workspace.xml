@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Fuctionality/MotorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fuctionality/TrimmedMotor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/ICar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/CarTransport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarTransport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LandVehicle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LandVehicle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Scania.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Scania.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Truck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Scania.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Scania.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Truck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/IHasMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LableInterfaces/IHasMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/ITruck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/CarTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MotorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/ICar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/ICar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Volvo240.java" afterDir="false" />
     </list>
