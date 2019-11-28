@@ -2,7 +2,6 @@ package WorldObjects.Movables;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
-import WorldObjects.WorldObject;
 
 /**
  * All movable objects implements this
@@ -10,16 +9,13 @@ import WorldObjects.WorldObject;
  * left or right.
  */
 public interface Movable extends WorldObject{
-    boolean isLoaded = false;
-
-    boolean getIsLoaded();
-    void setIsLoaded(boolean isLoaded);
-    int getSpeed();
-    void setSpeed(int speed);
     void setPosition(Point position);
-    void setRotation(Point2D rotation);
+    void setDirection (Point2D direction);
+
+    boolean getIsStatic();
+    void setIsLStatic(boolean isLoaded);
+
     /** makes sure the cars picture does not move out of frame
      * @param windowsize the size of the operating window
      * @param picsize the size of the cars picture*/
-    void fixPosition(Point windowsize,Point picsize);
 }

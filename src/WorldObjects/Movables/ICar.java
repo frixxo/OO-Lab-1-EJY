@@ -12,8 +12,7 @@ import java.awt.geom.Point2D;
  * Defines what a car needs to do
  */
 
-public interface ICar{
-    void initialize(int doors,Color color,String modelName);
+public interface ICar extends Movable{
     IMotor getMotor();
     MoveHandler getMoveHandler();
 
