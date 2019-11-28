@@ -1,9 +1,8 @@
 package WorldObjects;
 
 import Fuctionality.IMotor;
-import Fuctionality.MoveHandler;
+import Fuctionality.OldMoveHandlerDontTouchHasThePlague;
 import Fuctionality.TurboMotor;
-import LableInterfaces.IHasMotor;
 import LableInterfaces.IHasTurbo;
 
 import java.awt.*;
@@ -15,12 +14,12 @@ import java.awt.geom.Point2D;
 public class Saab95 extends WorldObject implements Car, IHasTurbo {
 
     private TurboMotor engine = new TurboMotor(20);
-    private MoveHandler moveHandler;
+    private OldMoveHandlerDontTouchHasThePlague moveHandler;
 
     //region constructors
     public Saab95(Point position, Point2D direction, Point size, boolean isStatic){
         super(position,direction, size, isStatic);
-        moveHandler = new MoveHandler(position, direction);
+        moveHandler = new OldMoveHandlerDontTouchHasThePlague(position, direction);
     }
 
     //endregion
@@ -32,5 +31,5 @@ public class Saab95 extends WorldObject implements Car, IHasTurbo {
     @Override
     public IMotor getMotor() { return engine; }
     @Override
-    public MoveHandler getMoveHandler() { return moveHandler; }
+    public OldMoveHandlerDontTouchHasThePlague getMoveHandler() { return moveHandler; }
 }

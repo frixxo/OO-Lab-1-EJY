@@ -10,8 +10,8 @@ import java.awt.geom.Point2D;
  */
 public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     private String modelName;
-    private SteerHandler steerer= new VehicleSteerer(this);
-    private DriveHandler driver= new VehicleDriver(this);
+    private RotationHandler steerer= new VehicleSteerer(this);
+    private MoveHandler driver= new VehicleDriver(this);
     private IMotor motor = new TrimmedMotor(100,1.25,driver);
 
 
@@ -33,12 +33,12 @@ public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     }
 
     @Override
-    public DriveHandler getDriveHandler() {
+    public MoveHandler getDriveHandler() {
         return null;
     }
 
     @Override
-    public SteerHandler getSteerHandler() {
+    public RotationHandler getSteerHandler() {
         return null;
     }
 }

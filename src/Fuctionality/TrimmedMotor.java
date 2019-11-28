@@ -3,8 +3,8 @@ package Fuctionality;
 public class TrimmedMotor extends NormalMotor{
     protected double trimFactor;
 
-    public TrimmedMotor(double power,double trimFactor,DriveHandler driveHandler) {
-        super(power,driveHandler);
+    public TrimmedMotor(double power, double trimFactor, MoveHandler moveHandler) {
+        super(power, moveHandler);
         this.trimFactor=trimFactor;
     }
 

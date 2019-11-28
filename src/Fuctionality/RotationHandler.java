@@ -1,6 +1,6 @@
 package Fuctionality;
 
-public interface SteerHandler {
+public interface RotationHandler {
     void turnLeft(int angle);
     void turnRight(int angle);
 }

@@ -1,9 +1,9 @@
 package WorldObjects;
 
-import Fuctionality.DriveHandler;
-import Fuctionality.SteerHandler;
+import Fuctionality.MoveHandler;
+import Fuctionality.RotationHandler;
 
 public interface Movable {
-    DriveHandler getDriveHandler();
-    SteerHandler getSteerHandler();
+    MoveHandler getDriveHandler();
+    RotationHandler getSteerHandler();
 }

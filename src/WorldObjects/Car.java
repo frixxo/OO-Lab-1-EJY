@@ -9,9 +9,4 @@ import Fuctionality.*;
 public interface Car {
 
     IMotor getMotor();
-    /** makes sure every car has an movehandler we can use*/
-    DriveHandler getDriver();
-
-    SteerHandler getSteerer();
-
 }
