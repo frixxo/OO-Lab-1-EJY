@@ -4,8 +4,20 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class MoveHandler {
-    Point position;
-    Point2D
+    private Point position;
+    private Point2D direction;
+    private int turnAngle;
+
+    public MoveHandler(){
+        this.position=new Point(0,0);
+        this.direction=new Point(1,0);
+        this.turnAngle=90;
+    }
+    public MoveHandler(Point position,Point2D direction){
+        this.position=position;
+        this.direction=direction;
+        this.turnAngle=90;
+    }
     public void turnLeft(){
         rotate(360-turnAngle);
     }
