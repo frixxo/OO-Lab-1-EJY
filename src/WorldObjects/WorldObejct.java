@@ -9,7 +9,7 @@ public abstract class WorldObejct implements WorldObjectView{
     private Point size;
 
     private boolean isStatic;
-    
+
     // region Constructor
     protected WorldObejct(Point position, Point2D direction, Point size, boolean isStatic)
     {
