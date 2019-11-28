@@ -26,10 +26,7 @@ public class Volvo240 extends WorldObject implements Car, Vehicle{
     public IMotor getMotor() {
         return motor;
     }
-    @Override
-    public MoveHandler getMoveHandler() {
-        return movehandler;
-    }
+
 
     @Override
     public String getModelName() {

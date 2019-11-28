@@ -1,6 +1,6 @@
 package Fuctionality;
 
-interface DriveHandler {
+public interface DriveHandler {
     void move();
     double getCurrentSpeed();
 }

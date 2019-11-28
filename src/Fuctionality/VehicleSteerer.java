@@ -5,13 +5,13 @@ import WorldObjects.WorldObject;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class VehicleDriving implements SteerHandler {
+public class VehicleSteerer implements SteerHandler {
     private WorldObject worldObject;
 
-    public VehicleDriving(WorldObject worldObject){
+    public VehicleSteerer(WorldObject worldObject){
         this.worldObject=worldObject;
     }
-    
+
     public void turnLeft(int turnAngle){
         rotate(360-turnAngle);
     }
