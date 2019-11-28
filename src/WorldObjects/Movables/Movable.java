@@ -10,6 +10,7 @@ import WorldObjects.WorldObject;
  * left or right.
  */
 public interface Movable extends WorldObject{
+
     void move();
     //TODO implement rotate() and remove turnLeft(), turnRight()
     void turnLeft();
@@ -17,7 +18,11 @@ public interface Movable extends WorldObject{
     //void rotate();
     Point2D getDirection();
     boolean getIsLoaded();
-    void setIsLoaded(boolean b);
+    void setIsLoaded(boolean isLoaded);
+    int getSpeed();
+    void setSpeed(int speed);
+    void setPosition(Point position);
+    void setRotation(Point2D rotation);
     /** makes sure the cars picture does not move out of frame
      * @param windowsize the size of the operating window
      * @param picsize the size of the cars picture*/
