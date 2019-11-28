@@ -8,7 +8,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Volvo 240 raggarbil
  */
-public class Volvo240 extends WorldObject implements Car, Vehicle{
+public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     private String modelName;
     private SteerHandler steerer= new VehicleSteerer(this);
     private DriveHandler driver= new VehicleDriver(this);
