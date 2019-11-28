@@ -37,7 +37,6 @@ public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
         return steerer;
     }
 
-
     @Override
     public String getModelName() {
         return modelName;
