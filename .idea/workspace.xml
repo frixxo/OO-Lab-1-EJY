@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da329c93-813d-47ac-8d5e-14b819e36d10" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/ICar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/ICar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/NormalMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/NormalMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/StandardMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/StandardMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movables/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movables/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/WorldObject.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
