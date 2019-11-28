@@ -1,6 +1,6 @@
 package Graphics;
 
-import WorldObjects.Movables.*;
+import WorldObjects.*;
 
 import java.awt.*;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package WorldObjects.Movables;
+package WorldObjects;
 
 import java.awt.*;
 

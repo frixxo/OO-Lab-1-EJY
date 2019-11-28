@@ -1,4 +1,4 @@
-package WorldObjects.Movables;
+package WorldObjects;
 
 import Fuctionality.IMotor;
 import LableInterfaces.IHasMotor;
@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 /**
  * Represent a Movables.Saab95
  */
-public class Saab95 implements Car, IHasMotor, IHasTurbo {
+public class Saab95 extends WorldObejct implements Car, IHasMotor, IHasTurbo {
     private boolean turboOn;
 
     //region constructors

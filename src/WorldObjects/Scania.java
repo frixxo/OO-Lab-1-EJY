@@ -1,10 +1,10 @@
-package WorldObjects.Movables; /** A scania truck*/
+package WorldObjects; /** A scania truck*/
 import Flak.Flak;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends Truck {
+public class Scania extends WorldObejct {
 
     public Scania(Point position, Point2D direction) {
         super(position,direction);

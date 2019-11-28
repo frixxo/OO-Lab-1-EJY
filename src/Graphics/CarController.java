@@ -1,7 +1,7 @@
 package Graphics;
 
 import LableInterfaces.IHasFlak;
-import WorldObjects.Movables.*;
+import WorldObjects.*;
 
 import javax.swing.*;
 import java.awt.*;

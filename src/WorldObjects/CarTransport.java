@@ -1,4 +1,4 @@
-package WorldObjects.Movables;
+package WorldObjects;
 import LableInterfaces.IHasLast;
 import LastHandle.*;
 import Flak.*;
@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
-public class CarTransport extends Truck implements IHasLast<Car> {
+public class CarTransport extends WorldObejct implements IHasLast<Car> {
     private LoadHandler<Car> load;
 
     public CarTransport(){

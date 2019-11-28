@@ -1,5 +1,4 @@
 import WorldObjects.*;
-import WorldObjects.Movables.*;
 import org.junit.Test;
 
 import java.awt.*;

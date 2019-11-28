@@ -1,4 +1,4 @@
-package WorldObjects.Movables;
+package WorldObjects;
 
 import Fuctionality.IMotor;
 import Fuctionality.MoveHandler;
@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Volvo 240 raggarbil
  */
-public class Volvo240 implements ICar {
+public class Volvo240 extends WorldObejct implements ICar {
     private double trimFactor = 1.25;
     private int NrDoors;
     private Color color;

@@ -1,4 +1,4 @@
-package WorldObjects.Movables;
+package WorldObjects;
 import LableInterfaces.IHasFlak;
 import Flak.Ramp;
 import Flak.IFlak;
@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends Vehicle implements IHasLast<LandVehicle>, IHasFlak {
+public class CarFerry extends WorldObejct implements IHasLast<LandVehicle>, IHasFlak {
     public IHandleLast<LandVehicle> load;
     private IFlak flak = new Ramp();
 
