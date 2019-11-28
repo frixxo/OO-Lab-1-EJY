@@ -17,14 +17,15 @@ public class Volvo240 implements ICar {
     private String modelName;
     private IMotor motor=new TrimmedMotor(100,1.25);
     private MoveHandler movehandler;
+    private Double currentSpeed;
 
     //region constructors
     public Volvo240(Point position,Point2D direction){
-        movehandler=new MoveHandler(position,direction);
+        movehandler=new MoveHandler(position,direction,currentSpeed);
         initialize(4,Color.black,"Volvo240");
     }
     public Volvo240(){
-        movehandler=new MoveHandler();
+        movehandler=new MoveHandler(currentSpeed);
         initialize(4,Color.black,"Volvo240");
     }
     //endregion

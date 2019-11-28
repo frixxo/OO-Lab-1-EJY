@@ -11,6 +11,7 @@ public class MoveHandler implements Movable {
     private int turnAngle;
     private boolean IsLoaded;
     private int frameCounter=0;
+    private double currentSpeed=0;
 
     public MoveHandler(){
         this.position=new Point(0,0);
@@ -32,6 +33,8 @@ public class MoveHandler implements Movable {
     public void turnRight(){
         rotate(turnAngle);
     }
+    public double getCurrentSpeed(){return currentSpeed;}
+    public void setCurrentSpeed(double speed){this.currentSpeed=speed;}
 
     /** calculates the rotation of the car when using turn methods (Origo is top left so we had to flip the rotation using -y)
      * @param angle how much to turn
@@ -48,9 +51,9 @@ public class MoveHandler implements Movable {
      * @param windowsize the size of the window cars are allowed to drive in
      * */
     public void fixPosition(Point windowsize, Point picsize){
-        if(position.x+(picsize.x)>windowsize.x){      //corrects right
+        if(position.x+(picsize.x)>windowsize.x){        //corrects right
             position.x=(windowsize.x-(picsize.x));
-        }if(position.y+(picsize.y)>windowsize.y){     //corrects down
+        }if(position.y+(picsize.y)>windowsize.y){       //corrects down
             position.y=(windowsize.y-(picsize.y));
         }if(position.x<0){                              //corrects left
             position.x=0;
@@ -58,7 +61,7 @@ public class MoveHandler implements Movable {
             position.y=0;
         }
     }
-    public void move(double currentSpeed){
+    public void move(){
         if(!IsLoaded){
             if(currentSpeed*frameCounter<0.5)frameCounter++;            //Helps when speed is low so that the car moves every other frame instead of not moving at all
             else { frameCounter=1;}
