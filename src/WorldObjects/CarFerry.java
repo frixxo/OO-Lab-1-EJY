@@ -1,8 +1,16 @@
 package WorldObjects;
-import LableInterfaces.IHasFlak;
+import Flak.FlakStorage;
 import Flak.Ramp;
 import Flak.IFlak;
-import LableInterfaces.IHasLast;
+import Flak.Storage;
+import Fuctionality.Motors.IMotor;
+import Fuctionality.Motors.NormalMotor;
+import Fuctionality.Motors.StandardMotor;
+import Fuctionality.MoveHandler;
+import Fuctionality.VehicleDriver;
+import Fuctionality.VehicleSteerer;
+import LableInterfaces.IHasMotor;
+import LableInterfaces.IHasStorage;
 import LastHandle.IHandleLast;
 import LastHandle.*;
 
@@ -10,9 +18,14 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends WorldObject implements IHasLast<LandVehicle>, IHasFlak {
-    public IHandleLast<LandVehicle> load;
-    private IFlak flak = new Ramp();
+public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Movable, Vehicle {
+
+    private String modelname = "CarFerry";
+    private RotationHandler steerer = new VehicleSteerer(this);
+    private MoveHandler driver = new VehicleDriver(this);
+    private IMotor engine = new StandardMotor(10, driver);
+    private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+
 
     public CarFerry(){
         super();
@@ -24,51 +37,34 @@ public class CarFerry extends WorldObject implements IHasLast<LandVehicle>, IHas
         super.initialize(Color.yellow,100,"CarFerry");
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
     }
-    public boolean lowerFlak(){
-        if(!isMoving()) {
-            flak.lowerRamp();
-            return true;
-        } return false;
+
+    @Override
+    public MoveHandler getDriveHandler() {
+        return driver;
     }
 
     @Override
-    public IFlak getFlak() {
-        return flak;
-    }
-
-    public boolean raiseFlak(){
-        return flak.raiseRamp();
-    }
-
-    public int getCarsLoaded(){ return load.getCargoCount(); }
-
-    @Override
-    public double speedFactor() { return enginePower * 0.009; }
-    @Override
-    public void move(){
-        if (flak.normalState()) super.move();
-        load.updatePosition(position);
+    public RotationHandler getSteerHandler() {
+        return  steerer;
     }
 
     @Override
-    public boolean loadState() {
-        return flak.loadState();
+    public String getModelName() {
+        return modelname;
     }
 
     @Override
-    public void IsLoadedMove(Point p) {
-        load.updatePosition(p);
+    public String getRegNr() {
+        return null;
     }
 
     @Override
-    public boolean load(LandVehicle landVehicle) {
-        if(loadState()) return load.load(landVehicle);
-        else return false;
+    public IMotor getMotor() {
+        return engine;
     }
 
     @Override
-    public LandVehicle release() {
-        if(loadState())return load.release();
-        else return null;
+    public Storage getStorage() {
+        return storage;
     }
 }

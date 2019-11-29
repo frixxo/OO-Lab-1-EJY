@@ -1,6 +1,11 @@
 package WorldObjects;
 import Fuctionality.MoveHandler;
 import Fuctionality.RegNrGenerator;
+import Fuctionality.Motors.IMotor;
+import Fuctionality.Motors.StandardMotor;
+import Fuctionality.MoveHandler;
+import Fuctionality.VehicleDriver;
+import Fuctionality.VehicleSteerer;
 import LableInterfaces.IHasLast;
 import LastHandle.*;
 import Flak.*;
@@ -25,34 +30,25 @@ public class CarTransport extends WorldObject implements IHasLast<Car>, Truk {
 
     }
 
-    @Override
-    public double speedFactor(){ return enginePower*0.01*(1-(getCarsLoaded()/100));}
 
-    public boolean load(Car car) {
-        if(loadState())return load.load(car);
-        else return false;
-    }
-    public Car release() {
-        if(loadState())return load.release();
-        else return null;
-    }
+    public boolean load(Car car) { return loadState() && storage.getLastHandler().load(car); }
+    public Car release() { return (loadState()) ? storage.getLastHandler().release() : null; }
 
     @Override
-    public void move(){
-        if(flak.normalState()) super.move();
-        load.updatePosition(this.position);
-    }
-
+    public void move(){ driver.move(); }
     @Override
     public boolean loadState() {
-        return flak.loadState();
+        return storage.getContainer().loadState();
     }
-
     @Override
     public void IsLoadedMove(Point p) {
-        load.updatePosition(p);
+        storage.getLastHandler().updatePosition(p);
     }
 
-    public int getCarsLoaded(){ return load.getCargoCount(); }
+    public int getCarsLoaded(){ return storage.getLastHandler().getCargoCount(); }
 
+    @Override
+    public Storage getStorage() { return storage; }
+    @Override
+    public IMotor getMotor() { return engine; }
 }
