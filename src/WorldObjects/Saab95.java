@@ -15,9 +15,10 @@ public class Saab95 extends WorldObject implements Car,Vehicle,Movable,IHasTurbo
     private MoveHandler Driver=new VehicleDriver(this);
     private RotationHandler Steerer=new VehicleSteerer(this);
     private TurboMotor engine = new TurboMotor(20,Driver);
+    private RegNrGenerator reg = new RegNrGenerator();
     private String ModelName="Saab95";
     private String RegNr;
-    private RegNrGenerator reg = new RegNrGenerator();
+
 
     //region constructors
     public Saab95(Point position, Point2D direction, Point size){

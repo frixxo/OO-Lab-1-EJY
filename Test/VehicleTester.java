@@ -14,16 +14,19 @@ public class VehicleTester {
 
     @Test
     public void TestGallardoSpoilerDown() {
-        LamborghiniGallardo x = new LamborghiniGallardo(new Point(0,0),new Point(1,0),null);
+        LamborghiniGallardo x = new LamborghiniGallardo();
+        x.LowerSpoiler();
+        x.getDriveHandler().move();
         double d=x.getDriveHandler().getCurrentSpeed();
-        assertEquals(3.2,d,0);
+        assertEquals(3.2,(float)d,0);
     }
 
     @Test
     public void TestGallardoSpoilerUp(){
-        LamborghiniGallardo x = new LamborghiniGallardo(new Point(0,0),new Point(1,0),null);
-        x.raiseSpoiler();
-        double d=x.speedFactor();
+        LamborghiniGallardo x = new LamborghiniGallardo();
+        x.LowerSpoiler();
+        x.getDriveHandler().move();
+        double d=x.getDriveHandler().getCurrentSpeed();
         assertEquals((float)2.88,(float)d,0);
     }
     @Test
@@ -117,7 +120,7 @@ public class VehicleTester {
     public void TestCarTransportLoadRampDown(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.lowerFlak();
+        x.getStorage().getContainer().openContainer();
         assertTrue(x.load(y));
     }
     @Test
@@ -125,14 +128,14 @@ public class VehicleTester {
         Point z=new Point(0,0);
         CarTransport x=new CarTransport(z,z);
         Volvo240 y= new Volvo240();
-        x.raiseFlak();
+        x.getStorage().getContainer().openContainer();
         assertFalse(x.load(y));
     }
     @Test
     public void TestCarTransportGet(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.lowerFlak();
+        x.getStorage().getContainer().closeContainer();
         x.load(y);
         assertSame(x.release(), y);
     }

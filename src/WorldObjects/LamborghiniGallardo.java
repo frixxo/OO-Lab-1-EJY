@@ -3,6 +3,7 @@ package WorldObjects;
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
+import LableInterfaces.IHasSpoiler;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -10,12 +11,12 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
-public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehicle{
+public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehicle,IHasSpoiler {
     private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;
     private RotationHandler steerer=new VehicleSteerer(this);
-    private MoveHandler driver=new SpoilerDriver(this);
+    private SpoilerDriver driver=new SpoilerDriver(this);
     private StandardMotor motor = new StandardMotor(300,driver);
     private RegNrGenerator reg=new RegNrGenerator();
     private String ModelName="Lamborghini Gallardo";
@@ -31,8 +32,6 @@ public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehi
     public LamborghiniGallardo(){
         this(new Point(0,0),new Point(1,0),null);
     }
-
-
 
     @Override
     public IMotor getMotor() {
@@ -57,5 +56,15 @@ public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehi
     @Override
     public String getRegNr() {
         return RegNr;
+    }
+
+    @Override
+    public void RaiseSpoiler() {
+        driver.raiseSpoiler();
+    }
+
+    @Override
+    public void LowerSpoiler() {
+        driver.lowerSpoiler();
     }
 }
