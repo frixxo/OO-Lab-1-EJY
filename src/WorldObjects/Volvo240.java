@@ -35,6 +35,11 @@ public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     }
 
     @Override
+    public String getRegNr() {
+        return null;
+    }
+
+    @Override
     public MoveHandler getDriveHandler() {
         return null;
     }
