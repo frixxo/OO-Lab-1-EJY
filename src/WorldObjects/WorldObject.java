@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public abstract class WorldObject implements WorldObjectView{
-    private  Point position;
+    private Point position;
     private Point2D direction;
     private Point size;
     private boolean isStatic;
