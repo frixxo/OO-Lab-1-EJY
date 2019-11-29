@@ -1,4 +1,4 @@
-package Flak;
+package Fuctionality.Storage.Containers;
 /** A ramp for loading vehicles m.m*/
 public class Ramp extends NormalFlak{
     @Override

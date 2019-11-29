@@ -1,4 +1,4 @@
-package LableInterfaces;
+package WorldObjects.LableInterfaces;
 
 public interface IHasSpoiler {
      void RaiseSpoiler();

@@ -1,4 +1,4 @@
-package Flak;
+package Fuctionality.Storage.Containers;
 
 /** all methods a flak has to have*/
 public interface IFlak extends Container{

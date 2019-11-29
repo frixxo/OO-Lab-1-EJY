@@ -1,4 +1,4 @@
-package LableInterfaces;
+package WorldObjects.LableInterfaces;
 
 import Fuctionality.Motors.IMotor;
 
