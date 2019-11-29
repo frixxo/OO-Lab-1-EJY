@@ -19,8 +19,4 @@ public class TurboMotor extends NormalMotor implements IHasTurbo {
     @Override
     public void setTurbo(boolean turbo) { turboOn=turbo; }
 
-    @Override
-    public boolean getTurbo() { return turboOn; }
-
-
 }
