@@ -1,9 +1,10 @@
-package WorldObjects;
+package WorldObjects.Objects;
 
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import LableInterfaces.IHasSpoiler;
+import WorldObjects.Car;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

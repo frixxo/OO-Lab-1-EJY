@@ -1,4 +1,4 @@
-package WorldObjects;
+package WorldObjects.Objects;
 import Flak.FlakStorage;
 import Flak.Ramp;
 import Flak.Storage;
@@ -6,6 +6,8 @@ import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import LastHandle.LoadHandler;
+import WorldObjects.Car;
+import WorldObjects.Truk;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -16,7 +18,7 @@ public class CarTransport extends WorldObject implements Truk {
     // TODO HELP
     private final static String model = "CarTransport";
     private MoveHandler driver = new VehicleDriver(this);
-    private Movable.RotationHandler steerer = new VehicleSteerer(this);
+    private RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
     private String RegNr;

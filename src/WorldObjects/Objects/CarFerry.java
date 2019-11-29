@@ -1,16 +1,16 @@
-package WorldObjects;
+package WorldObjects.Objects;
 import Flak.FlakStorage;
 import Flak.Ramp;
-import Flak.IFlak;
 import Flak.Storage;
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
-import Fuctionality.Motors.NormalMotor;
 import Fuctionality.Motors.StandardMotor;
 import LableInterfaces.IHasMotor;
 import LableInterfaces.IHasStorage;
-import LastHandle.IHandleLast;
 import LastHandle.*;
+import WorldObjects.Car;
+import WorldObjects.Movable;
+import WorldObjects.Vehicle;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

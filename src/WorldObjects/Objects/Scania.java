@@ -1,4 +1,4 @@
-package WorldObjects; /** A scania truck*/
+package WorldObjects.Objects; /** A scania truck*/
 import Flak.Flak;
 import Flak.FlakStorage;
 import Flak.Storage;
@@ -6,6 +6,7 @@ import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import LastHandle.LoadHandler;
+import WorldObjects.Truk;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

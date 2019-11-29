@@ -1,9 +1,12 @@
-package WorldObjects;
+package WorldObjects.Objects;
+
+import WorldObjects.IsWorldObject;
+import WorldObjects.WorldObjectView;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public abstract class WorldObject implements WorldObjectView, IsWorldObject{
+public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point position;
     private Point2D direction;
     private Point size;

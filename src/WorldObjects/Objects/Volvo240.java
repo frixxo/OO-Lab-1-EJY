@@ -1,8 +1,9 @@
-package WorldObjects;
+package WorldObjects.Objects;
 
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.TrimmedMotor;
+import WorldObjects.Car;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -10,7 +11,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Volvo 240 raggarbil
  */
-public class Volvo240 extends WorldObject implements Car{
+public class Volvo240 extends WorldObject implements Car {
     private RotationHandler steerer= new VehicleSteerer(this);
     private MoveHandler driver= new VehicleDriver(this);
     private IMotor motor = new TrimmedMotor(100,1.25,driver);

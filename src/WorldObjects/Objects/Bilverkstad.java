@@ -1,4 +1,6 @@
-package WorldObjects;
+package WorldObjects.Objects;
+
+import WorldObjects.Vehicle;
 
 import java.awt.*;
 import java.util.HashMap;
