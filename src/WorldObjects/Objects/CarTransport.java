@@ -33,7 +33,7 @@ public class CarTransport extends WorldObject implements Truk {
     }
     public CarTransport(Point position, Point2D direction, Point Size){
         super(position,direction,Size,false);
-        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
+        storage = new FlakStorage(new Ramp(),new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO));
         RegNr=reg.generate();
     }
 

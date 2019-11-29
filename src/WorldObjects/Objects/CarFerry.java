@@ -3,6 +3,7 @@ import Fuctionality.IDGenerator.IDGenerator;
 import Fuctionality.IDGenerator.RegNrGenerator;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
 import Fuctionality.Storage.FlakStorage;
 import Fuctionality.Storage.Containers.Ramp;
@@ -34,7 +35,7 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
     this(new Point(0,0),new Point(1,0),null)}
     public CarFerry(Point position, Point2D direction,Point Size){
         super(position,direction,Size,false);
-        load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
+        storage = new FlakStorage(new Ramp(), new  LoadHandler<Car>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO));
         RegNr=reg.generate();
     }
 
