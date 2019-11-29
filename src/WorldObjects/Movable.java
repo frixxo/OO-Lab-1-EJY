@@ -1,9 +1,13 @@
 package WorldObjects;
 
 import Fuctionality.MoveHandler;
-import Fuctionality.RotationHandler;
 
 public interface Movable {
     MoveHandler getDriveHandler();
     RotationHandler getSteerHandler();
+
+    interface RotationHandler {
+        void turnLeft(int angle);
+        void turnRight(int angle);
+    }
 }

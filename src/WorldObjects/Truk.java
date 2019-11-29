@@ -1,9 +1,9 @@
 package WorldObjects;
 
-import Flak.Container;
+import Flak.Storage;
 import Fuctionality.Motors.IMotor;
 
 public interface Truk {
-    Container getContainer();
+    Storage getStorage();
     IMotor getMotor();
 }

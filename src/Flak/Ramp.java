@@ -16,4 +16,10 @@ public class Ramp extends NormalFlak{
         tippingAmount = getMAX_ANGLE();         //makes sure that the ramp is either up or down.
         angle=getMAX_ANGLE();                   //Sets the ramp in the up position
     }
+
+    @Override
+    public void openContainer (){lowerRamp();}
+
+    @Override
+    public void closeContainer (){raiseRamp();}
 }

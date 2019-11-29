@@ -10,4 +10,10 @@ public class Flak extends NormalFlak {
     public boolean loadState() {
         return true;
     }
+
+    @Override
+    public void openContainer (){raiseRamp();}
+
+    @Override
+    public void closeContainer (){lowerRamp();}
 }

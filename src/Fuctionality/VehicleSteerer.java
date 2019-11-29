@@ -1,10 +1,11 @@
 package Fuctionality;
 
+import WorldObjects.Movable;
 import WorldObjects.WorldObject;
 
 import java.awt.geom.Point2D;
 
-public class VehicleSteerer implements RotationHandler {
+public class VehicleSteerer implements Movable.RotationHandler {
     private WorldObject worldObject;
 
     public VehicleSteerer(WorldObject worldObject){
