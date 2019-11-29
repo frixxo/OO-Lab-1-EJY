@@ -1,4 +1,4 @@
-package Fuctionality;
+package Fuctionality.MoveHandlers;
 
 import WorldObjects.Objects.WorldObject;
 

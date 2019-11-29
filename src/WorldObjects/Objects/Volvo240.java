@@ -3,6 +3,9 @@ package WorldObjects.Objects;
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.TrimmedMotor;
+import Fuctionality.MoveHandlers.MoveHandler;
+import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.VehicleSteerer;
 import WorldObjects.Car;
 
 import java.awt.*;

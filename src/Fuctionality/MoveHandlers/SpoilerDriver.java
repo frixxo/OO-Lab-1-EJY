@@ -1,8 +1,9 @@
-package Fuctionality;
+package Fuctionality.MoveHandlers;
 
+import Fuctionality.MoveHandlers.VehicleDriver;
 import WorldObjects.Objects.WorldObject;
 
-public class SpoilerDriver extends VehicleDriver{
+public class SpoilerDriver extends VehicleDriver {
     private boolean spoilerUp=false;
     private double spoilerspeed =0;
 

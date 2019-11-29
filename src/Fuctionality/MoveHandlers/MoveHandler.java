@@ -1,4 +1,4 @@
-package Fuctionality;
+package Fuctionality.MoveHandlers;
 
 public interface MoveHandler {
     void move();

@@ -1,6 +1,6 @@
 package Fuctionality.Motors;
 
-import Fuctionality.MoveHandler;
+import Fuctionality.MoveHandlers.MoveHandler;
 
 public class TrimmedMotor extends NormalMotor {
     protected double trimFactor;

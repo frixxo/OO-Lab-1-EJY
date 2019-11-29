@@ -1,6 +1,6 @@
 package WorldObjects;
 
-import Fuctionality.MoveHandler;
+import Fuctionality.MoveHandlers.MoveHandler;
 
 public interface Movable extends IsWorldObject{
     MoveHandler getDriveHandler();

@@ -2,69 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Java doc/CarFerry.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarFerry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/CarTransport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/CarTransport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/Flak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/Flak.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/IFlak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/IFlak.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/IHasFlak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/IHasFlak.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/NormalFlak.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/NormalFlak.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/Ramp.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/Ramp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Flak/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Flak/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/IHandleLast.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/IHandleLast.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/IHandleLast.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/IHandleLast.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/IHasLast.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/IHasLast.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.Principle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.Principle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/LoadHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LastHandle/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LastHandle/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LoadHandler.Principle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LoadHandler.Principle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LoadHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LoadHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/LoadMovable.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/LoadMovable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/CarFerry.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/CarFerry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/CarTransport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Scania.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Scania.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/Truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/Truck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/Movables/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Movables/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flak/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flak/Flak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Flak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flak/IFlak.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flak/Ramp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flak/Storage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/StandardMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/StandardMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/TrimmedMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/TrimmedMotor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/TurboMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/TurboMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/NormalFlak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/NormalFlak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/IHasMotor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/IHasSpoiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/LableInterfaces/IHasSpoiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/IHasStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/LableInterfaces/IHasStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LableInterfaces/IHasTurbo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LastHandle/IHandleLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/IHandleLast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LastHandle/LoadHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/MoveHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/SpoilerDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/SpoilerDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/VehicleSteerer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Truk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Truk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

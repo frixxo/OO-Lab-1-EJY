@@ -1,4 +1,4 @@
-package Fuctionality;
+package Fuctionality.RotationHandler;
 
 import WorldObjects.Movable;
 import WorldObjects.Objects.WorldObject;

@@ -1,4 +1,7 @@
 package WorldObjects.Objects; /** A scania truck*/
+import Fuctionality.MoveHandlers.MoveHandler;
+import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.VehicleSteerer;
 import Fuctionality.Storage.Containers.Flak;
 import Fuctionality.Storage.FlakStorage;
 import Fuctionality.Storage.Storage;

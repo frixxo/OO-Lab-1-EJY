@@ -1,7 +1,6 @@
 package Fuctionality.Motors;
 
-import Fuctionality.Motors.IMotor;
-import Fuctionality.MoveHandler;
+import Fuctionality.MoveHandlers.MoveHandler;
 
 public abstract class NormalMotor implements IMotor {
     protected double power;
