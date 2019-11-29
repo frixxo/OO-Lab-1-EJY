@@ -1,4 +1,4 @@
-import Fuctionality.RegNrGenerator;
+import Fuctionality.IDGenerator.RegNrGenerator;
 import WorldObjects.Objects.*;
 import org.junit.Test;
 

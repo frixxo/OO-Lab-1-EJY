@@ -1,4 +1,4 @@
-package Fuctionality;
+package Fuctionality.IDGenerator;
 
 import java.util.List;
 import java.util.Random;

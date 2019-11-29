@@ -1,10 +1,12 @@
 package WorldObjects.Objects;
 
-import Fuctionality.*;
+import Fuctionality.IDGenerator.IDGenerator;
+import Fuctionality.IDGenerator.RegNrGenerator;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.TrimmedMotor;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
 import WorldObjects.Car;
 

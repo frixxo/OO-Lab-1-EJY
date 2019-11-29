@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/StandardMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/StandardMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/TrimmedMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/TrimmedMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/TurboMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/TurboMotor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/MoveHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/SpoilerDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/SpoilerDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/VehicleSteerer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/RotationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/IDGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/RegNrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
@@ -33,6 +32,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

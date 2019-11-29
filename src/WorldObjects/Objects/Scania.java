@@ -1,11 +1,13 @@
 package WorldObjects.Objects; /** A scania truck*/
+import Fuctionality.IDGenerator.IDGenerator;
+import Fuctionality.IDGenerator.RegNrGenerator;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
 import Fuctionality.Storage.Containers.Flak;
 import Fuctionality.Storage.FlakStorage;
 import Fuctionality.Storage.Storage;
-import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Storage.LastHandle.LoadHandler;
