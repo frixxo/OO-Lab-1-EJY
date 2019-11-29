@@ -1,4 +1,6 @@
 package WorldObjects;
+import Fuctionality.MoveHandler;
+import Fuctionality.RegNrGenerator;
 import LableInterfaces.IHasLast;
 import LastHandle.*;
 import Flak.*;
@@ -9,18 +11,18 @@ import java.awt.geom.Point2D;
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends WorldObject implements IHasLast<Car>, Truk {
     private LoadHandler<Car> load;
+    private MoveHandler driver
+    private RegNrGenerator reg= new RegNrGenerator();
+    private String RegNr;
+    private String ModelName="CarTransport";
 
     public CarTransport(){
-        super();
-        super.initialize(2,Color.black,100,"CarTransport");
-        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
-        flak=new Ramp();
+        this();
     }
-    public CarTransport(Point position, Point2D direction){
-        super(position,direction);
-        super.initialize(2,Color.black,100,"CarTransport");
+    public CarTransport(Point position, Point2D direction,Point Size){
+        super(position,direction,Size,false);
         load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
-        flak=new Ramp();
+
     }
 
     @Override

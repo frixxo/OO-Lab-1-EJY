@@ -2,7 +2,7 @@ package Fuctionality;
 
 import java.util.Random;
 
-public class RegNrGenerator {
+public class RegNrGenerator implements IDGenerator{
     private static int RegNrKey = 0;
     Random r = new Random(RegNrKey);
 
