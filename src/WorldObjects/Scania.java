@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
 
-public class Scania extends WorldObject implements Vehicle {
+public class Scania extends WorldObject implements Vehicle, Truk {
     private final static String model = "Scania";
     private StandardMotor engine = new StandardMotor(20);
     private MoveHandler moveHandler;
