@@ -15,7 +15,7 @@ import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
 
-public class CarTransport extends WorldObject implements Movable, Vehicle, Truk {
+public class CarTransport extends WorldObject implements Truk {
     // TODO HELP
     private final static String model = "CarTransport";
     private MoveHandler driver = new VehicleDriver(this);

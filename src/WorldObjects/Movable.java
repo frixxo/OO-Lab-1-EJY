@@ -2,7 +2,7 @@ package WorldObjects;
 
 import Fuctionality.MoveHandler;
 
-public interface Movable {
+public interface Movable extends IsWorldObject{
     MoveHandler getDriveHandler();
     RotationHandler getSteerHandler();
 

@@ -1,5 +1,6 @@
 package LastHandle;
 
+import WorldObjects.IsWorldObject;
 import WorldObjects.WorldObject;
 
 import java.awt.*;
@@ -9,7 +10,7 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler <T extends WorldObject> implements IHandleLast<T> {
+public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out

@@ -10,7 +10,7 @@ import LastHandle.LoadHandler;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends WorldObject implements Movable, Vehicle, Truk {
+public class Scania extends WorldObject implements Truk {
     private MoveHandler driver = new VehicleDriver(this);
     private RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);

@@ -11,7 +11,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
-public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehicle,IHasSpoiler {
+public class LamborghiniGallardo extends WorldObject implements Car, IHasSpoiler {
     private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;

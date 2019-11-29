@@ -7,5 +7,5 @@ import LableInterfaces.IHasMotor;
  * Defines what a car needs to do
  */
 
-public interface Car extends IHasMotor {
+public interface Car extends Vehicle, IHasMotor {
 }
