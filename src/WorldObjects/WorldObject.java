@@ -7,7 +7,6 @@ public abstract class WorldObject implements WorldObjectView{
     private  Point position;
     private Point2D direction;
     private Point size;
-    protected static int ObjectNr=1;      //this object is Number ? created changes with each created object
     private boolean isStatic;
 
     // region Constructor
@@ -17,7 +16,6 @@ public abstract class WorldObject implements WorldObjectView{
        this.direction = direction;
        this.size = size;
        this.isStatic = isStatic;
-       ObjectNr++;
     }
 
     //endregion
