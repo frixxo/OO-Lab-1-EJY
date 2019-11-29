@@ -1,4 +1,5 @@
 package WorldObjects;
+<<<<<<< HEAD
 
 import Flak.FlakStorage;
 import Flak.Ramp;
@@ -10,11 +11,11 @@ import Fuctionality.VehicleDriver;
 import Fuctionality.VehicleSteerer;
 import LastHandle.LoadHandler;
 
-
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
+
 public class CarTransport extends WorldObject implements Movable, Vehicle, Truk {
     // TODO HELP
     private final static String model = "CarTransport";
@@ -26,8 +27,10 @@ public class CarTransport extends WorldObject implements Movable, Vehicle, Truk 
     public CarTransport(Point position, Point2D direction, Point size) {
         super(position,direction, size, false);
     }
-    public CarTransport() {
-        this(new Point(0,0),new Point(1,0), null);
+    public CarTransport(Point position, Point2D direction, Point Size){
+        super(position,direction,Size,false);
+        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
+
     }
 
     @Override

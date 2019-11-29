@@ -14,7 +14,7 @@ public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
     private RotationHandler steerer= new VehicleSteerer(this);
     private MoveHandler driver= new VehicleDriver(this);
     private IMotor motor = new TrimmedMotor(100,1.25,driver);
-    private RegNrGenerator reg=new RegNrGenerator();
+    private IDGenerator reg=new RegNrGenerator();
     private String modelName="Volvo240";
     private String RegNr;
 

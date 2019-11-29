@@ -2,22 +2,23 @@ package WorldObjects; /** A scania truck*/
 import Flak.Flak;
 import Flak.FlakStorage;
 import Flak.Storage;
+import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
-import Fuctionality.MoveHandler;
 import Fuctionality.Motors.StandardMotor;
-import Fuctionality.VehicleDriver;
-import Fuctionality.VehicleSteerer;
 import LastHandle.LoadHandler;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Scania extends WorldObject implements Movable, Vehicle, Truk {
-    private final static String model = "Scania";
     private MoveHandler driver = new VehicleDriver(this);
     private RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Flak(), new LoadHandler <>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
+    private IDGenerator reg=new RegNrGenerator();
+    private String modelname = "Scania";
+    private String RegNr;
+
 
     public Scania(Point position, Point2D direction, Point size) {
         super(position,direction, size, false);
@@ -36,11 +37,11 @@ public class Scania extends WorldObject implements Movable, Vehicle, Truk {
     public IMotor getMotor(){ return engine; }
 
     @Override
-    public String getModelName() { return model; }
+    public String getModelName() { return modelname; }
 
     @Override
     public String getRegNr() {
-        return null;
+        return RegNr;
     }
 
     @Override
