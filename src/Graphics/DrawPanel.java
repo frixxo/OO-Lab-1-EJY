@@ -10,15 +10,15 @@ import javax.swing.*;
 // This panel represent the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel{
-    private List<Vehicle> vehicles;
+    private List<WorldObject> worldObjects;
     private HashMap <Object,ImageWithSize> imageMap=new HashMap<>();
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y, List<Vehicle> vehicles) {
+    public DrawPanel(int x, int y, List<WorldObject> worldObjects) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
-        this.vehicles = vehicles;
+        this.worldObjects = worldObjects;
         initializeHashmap();
     }
 
@@ -28,7 +28,7 @@ public class DrawPanel extends JPanel{
         super.paintComponent(g);
         Image I;
         Point size;
-        for (Vehicle v : vehicles) {
+        for (WorldObject v : worldObjects) {
            I=imageMap.get(v.getClass()).getImage();
            size =imageMap.get(v.getClass()).getSize();
             g.drawImage(I, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
