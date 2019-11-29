@@ -49,7 +49,7 @@ public class Volvo240 extends WorldObject implements Car {
 
     @Override
     public String getRegNr() {
-        return null;
+        return RegNr;
     }
 
     @Override

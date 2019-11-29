@@ -13,7 +13,7 @@ import Fuctionality.Motors.StandardMotor;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import Fuctionality.Storage.LastHandle.*;
-import WorldObjects.Car;
+import WorldObjects.LandVehicle;
 import WorldObjects.Movable;
 import WorldObjects.Vehicle;
 
@@ -27,7 +27,7 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
     private RotationHandler steerer = new VehicleSteerer(this);
     private MoveHandler driver = new VehicleDriver(this);
     private IMotor engine = new StandardMotor(10, driver);
-    private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+    private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
 
@@ -55,7 +55,7 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
 
     @Override
     public String getRegNr() {
-        return null;
+        return RegNr;
     }
 
     @Override
