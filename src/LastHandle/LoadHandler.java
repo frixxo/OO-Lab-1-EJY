@@ -1,6 +1,8 @@
 package LastHandle;
 
 import LableInterfaces.IHasLast;
+import WorldObjects.Movable;
+import WorldObjects.WorldObject;
 
 import java.awt.*;
 import java.util.Deque;
@@ -9,7 +11,7 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler <T extends Movable> implements IHandleLast<T> {
+public class LoadHandler <T extends WorldObject> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out
@@ -23,12 +25,12 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
     protected final int MAX_CARGO_LOAD;
     private final int MAX_LOAD_DISTANCE;
     private final int sX, sY; // size of the cargo
-    private Movable movable;
+    private WorldObject LoadingVehicle;
 
-    public LoadHandler(Movable movable, int maxCargoLoad, int maxLoadDistance, int sX, int sY, Principle principle){
+    public LoadHandler(WorldObject LoadingVehicle, int maxCargoLoad, int maxLoadDistance, int sX, int sY, Principle principle){
         this.MAX_CARGO_LOAD = maxCargoLoad;
         this.principle = principle;
-        this.movable=movable;
+        this.LoadingVehicle=LoadingVehicle;
         this.MAX_LOAD_DISTANCE = maxLoadDistance;
         this.sX = sX;
         this.sY = sY;
@@ -38,10 +40,10 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
 
     public boolean load(T cargo){
         if (cargoList.size() < MAX_CARGO_LOAD
-                &&!cargo.getIsLoaded()
+                &&!cargo.getStatic()
                 &&isBehind(cargo)
                 ) {
-            cargo.setIsLoaded(true);
+            cargo.setStatic(true);
             cargoList.add(cargo);
             return true;
         } return false;
@@ -59,13 +61,13 @@ public class LoadHandler <T extends Movable> implements IHandleLast<T> {
                 default:
                     cargo = null;
             }
-            cargo.setIsLoaded(false);
+            cargo.setStatic(false);
             return cargo;
     }
 
-    private boolean isBehind(Movable obj){
-        if(movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
-                || movable.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getIsLoaded()) return false;
+    private boolean isBehind(WorldObject obj){
+        if(LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
+                || LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getStatic()) return false;
         return true;
     }
 
