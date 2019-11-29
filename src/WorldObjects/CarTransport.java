@@ -1,5 +1,4 @@
 package WorldObjects;
-<<<<<<< HEAD
 
 import Flak.FlakStorage;
 import Flak.Ramp;
