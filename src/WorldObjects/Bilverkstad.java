@@ -1,11 +1,10 @@
 package WorldObjects;
 
-import WorldObjects.Movables.LandVehicle;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 /** A representation of a car repairshop where you */
-public class Bilverkstad<T  extends  LandVehicle> extends WorldObject {
+public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     private Map<String, T> cars = new HashMap<String, T>();
     private Point location;
     private int maxCars = 0;
@@ -13,11 +12,10 @@ public class Bilverkstad<T  extends  LandVehicle> extends WorldObject {
 
 
     public boolean add(T car){
-
-        if (numberOfCars() == getMaxCars() || getPosition().distance(car.getPosition()) > distToCArDeadzone
-                || location.distance(car.getPosition()) > distToCArDeadzone||car.getIsLoaded()) return false;
+        if ((numberOfCars() == getMaxCars() || getPosition().distance(car.getPosition()) > distToCArDeadzone)
+                || location.distance(((WorldObject) car).getPosition()) > distToCArDeadzone|| car.getStatic()) return false;
         cars.put (car.getRegNr(), car);
-        car.setIsLoaded(true);
+        car.setStatic(true);
         return true;
     }
 
@@ -28,7 +26,7 @@ public class Bilverkstad<T  extends  LandVehicle> extends WorldObject {
     public T get (String reg) {
 
         if(cars.containsKey(reg)) {
-            cars.get(reg).setIsLoaded(false);
+            cars.get(reg).setStatic(false);
             return cars.get(reg);
         }
         else {
@@ -37,7 +35,7 @@ public class Bilverkstad<T  extends  LandVehicle> extends WorldObject {
     }
 
     public Bilverkstad(Point location, int maxCars){
-        this.location=location;
+        super(location,null,new Point (50,50),false);
         this.maxCars = maxCars;
     }
 
