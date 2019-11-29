@@ -1,6 +1,8 @@
-package Fuctionality;
+package Fuctionality.Motors;
 
-public class TrimmedMotor extends NormalMotor{
+import Fuctionality.MoveHandler;
+
+public class TrimmedMotor extends NormalMotor {
     protected double trimFactor;
 
     public TrimmedMotor(double power, double trimFactor, MoveHandler moveHandler) {

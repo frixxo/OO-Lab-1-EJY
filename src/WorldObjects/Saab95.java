@@ -1,8 +1,8 @@
 package WorldObjects;
 
-import Fuctionality.IMotor;
-import Fuctionality.OldMoveHandlerDontTouchHasThePlague;
-import Fuctionality.TurboMotor;
+import Fuctionality.*;
+import Fuctionality.Motors.IMotor;
+import Fuctionality.Motors.TurboMotor;
 import LableInterfaces.IHasTurbo;
 
 import java.awt.*;
@@ -11,25 +11,30 @@ import java.awt.geom.Point2D;
 /**
  * Represent a Movables.Saab95
  */
-public class Saab95 extends WorldObject implements Car, IHasTurbo {
-
-    private TurboMotor engine = new TurboMotor(20);
-    private OldMoveHandlerDontTouchHasThePlague moveHandler;
-
+public class Saab95 extends WorldObject implements Car,Movable,IHasTurbo {
+    private MoveHandler Driver=new VehicleDriver(this);
+    private RotationHandler Steerer=new VehicleSteerer(this);
+    private TurboMotor engine = new TurboMotor(20,Driver);
     //region constructors
-    public Saab95(Point position, Point2D direction, Point size, boolean isStatic){
-        super(position,direction, size, isStatic);
-        moveHandler = new OldMoveHandlerDontTouchHasThePlague(position, direction);
+    public Saab95(Point position, Point2D direction, Point size){
+        super(position,direction, size, false);
     }
 
     //endregion
     
     @Override
-    public void setTurbo(boolean turbo) { engine.setTurbo(turbo); }
-    @Override
-    public boolean getTurbo() { return engine.getTurbo(); }
+    public void setTurbo(boolean turbo) {engine.setTurbo(turbo);}
+
     @Override
     public IMotor getMotor() { return engine; }
+
     @Override
-    public OldMoveHandlerDontTouchHasThePlague getMoveHandler() { return moveHandler; }
+    public MoveHandler getDriveHandler() {
+        return Driver;
+    }
+
+    @Override
+    public RotationHandler getSteerHandler() {
+        return Steerer;
+    }
 }

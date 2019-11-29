@@ -1,4 +1,4 @@
-package Fuctionality;
+package Fuctionality.Motors;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

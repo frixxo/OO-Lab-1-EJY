@@ -1,11 +1,12 @@
-package Fuctionality;
+package Fuctionality.Motors;
 
+import Fuctionality.MoveHandler;
 import LableInterfaces.IHasTurbo;
 
 public class TurboMotor extends NormalMotor implements IHasTurbo {
     private boolean turboOn=false;
-    public TurboMotor(double power) {
-        super(power);
+    public TurboMotor(double power, MoveHandler moveHandler) {
+        super(power,moveHandler);
     }
 
     @Override

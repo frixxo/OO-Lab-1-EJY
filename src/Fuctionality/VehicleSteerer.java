@@ -11,9 +11,7 @@ public class VehicleSteerer implements RotationHandler {
         this.worldObject=worldObject;
     }
 
-    public void turnLeft(int turnAngle){
-        rotate(360-turnAngle);
-    }
+    public void turnLeft(int turnAngle){ rotate(360-turnAngle); }
     public void turnRight(int turnAngle){
         rotate(turnAngle);
     }

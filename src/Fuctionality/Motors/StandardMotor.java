@@ -1,6 +1,6 @@
-package Fuctionality;
+package Fuctionality.Motors;
 
-public class StandardMotor extends NormalMotor{
+public class StandardMotor extends NormalMotor {
 
     public StandardMotor(double power) {
         super(power);

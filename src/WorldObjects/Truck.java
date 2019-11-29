@@ -3,7 +3,7 @@ package WorldObjects;
 import java.awt.*;
 
 import Flak.*;
-import Fuctionality.IMotor;
+import Fuctionality.Motors.IMotor;
 import LableInterfaces.IHasFlak;
 import LableInterfaces.IHasMotor;
 

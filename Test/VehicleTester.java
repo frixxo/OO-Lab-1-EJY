@@ -28,67 +28,58 @@ public class VehicleTester {
 
     @Test
     public void TestTurnLeftX(){
-        Saab95 saab = new Saab95();
-        saab.turnLeft();
-        if(saab.getTurnAngle()==90){
-        assertEquals(0,saab.getDirection().getX(),0.01);}
-        else fail("turnangle is not 90");
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getSteerHandler().turnLeft(90);
+        assertEquals(0,saab.getDirection().getX(),0.01);
     }
     @Test
     public void TestTurnLeftY(){
-        Saab95 saab = new Saab95();
-        saab.turnLeft();
-        if(saab.getTurnAngle()==90) {
-            assertEquals(-1, saab.getDirection().getY(), 0.01); }
-        else fail("turnangle is not 90");
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getSteerHandler().turnLeft(90);
+        assertEquals(-1, saab.getDirection().getY(), 0.01);
     }
     @Test
     public void TestTurnRightX(){
-        Saab95 saab = new Saab95();
-        saab.turnRight();
-        if(saab.getTurnAngle()==90) {
-            assertEquals(0, saab.getDirection().getX(), 0.01);}
-        else fail("turnangle is not 90");
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getSteerHandler().turnRight(90);
+        assertEquals(0, saab.getDirection().getX(), 0.01);
     }
     @Test
     public void TestTurnRightY(){
-        Saab95 saab = new Saab95();
-        saab.turnRight();
-            if(saab.getTurnAngle()==90) {
-                assertEquals(1,saab.getDirection().getY(),0.01);}
-        else fail("turnangle is not 90");
-
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getSteerHandler().turnRight(90);
+        assertEquals(1,saab.getDirection().getY(),0.01);}
     }
     @Test
     public void TestVolvoSpeedFactor(){
-        Volvo240 volvo = new Volvo240();
-        assertEquals(1.25d,volvo.speedFactor(),0.01d);
+        Volvo240 volvo = new Volvo240(new Point(0,0),new Point(1,0),null);
+        assertEquals(1.25d,volvo.getMotor().SpeedFactor(),0.01d);
     }
     @Test
     public void TestGasHigher(){
-        Volvo240 volvo=new Volvo240();
-        volvo.gas(10);
-        assertEquals(1.25d,volvo.getCurrentSpeed(),0.01);
+        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0),null);
+        volvo.getMotor().gas(10);
+        assertEquals(1.25d,volvo.getDriveHandler().getCurrentSpeed(),0.01);
     }
     @Test
     public void TestBrakeHigher(){
-        Volvo240 volvo=new Volvo240();
-        volvo.gas(10);
-        volvo.brake(10);
-        assertEquals(0,volvo.getCurrentSpeed(),0.01);
+        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0),null);
+        volvo.getMotor().gas(10);
+        volvo.getMotor().brake(10);
+        assertEquals(0,volvo.getDriveHandler().getCurrentSpeed(),0.01);
     }
     @Test
     public void TestMoveX(){
-        Saab95 saab=new Saab95();
-        saab.gas(1);
-        saab.move();
+        Saab95 saab=new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getMotor().gas(1);
+        saab.getDriveHandler().move();
         assertEquals(1,saab.getPosition().getX(),0.01);
     }
     @Test
     public void TestMoveY(){
-        Saab95 saab=new Saab95();
-        saab.gas(1);
-        saab.move();
+        Saab95 saab=new Saab95(new Point(0,0),new Point(1,0),null);
+        saab.getMotor().gas(1);
+        saab.getDriveHandler().move();
         assertEquals(0,saab.getPosition().getY(),0.01);
     }
     @Test   //testar 500 olika kombinationer, klarar över 20000 innan duplicering

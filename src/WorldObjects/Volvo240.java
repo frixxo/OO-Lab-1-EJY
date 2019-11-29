@@ -1,6 +1,8 @@
 package WorldObjects;
 
 import Fuctionality.*;
+import Fuctionality.Motors.IMotor;
+import Fuctionality.Motors.TrimmedMotor;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

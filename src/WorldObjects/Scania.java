@@ -1,9 +1,8 @@
 package WorldObjects; /** A scania truck*/
 import Flak.Flak;
 import Fuctionality.MoveHandler;
-import Fuctionality.OldMoveHandlerDontTouchHasThePlague;
-import Fuctionality.NormalMotor;
-import Fuctionality.StandardMotor;
+import Fuctionality.Motors.NormalMotor;
+import Fuctionality.Motors.StandardMotor;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

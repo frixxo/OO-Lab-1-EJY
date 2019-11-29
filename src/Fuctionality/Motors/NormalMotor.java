@@ -1,6 +1,9 @@
-package Fuctionality;
+package Fuctionality.Motors;
 
-public abstract class NormalMotor implements IMotor{
+import Fuctionality.Motors.IMotor;
+import Fuctionality.MoveHandler;
+
+public abstract class NormalMotor implements IMotor {
     protected double power;
     private int frameCounter=0;
     private MoveHandler moveHandler;
