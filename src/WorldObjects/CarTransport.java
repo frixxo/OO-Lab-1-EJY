@@ -1,27 +1,27 @@
 package WorldObjects;
-<<<<<<< HEAD
-=======
+
+import Flak.FlakStorage;
+import Flak.Ramp;
+import Flak.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.MoveHandler;
 import Fuctionality.VehicleDriver;
 import Fuctionality.VehicleSteerer;
-import LableInterfaces.IHasLast;
->>>>>>> e27cd962f37c10dbc625f8256cd97445947d7f55
-import LastHandle.*;
-import Flak.*;
+import LastHandle.LoadHandler;
+
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
-public class CarTransport extends WorldObject implements IHasLast<Car>, Truk {
+public class CarTransport extends WorldObject implements Movable, Vehicle, Truk {
     // TODO HELP
-    private final static String model = "Scania";
+    private final static String model = "CarTransport";
     private MoveHandler driver = new VehicleDriver(this);
     private Movable.RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);
-    private Storage storage = new FlakStorage(new Flak(), new LoadHandler <Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
+    private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
 
     public CarTransport(Point position, Point2D direction, Point size) {
         super(position,direction, size, false);
@@ -30,25 +30,24 @@ public class CarTransport extends WorldObject implements IHasLast<Car>, Truk {
         this(new Point(0,0),new Point(1,0), null);
     }
 
-
-    public boolean load(Car car) { return loadState() && storage.getLastHandler().load(car); }
-    public Car release() { return (loadState()) ? storage.getLastHandler().release() : null; }
-
     @Override
-    public void move(){ driver.move(); }
-    @Override
-    public boolean loadState() {
-        return storage.getContainer().loadState();
-    }
-    @Override
-    public void IsLoadedMove(Point p) {
-        storage.getLastHandler().updatePosition(p);
+    public String getModelName() {
+        return model;
     }
 
-    public int getCarsLoaded(){ return storage.getLastHandler().getCargoCount(); }
+    @Override
+    public RotationHandler getSteerHandler() {
+        return steerer;
+    }
+
+    @Override
+    public MoveHandler getDriveHandler() {
+        return driver;
+    }
 
     @Override
     public Storage getStorage() { return storage; }
+
     @Override
     public IMotor getMotor() { return engine; }
 }
