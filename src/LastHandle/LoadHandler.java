@@ -11,7 +11,7 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler <T extends WorldObject&Movable> implements IHandleLast<T> {
+public class LoadHandler <T extends WorldObject> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out

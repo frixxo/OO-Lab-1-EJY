@@ -1,9 +1,13 @@
 package WorldObjects; /** A scania truck*/
+import Flak.Flak;
+import Flak.FlakStorage;
+import Flak.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.MoveHandler;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.VehicleDriver;
 import Fuctionality.VehicleSteerer;
+import LastHandle.LoadHandler;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -13,9 +17,7 @@ public class Scania extends WorldObject implements Movable, Vehicle, Truk {
     private MoveHandler driver = new VehicleDriver(this);
     private RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);
-
-
-
+    private Storage storage = new FlakStorage(new Flak(), new LoadHandler <WorldObject>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
 
     public Scania(Point position, Point2D direction, Point size, boolean isStatic) {
         super(position,direction, size, isStatic);
@@ -37,4 +39,7 @@ public class Scania extends WorldObject implements Movable, Vehicle, Truk {
     public String getRegNr() {
         return null;
     }
+
+    @Override
+    public Storage getStorage(){return storage; }
 }

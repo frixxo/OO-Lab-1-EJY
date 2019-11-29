@@ -4,7 +4,7 @@ import LastHandle.IHandleLast;
 import LastHandle.LoadHandler;
 import WorldObjects.WorldObject;
 
-public class FlakStorage<T extends WorldObject> implements Storage <T>{
+public class FlakStorage implements Storage{
 
     IFlak flak;
     IHandleLast lasthandler;
