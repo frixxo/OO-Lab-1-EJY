@@ -6,7 +6,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
-public class LamborghiniGallardo extends Car{
+/*public class LamborghiniGallardo extends Car{
     private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;
@@ -47,9 +47,5 @@ public class LamborghiniGallardo extends Car{
         return spoilerUp;
     }
 
-    @Override
-    public double speedFactor(){
-        if(spoilerUp)return enginePower*0.01*0.9;
-        return enginePower*0.01;
-    }
-}
+
+}*/
