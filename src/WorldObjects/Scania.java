@@ -21,8 +21,11 @@ public class Scania extends WorldObject implements Movable, Vehicle, Truk {
 
 
 
-    public Scania(Point position, Point2D direction, Point size, boolean isStatic) {
-        super(position,direction, size, isStatic);
+    public Scania(Point position, Point2D direction, Point size) {
+        super(position,direction, size, false);
+    }
+    public Scania() {
+        this(new Point(0,0),new Point(1,0), null);
     }
 
     @Override
