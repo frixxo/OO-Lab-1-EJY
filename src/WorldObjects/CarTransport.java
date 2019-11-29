@@ -1,14 +1,10 @@
 package WorldObjects;
-<<<<<<< HEAD
-
 import Flak.FlakStorage;
 import Flak.Ramp;
 import Flak.Storage;
+import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
-import Fuctionality.MoveHandler;
-import Fuctionality.VehicleDriver;
-import Fuctionality.VehicleSteerer;
 import LastHandle.LoadHandler;
 
 import java.awt.*;
@@ -23,19 +19,25 @@ public class CarTransport extends WorldObject implements Movable, Vehicle, Truk 
     private Movable.RotationHandler steerer = new VehicleSteerer(this);
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
-
-    public CarTransport(Point position, Point2D direction, Point size) {
-        super(position,direction, size, false);
+    private String RegNr;
+    private IDGenerator reg=new RegNrGenerator();
+    public CarTransport() {
+        super(new Point(0,0),new Point(1,0), null, false);
     }
     public CarTransport(Point position, Point2D direction, Point Size){
         super(position,direction,Size,false);
         load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
-
+        RegNr=reg.generate();
     }
 
     @Override
     public String getModelName() {
         return model;
+    }
+
+    @Override
+    public String getRegNr() {
+        return RegNr;
     }
 
     @Override

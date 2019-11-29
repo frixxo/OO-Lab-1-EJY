@@ -3,12 +3,10 @@ import Flak.FlakStorage;
 import Flak.Ramp;
 import Flak.IFlak;
 import Flak.Storage;
+import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.NormalMotor;
 import Fuctionality.Motors.StandardMotor;
-import Fuctionality.MoveHandler;
-import Fuctionality.VehicleDriver;
-import Fuctionality.VehicleSteerer;
 import LableInterfaces.IHasMotor;
 import LableInterfaces.IHasStorage;
 import LastHandle.IHandleLast;
@@ -25,17 +23,15 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
     private MoveHandler driver = new VehicleDriver(this);
     private IMotor engine = new StandardMotor(10, driver);
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+    private String RegNr;
+    private IDGenerator reg=new RegNrGenerator();
 
-
-    public CarFerry(){
-        super();
-        super.initialize(Color.YELLOW,100,"CarFerry");
+    public CarFerry() {
+    this(new Point(0,0),new Point(1,0),null)}
+    public CarFerry(Point position, Point2D direction,Point Size){
+        super(position,direction,Size,false);
         load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
-    }
-    public CarFerry(Point position, Point2D direction){
-        super(position,direction);
-        super.initialize(Color.yellow,100,"CarFerry");
-        load = new LoadHandler<>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO);
+        RegNr=reg.generate();
     }
 
     @Override
