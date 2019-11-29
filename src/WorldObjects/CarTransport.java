@@ -1,4 +1,9 @@
 package WorldObjects;
+import Fuctionality.Motors.IMotor;
+import Fuctionality.Motors.StandardMotor;
+import Fuctionality.MoveHandler;
+import Fuctionality.VehicleDriver;
+import Fuctionality.VehicleSteerer;
 import LableInterfaces.IHasLast;
 import LastHandle.*;
 import Flak.*;
@@ -8,49 +13,39 @@ import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
 public class CarTransport extends WorldObject implements IHasLast<Car>, Truk {
-    private LoadHandler<Car> load;
+    // TODO HELP
+    private final static String model = "Scania";
+    private MoveHandler driver = new VehicleDriver(this);
+    private Movable.RotationHandler steerer = new VehicleSteerer(this);
+    private StandardMotor engine = new StandardMotor(20, driver);
+    private Storage storage = new FlakStorage(new Flak(), new LoadHandler <Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
 
-    public CarTransport(){
-        super();
-        super.initialize(2,Color.black,100,"CarTransport");
-        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
-        flak=new Ramp();
+    public CarTransport(Point position, Point2D direction, Point size) {
+        super(position,direction, size, false);
     }
-    public CarTransport(Point position, Point2D direction){
-        super(position,direction);
-        super.initialize(2,Color.black,100,"CarTransport");
-        load = new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO);
-        flak=new Ramp();
+    public CarTransport() {
+        this(new Point(0,0),new Point(1,0), null);
     }
 
-    @Override
-    public double speedFactor(){ return enginePower*0.01*(1-(getCarsLoaded()/100));}
 
-    public boolean load(Car car) {
-        if(loadState())return load.load(car);
-        else return false;
-    }
-    public Car release() {
-        if(loadState())return load.release();
-        else return null;
-    }
+    public boolean load(Car car) { return loadState() && storage.getLastHandler().load(car); }
+    public Car release() { return (loadState()) ? storage.getLastHandler().release() : null; }
 
     @Override
-    public void move(){
-        if(flak.normalState()) super.move();
-        load.updatePosition(this.position);
-    }
-
+    public void move(){ driver.move(); }
     @Override
     public boolean loadState() {
-        return flak.loadState();
+        return storage.getContainer().loadState();
     }
-
     @Override
     public void IsLoadedMove(Point p) {
-        load.updatePosition(p);
+        storage.getLastHandler().updatePosition(p);
     }
 
-    public int getCarsLoaded(){ return load.getCargoCount(); }
+    public int getCarsLoaded(){ return storage.getLastHandler().getCargoCount(); }
 
+    @Override
+    public Storage getStorage() { return storage; }
+    @Override
+    public IMotor getMotor() { return engine; }
 }
