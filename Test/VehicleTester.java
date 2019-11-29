@@ -14,14 +14,14 @@ public class VehicleTester {
 
     @Test
     public void TestGallardoSpoilerDown() {
-        LamborghiniGallardo x = new LamborghiniGallardo();
-        double d=x.speedFactor();
+        LamborghiniGallardo x = new LamborghiniGallardo(new Point(0,0),new Point(1,0),null);
+        double d=x.getDriveHandler().getCurrentSpeed();
         assertEquals(3.2,d,0);
     }
 
     @Test
     public void TestGallardoSpoilerUp(){
-        LamborghiniGallardo x = new LamborghiniGallardo();
+        LamborghiniGallardo x = new LamborghiniGallardo(new Point(0,0),new Point(1,0),null);
         x.raiseSpoiler();
         double d=x.speedFactor();
         assertEquals((float)2.88,(float)d,0);

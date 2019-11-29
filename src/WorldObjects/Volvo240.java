@@ -11,16 +11,23 @@ import java.awt.geom.Point2D;
  * Represents a Volvo 240 raggarbil
  */
 public class Volvo240 extends WorldObject implements Movable, Car, Vehicle{
-    private String modelName;
     private RotationHandler steerer= new VehicleSteerer(this);
     private MoveHandler driver= new VehicleDriver(this);
     private IMotor motor = new TrimmedMotor(100,1.25,driver);
+    private RegNrGenerator reg=new RegNrGenerator();
+    private String modelName="Volvo240";
+    private String RegNr;
 
 
     //region Constructor
     public Volvo240(Point position, Point2D direction, Point size)
     {
         super(position, direction, size, false);
+        RegNr=reg.generate();
+    }
+    public Volvo240()
+    {
+        this(new Point(0,0),new Point(1,0),null);
     }
     //endregion
 

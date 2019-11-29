@@ -1,8 +1,8 @@
 package WorldObjects;
 
+import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
-import Fuctionality.MoveHandler;
-import Fuctionality.RotationHandler;
+import Fuctionality.Motors.StandardMotor;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -14,51 +14,48 @@ public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehi
     private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;
+    private RotationHandler steerer=new VehicleSteerer(this);
+    private MoveHandler driver=new SpoilerDriver(this);
+    private StandardMotor motor = new StandardMotor(300,driver);
+    private RegNrGenerator reg=new RegNrGenerator();
+    private String ModelName="Lamborghini Gallardo";
+    private String RegNr;
+
 
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction,Point size){
         super(position,direction,size,false);
-        setSpoilerUp(false);
         epic = true;
+        this.RegNr=reg.generate();
     }
-    //endregion
-    public void raiseSpoiler(){
-        if(spoilerUp=false)this.currentSpeed=currentSpeed*1.1;
-        setSpoilerUp(true);
+    public LamborghiniGallardo(){
+        this(new Point(0,0),new Point(1,0),null);
     }
-    public void lowerSpoiler(){
-        if(spoilerUp=true)this.currentSpeed=currentSpeed*0.9;
-        setSpoilerUp(false);
-    }
-    private void setSpoilerUp(boolean TrueOrFalse) {
-        spoilerUp=TrueOrFalse;
-        if(TrueOrFalse)turnAngle = startturnangle+10;
-        else turnAngle=startturnangle;
-    }
+
 
 
     @Override
     public IMotor getMotor() {
-        return null;
+        return motor;
     }
 
     @Override
     public MoveHandler getDriveHandler() {
-        return null;
+        return driver;
     }
 
     @Override
     public RotationHandler getSteerHandler() {
-        return null;
+        return steerer;
     }
 
     @Override
     public String getModelName() {
-        return null;
+        return ModelName;
     }
 
     @Override
     public String getRegNr() {
-        return null;
+        return RegNr;
     }
 }

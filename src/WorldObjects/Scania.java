@@ -19,8 +19,11 @@ public class Scania extends WorldObject implements Movable, Vehicle, Truk {
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Flak(), new LoadHandler <WorldObject>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
 
-    public Scania(Point position, Point2D direction, Point size, boolean isStatic) {
-        super(position,direction, size, isStatic);
+    public Scania(Point position, Point2D direction, Point size) {
+        super(position,direction, size, false);
+    }
+    public Scania() {
+        this(new Point(0,0),new Point(1,0), null);
     }
 
     @Override

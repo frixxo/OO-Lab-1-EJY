@@ -24,6 +24,9 @@ public class Saab95 extends WorldObject implements Car,Vehicle,Movable,IHasTurbo
         super(position,direction, size, false);
         RegNr=reg.generate();
     }
+    public Saab95(){
+        this(new Point(0,0),new Point(1,0), null);
+    }
 
     //endregion
     
