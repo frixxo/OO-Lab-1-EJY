@@ -3,7 +3,7 @@ package WorldObjects.Objects;
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.TurboMotor;
-import LableInterfaces.IHasTurbo;
+import WorldObjects.LableInterfaces.IHasTurbo;
 import WorldObjects.Car;
 
 import java.awt.*;

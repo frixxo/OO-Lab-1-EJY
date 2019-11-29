@@ -1,4 +1,4 @@
-package Flak;
+package Fuctionality.Storage.Containers;
 
 abstract class NormalFlak implements IFlak {
     protected double angle = 0;  //0 is when the ramp is flat against the truck.

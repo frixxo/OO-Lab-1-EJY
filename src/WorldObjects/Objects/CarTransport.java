@@ -1,11 +1,11 @@
 package WorldObjects.Objects;
-import Flak.FlakStorage;
-import Flak.Ramp;
-import Flak.Storage;
+import Fuctionality.Storage.FlakStorage;
+import Fuctionality.Storage.Containers.Ramp;
+import Fuctionality.Storage.Storage;
 import Fuctionality.*;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
-import LastHandle.LoadHandler;
+import Fuctionality.Storage.LastHandle.LoadHandler;
 import WorldObjects.Car;
 import WorldObjects.Truk;
 

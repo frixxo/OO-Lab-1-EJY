@@ -1,7 +1,7 @@
 package Fuctionality.Motors;
 
 import Fuctionality.MoveHandler;
-import LableInterfaces.IHasTurbo;
+import WorldObjects.LableInterfaces.IHasTurbo;
 
 public class TurboMotor extends NormalMotor implements IHasTurbo {
     private boolean turboOn=false;

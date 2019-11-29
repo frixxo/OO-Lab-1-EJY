@@ -1,6 +1,7 @@
-package Flak;
+package Fuctionality.Storage;
 
-import LastHandle.IHandleLast;
+import Fuctionality.Storage.Containers.Container;
+import Fuctionality.Storage.LastHandle.IHandleLast;
 
 public interface Storage {
     IHandleLast getLastHandler();

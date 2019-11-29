@@ -1,4 +1,4 @@
-package Flak;
+package Fuctionality.Storage.Containers;
 /** A normal flak that is raisable and has an open top so is always loadable*/
 public class Flak extends NormalFlak {
     @Override

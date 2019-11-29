@@ -1,6 +1,8 @@
-package Flak;
+package Fuctionality.Storage;
 
-import LastHandle.IHandleLast;
+import Fuctionality.Storage.Containers.Container;
+import Fuctionality.Storage.Containers.IFlak;
+import Fuctionality.Storage.LastHandle.IHandleLast;
 
 public class FlakStorage implements Storage{
 
