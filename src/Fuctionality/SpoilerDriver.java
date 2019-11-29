@@ -1,6 +1,6 @@
 package Fuctionality;
 
-import WorldObjects.WorldObject;
+import WorldObjects.Objects.WorldObject;
 
 public class SpoilerDriver extends VehicleDriver{
     private boolean spoilerUp=false;

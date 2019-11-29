@@ -1,6 +1,6 @@
 package Graphics;
 
-import WorldObjects.*;
+import WorldObjects.Objects.WorldObject;
 
 import javax.swing.*;
 import java.awt.*;

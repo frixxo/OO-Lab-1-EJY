@@ -1,5 +1,5 @@
 import Fuctionality.RegNrGenerator;
-import WorldObjects.*;
+import WorldObjects.Objects.*;
 import org.junit.Test;
 
 import java.awt.*;

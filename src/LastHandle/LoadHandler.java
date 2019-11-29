@@ -1,7 +1,7 @@
 package LastHandle;
 
 import WorldObjects.IsWorldObject;
-import WorldObjects.WorldObject;
+import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
 import java.util.Deque;

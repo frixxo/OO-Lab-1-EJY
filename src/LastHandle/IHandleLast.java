@@ -1,8 +1,6 @@
 package LastHandle;
 
 import WorldObjects.IsWorldObject;
-import WorldObjects.Movable;
-import WorldObjects.WorldObject;
 
 import java.awt.*;
 

@@ -1,7 +1,7 @@
 package Fuctionality;
 
 import WorldObjects.Movable;
-import WorldObjects.WorldObject;
+import WorldObjects.Objects.WorldObject;
 
 import java.awt.geom.Point2D;
 

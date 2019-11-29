@@ -1,6 +1,6 @@
 package Fuctionality;
 
-import WorldObjects.WorldObject;
+import WorldObjects.Objects.WorldObject;
 
 public class VehicleDriver implements MoveHandler {
     protected double currentSpeed=0;
