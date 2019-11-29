@@ -1,3 +1,4 @@
+import Fuctionality.RegNrGenerator;
 import WorldObjects.*;
 import org.junit.Test;
 
@@ -25,7 +26,6 @@ public class VehicleTester {
         double d=x.speedFactor();
         assertEquals((float)2.88,(float)d,0);
     }
-
     @Test
     public void TestTurnLeftX(){
         Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
@@ -84,21 +84,22 @@ public class VehicleTester {
     }
     @Test   //testar 500 olika kombinationer, klarar över 20000 innan duplicering
     public void TestRegNrGenerator(){
-        Saab95 k;
+        RegNrGenerator reg=new RegNrGenerator();
         ArrayList<String> j= new ArrayList<>();
+        String Nr=null;
         for(int x=0;x<500;x++){
-            k=new Saab95(new Point(0,0),new Point(1,0),null);
             for(int y=0; y<(j.size());y++){
-                if(j.get(y).equals(k.getRegNr())){
-                    System.out.println(x+" "+y+" "+k.getRegNr());
+                Nr=reg.generate();
+                if(j.get(y).equals(Nr)){
+                    System.out.println(x+" "+y+" "+j.get(y));
                     fail();
                 }
             }
-            j.add(k.getRegNr());
+            j.add(Nr);
         }
         assertTrue(true);
     }
-    /*@Test
+    @Test
     public void TestBilverkstadAdd(){
         Bilverkstad<Volvo240> x=new Bilverkstad<>(new Point(0,0),5);
         Volvo240 y=new Volvo240();
@@ -264,6 +265,4 @@ public class VehicleTester {
         assertFalse(c.load(v));
     }
     */
-     */
-    //TODO tests for Graphics
 }

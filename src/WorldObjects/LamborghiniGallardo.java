@@ -1,28 +1,23 @@
 package WorldObjects;
 
+import Fuctionality.Motors.IMotor;
+import Fuctionality.MoveHandler;
+import Fuctionality.RotationHandler;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 /**
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
-/*public class LamborghiniGallardo extends Car{
+public class LamborghiniGallardo extends WorldObject implements Car,Movable,Vehicle{
     private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;
 
     //region constructors
-    public LamborghiniGallardo(Point position, Point2D direction){
-        super(position,direction);
-        initialize(2,Color.yellow,320,"LamborghiniGallardo");
-        setstartturnangle();
-        setSpoilerUp(false);
-        epic = true;
-    }
-    public LamborghiniGallardo(){
-        super();
-        initialize(2,Color.yellow,320,"LamborghiniGallardo");
-        setstartturnangle();
+    public LamborghiniGallardo(Point position, Point2D direction,Point size){
+        super(position,direction,size,false);
         setSpoilerUp(false);
         epic = true;
     }
@@ -40,12 +35,30 @@ import java.awt.geom.Point2D;
         if(TrueOrFalse)turnAngle = startturnangle+10;
         else turnAngle=startturnangle;
     }
-    private void setstartturnangle(){
-        startturnangle=turnAngle;
-    }
-    public boolean getSpoilerUp(){
-        return spoilerUp;
-    }
 
 
-}*/
+    @Override
+    public IMotor getMotor() {
+        return null;
+    }
+
+    @Override
+    public MoveHandler getDriveHandler() {
+        return null;
+    }
+
+    @Override
+    public RotationHandler getSteerHandler() {
+        return null;
+    }
+
+    @Override
+    public String getModelName() {
+        return null;
+    }
+
+    @Override
+    public String getRegNr() {
+        return null;
+    }
+}
