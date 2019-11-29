@@ -32,10 +32,9 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
     private IDGenerator reg=new RegNrGenerator();
 
     public CarFerry() {
-    this(new Point(0,0),new Point(1,0),null)}
+    this(new Point(0,0),new Point(1,0),null);}
     public CarFerry(Point position, Point2D direction,Point Size){
         super(position,direction,Size,false);
-        storage = new FlakStorage(new Ramp(), new  LoadHandler<Car>(this, 5000, 40, 20, 10, LoadHandler.Principle.FIFO));
         RegNr=reg.generate();
     }
 
