@@ -1,5 +1,4 @@
 package WorldObjects;
-import LableInterfaces.IHasLast;
 import LastHandle.*;
 import Flak.*;
 

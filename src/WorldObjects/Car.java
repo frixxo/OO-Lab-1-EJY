@@ -8,6 +8,4 @@ import LableInterfaces.IHasMotor;
  */
 
 public interface Car extends IHasMotor {
-
-    IMotor getMotor();
 }

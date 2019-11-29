@@ -1,9 +1,7 @@
 package WorldObjects;
 
-import Flak.Storage;
-import Fuctionality.Motors.IMotor;
+import LableInterfaces.IHasMotor;
+import LableInterfaces.IHasStorage;
 
-public interface Truk {
-    Storage getStorage();
-    IMotor getMotor();
+public interface Truk extends IHasMotor, IHasStorage {
 }
