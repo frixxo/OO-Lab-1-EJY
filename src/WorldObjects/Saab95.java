@@ -18,13 +18,12 @@ public class Saab95 extends WorldObject implements Car,Vehicle,Movable,IHasTurbo
     private TurboMotor engine = new TurboMotor(20,Driver);
     private String ModelName="Saab95";
     private String RegNr;
+    private RegNrGenerator reg = new RegNrGenerator();
 
     //region constructors
     public Saab95(Point position, Point2D direction, Point size){
         super(position,direction, size, false);
-        //RegNr Generator
-        Random r = new Random(ObjectNr);
-        this.RegNr=(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+""+(char)(r.nextInt(26) + 'a')+" "+r.nextInt(10)+""+r.nextInt(10)+""+r.nextInt(10);
+        RegNr=reg.generate();
     }
 
     //endregion

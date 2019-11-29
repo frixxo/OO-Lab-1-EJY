@@ -1,9 +1,11 @@
 package Fuctionality.Motors;
 
+import Fuctionality.MoveHandler;
+
 public class StandardMotor extends NormalMotor {
 
-    public StandardMotor(double power) {
-        super(power);
+    public StandardMotor(double power, MoveHandler moveHandler) {
+        super(power,moveHandler);
     }
 
     @Override
