@@ -1,16 +1,12 @@
 package WorldObjects; /** A scania truck*/
-import Flak.Flak;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.MoveHandler;
-import Fuctionality.Motors.NormalMotor;
 import Fuctionality.Motors.StandardMotor;
-import Fuctionality.RotationHandler;
 import Fuctionality.VehicleDriver;
 import Fuctionality.VehicleSteerer;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.util.Random;
 
 public class Scania extends WorldObject implements Movable, Vehicle, Truk {
     private final static String model = "Scania";

@@ -28,7 +28,7 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     private CarView frame;
     // A list of cars, modify if needed
-    ArrayList<Vehicle> cars = new ArrayList<>();
+    ArrayList<WorldObject> cars = new ArrayList<>();
 
     //methods:
 
@@ -36,19 +36,21 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.cars.add(new Volvo240());
+
+        // no
+       /* cc.cars.add(new Volvo240());
         cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point(1,0)));
         cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
         cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1)));
         cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1)));
-        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1)));
+        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1)));*/
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
         // Make sure cars are in frame
-        for (Vehicle car:cc.cars) {
-            car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240),cc.frame.drawPanel.getImageMap().get(car.getClass()).getSize());
+        for (WorldObject car : cc.cars) {
+            //car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240),cc.frame.drawPanel.getImageMap().get(car.getClass()).getSize());
         }
         // Start the timer
         cc.timer.start();
@@ -59,17 +61,17 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle car : cars) {
+            /*for (WorldObject car : cars) {
                 car.move();                                 //TODO some cars will not move after turning at low speeds.
                 hasHitWall(car);
 
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
-            }
+            }*/
         }
     }
 
-    private void hasHitWall(Vehicle vehicle){
+    private void hasHitWall(WorldObject vehicle){
         Point pos = vehicle.getPosition();
         Point2D dir = vehicle.getDirection();
         if(dir.getX() > 0 && pos.x + frame.getSize(vehicle).x >= frame.getWidth() ||
@@ -81,67 +83,67 @@ public class CarController {
             changeDirection(vehicle,1,-1);
         }
     }
-    private void changeDirection(Vehicle vehicle,int x, int y){
+    private void changeDirection(WorldObject vehicle,int x, int y){
         //vehicle.stopEngine();                                     //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
-        vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
+       // vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
         Point2D carDirection = vehicle.getDirection();
         carDirection.setLocation(carDirection.getX()*x, carDirection.getY()*y);
     }
     // Calls the gas method for each car once
     //region Vehicle functionality
     void gas(int amount) {
-        double gas = ((double) amount) / 100;
+       /* double gas = ((double) amount) / 100;
         for (Vehicle car : cars
                 ) {
             car.gas(gas);
-        }
+        }*/
     }
     void startEngline() {
-        for (Vehicle car : cars
+       /* for (Vehicle car : cars
         ) {
             car.startEngine();
-        }
+        }*/
     }
     void stopEngline() {
-        for (Vehicle car : cars
+       /* for (Vehicle car : cars
         ) {
             car.stopEngine();
-        }
+        }*/
     }
     void brake(int amount) {
         double brake = ((double) amount) / 100;
-        for (Vehicle car : cars
+        /*for (Vehicle car : cars
         ) {
             car.brake(brake);
-        }
+        }*/
     }
     void RaiseFlak() {
-        for (Vehicle car : cars
+        /*for (Vehicle car : cars
         ) {
             if(car instanceof IHasFlak) {
                 ((IHasFlak) car).raiseFlak();
             }
-        }
+        }*/
     }
     void LowerFlak() {
-        for (Vehicle car : cars
+        /*for (Vehicle car : cars
         ) {
             if(car instanceof IHasFlak) {
                 ((IHasFlak) car).lowerFlak();
             }
-        }
+        }*/
     }
     void TurnLeft() {
-        for (Vehicle car : cars
+        /*for (Vehicle car : cars
         ) {
             car.turnLeft();
-        }
+        }*/
     }
     void TurnRight() {
-        for (Vehicle car : cars
+        /*for (Vehicle car : cars
         ) {
             car.turnRight();
-        }
+        }*/
     }
     //endregion
 }

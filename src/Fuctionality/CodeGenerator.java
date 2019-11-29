@@ -29,6 +29,7 @@ public class CodeGenerator {
                     break;
                 case MIXED:
                     str = generateMixed(length);
+                    break;
                 default:
                     str = "";
             }
@@ -61,11 +62,12 @@ public class CodeGenerator {
     }
 
     private boolean checkIfCodeTaken(String code){
-        for (int i = 0; i < codes.size(); i++) {
-            if (codes.get(i).equals(code)) {
+        for (String s : codes) {
+            if (s.equals(code)) {
                 return true;
             }
-        } return false;
+        }
+        return false;
     }
 
     private char getRandom(){ return (random.nextInt(1) == 0) ? getRandomLetter() : getRandomNumber(); }

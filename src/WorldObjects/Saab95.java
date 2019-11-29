@@ -7,7 +7,6 @@ import LableInterfaces.IHasTurbo;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
-import java.util.Random;
 
 /**
  * Represent a Movables.Saab95
