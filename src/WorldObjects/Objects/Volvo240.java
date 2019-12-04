@@ -23,7 +23,7 @@ public class Volvo240 extends WorldObject implements Car {
     private IDGenerator reg=new RegNrGenerator();
     private String modelName="Volvo240";
     private String RegNr;
-    private int Turnangle=90;
+    private int turnAngle =90;
 
 
     //region Constructor
@@ -53,14 +53,10 @@ public class Volvo240 extends WorldObject implements Car {
         return RegNr;
     }
 
-    public void turnLeft(){
-        steerer.turnLeft(Turnangle,this.getDirection());
-    }
-    public void turnRight(){
-        steerer.turnRight(Turnangle,this.getDirection());
-    }
+    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
+    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
     public void move(){
-        driver.move(getPosition(),getDirection(),getStatic());
+        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
     }
     public double getCurrentSpeed(){return driver.getCurrentSpeed();}
 }

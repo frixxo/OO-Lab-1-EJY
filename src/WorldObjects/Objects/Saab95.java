@@ -54,14 +54,10 @@ public class Saab95 extends WorldObject implements Car,IHasTurbo {
     }
 
     @Override
-    public void turnLeft() {
-        steerer.turnLeft(turnAngle,getDirection());
-    }
+    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
 
     @Override
-    public void turnRight() {
-        steerer.turnRight(turnAngle,getDirection());
-    }
+    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
 
     @Override
     public void move() {

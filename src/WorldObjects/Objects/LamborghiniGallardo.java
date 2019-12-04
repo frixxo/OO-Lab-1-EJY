@@ -67,18 +67,14 @@ public class LamborghiniGallardo extends WorldObject implements Car, IHasSpoiler
     }
 
     @Override
-    public void turnLeft() {
-        steerer.turnLeft(turnAngle,getDirection());
-    }
+    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
 
     @Override
-    public void turnRight() {
-        steerer.turnRight(turnAngle,getDirection());
-    }
+    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
 
     @Override
     public void move() {
-        driver.move(getPosition(),getDirection(),getStatic());
+        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
     }
 
     @Override
