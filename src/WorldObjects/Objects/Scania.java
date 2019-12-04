@@ -17,13 +17,14 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Scania extends WorldObject implements Truk {
-    private MoveHandler driver = new VehicleDriver(this);
-    private RotationHandler steerer = new VehicleSteerer(this);
+    private MoveHandler driver = new VehicleDriver();
+    private RotationHandler steerer = new VehicleSteerer();
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Flak(), new LoadHandler <>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
     private IDGenerator reg=new RegNrGenerator();
     private String modelname = "Scania";
     private String RegNr;
+    private int turnAngle=90;
 
 
     public Scania(Point position, Point2D direction, Point size) {
@@ -32,12 +33,6 @@ public class Scania extends WorldObject implements Truk {
     public Scania() {
         this(new Point(0,0),new Point(1,0), null);
     }
-
-    @Override
-    public MoveHandler getDriveHandler(){ return driver; }
-
-    @Override
-    public RotationHandler getSteerHandler (){return steerer; }
 
     @Override
     public IMotor getMotor(){ return engine; }
@@ -52,4 +47,24 @@ public class Scania extends WorldObject implements Truk {
 
     @Override
     public Storage getStorage(){return storage; }
+
+    @Override
+    public void turnLeft() {
+        steerer.turnLeft(turnAngle,getDirection());
+    }
+
+    @Override
+    public void turnRight() {
+        steerer.turnRight(turnAngle,getDirection());
+    }
+
+    @Override
+    public void move() {
+        driver.move(getPosition(),getDirection(),getStatic());
+    }
+
+    @Override
+    public double getCurrentSpeed() {
+        return driver.getCurrentSpeed();
+    }
 }

@@ -1,6 +1,7 @@
 package Fuctionality.Storage.LastHandle;
 
 import WorldObjects.IsWorldObject;
+import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
@@ -64,7 +65,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
             return cargo;
     }
 
-    private boolean isBehind(WorldObject obj){
+    private boolean isBehind(IsWorldObject obj){
         if(LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
                 || LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getStatic()) return false;
         return true;
@@ -73,8 +74,8 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     public void updatePosition(Point position){
         for (T cargo : cargoList){
             cargo.getPosition().setLocation(position.x, position.y);
-            if (cargo instanceof IHasLast){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
-                ((IHasLast)cargo).IsLoadedMove(position);
+            if (cargo instanceof IHasStorage){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
+                ((IHasStorage)cargo).getStorage().getLastHandler().updatePosition(position);
             }
         }
     }

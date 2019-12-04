@@ -4,6 +4,8 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.RotationHandler.RotationHandler;
 
 public interface Movable extends IsWorldObject{
-    MoveHandler getDriveHandler();
-    RotationHandler getSteerHandler();
+    void turnLeft();
+    void turnRight();
+    void move();
+    double getCurrentSpeed();
 }

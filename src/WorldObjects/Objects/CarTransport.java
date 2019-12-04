@@ -22,12 +22,16 @@ import java.awt.geom.Point2D;
 public class CarTransport extends WorldObject implements Truk {
     // TODO HELP
     private final static String model = "CarTransport";
-    private MoveHandler driver = new VehicleDriver(this);
-    private RotationHandler steerer = new VehicleSteerer(this);
+    private MoveHandler driver = new VehicleDriver();
+    private RotationHandler steerer = new VehicleSteerer();
     private StandardMotor engine = new StandardMotor(20, driver);
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
+    private int turnAngle=90;
+
+
+
     public CarTransport() {
         super(new Point(0,0),new Point(1,0), null, false);
     }
@@ -47,19 +51,30 @@ public class CarTransport extends WorldObject implements Truk {
         return RegNr;
     }
 
-    @Override
-    public RotationHandler getSteerHandler() {
-        return steerer;
-    }
-
-    @Override
-    public MoveHandler getDriveHandler() {
-        return driver;
-    }
 
     @Override
     public Storage getStorage() { return storage; }
 
     @Override
     public IMotor getMotor() { return engine; }
+
+    @Override
+    public void turnLeft() {
+        steerer.turnLeft(turnAngle,getDirection());
+    }
+
+    @Override
+    public void turnRight() {
+        steerer.turnRight(turnAngle,getDirection());
+    }
+
+    @Override
+    public void move() {
+        driver.move(getPosition(),getDirection(),getStatic());
+    }
+
+    @Override
+    public double getCurrentSpeed() {
+        return driver.getCurrentSpeed();
+    }
 }

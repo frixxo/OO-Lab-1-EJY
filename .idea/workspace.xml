@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WorldObjects/LandVehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/IsWorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/IsWorldObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/MoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/MoveHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/SpoilerDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/SpoilerDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/RotationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/RotationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/RotationHandler/VehicleSteerer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Truk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Truk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/GraphicsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/OO-Lab-1-EJY/VehicleTester.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.VehicleTester.TestMoveX">
     <configuration name="VehicleTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
@@ -65,9 +79,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleTester.TestBilverkstadAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OO-Lab-1-EJY" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VehicleTester" />
+      <option name="METHOD_NAME" value="TestBilverkstadAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTester.TestGallardoSpoilerDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OO-Lab-1-EJY" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VehicleTester" />
+      <option name="METHOD_NAME" value="TestGallardoSpoilerDown" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTester.TestGallardoSpoilerUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OO-Lab-1-EJY" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VehicleTester" />
+      <option name="METHOD_NAME" value="TestGallardoSpoilerUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTester.TestMoveX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OO-Lab-1-EJY" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VehicleTester" />
+      <option name="METHOD_NAME" value="TestMoveX" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VehicleTester.TestMoveX" />
         <item itemvalue="JUnit.VehicleTester" />
+        <item itemvalue="JUnit.VehicleTester.TestBilverkstadAdd" />
+        <item itemvalue="JUnit.VehicleTester.TestGallardoSpoilerUp" />
+        <item itemvalue="JUnit.VehicleTester.TestGallardoSpoilerDown" />
       </list>
     </recent_temporary>
   </component>
@@ -99,11 +157,39 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

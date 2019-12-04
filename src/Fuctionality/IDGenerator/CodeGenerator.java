@@ -3,7 +3,13 @@ package Fuctionality.IDGenerator;
 import java.util.List;
 import java.util.Random;
 
-public class CodeGenerator {
+public class CodeGenerator implements IDGenerator{
+
+    @Override
+    public String generate() {
+        return generate(6);
+    }
+
     public enum CodeStyle{
         NUMBER, LETTER, MIXED
     }

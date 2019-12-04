@@ -17,12 +17,13 @@ import java.awt.geom.Point2D;
  * Represent a Movables.Saab95
  */
 public class Saab95 extends WorldObject implements Car,IHasTurbo {
-    private MoveHandler Driver=new VehicleDriver(this);
-    private RotationHandler Steerer=new VehicleSteerer(this);
-    private TurboMotor engine = new TurboMotor(20,Driver);
+    private MoveHandler driver=new VehicleDriver();
+    private RotationHandler steerer=new VehicleSteerer();
+    private TurboMotor engine = new TurboMotor(100,driver);
     private RegNrGenerator reg = new RegNrGenerator();
     private String ModelName="Saab95";
     private String RegNr;
+    private int turnAngle=90;
 
 
     //region constructors
@@ -43,16 +44,6 @@ public class Saab95 extends WorldObject implements Car,IHasTurbo {
     public IMotor getMotor() { return engine; }
 
     @Override
-    public MoveHandler getDriveHandler() {
-        return Driver;
-    }
-
-    @Override
-    public RotationHandler getSteerHandler() {
-        return Steerer;
-    }
-
-    @Override
     public String getModelName() {
         return ModelName;
     }
@@ -60,5 +51,25 @@ public class Saab95 extends WorldObject implements Car,IHasTurbo {
     @Override
     public String getRegNr() {
         return RegNr;
+    }
+
+    @Override
+    public void turnLeft() {
+        steerer.turnLeft(turnAngle,getDirection());
+    }
+
+    @Override
+    public void turnRight() {
+        steerer.turnRight(turnAngle,getDirection());
+    }
+
+    @Override
+    public void move() {
+        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
+    }
+
+    @Override
+    public double getCurrentSpeed() {
+        return driver.getCurrentSpeed();
     }
 }

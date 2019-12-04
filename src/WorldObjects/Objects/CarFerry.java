@@ -24,28 +24,19 @@ import java.awt.geom.Point2D;
 public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Movable, Vehicle {
 
     private String modelname = "CarFerry";
-    private RotationHandler steerer = new VehicleSteerer(this);
-    private MoveHandler driver = new VehicleDriver(this);
+    private RotationHandler steerer = new VehicleSteerer();
+    private MoveHandler driver = new VehicleDriver();
     private IMotor engine = new StandardMotor(10, driver);
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
+    private int turnAngle=90;
 
     public CarFerry() {
     this(new Point(0,0),new Point(1,0),null);}
     public CarFerry(Point position, Point2D direction,Point Size){
         super(position,direction,Size,false);
         RegNr=reg.generate();
-    }
-
-    @Override
-    public MoveHandler getDriveHandler() {
-        return driver;
-    }
-
-    @Override
-    public RotationHandler getSteerHandler() {
-        return  steerer;
     }
 
     @Override
@@ -66,5 +57,25 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
     @Override
     public Storage getStorage() {
         return storage;
+    }
+
+    @Override
+    public void turnLeft() {
+        steerer.turnLeft(turnAngle,getDirection());
+    }
+
+    @Override
+    public void turnRight() {
+        steerer.turnRight(turnAngle,getDirection());
+    }
+
+    @Override
+    public void move() {
+        driver.move(getPosition(),getDirection(),getStatic());
+    }
+
+    @Override
+    public double getCurrentSpeed() {
+        return driver.getCurrentSpeed();
     }
 }

@@ -17,12 +17,13 @@ import java.awt.geom.Point2D;
  * Represents a Volvo 240 raggarbil
  */
 public class Volvo240 extends WorldObject implements Car {
-    private RotationHandler steerer= new VehicleSteerer(this);
-    private MoveHandler driver= new VehicleDriver(this);
+    private RotationHandler steerer= new VehicleSteerer();
+    private MoveHandler driver= new VehicleDriver();
     private IMotor motor = new TrimmedMotor(100,1.25,driver);
     private IDGenerator reg=new RegNrGenerator();
     private String modelName="Volvo240";
     private String RegNr;
+    private int Turnangle=90;
 
 
     //region Constructor
@@ -52,13 +53,14 @@ public class Volvo240 extends WorldObject implements Car {
         return RegNr;
     }
 
-    @Override
-    public MoveHandler getDriveHandler() {
-        return null;
+    public void turnLeft(){
+        steerer.turnLeft(Turnangle,this.getDirection());
     }
-
-    @Override
-    public RotationHandler getSteerHandler() {
-        return null;
+    public void turnRight(){
+        steerer.turnRight(Turnangle,this.getDirection());
     }
+    public void move(){
+        driver.move(getPosition(),getDirection(),getStatic());
+    }
+    public double getCurrentSpeed(){return driver.getCurrentSpeed();}
 }

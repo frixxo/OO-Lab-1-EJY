@@ -17,15 +17,15 @@ import java.awt.geom.Point2D;
  * Represents a Lamborghini Gallardo that has a Spoiler that decreases speed but increases turning ability, is also epic.
  */
 public class LamborghiniGallardo extends WorldObject implements Car, IHasSpoiler {
-    private boolean spoilerUp;
     private boolean epic;
     private int startturnangle;
-    private RotationHandler steerer=new VehicleSteerer(this);
-    private SpoilerDriver driver=new SpoilerDriver(this);
-    private StandardMotor motor = new StandardMotor(300,driver);
+    private RotationHandler steerer=new VehicleSteerer();
+    private SpoilerDriver driver=new SpoilerDriver();
+    private StandardMotor motor = new StandardMotor(320,driver);
     private RegNrGenerator reg=new RegNrGenerator();
     private String ModelName="Lamborghini Gallardo";
     private String RegNr;
+    private int turnAngle=90;
 
 
     //region constructors
@@ -43,15 +43,6 @@ public class LamborghiniGallardo extends WorldObject implements Car, IHasSpoiler
         return motor;
     }
 
-    @Override
-    public MoveHandler getDriveHandler() {
-        return driver;
-    }
-
-    @Override
-    public RotationHandler getSteerHandler() {
-        return steerer;
-    }
 
     @Override
     public String getModelName() {
@@ -66,10 +57,32 @@ public class LamborghiniGallardo extends WorldObject implements Car, IHasSpoiler
     @Override
     public void RaiseSpoiler() {
         driver.raiseSpoiler();
+        turnAngle=95;
     }
 
     @Override
     public void LowerSpoiler() {
         driver.lowerSpoiler();
+        turnAngle=90;
+    }
+
+    @Override
+    public void turnLeft() {
+        steerer.turnLeft(turnAngle,getDirection());
+    }
+
+    @Override
+    public void turnRight() {
+        steerer.turnRight(turnAngle,getDirection());
+    }
+
+    @Override
+    public void move() {
+        driver.move(getPosition(),getDirection(),getStatic());
+    }
+
+    @Override
+    public double getCurrentSpeed() {
+        return driver.getCurrentSpeed();
     }
 }
