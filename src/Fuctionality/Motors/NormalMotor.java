@@ -4,6 +4,7 @@ import Fuctionality.MoveHandlers.MoveHandler;
 
 public abstract class NormalMotor implements IMotor {
     protected double power;
+    private boolean isEngineOn = false;
     private int frameCounter = 0;
     private MoveHandler moveHandler;
 
@@ -18,6 +19,11 @@ public abstract class NormalMotor implements IMotor {
     public double getPower() {
         return power;
     }
+
+    @Override
+    public void startEngine() { isEngineOn = true; }
+    @Override
+    public void stopEngine() { isEngineOn = false; }
 
 
     /**
@@ -41,8 +47,10 @@ public abstract class NormalMotor implements IMotor {
      * @param amount how much to gas
      */
     public void gas(double amount) {
-        amount = (amount > 1) ? 1 : (amount < 0) ? 0 : amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
-        incrementSpeed(amount);
+        if (isEngineOn) {
+            amount = (amount > 1) ? 1 : (amount < 0) ? 0 : amount;   //sätter alla tal större än 1 till 1 och mindre än 0 till 0.
+            incrementSpeed(amount);
+        }
     }
 
     /**
