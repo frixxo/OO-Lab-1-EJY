@@ -55,7 +55,7 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
     }
 
     @Override
-    public RotationHandler getSteerer() { return steerer; }
+    public RotationHandler getRotationHandler() { return steerer; }
 
     @Override
     public MoveHandler getDriver() { return driver; }

@@ -1,6 +1,6 @@
 package WorldObjects;
 
-public interface Vehicle extends Movable,IsWorldObject{
+public interface Vehicle extends Movable{
     String getModelName ();
     String getRegNr();
 }

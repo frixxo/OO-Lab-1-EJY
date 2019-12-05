@@ -60,7 +60,7 @@ public class CarTransport extends Drivable implements Truk {
     public IMotor getMotor() { return engine; }
 
     @Override
-    public RotationHandler getSteerer() { return steerer; }
+    public RotationHandler getRotationHandler() { return steerer; }
 
     @Override
     public MoveHandler getDriver() { return driver; }

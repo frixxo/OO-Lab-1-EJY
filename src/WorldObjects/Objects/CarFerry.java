@@ -62,7 +62,7 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
 
 
     @Override
-    public RotationHandler getSteerer() { return steerer; }
+    public RotationHandler getRotationHandler() { return steerer; }
 
     @Override
     public MoveHandler getDriver() { return driver; }
