@@ -4,6 +4,7 @@ import WorldObjects.IsWorldObject;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.WorldObject;
 
+import Fuctionality.Storage.Containers.Container;
 import java.awt.*;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -20,7 +21,6 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
 
     protected Deque<T> cargoList = new LinkedList<>();
 
-    private boolean dock = false; // simulates all kind of things, truck ramp, actual dock or even a kangaroo pouch
     private final Principle principle;
     protected final int MAX_CARGO_LOAD;
     private final int MAX_LOAD_DISTANCE;
@@ -42,6 +42,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getStatic()
                 &&isBehind(cargo)
+                && container.loadState()            //TODO fix this need to get the containers loadstate without access back to storage
                 ) {
             cargo.setStatic(true);
             cargoList.add(cargo);
@@ -79,5 +80,4 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
             }
         }
     }
-
 }

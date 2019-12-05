@@ -20,17 +20,9 @@ public class SpoilerDriver extends VehicleDriver {
         spoilerUp=false; }
 
     @Override
-    public Point move(Point position, Point2D direction, boolean Static){
-        if(spoilerUp) {
-            spoilerspeed =currentSpeed*0.9;}
-        else {
-            spoilerspeed =currentSpeed;}
-        if(!Static){
-            if(currentSpeed*frameCounter<0.5)frameCounter++;
-            else { frameCounter=1;}
-            return new Point((int)Math.round(direction.getX()*currentSpeed*frameCounter),(int)Math.round(direction.getY()*currentSpeed*frameCounter));
-        }
-        return position;
+    public void setCurrentSpeed(double d){
+        if(spoilerUp){this.currentSpeed=d*0.9;}
+        else {super.setCurrentSpeed(d);}
     }
 }
 

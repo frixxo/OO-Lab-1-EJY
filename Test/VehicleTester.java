@@ -134,7 +134,8 @@ public class VehicleTester {
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.getStorage().getContainer().closeContainer();
-        assertFalse(x.getStorage().getLastHandler().load(y));
+        boolean b=x.getStorage().getLastHandler().load(y);
+        assertFalse(b);
     }
     @Test
     public void TestCarTransportGet(){
