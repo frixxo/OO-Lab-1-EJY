@@ -1,7 +1,5 @@
 package WorldObjects.Objects;
 
-import Fuctionality.MoveHandlers.MoveHandler;
-import Fuctionality.RotationHandler.RotationHandler;
 import WorldObjects.Movable;
 
 import java.awt.*;
@@ -14,8 +12,8 @@ public abstract class Drivable extends WorldObject implements Movable {
         super(position, direction, size, isStatic);
     }
 
-    public void turnLeft(){ setDirection(getSteerer().turnLeft(turnAngle,getDirection())); }
-    public void turnRight(){ setDirection(getSteerer().turnRight(turnAngle,getDirection())); }
-    public void move(){ setPosition(getDriver().move(getPosition(),getDirection(),getStatic())); }
-    public double getCurrentSpeed(){return getDriver().getCurrentSpeed();}
+    public void turnLeft(){ setDirection(getRotationHandler().turnLeft(turnAngle,getDirection())); }
+    public void turnRight(){ setDirection(getRotationHandler().turnRight(turnAngle,getDirection())); }
+    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(),getStatic())); }
+    public double getCurrentSpeed(){return getMoveHandler().getCurrentSpeed();}
 }

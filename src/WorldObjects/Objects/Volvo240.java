@@ -54,8 +54,8 @@ public class Volvo240 extends Drivable implements Car {
     }
 
     @Override
-    public RotationHandler getSteerer() { return steerer; }
+    public RotationHandler getRotationHandler() { return steerer; }
 
     @Override
-    public MoveHandler getDriver() { return driver; }
+    public MoveHandler getMoveHandler() { return driver; }
 }

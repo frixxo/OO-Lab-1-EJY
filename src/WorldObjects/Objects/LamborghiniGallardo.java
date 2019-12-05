@@ -65,8 +65,8 @@ public class LamborghiniGallardo extends Drivable implements Car, IHasSpoiler {
     }
 
     @Override
-    public RotationHandler getSteerer() { return steerer;}
+    public RotationHandler getRotationHandler() { return steerer;}
 
     @Override
-    public MoveHandler getDriver() { return driver; }
+    public MoveHandler getMoveHandler() { return driver; }
 }

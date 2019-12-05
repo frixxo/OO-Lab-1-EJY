@@ -20,7 +20,6 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
        this.size = size;
        this.isStatic = isStatic;
     }
-
     //endregion
 
     //region Setters
