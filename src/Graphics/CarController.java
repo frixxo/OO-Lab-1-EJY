@@ -1,9 +1,11 @@
 package Graphics;
 
 import Systems.CollisionHandler;
+import Systems.Physics;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.*;
+import WorldObjects.WorldObjectView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,9 +31,9 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     private CarView frame;
     // A list of cars, modify if needed
-    ArrayList<WorldObject> cars = new ArrayList<>();
+    ArrayList<WorldObjectView> cars = new ArrayList<>();
 
-    private CollisionHandler collider=new CollisionHandler(frame.windowSize());
+    private Physics physics;
     //methods:
 
     public static void main(String[] args) {
@@ -40,18 +42,18 @@ public class CarController {
 
         // no
        cc.cars.add(new Volvo240());
-        cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point (1,0),new Point(20,20)));
-        cc.cars.add(new Scania(new Point(0,200),new Point(1,0),new Point(20,20)));
-        cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1),new Point(20,20)));
-        cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1),new Point(20,20)));
-        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1),new Point(40,40)));
+        cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point (1,0)));
+        cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
+        cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1)));
+        cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1)));
+        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
-
+        cc.physics=new Physics(cc.frame.windowSize());
         // Make sure cars are in frame
-        for (WorldObject car : cc.cars) {
-            //car.fixPosition(new Point(cc.frame.getSize().width,cc.frame.getSize().height-240),cc.frame.drawPanel.getImageMap().get(car.getClass()).getSize());
+        for (WorldObjectView car : cc.cars) {
+            cc.physics.update(car);
         }
         // Start the timer
         cc.timer.start();
@@ -62,14 +64,15 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (WorldObject car : cars) {
+            for (WorldObjectView car : cars) {
                 if(car instanceof Drivable) {
                     ((Drivable)car).move();
                 }
-                    collider.hasHitWall(car);
+                physics.update(car);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
+
         }
     }
 
@@ -78,14 +81,14 @@ public class CarController {
     //region Vehicle functionality
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (WorldObject car : cars){
+        for (WorldObjectView car : cars){
             if(car instanceof IHasMotor){
                 ((IHasMotor) car).getMotor().gas(gas);
             }
         }
     }
     void startEngline() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasMotor){
                 ((IHasMotor) car).getMotor().startEngine();
@@ -93,7 +96,7 @@ public class CarController {
         }
     }
     void stopEngline() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasMotor){
                 ((IHasMotor) car).getMotor().stopEngine();
@@ -103,7 +106,7 @@ public class CarController {
     }
     void brake(int amount) {
         double brake = ((double) amount) / 100;
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasMotor){
                 ((IHasMotor) car).getMotor().brake(brake);
@@ -111,7 +114,7 @@ public class CarController {
         }
     }
     void RaiseFlak() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasStorage) {
                 ((IHasStorage) car).getStorage().getContainer().closeContainer();
@@ -119,7 +122,7 @@ public class CarController {
         }
     }
     void LowerFlak() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasStorage) {
                 ((IHasStorage) car).getStorage().getContainer().openContainer();
@@ -127,7 +130,7 @@ public class CarController {
         }
     }
     void TurnLeft() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof Drivable) {
                 ((Drivable)car).turnLeft();
@@ -135,7 +138,7 @@ public class CarController {
         }
     }
     void TurnRight() {
-        for (WorldObject car : cars
+        for (WorldObjectView car : cars
         ) {
             if(car instanceof Drivable) {
                 ((Drivable)car).turnRight();

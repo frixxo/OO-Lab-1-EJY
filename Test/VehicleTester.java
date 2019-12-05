@@ -35,43 +35,43 @@ public class VehicleTester {
     }
     @Test
     public void TestTurnLeftX(){
-        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0));
         saab.turnLeft();
         assertEquals(0,saab.getDirection().getX(),0.01);
     }
     @Test
     public void TestTurnLeftY(){
-        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0));
         saab.turnLeft();
 
         assertEquals(-1, saab.getDirection().getY(), 0.01);
     }
     @Test
     public void TestTurnRightX(){
-        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0));
         saab.turnRight();
         assertEquals(0, saab.getDirection().getX(), 0.01);
     }
     @Test
     public void TestTurnRightY(){
-        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0),null);
+        Saab95 saab = new Saab95(new Point(0,0),new Point(1,0));
         saab.turnRight();
         assertEquals(1,saab.getDirection().getY(),0.01);
     }
     @Test
     public void TestVolvoSpeedFactor(){
-        Volvo240 volvo = new Volvo240(new Point(0,0),new Point(1,0),null);
+        Volvo240 volvo = new Volvo240(new Point(0,0),new Point(1,0));
         assertEquals(1.25d,volvo.getMotor().SpeedFactor(),0.01d);
     }
     @Test
     public void TestGasHigher(){
-        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0),null);
+        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0));
         volvo.getMotor().gas(10);
         assertEquals(1.25d,volvo.getCurrentSpeed(),0.01);
     }
     @Test
     public void TestBrakeHigher(){
-        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0),null);
+        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0));
         volvo.getMotor().gas(10);
         volvo.getMotor().brake(10);
         volvo.move();
@@ -266,8 +266,8 @@ public class VehicleTester {
     @Test
     public void TestLoadWhenNotInMaxLoadDistance(){
         CarTransport c=new CarTransport();
-        Point x=new Point(100,100);
-        Volvo240 v=new Volvo240(x,x,new Point (10,10));
+        Point x=new Point(1000,1000);
+        Volvo240 v=new Volvo240(x,x);
         assertFalse(c.getStorage().getLastHandler().load(v));
     }
 }

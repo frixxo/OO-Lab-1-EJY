@@ -8,6 +8,7 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
+import Systems.CollisionHandler;
 import WorldObjects.Car;
 
 import java.awt.*;
@@ -23,18 +24,18 @@ public class Volvo240 extends Drivable implements Car {
     private IDGenerator reg=new RegNrGenerator();
     private String modelName="Volvo240";
     private String RegNr;
-    private int turnAngle =90;
+    private CollisionHandler collider=new CollisionHandler();
 
 
     //region Constructor
-    public Volvo240(Point position, Point2D direction, Point size)
+    public Volvo240(Point position, Point2D direction)
     {
-        super(position, direction, size, false);
+        super(position, direction, new Point(70,50), false);
         RegNr=reg.generate();
     }
     public Volvo240()
     {
-        this(new Point(0,0),new Point(1,0),null);
+        this(new Point(0,0),new Point(1,0));
     }
     //endregion
 
@@ -58,4 +59,9 @@ public class Volvo240 extends Drivable implements Car {
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }

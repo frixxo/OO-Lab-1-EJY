@@ -7,6 +7,7 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
+import Systems.CollisionHandler;
 import WorldObjects.LableInterfaces.IHasTurbo;
 import WorldObjects.Car;
 
@@ -23,16 +24,16 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
     private RegNrGenerator reg = new RegNrGenerator();
     private String ModelName="Saab95";
     private String RegNr;
-    private int turnAngle=90;
+    private CollisionHandler collider=new CollisionHandler();
 
 
     //region constructors
-    public Saab95(Point position, Point2D direction, Point size){
-        super(position,direction, size, false);
+    public Saab95(Point position, Point2D direction){
+        super(position,direction, new Point(70,50), false);
         RegNr=reg.generate();
     }
     public Saab95(){
-        this(new Point(0,0),new Point(1,0), null);
+        this(new Point(0,0),new Point(1,0));
     }
 
     //endregion
@@ -58,4 +59,9 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }

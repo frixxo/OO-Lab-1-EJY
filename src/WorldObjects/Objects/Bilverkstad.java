@@ -1,5 +1,6 @@
 package WorldObjects.Objects;
 
+import Systems.CollisionHandler;
 import WorldObjects.Vehicle;
 
 import java.awt.*;
@@ -9,6 +10,7 @@ import java.util.Map;
 public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     private Map<String, T> cars = new HashMap<String, T>();
     private int maxCars = 0;
+    private CollisionHandler collider=new CollisionHandler();
     private final int distToCArDeadzone = 3;
 
 
@@ -36,7 +38,7 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     }
 
     public Bilverkstad(Point location, int maxCars){
-        super(location,null,new Point (50,50),false);
+        super(location,null,new Point(200,200),false);
         this.maxCars = maxCars;
     }
 
@@ -45,5 +47,10 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     }
     public int numberOfCars() {
         return cars.size();
+    }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
     }
 }

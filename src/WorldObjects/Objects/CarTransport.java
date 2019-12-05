@@ -11,6 +11,7 @@ import Fuctionality.Storage.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Storage.LastHandle.LoadHandler;
+import Systems.CollisionHandler;
 import WorldObjects.Car;
 import WorldObjects.Truk;
 
@@ -28,15 +29,15 @@ public class CarTransport extends Drivable implements Truk {
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
-    private int turnAngle=90;
+    private CollisionHandler collider=new CollisionHandler();
 
 
 
     public CarTransport() {
-        super(new Point(0,0),new Point(1,0), null, false);
+        this(new Point(0,0),new Point(1,0));
     }
-    public CarTransport(Point position, Point2D direction, Point Size){
-        super(position,direction,Size,false);
+    public CarTransport(Point position, Point2D direction){
+        super(position,direction,new Point(70,50),false);
         storage = new FlakStorage(new Ramp(),new LoadHandler<Car>(this, 5, 10, 20, 10, LoadHandler.Principle.FILO));
         RegNr=reg.generate();
     }
@@ -63,4 +64,9 @@ public class CarTransport extends Drivable implements Truk {
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }

@@ -177,7 +177,7 @@ public class CarView extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     public Point windowSize(){
-        return new Point(X,Y);
+        return new Point(X,Y-240);
     }
 
 }

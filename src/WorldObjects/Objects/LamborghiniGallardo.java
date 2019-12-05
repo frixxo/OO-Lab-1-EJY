@@ -7,6 +7,7 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.SpoilerDriver;
 import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
+import Systems.CollisionHandler;
 import WorldObjects.LableInterfaces.IHasSpoiler;
 import WorldObjects.Car;
 
@@ -24,16 +25,16 @@ public class LamborghiniGallardo extends Drivable implements Car, IHasSpoiler {
     private RegNrGenerator reg=new RegNrGenerator();
     private String ModelName="Lamborghini Gallardo";
     private String RegNr;
-
+    private CollisionHandler collider=new CollisionHandler();
 
     //region constructors
-    public LamborghiniGallardo(Point position, Point2D direction,Point size){
-        super(position,direction,size,false);
+    public LamborghiniGallardo(Point position, Point2D direction){
+        super(position,direction,new Point(70,50),false);
         epic = true;
         this.RegNr=reg.generate();
     }
     public LamborghiniGallardo(){
-        this(new Point(0,0),new Point(1,0),null);
+        this(new Point(0,0),new Point(1,0));
     }
 
     @Override
@@ -69,4 +70,9 @@ public class LamborghiniGallardo extends Drivable implements Car, IHasSpoiler {
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }

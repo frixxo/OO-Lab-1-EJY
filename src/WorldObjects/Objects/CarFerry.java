@@ -10,6 +10,7 @@ import Fuctionality.Storage.Containers.Ramp;
 import Fuctionality.Storage.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
+import Systems.CollisionHandler;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import Fuctionality.Storage.LastHandle.*;
@@ -30,12 +31,12 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
-    private int turnAngle=90;
+    private CollisionHandler collider=new CollisionHandler();
 
     public CarFerry() {
-    this(new Point(0,0),new Point(1,0),null);}
-    public CarFerry(Point position, Point2D direction,Point Size){
-        super(position,direction,Size,false);
+    this(new Point(0,0),new Point(1,0));}
+    public CarFerry(Point position, Point2D direction){
+        super(position,direction,new Point(140,100),false);
         RegNr=reg.generate();
     }
 
@@ -65,4 +66,9 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }

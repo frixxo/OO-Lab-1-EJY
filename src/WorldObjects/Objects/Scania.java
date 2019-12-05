@@ -11,6 +11,7 @@ import Fuctionality.Storage.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Storage.LastHandle.LoadHandler;
+import Systems.CollisionHandler;
 import WorldObjects.Truk;
 
 import java.awt.*;
@@ -24,14 +25,14 @@ public class Scania extends Drivable implements Truk {
     private IDGenerator reg=new RegNrGenerator();
     private String modelname = "Scania";
     private String RegNr;
-    private int turnAngle=90;
+    private CollisionHandler collider=new CollisionHandler();
 
 
-    public Scania(Point position, Point2D direction, Point size) {
-        super(position,direction, size, false);
+    public Scania(Point position, Point2D direction) {
+        super(position,direction, new Point(70,50), false);
     }
     public Scania() {
-        this(new Point(0,0),new Point(1,0), null);
+        this(new Point(0,0),new Point(1,0));
     }
 
     @Override
@@ -53,4 +54,9 @@ public class Scania extends Drivable implements Truk {
 
     @Override
     public MoveHandler getDriver() { return driver; }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
+    }
 }
