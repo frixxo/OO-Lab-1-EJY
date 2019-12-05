@@ -24,4 +24,6 @@ public class FlakStorage implements Storage{
     public IHandleLast getLastHandler() {
         return lasthandler;
     }
+
+
 }

@@ -42,7 +42,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getStatic()
                 &&isBehind(cargo)
-                && container.loadState()            //TODO fix this need to get the containers loadstate without access back to storage
+                //&& loadState()                  //TODO need to check loadstate
                 ) {
             cargo.setStatic(true);
             cargoList.add(cargo);

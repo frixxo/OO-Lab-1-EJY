@@ -48,19 +48,14 @@ public class Scania extends WorldObject implements Truk {
     @Override
     public Storage getStorage(){return storage; }
 
-    @Override
-    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
 
     @Override
-    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
-
-    @Override
-    public void move() {
-        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
+    public RotationHandler getSteerer() {
+        return steerer;
     }
 
     @Override
-    public double getCurrentSpeed() {
-        return driver.getCurrentSpeed();
+    public MoveHandler getDriver() {
+        return driver;
     }
 }

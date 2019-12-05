@@ -24,4 +24,5 @@ public class VehicleDriver implements MoveHandler {
         return currentSpeed;
     }
     public void setCurrentSpeed(double d) { this.currentSpeed=d; }
+
 }

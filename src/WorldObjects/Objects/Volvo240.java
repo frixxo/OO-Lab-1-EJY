@@ -16,7 +16,7 @@ import java.awt.geom.Point2D;
 /**
  * Represents a Volvo 240 raggarbil
  */
-public class Volvo240 extends WorldObject implements Car {
+public class Volvo240 extends Drivable implements Car {
     private RotationHandler steerer= new VehicleSteerer();
     private MoveHandler driver= new VehicleDriver();
     private IMotor motor = new TrimmedMotor(100,1.25,driver);
@@ -53,10 +53,14 @@ public class Volvo240 extends WorldObject implements Car {
         return RegNr;
     }
 
-    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
-    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
-    public void move(){
-        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
+
+    @Override
+    public RotationHandler getSteerer() {
+        return steerer;
     }
-    public double getCurrentSpeed(){return driver.getCurrentSpeed();}
+
+    @Override
+    public MoveHandler getDriver() {
+        return driver;
+    }
 }
