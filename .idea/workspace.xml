@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/drivable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/LamborghiniGallardo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/LamborghiniGallardo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Volvo240.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +66,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VehicleTester">
+  <component name="RunManager" selected="Application.CarController">
+    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graphics.CarController" />
+      <module name="OO-Lab-1-EJY" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Graphics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VehicleTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OO-Lab-1-EJY" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,16 +94,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VehicleTester" />
       <option name="METHOD_NAME" value="TestBilverkstadAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehicleTester.TestGallardoSpoilerDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OO-Lab-1-EJY" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VehicleTester" />
-      <option name="METHOD_NAME" value="TestGallardoSpoilerDown" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CarController" />
         <item itemvalue="JUnit.VehicleTester" />
         <item itemvalue="JUnit.VehicleTester.TestMoveX" />
         <item itemvalue="JUnit.VehicleTester.TestBilverkstadAdd" />
         <item itemvalue="JUnit.VehicleTester.TestGallardoSpoilerUp" />
-        <item itemvalue="JUnit.VehicleTester.TestGallardoSpoilerDown" />
       </list>
     </recent_temporary>
   </component>

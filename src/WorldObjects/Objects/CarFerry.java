@@ -21,7 +21,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /** A ferry that transports cars over a body of water*/
-public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Movable, Vehicle {
+public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicle {
 
     private String modelname = "CarFerry";
     private RotationHandler steerer = new VehicleSteerer();
@@ -59,19 +59,10 @@ public class CarFerry extends WorldObject implements IHasStorage, IHasMotor, Mov
         return storage;
     }
 
-    @Override
-    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
 
     @Override
-    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
+    public RotationHandler getSteerer() { return steerer; }
 
     @Override
-    public void move() {
-        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
-    }
-
-    @Override
-    public double getCurrentSpeed() {
-        return driver.getCurrentSpeed();
-    }
+    public MoveHandler getDriver() { return driver; }
 }

@@ -16,7 +16,7 @@ import WorldObjects.Truk;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class Scania extends WorldObject implements Truk {
+public class Scania extends Drivable implements Truk {
     private MoveHandler driver = new VehicleDriver();
     private RotationHandler steerer = new VehicleSteerer();
     private StandardMotor engine = new StandardMotor(20, driver);
@@ -46,16 +46,11 @@ public class Scania extends WorldObject implements Truk {
     }
 
     @Override
-    public Storage getStorage(){return storage; }
-
-
-    @Override
-    public RotationHandler getSteerer() {
-        return steerer;
-    }
+    public Storage getStorage(){return storage;}
 
     @Override
-    public MoveHandler getDriver() {
-        return driver;
-    }
+    public RotationHandler getSteerer() { return steerer; }
+
+    @Override
+    public MoveHandler getDriver() { return driver; }
 }

@@ -1,6 +1,8 @@
 package Graphics;
 
-import WorldObjects.Objects.WorldObject;
+import WorldObjects.LableInterfaces.IHasMotor;
+import WorldObjects.LableInterfaces.IHasStorage;
+import WorldObjects.Objects.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -37,12 +39,12 @@ public class CarController {
 
 
         // no
-       /* cc.cars.add(new Volvo240());
-        cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point(1,0)));
-        cc.cars.add(new Scania(new Point(0,200),new Point(1,0)));
-        cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1)));
-        cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1)));
-        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1)));*/
+       cc.cars.add(new Volvo240());
+        cc.cars.add(new LamborghiniGallardo(new Point(0,100),new Point (1,0),new Point(20,20)));
+        cc.cars.add(new Scania(new Point(0,200),new Point(1,0),new Point(20,20)));
+        cc.cars.add(new CarTransport(new Point(350,0),new Point(0,1),new Point(20,20)));
+        cc.cars.add(new Saab95(new Point(0,560),new Point(0,-1),new Point(20,20)));
+        cc.cars.add(new CarFerry(new Point(200,0),new Point(0,1),new Point(40,40)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -60,13 +62,14 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            /*for (WorldObject car : cars) {
-                car.move();                                 //TODO some cars will not move after turning at low speeds.
-                hasHitWall(car);
-
+            for (WorldObject car : cars) {
+                if(car instanceof Drivable) {
+                    ((Drivable)car).move();
+                }
+                    hasHitWall(car);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
-            }*/
+            }
         }
     }
 
@@ -91,16 +94,20 @@ public class CarController {
     // Calls the gas method for each car once
     //region Vehicle functionality
     void gas(int amount) {
-       /* double gas = ((double) amount) / 100;
-        for (Vehicle car : cars
-                ) {
-            car.gas(gas);
-        }*/
+        double gas = ((double) amount) / 100;
+        for (WorldObject car : cars){
+            if(car instanceof IHasMotor){
+                ((IHasMotor) car).getMotor().gas(gas);
+            }
+        }
     }
     void startEngline() {
-       /* for (Vehicle car : cars
+        /*for (Drivable car : cars
         ) {
-            car.startEngine();
+            if(car instanceof IHasMotor){
+                ((IHasMotor) car).getMotor()
+            }
+
         }*/
     }
     void stopEngline() {
@@ -111,38 +118,44 @@ public class CarController {
     }
     void brake(int amount) {
         double brake = ((double) amount) / 100;
-        /*for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            car.brake(brake);
-        }*/
+            if(car instanceof IHasMotor){
+                ((IHasMotor) car).getMotor().brake(brake);
+            }
+        }
     }
     void RaiseFlak() {
-        /*for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            if(car instanceof IHasFlak) {
-                ((IHasFlak) car).raiseFlak();
+            if(car instanceof IHasStorage) {
+                ((IHasStorage) car).getStorage().getContainer().closeContainer();
             }
-        }*/
+        }
     }
     void LowerFlak() {
-        /*for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            if(car instanceof IHasFlak) {
-                ((IHasFlak) car).lowerFlak();
+            if(car instanceof IHasStorage) {
+                ((IHasStorage) car).getStorage().getContainer().openContainer();
             }
-        }*/
+        }
     }
     void TurnLeft() {
-        /*for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            car.turnLeft();
-        }*/
+            if(car instanceof Drivable) {
+                ((Drivable)car).turnLeft();
+            }
+        }
     }
     void TurnRight() {
-        /*for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            car.turnRight();
-        }*/
+            if(car instanceof Drivable) {
+                ((Drivable)car).turnRight();
+            }
+        }
     }
     //endregion
 }

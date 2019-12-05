@@ -19,7 +19,7 @@ import java.awt.geom.Point2D;
 
 /** A car transporting truck for delivering cars*/
 
-public class CarTransport extends WorldObject implements Truk {
+public class CarTransport extends Drivable implements Truk {
     // TODO HELP
     private final static String model = "CarTransport";
     private MoveHandler driver = new VehicleDriver();
@@ -59,18 +59,8 @@ public class CarTransport extends WorldObject implements Truk {
     public IMotor getMotor() { return engine; }
 
     @Override
-    public void turnLeft(){ setDirection(steerer.turnLeft(turnAngle,this.getDirection())); }
+    public RotationHandler getSteerer() { return steerer; }
 
     @Override
-    public void turnRight(){ setDirection(steerer.turnRight(turnAngle,this.getDirection())); }
-
-    @Override
-    public void move() {
-        setPosition(driver.move(getPosition(),getDirection(),getStatic()));
-    }
-
-    @Override
-    public double getCurrentSpeed() {
-        return driver.getCurrentSpeed();
-    }
+    public MoveHandler getDriver() { return driver; }
 }
