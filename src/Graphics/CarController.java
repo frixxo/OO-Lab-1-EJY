@@ -88,8 +88,7 @@ public class CarController {
     private void changeDirection(WorldObject vehicle,int x, int y){
         //vehicle.stopEngine();                                     //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
        // vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
-        Point2D carDirection = vehicle.getDirection();
-        carDirection.setLocation(carDirection.getX()*x, carDirection.getY()*y);
+        vehicle.setDirection(new Point.Double(vehicle.getDirection().getX()*x, vehicle.getDirection().getY()*y));
     }
     // Calls the gas method for each car once
     //region Vehicle functionality
