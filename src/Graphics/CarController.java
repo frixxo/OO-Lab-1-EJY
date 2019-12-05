@@ -1,5 +1,6 @@
 package Graphics;
 
+import Systems.CollisionHandler;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.*;
@@ -8,7 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 /*
@@ -31,12 +31,12 @@ public class CarController {
     // A list of cars, modify if needed
     ArrayList<WorldObject> cars = new ArrayList<>();
 
+    private CollisionHandler collider=new CollisionHandler(frame.windowSize());
     //methods:
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
-
 
         // no
        cc.cars.add(new Volvo240());
@@ -66,30 +66,14 @@ public class CarController {
                 if(car instanceof Drivable) {
                     ((Drivable)car).move();
                 }
-                    hasHitWall(car);
+                    collider.hasHitWall(car);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
     }
 
-    private void hasHitWall(WorldObject vehicle){
-        Point pos = vehicle.getPosition();
-        Point2D dir = vehicle.getDirection();
-        if(dir.getX() > 0 && pos.x + frame.getSize(vehicle).x >= frame.getWidth() ||
-                dir.getX() < 0 && pos.x <= 0){
-            changeDirection(vehicle,-1,1);
-        }
-        if(dir.getY() > 0 && pos.y + frame.getSize(vehicle).y>= frame.getSize().height-240 ||
-                dir.getY() < 0 && pos.y <= 0){
-            changeDirection(vehicle,1,-1);
-        }
-    }
-    private void changeDirection(WorldObject vehicle,int x, int y){
-        //vehicle.stopEngine();                                     //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
-       // vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
-        vehicle.setDirection(new Point.Double(vehicle.getDirection().getX()*x, vehicle.getDirection().getY()*y));
-    }
+
     // Calls the gas method for each car once
     //region Vehicle functionality
     void gas(int amount) {
@@ -101,19 +85,21 @@ public class CarController {
         }
     }
     void startEngline() {
-        /*for (Drivable car : cars
+        for (WorldObject car : cars
         ) {
             if(car instanceof IHasMotor){
-                ((IHasMotor) car).getMotor()
+                ((IHasMotor) car).getMotor().startEngine();
             }
-
-        }*/
+        }
     }
     void stopEngline() {
-       /* for (Vehicle car : cars
+        for (WorldObject car : cars
         ) {
-            car.stopEngine();
-        }*/
+            if(car instanceof IHasMotor){
+                ((IHasMotor) car).getMotor().stopEngine();
+            }
+
+        }
     }
     void brake(int amount) {
         double brake = ((double) amount) / 100;

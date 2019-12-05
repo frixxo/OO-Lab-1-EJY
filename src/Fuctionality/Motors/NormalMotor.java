@@ -23,7 +23,9 @@ public abstract class NormalMotor implements IMotor {
     @Override
     public void startEngine() { isEngineOn = true; }
     @Override
-    public void stopEngine() { isEngineOn = false; }
+    public void stopEngine() {
+        isEngineOn = false;
+    moveHandler.setCurrentSpeed(0);}
 
 
     /**
