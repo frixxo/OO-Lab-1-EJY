@@ -6,6 +6,8 @@ import java.awt.geom.Point2D;
 public interface IMotor {
     double getPower();
     double SpeedFactor();
+    void startEngine();
+    void stopEngine();
 
     /** apply gas
      * @param amount how much to gas*/
