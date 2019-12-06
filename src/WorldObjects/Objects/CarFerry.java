@@ -54,6 +54,7 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
 
     @Override
     public Storage getStorage() {
+        storage.setCanChangeState(!driver.isMoving());
         return storage;
     }
 

@@ -12,4 +12,5 @@ public interface Storage <T extends IsWorldObject>{
     void openContainer();
     void closeContainer();
     boolean normalState();
+    void setCanChangeState(boolean canChangeState);
 }

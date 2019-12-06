@@ -49,7 +49,9 @@ public class CarTransport extends Drivable implements Truk {
 
 
     @Override
-    public Storage getStorage() { return storage; }
+    public Storage getStorage() {
+        storage.setCanChangeState(!driver.isMoving());
+        return storage; }
 
     @Override
     public IMotor getMotor() { return engine; }

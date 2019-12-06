@@ -7,8 +7,9 @@ import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import java.awt.*;
 
 public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
-    Container container;
-    IHandleLast lasthandler;
+    private Container container;
+    private IHandleLast lasthandler;
+    private boolean canChangeState =true;
 
     public StandardStorage(Container container, IHandleLast<T> lasthandler )
     {
@@ -29,9 +30,14 @@ public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
         lasthandler.updatePosition(position);
     }
     public void openContainer(){
-        container.openContainer();
+        if(canChangeState) {container.openContainer();}
     }
     public void closeContainer(){ container.closeContainer(); }
 
     public boolean normalState(){ return container.normalState();}
+
+    @Override
+    public void setCanChangeState(boolean canChangeState) {
+        this.canChangeState = canChangeState;
+    }
 }

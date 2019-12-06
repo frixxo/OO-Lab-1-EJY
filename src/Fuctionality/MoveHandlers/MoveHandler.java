@@ -7,4 +7,5 @@ public interface MoveHandler {
     Point move(Point position, Point2D direction, boolean Static);
     double getCurrentSpeed();
     void setCurrentSpeed(double d);
+    boolean isMoving();
 }
