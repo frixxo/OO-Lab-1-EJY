@@ -96,16 +96,17 @@ public class VehicleTester {
         saab.move();
         assertEquals(0,saab.getPosition().getY(),0.01);
     }
-    @Test   //testar 500 olika kombinationer, klarar över 20000 innan duplicering
+    @Test   //testar 1000 olika kombinationer, klarar över 20000 innan duplicering
     public void TestRegNrGenerator(){
         IDGenerator reg=new RegNrGenerator();
         List<String> j= new ArrayList<>();
         String Nr="";
-        for(int x=0;x<1000;x++){
+        for(int x=0;x<20000;x++){
             Nr=reg.generate();
             for(int y=0; y<(j.size());y++){
                 if(j.get(y).equals(Nr)){
 
+                    System.out.println(x+" "+y+ " "+ Nr);
                     fail();
                 }
             }
@@ -148,7 +149,6 @@ public class VehicleTester {
         Volvo240 y= new Volvo240();
         x.getStorage().openContainer();
         x.getStorage().load(y);
-
         assertSame(x.getStorage().release(), y);
     }
     @Test
