@@ -5,33 +5,15 @@
       <change afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/StandardStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/FlakStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/FlakStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/IDGenerator/RegNrGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/IDGenerator/RegNrGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/OldMoveHandlerDontTouchHasThePlague.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/LamborghiniGallardo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/LamborghiniGallardo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Saab95.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/FlakStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/IHandleLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/IHandleLast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/LamborghiniGallardo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -368,14 +350,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
-          <line>140</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
-          <line>149</line>
-          <properties />
+          <line>150</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
