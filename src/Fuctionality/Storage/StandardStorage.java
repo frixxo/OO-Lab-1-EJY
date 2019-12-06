@@ -6,21 +6,21 @@ import WorldObjects.IsWorldObject;
 
 import java.awt.*;
 
-public class StandardStorage implements Storage{
+public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
     Container container;
     IHandleLast lasthandler;
 
-    public StandardStorage(Container container, IHandleLast lasthandler)
+    public StandardStorage(Container container, IHandleLast<T> lasthandler )
     {
         this.container = container;
         this.lasthandler = lasthandler;
     }
 
-    public boolean load(IsWorldObject cargo){
+    public boolean load(T cargo){
         return lasthandler.load(cargo,container.loadState());
     }
-    public IsWorldObject release(){                 //Todo generic type?
-        return lasthandler.release();
+    public T release(){                 //Todo generic type?
+        return (T)lasthandler.release();
     }
     public int getCargoCount(){
         return lasthandler.getCargoCount();
