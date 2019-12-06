@@ -1,7 +1,5 @@
 package WorldObjects.InterfaceHierarchy;
 
-import Systems.CollisionHandler;
-
 import java.awt.*;
 import java.awt.geom.Point2D;
 

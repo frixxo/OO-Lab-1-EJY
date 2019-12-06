@@ -1,6 +1,6 @@
 package WorldObjects.Objects;
 
-import Systems.CollisionHandler;
+import Fuctionality.Colliders.CollisionHandler;
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
