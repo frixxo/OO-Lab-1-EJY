@@ -26,7 +26,7 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     private RotationHandler steerer = new VehicleSteerer();
     private MoveHandler driver = new VehicleDriver();
     private IMotor engine = new StandardMotor(10, driver);
-    private Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+    private Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
 

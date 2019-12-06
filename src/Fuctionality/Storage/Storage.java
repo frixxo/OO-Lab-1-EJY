@@ -5,7 +5,7 @@ import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import java.awt.*;
 
 public interface Storage <T extends IsWorldObject>{
-    boolean load(T cargo,Point position);
+    boolean load(T cargo,Point LoaderPosition);
     T release();
     int getCargoCount();
     void updatePosition(Point position);

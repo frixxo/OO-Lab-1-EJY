@@ -75,6 +75,7 @@ public class VehicleTester {
     @Test
     public void TestBrakeHigher(){
         Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0));
+        volvo.getMotor().startEngine();
         volvo.getMotor().gas(10);
         volvo.getMotor().brake(10);
         volvo.move();
@@ -133,14 +134,14 @@ public class VehicleTester {
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.getStorage().openContainer();
-        assertTrue(x.getStorage().load(y));
+        assertTrue(x.getStorage().load(y,x.getPosition()));
     }
     @Test
     public void TestCarTransportLoadRampUp(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.getStorage().closeContainer();
-        boolean b=x.getStorage().load(y);
+        boolean b=x.getStorage().load(y,x.getPosition());
         assertFalse(b);
     }
     @Test
@@ -148,7 +149,7 @@ public class VehicleTester {
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
         x.getStorage().openContainer();
-        x.getStorage().load(y);
+        x.getStorage().load(y,x.getPosition());
         assertSame(x.getStorage().release(), y);
     }
     @Test
@@ -156,15 +157,15 @@ public class VehicleTester {
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
         ferry.getStorage().openContainer();
-        assertTrue(ferry.getStorage().load(y));
+        assertTrue(ferry.getStorage().load(y,ferry.getPosition()));
     }
     @Test
     public void TestCarFerryGet(){
         CarFerry ferry=new CarFerry();
         Volvo240 y= new Volvo240();
         ferry.getStorage().openContainer();
-        ferry.getStorage().load(y);
-        ferry.getStorage().load(new Saab95());
+        ferry.getStorage().load(y,ferry.getPosition());
+        ferry.getStorage().load(new Saab95(),ferry.getPosition());
         assertSame(ferry.getStorage().release(), y);
     }
     @Test
@@ -192,7 +193,7 @@ public class VehicleTester {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
-        t.getStorage().load(v);
+        t.getStorage().load(v,t.getPosition());
         t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
@@ -203,7 +204,7 @@ public class VehicleTester {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
-        t.getStorage().load(v);
+        t.getStorage().load(v,t.getPosition());
         t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
@@ -214,15 +215,15 @@ public class VehicleTester {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
-        t.getStorage().load(v);
-        assertFalse(t.getStorage().load(v));
+        t.getStorage().load(v,t.getPosition());
+        assertFalse(t.getStorage().load(v,t.getPosition()));
     }
     @Test
     public void TestDriveLoadedCarX() {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
-        t.getStorage().load(v);
+        t.getStorage().load(v,t.getPosition());
         t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
@@ -233,7 +234,7 @@ public class VehicleTester {
         CarTransport t = new CarTransport();
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
-        t.getStorage().load(v);
+        t.getStorage().load(v,t.getPosition());
         v.getMotor().startEngine();
         v.getMotor().gas(100);
         v.move();
@@ -246,8 +247,8 @@ public class VehicleTester {
         Volvo240 V = new Volvo240();
         T.getStorage().openContainer();
         F.getStorage().openContainer();
-        T.getStorage().load(V);
-        assertTrue( F.getStorage().load(T));
+        T.getStorage().load(V,T.getPosition());
+        assertTrue( F.getStorage().load(T,F.getPosition()));
     }
     @Test
     public void TestMoveCarTransportWithCargoOnFerryCargoUpdateX(){
@@ -256,8 +257,9 @@ public class VehicleTester {
         Volvo240 V = new Volvo240();
         T.getStorage().openContainer();
         F.getStorage().openContainer();
-        T.getStorage().load(V);
-        F.getStorage().load(T);
+        T.getStorage().load(V,T.getPosition());
+        F.getStorage().load(T,F.getPosition());
+        F.getMotor().startEngine();
         F.getMotor().gas(100);
         F.move();
         assertEquals(V.getPosition().x,F.getPosition().x);
@@ -269,8 +271,9 @@ public class VehicleTester {
         Volvo240 V = new Volvo240();
         T.getStorage().openContainer();
         F.getStorage().openContainer();
-        T.getStorage().load(V);
-        F.getStorage().load(T);
+        T.getStorage().load(V,T.getPosition());
+        F.getStorage().load(T,F.getPosition());
+        F.getMotor().startEngine();
         F.getMotor().gas(100);
         F.move();
         assertEquals(V.getPosition().y,F.getPosition().y);
@@ -278,8 +281,9 @@ public class VehicleTester {
     @Test
     public void TestLoadWhenNotInMaxLoadDistance(){
         CarTransport c=new CarTransport();
+        c.getStorage().openContainer();
         Point x=new Point(1000,1000);
         Volvo240 v=new Volvo240(x,x);
-        assertFalse(c.getStorage().load(v));
+        assertFalse(c.getStorage().load(v,c.getPosition()));
     }
 }

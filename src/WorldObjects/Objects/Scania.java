@@ -20,7 +20,7 @@ public class Scania extends Drivable implements Truk {
     private MoveHandler driver = new VehicleDriver();
     private RotationHandler steerer = new VehicleSteerer();
     private StandardMotor engine = new StandardMotor(20, driver);
-    private Storage storage = new StandardStorage(new Flak(), new LoadHandler <>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
+    private Storage storage = new StandardStorage(new Flak(), new LoadHandler <Skräp>(10, 2,3, 3, LoadHandler.Principle.FILO));
     private IDGenerator reg=new RegNrGenerator();
     private String modelname = "Scania";
     private String RegNr;
