@@ -1,5 +1,6 @@
 package WorldObjects.Objects;
 
+import Systems.CollisionHandler;
 import WorldObjects.IsWorldObject;
 import WorldObjects.WorldObjectView;
 
@@ -11,6 +12,7 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point2D direction;
     private Point size;
     private boolean isStatic;
+    private CollisionHandler collider=new CollisionHandler();
 
     // region Constructor
     protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic)
@@ -66,6 +68,11 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     public boolean getStatic()
     {
         return isStatic;
+    }
+
+    @Override
+    public void updateCollider(Point Worldsize) {
+        collider.hasHitWall(this,Worldsize);
     }
     //endregion
 }

@@ -54,9 +54,4 @@ public class Scania extends Drivable implements Truk {
 
     @Override
     public MoveHandler getMoveHandler() { return driver; }
-
-    @Override
-    public void updateCollider(Point Worldsize) {
-        collider.hasHitWall(this,Worldsize);
-    }
 }

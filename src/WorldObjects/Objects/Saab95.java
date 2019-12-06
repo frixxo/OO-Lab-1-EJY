@@ -59,9 +59,4 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
 
     @Override
     public MoveHandler getMoveHandler() { return driver; }
-
-    @Override
-    public void updateCollider(Point Worldsize) {
-        collider.hasHitWall(this,Worldsize);
-    }
 }

@@ -49,8 +49,4 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
         return cars.size();
     }
 
-    @Override
-    public void updateCollider(Point Worldsize) {
-        collider.hasHitWall(this,Worldsize);
-    }
 }

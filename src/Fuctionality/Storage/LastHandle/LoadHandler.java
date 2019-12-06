@@ -38,11 +38,11 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     
     public int getCargoCount(){ return cargoList.size(); }
 
-    public boolean load(T cargo){
+    public boolean load(T cargo,boolean loadstate){
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getStatic()
                 &&isBehind(cargo)
-                //&& loadState()                  //TODO need to check loadstate
+                && loadstate               //TODO need to check loadstate
                 ) {
             cargo.setStatic(true);
             cargoList.add(cargo);
@@ -76,7 +76,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
         for (T cargo : cargoList){
             cargo.getPosition().setLocation(position.x, position.y);
             if (cargo instanceof IHasStorage){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
-                ((IHasStorage)cargo).getStorage().getLastHandler().updatePosition(position);
+                ((IHasStorage)cargo).getStorage().updatePosition(position);
             }
         }
     }

@@ -117,7 +117,7 @@ public class CarController {
         for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasStorage) {
-                ((IHasStorage) car).getStorage().getContainer().closeContainer();
+                ((IHasStorage) car).getStorage().closeContainer();
             }
         }
     }
@@ -125,7 +125,7 @@ public class CarController {
         for (WorldObjectView car : cars
         ) {
             if(car instanceof IHasStorage) {
-                ((IHasStorage) car).getStorage().getContainer().openContainer();
+                ((IHasStorage) car).getStorage().openContainer();
             }
         }
     }

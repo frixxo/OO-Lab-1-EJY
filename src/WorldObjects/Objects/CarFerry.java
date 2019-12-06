@@ -7,6 +7,7 @@ import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
 import Fuctionality.Storage.FlakStorage;
 import Fuctionality.Storage.Containers.Ramp;
+import Fuctionality.Storage.StandardStorage;
 import Fuctionality.Storage.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
@@ -28,7 +29,7 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     private RotationHandler steerer = new VehicleSteerer();
     private MoveHandler driver = new VehicleDriver();
     private IMotor engine = new StandardMotor(10, driver);
-    private Storage storage = new FlakStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+    private Storage storage = new StandardStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
     private CollisionHandler collider=new CollisionHandler();
@@ -67,8 +68,4 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     @Override
     public MoveHandler getMoveHandler() { return driver; }
 
-    @Override
-    public void updateCollider(Point Worldsize) {
-        collider.hasHitWall(this,Worldsize);
-    }
 }
