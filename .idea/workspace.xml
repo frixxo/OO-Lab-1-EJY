@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="" />
+    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Fuctionality/Colliders/IDynamicCollider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fuctionality/Colliders/IStaticCollider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fuctionality/Colliders/ObjectCollider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Colliders/Collider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Colliders/Collider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Colliders/CollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Colliders/VehicleCollider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/IsWorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/IsWorldObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

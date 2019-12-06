@@ -1,5 +1,7 @@
 package WorldObjects.InterfaceHierarchy;
 
+import Fuctionality.Colliders.Collider;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 
@@ -9,5 +11,5 @@ public interface IsWorldObject {
     Point getPosition();
     Point2D getDirection();
     Point getSize();
-    void updateCollider(Point Worldsize);
+    Collider getCollider();
 }

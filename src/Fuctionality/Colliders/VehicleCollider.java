@@ -6,21 +6,21 @@ import WorldObjects.Objects.WorldObject;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class CollisionHandler implements Collider{
+public class VehicleCollider implements IDynamicCollider{
 
-    public void Update(WorldObject vehicle, Point Worldsize){
-        Point pos = vehicle.getPosition();
-        Point2D dir = vehicle.getDirection();
-        if(dir.getX() > 0 && pos.x + vehicle.getSize().x >= Worldsize.x ||
+    public void Update(WorldObject thisVehicle, Point Worldsize){
+        Point pos = thisVehicle.getPosition();
+        Point2D dir = thisVehicle.getDirection();
+        if(dir.getX() > 0 && pos.x + thisVehicle.getSize().x >= Worldsize.x ||
                 dir.getX() < 0 && pos.x <= 0){
-            changeDirection(vehicle,-1,1);
+            changeDirection(thisVehicle,-1,1);
         }
-        if(dir.getY() > 0 && pos.y + vehicle.getSize().y>= Worldsize.y ||
+        if(dir.getY() > 0 && pos.y + thisVehicle.getSize().y>= Worldsize.y ||
                 dir.getY() < 0 && pos.y <= 0){
-            changeDirection(vehicle,1,-1);
+            changeDirection(thisVehicle,1,-1);
         }
 
-        changePosition(vehicle,Worldsize);
+        changePosition(thisVehicle,Worldsize);
     }
     private void changeDirection(WorldObject vehicle,int x, int y){
         //if(vehicle instanceof IHasMotor){((IHasMotor) vehicle).getMotor().stopEngine();}                                    //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
@@ -42,5 +42,8 @@ public class CollisionHandler implements Collider{
         position.y=0;
     }
      vehicle.setPosition(position);
+}
+public void collision(WorldObject vehicle,WorldObject thisVehicle){
+        //TODO vehicle Collision
 }
 }

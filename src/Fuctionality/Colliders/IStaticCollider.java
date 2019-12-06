@@ -4,6 +4,5 @@ import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
 
-public interface Collider {
-    void collision(WorldObject vehicle,WorldObject thisVehicle);
+public interface IStaticCollider extends Collider{
 }

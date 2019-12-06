@@ -1,6 +1,7 @@
 package WorldObjects.Objects;
 
-import Fuctionality.Colliders.CollisionHandler;
+import Fuctionality.Colliders.Collider;
+import Fuctionality.Colliders.VehicleCollider;
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
@@ -12,10 +13,10 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point2D direction;
     private Point size;
     private boolean isStatic;
-    private CollisionHandler collider=new CollisionHandler();
+    private Collider collider;
 
     // region Constructor
-    protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic)
+    protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic,Collider collider)
     {
        this.position = position;
        this.direction = direction;
@@ -71,8 +72,8 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     }
 
     @Override
-    public void updateCollider(Point Worldsize) {
-        collider.hasHitWall(this,Worldsize);
+    public Collider getCollider() {
+        return collider;
     }
     //endregion
 }
