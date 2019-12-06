@@ -25,7 +25,6 @@ public class LamborghiniGallardo extends Drivable implements Car, IHasSpoiler {
     private RegNrGenerator reg=new RegNrGenerator();
     private String ModelName="Lamborghini Gallardo";
     private String RegNr;
-    private CollisionHandler collider=new CollisionHandler();
 
     //region constructors
     public LamborghiniGallardo(Point position, Point2D direction){

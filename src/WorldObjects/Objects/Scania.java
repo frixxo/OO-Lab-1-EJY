@@ -25,7 +25,6 @@ public class Scania extends Drivable implements Truk {
     private IDGenerator reg=new RegNrGenerator();
     private String modelname = "Scania";
     private String RegNr;
-    private CollisionHandler collider=new CollisionHandler();
 
 
     public Scania(Point position, Point2D direction) {

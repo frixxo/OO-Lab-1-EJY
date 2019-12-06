@@ -24,7 +24,6 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
     private RegNrGenerator reg = new RegNrGenerator();
     private String ModelName="Saab95";
     private String RegNr;
-    private CollisionHandler collider=new CollisionHandler();
 
 
     //region constructors

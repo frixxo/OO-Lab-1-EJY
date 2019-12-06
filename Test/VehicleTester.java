@@ -17,6 +17,7 @@ public class VehicleTester {
     @Test
     public void TestGallardoSpoilerDown() {
         LamborghiniGallardo x = new LamborghiniGallardo();
+        x.getMotor().startEngine();
         x.LowerSpoiler();
         x.getMotor().gas(100);
         x.move();
@@ -28,6 +29,7 @@ public class VehicleTester {
     public void TestGallardoSpoilerUp(){
         LamborghiniGallardo x = new LamborghiniGallardo();
         x.RaiseSpoiler();
+        x.getMotor().startEngine();
         x.getMotor().gas(100);
         x.move();
         double d=x.getCurrentSpeed();
@@ -60,12 +62,13 @@ public class VehicleTester {
     }
     @Test
     public void TestVolvoSpeedFactor(){
-        Volvo240 volvo = new Volvo240(new Point(0,0),new Point(1,0));
+        Volvo240 volvo = new Volvo240();
         assertEquals(1.25d,volvo.getMotor().SpeedFactor(),0.01d);
     }
     @Test
     public void TestGasHigher(){
-        Volvo240 volvo=new Volvo240(new Point(0,0),new Point(1,0));
+        Volvo240 volvo=new Volvo240();
+        volvo.getMotor().startEngine();
         volvo.getMotor().gas(10);
         assertEquals(1.25d,volvo.getCurrentSpeed(),0.01);
     }
@@ -80,6 +83,7 @@ public class VehicleTester {
     @Test
     public void TestMoveX(){
         Saab95 saab=new Saab95();
+        saab.getMotor().startEngine();
         saab.getMotor().gas(10);
         saab.move();
         assertEquals(1,saab.getPosition().getX(),0.01);
@@ -87,6 +91,7 @@ public class VehicleTester {
     @Test
     public void TestMoveY(){
         Saab95 saab=new Saab95();
+        saab.getMotor().startEngine();
         saab.getMotor().gas(10);
         saab.move();
         assertEquals(0,saab.getPosition().getY(),0.01);
@@ -141,8 +146,9 @@ public class VehicleTester {
     public void TestCarTransportGet(){
         CarTransport x=new CarTransport();
         Volvo240 y= new Volvo240();
-        x.getStorage().closeContainer();
+        x.getStorage().openContainer();
         x.getStorage().load(y);
+
         assertSame(x.getStorage().release(), y);
     }
     @Test

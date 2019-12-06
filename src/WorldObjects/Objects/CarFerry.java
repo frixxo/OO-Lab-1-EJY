@@ -32,7 +32,6 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     private Storage storage = new StandardStorage(new Ramp(), new LoadHandler<LandVehicle>(this, 20, 2, 10, 10, LoadHandler.Principle.FIFO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
-    private CollisionHandler collider=new CollisionHandler();
 
     public CarFerry() {
     this(new Point(0,0),new Point(1,0));}
