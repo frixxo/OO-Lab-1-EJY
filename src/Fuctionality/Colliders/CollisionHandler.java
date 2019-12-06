@@ -6,9 +6,9 @@ import WorldObjects.Objects.WorldObject;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class CollisionHandler {
+public class CollisionHandler implements Collider{
 
-    public void hasHitWall(WorldObject vehicle, Point Worldsize){
+    public void Update(WorldObject vehicle, Point Worldsize){
         Point pos = vehicle.getPosition();
         Point2D dir = vehicle.getDirection();
         if(dir.getX() > 0 && pos.x + vehicle.getSize().x >= Worldsize.x ||

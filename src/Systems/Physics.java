@@ -1,5 +1,6 @@
 package Systems;
 
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.Objects.WorldObject;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
@@ -12,8 +13,8 @@ public class Physics {
     }
 
     public void update(WorldObjectView car){
-            if(car instanceof WorldObject){
-                ((WorldObject) car).updateCollider(Worldsize);
+            if(car instanceof IsWorldObject){
+                ((IsWorldObject) car).updateCollider(Worldsize);
             }
     }
 }
