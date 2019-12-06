@@ -6,9 +6,9 @@ import WorldObjects.IsWorldObject;
 
 import java.awt.*;
 
-public interface Storage{
-    boolean load(IsWorldObject cargo);
-    IsWorldObject release();
+public interface Storage <T extends IsWorldObject>{
+    boolean load(T cargo);
+    T release();
     int getCargoCount();
     void updatePosition(Point position);
     void openContainer();

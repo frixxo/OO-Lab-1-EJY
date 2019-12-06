@@ -14,6 +14,7 @@ import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Storage.LastHandle.LoadHandler;
 import Systems.CollisionHandler;
 import WorldObjects.Car;
+import WorldObjects.IsWorldObject;
 import WorldObjects.Truk;
 
 import java.awt.*;
@@ -27,7 +28,7 @@ public class CarTransport extends Drivable implements Truk {
     private MoveHandler driver = new VehicleDriver();
     private RotationHandler steerer = new VehicleSteerer();
     private StandardMotor engine = new StandardMotor(20, driver);
-    private Storage storage = new StandardStorage(new Ramp(), new LoadHandler<Car>(this,10, 2,3, 3, LoadHandler.Principle.FILO));
+    private Storage storage = new StandardStorage<Car>(new Ramp(), new LoadHandler(this,10, 2,3, 3, LoadHandler.Principle.FILO));
     private String RegNr;
     private IDGenerator reg=new RegNrGenerator();
 
