@@ -24,7 +24,6 @@ public class Volvo240 extends Drivable implements Car {
     private IDGenerator reg=new RegNrGenerator();
     private String modelName="Volvo240";
     private String RegNr;
-    private CollisionHandler collider=new CollisionHandler();
 
 
     //region Constructor
