@@ -2,7 +2,7 @@ package Fuctionality.Storage;
 
 import Fuctionality.Storage.Containers.Container;
 import Fuctionality.Storage.LastHandle.IHandleLast;
-import WorldObjects.IsWorldObject;
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
 
 import java.awt.*;
 
@@ -16,10 +16,10 @@ public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
         this.lasthandler = lasthandler;
     }
 
-    public boolean load(T cargo){
-        return lasthandler.load(cargo,container.loadState());
+    public boolean load(T cargo,Point position){
+        return lasthandler.load(cargo,container.loadState(),position);
     }
-    public T release(){                 //Todo generic type?
+    public T release(){
         return (T)lasthandler.release();
     }
     public int getCargoCount(){
@@ -31,7 +31,5 @@ public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
     public void openContainer(){
         container.openContainer();
     }
-    public void closeContainer(){
-        container.closeContainer();
-    }
+    public void closeContainer(){ container.closeContainer(); }
 }

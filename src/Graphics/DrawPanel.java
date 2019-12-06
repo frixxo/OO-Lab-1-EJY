@@ -1,7 +1,7 @@
 package Graphics;
 
 import WorldObjects.Objects.*;
-import WorldObjects.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
 import java.awt.*;
 import java.util.HashMap;

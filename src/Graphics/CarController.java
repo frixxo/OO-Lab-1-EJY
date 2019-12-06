@@ -1,11 +1,10 @@
 package Graphics;
 
-import Systems.CollisionHandler;
 import Systems.Physics;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.*;
-import WorldObjects.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package WorldObjects;
+package WorldObjects.InterfaceHierarchy;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

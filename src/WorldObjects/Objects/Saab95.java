@@ -7,9 +7,8 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
-import Systems.CollisionHandler;
 import WorldObjects.LableInterfaces.IHasTurbo;
-import WorldObjects.Car;
+import WorldObjects.InterfaceHierarchy.Car;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

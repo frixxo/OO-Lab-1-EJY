@@ -1,7 +1,7 @@
 package WorldObjects.Objects;
 
 import Systems.CollisionHandler;
-import WorldObjects.Vehicle;
+import WorldObjects.InterfaceHierarchy.Vehicle;
 
 import java.awt.*;
 import java.util.HashMap;

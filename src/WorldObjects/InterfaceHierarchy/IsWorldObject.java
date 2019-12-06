@@ -1,4 +1,4 @@
-package WorldObjects;
+package WorldObjects.InterfaceHierarchy;
 
 import Systems.CollisionHandler;
 

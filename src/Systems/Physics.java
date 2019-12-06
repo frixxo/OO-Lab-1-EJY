@@ -1,10 +1,9 @@
 package Systems;
 
 import WorldObjects.Objects.WorldObject;
-import WorldObjects.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Physics {
     Point Worldsize;

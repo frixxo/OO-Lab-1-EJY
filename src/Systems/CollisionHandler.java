@@ -1,6 +1,5 @@
 package Systems;
 
-import WorldObjects.IsWorldObject;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.Objects.WorldObject;
 
@@ -24,7 +23,7 @@ public class CollisionHandler {
         changePosition(vehicle,Worldsize);
     }
     private void changeDirection(WorldObject vehicle,int x, int y){
-        if(vehicle instanceof IHasMotor){((IHasMotor) vehicle).getMotor().stopEngine();}                                    //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
+        //if(vehicle instanceof IHasMotor){((IHasMotor) vehicle).getMotor().stopEngine();}                                    //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
         // vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
         vehicle.setDirection(new Point.Double(vehicle.getDirection().getX()*x, vehicle.getDirection().getY()*y));
     }

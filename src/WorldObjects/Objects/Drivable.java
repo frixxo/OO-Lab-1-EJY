@@ -1,6 +1,6 @@
 package WorldObjects.Objects;
 
-import WorldObjects.Movable;
+import WorldObjects.InterfaceHierarchy.Movable;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

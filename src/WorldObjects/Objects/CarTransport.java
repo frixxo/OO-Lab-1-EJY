@@ -5,17 +5,14 @@ import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.RotationHandler;
 import Fuctionality.RotationHandler.VehicleSteerer;
-import Fuctionality.Storage.FlakStorage;
 import Fuctionality.Storage.Containers.Ramp;
 import Fuctionality.Storage.StandardStorage;
 import Fuctionality.Storage.Storage;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Storage.LastHandle.LoadHandler;
-import Systems.CollisionHandler;
-import WorldObjects.Car;
-import WorldObjects.IsWorldObject;
-import WorldObjects.Truk;
+import WorldObjects.InterfaceHierarchy.Car;
+import WorldObjects.InterfaceHierarchy.Truk;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -23,7 +20,7 @@ import java.awt.geom.Point2D;
 /** A car transporting truck for delivering cars*/
 
 public class CarTransport extends Drivable implements Truk {
-    // TODO HELP
+
     private final static String model = "CarTransport";
     private MoveHandler driver = new VehicleDriver();
     private RotationHandler steerer = new VehicleSteerer();

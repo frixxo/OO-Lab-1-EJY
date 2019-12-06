@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Has all the test
+ * Has all the test for the vehicles
  */
 public class VehicleTester {
 
@@ -172,6 +172,7 @@ public class VehicleTester {
         Scania s = new Scania();
         s.getStorage().closeContainer();
         Point p = s.getPosition();
+        s.getMotor().startEngine();
         s.getMotor().gas(100);
         s.move();
         assertEquals(s.getPosition().getX(),p.x,0.01);
@@ -181,6 +182,7 @@ public class VehicleTester {
         Scania s = new Scania();
         s.getStorage().closeContainer();
         Point p = s.getPosition();
+        s.getMotor().startEngine();
         s.getMotor().gas(100);
         s.move();
         assertEquals(s.getPosition().getY(),p.y,0.01);
@@ -191,6 +193,7 @@ public class VehicleTester {
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
         t.getStorage().load(v);
+        t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
         assertEquals(v.getPosition().x,t.getPosition().x);
@@ -201,6 +204,7 @@ public class VehicleTester {
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
         t.getStorage().load(v);
+        t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
         assertEquals(v.getPosition().y,t.getPosition().y);
@@ -219,6 +223,7 @@ public class VehicleTester {
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
         t.getStorage().load(v);
+        t.getMotor().startEngine();
         t.getMotor().gas(100);
         t.move();
         assertEquals(v.getPosition().getX(), t.getPosition().getX(), 0.01);
@@ -229,8 +234,9 @@ public class VehicleTester {
         Volvo240 v = new Volvo240();
         t.getStorage().openContainer();
         t.getStorage().load(v);
-        t.getMotor().gas(100);
-        t.move();
+        v.getMotor().startEngine();
+        v.getMotor().gas(100);
+        v.move();
         assertEquals(v.getPosition().getY(), t.getPosition().getY(), 0.01);
     }
     @Test

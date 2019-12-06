@@ -1,8 +1,8 @@
 package WorldObjects.Objects;
 
 import Systems.CollisionHandler;
-import WorldObjects.IsWorldObject;
-import WorldObjects.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
+import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

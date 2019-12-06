@@ -1,10 +1,9 @@
 package Fuctionality.Storage.LastHandle;
 
-import WorldObjects.IsWorldObject;
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.WorldObject;
 
-import Fuctionality.Storage.Containers.Container;
 import java.awt.*;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -25,12 +24,11 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     protected final int MAX_CARGO_LOAD;
     private final int MAX_LOAD_DISTANCE;
     private final int sX, sY; // size of the cargo
-    private WorldObject LoadingVehicle;
+    //private WorldObject LoadingVehicle;
 
-    public LoadHandler(WorldObject LoadingVehicle, int maxCargoLoad, int maxLoadDistance, int sX, int sY, Principle principle){
+    public LoadHandler(int maxCargoLoad, int maxLoadDistance, int sX, int sY, Principle principle){
         this.MAX_CARGO_LOAD = maxCargoLoad;
         this.principle = principle;
-        this.LoadingVehicle=LoadingVehicle;
         this.MAX_LOAD_DISTANCE = maxLoadDistance;
         this.sX = sX;
         this.sY = sY;
@@ -38,11 +36,11 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     
     public int getCargoCount(){ return cargoList.size(); }
 
-    public boolean load(T cargo,boolean loadstate){
+    public boolean load(T cargo,boolean loadstate,Point position){
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getStatic()
-                &&isBehind(cargo)
-                && loadstate               //TODO need to check loadstate
+                &&isBehind(cargo,position)
+                && loadstate
                 ) {
             cargo.setStatic(true);
             cargoList.add(cargo);
@@ -66,9 +64,9 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
             return cargo;
     }
 
-    private boolean isBehind(IsWorldObject obj){
-        if(LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE
-                || LoadingVehicle.getPosition().distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getStatic()) return false;
+    private boolean isBehind(IsWorldObject obj,Point position){
+        if(position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE
+                || position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getStatic()) return false;
         return true;
     }
 
