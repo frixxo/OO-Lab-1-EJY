@@ -32,4 +32,6 @@ public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
         container.openContainer();
     }
     public void closeContainer(){ container.closeContainer(); }
+
+    public boolean normalState(){ return container.normalState();}
 }

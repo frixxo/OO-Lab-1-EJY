@@ -11,4 +11,5 @@ public interface Storage <T extends IsWorldObject>{
     void updatePosition(Point position);
     void openContainer();
     void closeContainer();
+    boolean normalState();
 }
