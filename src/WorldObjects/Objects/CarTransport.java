@@ -63,7 +63,7 @@ public class CarTransport extends Drivable implements Truk {
     public RotationHandler getRotationHandler() { return steerer; }
 
     @Override
-    public MoveHandler getDriver() { return driver; }
+    public MoveHandler getMoveHandler() { return driver; }
 
     @Override
     public void updateCollider(Point Worldsize) {
