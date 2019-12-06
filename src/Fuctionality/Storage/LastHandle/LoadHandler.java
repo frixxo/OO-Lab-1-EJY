@@ -71,7 +71,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
 
     public void updatePosition(Point position){
         for (T cargo : cargoList){
-            cargo.getPosition().setLocation(position.x, position.y);
+            cargo.setPosition(position);
             if (cargo instanceof IHasStorage){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
                 ((IHasStorage)cargo).getStorage().updatePosition(position);
             }
