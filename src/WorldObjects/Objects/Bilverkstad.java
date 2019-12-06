@@ -1,15 +1,14 @@
 package WorldObjects.Objects;
 
-import Fuctionality.Colliders.IStaticCollider;
-import Fuctionality.Colliders.ObjectCollider;
-import Fuctionality.Colliders.VehicleCollider;
+import Fuctionality.Colliders.StandardCollider;
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.InterfaceHierarchy.Vehicle;
 
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 /** A representation of a car repairshop where you */
-public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
+public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject implements IsWorldObject{
     private Map<String, T> cars = new HashMap<String, T>();
     private int maxCars = 0;
     private final int distToCArDeadzone = 3;
@@ -17,9 +16,9 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
 
     public boolean add(T car){
         if ((numberOfCars() == getMaxCars() || getPosition().distance(car.getPosition()) > distToCArDeadzone)
-                || getPosition().distance(car.getPosition()) > distToCArDeadzone|| car.getStatic()) return false;
+                || getPosition().distance(car.getPosition()) > distToCArDeadzone|| car.getLoaded()) return false;
         cars.put (car.getRegNr(), car);
-        car.setStatic(true);
+        car.setLoaded(true);
         return true;
     }
 
@@ -30,7 +29,7 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     public T get (String reg) {
 
         if(cars.containsKey(reg)) {
-            cars.get(reg).setStatic(false);
+            cars.get(reg).setLoaded(false);
             return cars.get(reg);
         }
         else {
@@ -39,7 +38,7 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
     }
 
     public Bilverkstad(Point location, int maxCars){
-        super(location,null,new Point(200,200),true,new ObjectCollider());
+        super(location,null,new Point(200,200),false,new StandardCollider(false));
         this.maxCars = maxCars;
     }
 
@@ -50,4 +49,8 @@ public class Bilverkstad<T extends WorldObject & Vehicle> extends WorldObject {
         return cars.size();
     }
 
+    @Override
+    public boolean getLoaded() {
+        return false;
+    }
 }

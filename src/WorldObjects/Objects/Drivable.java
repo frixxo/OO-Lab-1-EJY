@@ -1,6 +1,6 @@
 package WorldObjects.Objects;
 
-import Fuctionality.Colliders.VehicleCollider;
+import Fuctionality.Colliders.StandardCollider;
 import WorldObjects.InterfaceHierarchy.Movable;
 
 import java.awt.*;
@@ -10,11 +10,12 @@ public abstract class Drivable extends WorldObject implements Movable {
     protected int turnAngle=90;
 
     protected Drivable(Point position, Point2D direction, Point size, boolean isStatic) {
-        super(position, direction, size, isStatic,new VehicleCollider());
+        super(position, direction, size, isStatic,new StandardCollider(false));
     }
 
     public void turnLeft(){ setDirection(getRotationHandler().turnLeft(turnAngle,getDirection())); }
     public void turnRight(){ setDirection(getRotationHandler().turnRight(turnAngle,getDirection())); }
-    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(),getStatic())); }
+    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(), getLoaded())); }
     public double getCurrentSpeed(){return getMoveHandler().getCurrentSpeed();}
-}
+    }
+

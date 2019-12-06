@@ -1,4 +1,5 @@
 package WorldObjects.Objects; /** A scania truck*/
+
 import Fuctionality.IDGenerator.IDGenerator;
 import Fuctionality.IDGenerator.RegNrGenerator;
 import Fuctionality.MoveHandlers.MoveHandler;
@@ -54,7 +55,7 @@ public class Scania extends Drivable implements Truk {
     public MoveHandler getMoveHandler() { return driver; }
 
     @Override
-    public boolean getStatic()
+    public boolean getLoaded()
     {
         return storage.normalState();
     }

@@ -1,14 +1,21 @@
 package Fuctionality.Colliders;
 
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
+import WorldObjects.InterfaceHierarchy.Vehicle;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class VehicleCollider implements IDynamicCollider{
+public class StandardCollider implements Collider{
+    private boolean isStatic;
 
-    public void Update(WorldObject thisVehicle, Point Worldsize){
+    public StandardCollider(boolean isStatic){
+        this.isStatic=isStatic;
+    }
+
+    public void Update(IsWorldObject thisVehicle, Point Worldsize){
         Point pos = thisVehicle.getPosition();
         Point2D dir = thisVehicle.getDirection();
         if(dir.getX() > 0 && pos.x + thisVehicle.getSize().x >= Worldsize.x ||
@@ -22,13 +29,19 @@ public class VehicleCollider implements IDynamicCollider{
 
         changePosition(thisVehicle,Worldsize);
     }
-    private void changeDirection(WorldObject vehicle,int x, int y){
+
+    @Override
+    public boolean getStatic() {
+        return isStatic;
+    }
+
+    private void changeDirection(IsWorldObject vehicle,int x, int y){
         //if(vehicle instanceof IHasMotor){((IHasMotor) vehicle).getMotor().stopEngine();}                                    //stops the cars when hitting a wall. if commented cars will turn around instantly and run with same speed the other way
         // vehicle.fixPosition(new Point(frame.getSize().width,frame.getSize().height-240),frame.drawPanel.getImageMap().get(vehicle.getClass()).getSize());
         vehicle.setDirection(new Point.Double(vehicle.getDirection().getX()*x, vehicle.getDirection().getY()*y));
     }
 
-    private void changePosition(WorldObject vehicle,Point Worldsize){
+    private void changePosition(IsWorldObject vehicle,Point Worldsize){
         Point position=vehicle.getPosition();
         Point picsize=vehicle.getSize();
 
@@ -43,7 +56,7 @@ public class VehicleCollider implements IDynamicCollider{
     }
      vehicle.setPosition(position);
 }
-public void collision(WorldObject vehicle,WorldObject thisVehicle){
+public void collision(IsWorldObject vehicle,IsWorldObject thisVehicle){
         //TODO vehicle Collision
 }
 }

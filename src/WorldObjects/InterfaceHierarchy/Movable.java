@@ -7,3 +7,4 @@ public interface Movable extends IsWorldObject{
     RotationHandler getRotationHandler();
     MoveHandler getMoveHandler();
 }
+

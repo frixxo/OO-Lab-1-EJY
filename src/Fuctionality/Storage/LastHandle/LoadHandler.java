@@ -2,7 +2,6 @@ package Fuctionality.Storage.LastHandle;
 
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.LableInterfaces.IHasStorage;
-import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
 import java.util.Deque;
@@ -38,11 +37,11 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
 
     public boolean load(T cargo,boolean loadstate,Point position){
         if (cargoList.size() < MAX_CARGO_LOAD
-                &&!cargo.getStatic()
+                &&!cargo.getLoaded()
                 &&isBehind(cargo,position)
                 && loadstate
                 ) {
-            cargo.setStatic(true);
+            cargo.setLoaded(true);
             cargoList.add(cargo);
             return true;
         } return false;
@@ -60,13 +59,13 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
                 default:
                     cargo = null;
             }
-            cargo.setStatic(false);
+            cargo.setLoaded(false);
             return cargo;
     }
 
     private boolean isBehind(IsWorldObject obj,Point position){
         if(position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE
-                || position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getStatic()) return false;
+                || position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getLoaded()) return false;
         return true;
     }
 

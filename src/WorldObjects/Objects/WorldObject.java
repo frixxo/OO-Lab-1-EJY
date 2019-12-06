@@ -1,7 +1,6 @@
 package WorldObjects.Objects;
 
 import Fuctionality.Colliders.Collider;
-import Fuctionality.Colliders.VehicleCollider;
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
@@ -12,38 +11,39 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point position;
     private Point2D direction;
     private Point size;
-    private boolean isStatic;
+    private boolean isLoaded;
     private Collider collider;
 
     // region Constructor
-    protected WorldObject(Point position, Point2D direction, Point size, boolean isStatic,Collider collider)
+    protected WorldObject(Point position, Point2D direction, Point size, boolean isLoaded,Collider collider)
     {
        this.position = position;
        this.direction = direction;
        this.size = size;
-       this.isStatic = isStatic;
+       this.isLoaded = isLoaded;
+       this.collider=collider;
     }
     //endregion
 
     //region Setters
-    public void setStatic(boolean isLoaded)
+    public void setLoaded(boolean isLoaded)
     {
-        this.isStatic = isLoaded;
+        this.isLoaded = isLoaded;
     }
 
     public void setPosition(Point position)
      {
-       if(!isStatic) this.position = position;
+       if(!isLoaded) this.position = position;
     }
 
      public void setDirection(Point2D direction)
     {
-       if(!isStatic) this.direction = direction;
+       if(!isLoaded) this.direction = direction;
     }
 
      public void setSize(Point size)
     {
-       if(!isStatic) this.size = size;
+       if(!isLoaded) this.size = size;
     }
     //endregion
 
@@ -66,9 +66,9 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
         return p;
     }
 
-    public boolean getStatic()
+    public boolean getLoaded()
     {
-        return isStatic;
+        return isLoaded;
     }
 
     @Override

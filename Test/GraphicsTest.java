@@ -12,13 +12,13 @@ public class GraphicsTest {
     @Test
     public void TestCollisionX(){
         Volvo240 v = new Volvo240(new Point(-100,-100),new Point(0,0));
-        v.updateCollider(new Point (10,10));
+        v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().x,0);
     }
     @Test
     public void TestCollisionY(){
         Volvo240 v = new Volvo240(new Point(-100,-100),new Point(0,0));
-        v.updateCollider(new Point (10,10));
+        v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().y,0);
     }
 }
