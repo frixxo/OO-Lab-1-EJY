@@ -1,4 +1,5 @@
-import Movables.*;
+
+import WorldObjects.Bilverkstad;
 import WorldObjects.Movables.*;
 import org.junit.Test;
 
