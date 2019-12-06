@@ -96,12 +96,12 @@ public class VehicleTester {
         saab.move();
         assertEquals(0,saab.getPosition().getY(),0.01);
     }
-    @Test   //testar 1000 olika kombinationer, klarar över 20000 innan duplicering
+    @Test   //testar 1000 olika kombinationer, klarar 20000 innan duplicering
     public void TestRegNrGenerator(){
         IDGenerator reg=new RegNrGenerator();
         List<String> j= new ArrayList<>();
         String Nr="";
-        for(int x=0;x<20000;x++){
+        for(int x=0;x<1000;x++){
             Nr=reg.generate();
             for(int y=0; y<(j.size());y++){
                 if(j.get(y).equals(Nr)){
