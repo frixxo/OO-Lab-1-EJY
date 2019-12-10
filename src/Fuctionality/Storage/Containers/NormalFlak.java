@@ -1,16 +1,20 @@
 package Fuctionality.Storage.Containers;
 
+import java.util.concurrent.ExecutionException;
+
 abstract class NormalFlak implements IFlak {
     protected double angle = 0;  //0 is when the ramp is flat against the truck.
     protected double tippingAmount = 5;
     protected final double MAX_ANGLE = 70;
 
-    public boolean lowerRamp(){
+    public  boolean lowerRamp()  {
         return increaseTippingAngle(-tippingAmount);
     }
     public boolean raiseRamp(){
         return increaseTippingAngle(tippingAmount);
     }
+
+    protected boolean canChangeState = true;
 
 
     /** private method for raising or lowering the tipping angle called on by lower or raise ramp
@@ -36,4 +40,7 @@ abstract class NormalFlak implements IFlak {
         return angle;
     }
 
+    public void setCanChangeState(boolean canChangeState) {
+        this.canChangeState = canChangeState;
+    }
 }

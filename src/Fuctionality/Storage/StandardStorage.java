@@ -17,24 +17,24 @@ public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
         this.lasthandler = lasthandler;
     }
 
-    public boolean load(T cargo,Point position){
-        return lasthandler.load(cargo,container.loadState(),position);
-    }
-    public T release(){
-        return (T)lasthandler.release();
-    }
-    public int getCargoCount(){
-        return lasthandler.getCargoCount();
-    }
+    @Override
     public void updatePosition(Point position){
         lasthandler.updatePosition(position);
     }
-    public void openContainer(){
-        if(canChangeState) {container.openContainer();}
-    }
-    public void closeContainer(){ container.closeContainer(); }
 
-    public boolean normalState(){ return container.normalState();}
+
+    @Override
+    public Container getContainer()
+    {
+        container.setCanChangeState(canChangeState);
+        return container;
+    }
+
+    @Override
+    public IHandleLast getLastHandler() {
+        lasthandler.setLoadState(container.loadState());
+        return lasthandler;
+    }
 
     @Override
     public void setCanChangeState(boolean canChangeState) {

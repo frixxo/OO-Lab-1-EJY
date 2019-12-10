@@ -25,6 +25,8 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     private final int sX, sY; // size of the cargo
     //private WorldObject LoadingVehicle;
 
+    private boolean loadstate = true;
+
     public LoadHandler(int maxCargoLoad, int maxLoadDistance, int sX, int sY, Principle principle){
         this.MAX_CARGO_LOAD = maxCargoLoad;
         this.principle = principle;
@@ -35,13 +37,13 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     
     public int getCargoCount(){ return cargoList.size(); }
 
-    public boolean load(T cargo,boolean loadstate,Point position){
+    public boolean load(T cargo,Point position){
         if (cargoList.size() < MAX_CARGO_LOAD
-                &&!cargo.getLoaded()
+                &&!cargo.getLocked()
                 &&isBehind(cargo,position)
                 && loadstate
                 ) {
-            cargo.setLoaded(true);
+            cargo.setLocked(true);
             cargoList.add(cargo);
             return true;
         } return false;
@@ -59,14 +61,19 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
                 default:
                     cargo = null;
             }
-            cargo.setLoaded(false);
+            cargo.setLocked(false);
             return cargo;
     }
 
     private boolean isBehind(IsWorldObject obj,Point position){
         if(position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE
-                || position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getLoaded()) return false;
+                || position.distance(obj.getPosition()) > MAX_LOAD_DISTANCE||obj.getLocked()) return false;
         return true;
+    }
+
+    public void setLoadState (boolean loadState)
+    {
+        this.loadstate = loadState;
     }
 
     public void updatePosition(Point position){

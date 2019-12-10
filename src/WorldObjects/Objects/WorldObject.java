@@ -11,7 +11,7 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point position;
     private Point2D direction;
     private Point size;
-    private boolean isLoaded;
+    private boolean isLocked;
     private Collider collider;
 
     // region Constructor
@@ -20,30 +20,30 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
        this.position = position;
        this.direction = direction;
        this.size = size;
-       this.isLoaded = isLoaded;
+       this.isLocked = isLoaded;
        this.collider=collider;
     }
     //endregion
 
     //region Setters
-    public void setLoaded(boolean isLoaded)
+    public void setLocked(boolean isLoaded)
     {
-        this.isLoaded = isLoaded;
+        this.isLocked = isLoaded;
     }
 
     public void setPosition(Point position)
      {
-       if(!isLoaded) this.position = position;
+       if(!isLocked) this.position = position;
     }
 
      public void setDirection(Point2D direction)
     {
-       if(!isLoaded) this.direction = direction;
+       if(!isLocked) this.direction = direction;
     }
 
      public void setSize(Point size)
     {
-       if(!isLoaded) this.size = size;
+       if(!isLocked) this.size = size;
     }
     //endregion
 
@@ -66,9 +66,9 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
         return p;
     }
 
-    public boolean getLoaded()
+    public boolean getLocked()
     {
-        return isLoaded;
+        return isLocked;
     }
 
     @Override

@@ -1,16 +1,14 @@
 package Fuctionality.Storage;
 
+import Fuctionality.Storage.LastHandle.IHandleLast;
+import Fuctionality.Storage.Containers.Container;
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
 
 import java.awt.*;
 
-public interface Storage <T extends IsWorldObject>{
-    boolean load(T cargo,Point LoaderPosition);
-    T release();
-    int getCargoCount();
+public interface Storage <T extends IsWorldObject> {
     void updatePosition(Point position);
-    void openContainer();
-    void closeContainer();
-    boolean normalState();
     void setCanChangeState(boolean canChangeState);
+    IHandleLast getLastHandler();
+    Container getContainer();
 }

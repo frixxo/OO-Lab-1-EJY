@@ -66,8 +66,8 @@ public class CarFerry extends Drivable implements IHasStorage, IHasMotor, Vehicl
     public MoveHandler getMoveHandler() { return driver; }
 
     @Override
-    public boolean getLoaded()
+    public boolean getLocked()
     {
-        return storage.normalState();
+        return storage.getContainer().normalState();
     }
 }
