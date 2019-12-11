@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Graphics/ImageWithSize.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Graphics/ImageWithSize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Gui/ImageWithSize.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Gui/ImageWithSize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Container.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Flak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Flak.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/NormalFlak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/NormalFlak.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Ramp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Ramp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/StandardStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/StandardStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Storage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/DrawPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/ImageWithSize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/META-INF/OO-Lab-1-EJY.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/META-INF/OO-Lab-1-EJY.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/IsWorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/IsWorldObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/WorldObjectView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/WorldObjectView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarFerry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/CarTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Drivable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Drivable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/ImageWithSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/ImageHandler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,19 +83,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.All in OO-Lab-1-EJY">
+  <component name="RunManager" selected="Application.CarController">
     <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphics.CarController" />
       <module name="OO-Lab-1-EJY" />
@@ -105,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in OO-Lab-1-EJY" />
         <item itemvalue="Application.CarController" />
+        <item itemvalue="JUnit.All in OO-Lab-1-EJY" />
         <item itemvalue="JUnit.GraphicsTest" />
         <item itemvalue="JUnit.VehicleTester" />
         <item itemvalue="JUnit.VehicleTester.TestMoveX" />
@@ -114,13 +144,15 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -162,6 +194,32 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="707" y="485" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576071308364">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="707" y="485" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1576071308364" />
+    <state width="1258" height="169" key="GridCell.Tab.0.bottom" timestamp="1576074618238">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1258" height="169" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1576074618238" />
+    <state width="1258" height="169" key="GridCell.Tab.0.center" timestamp="1576074618238">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1258" height="169" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1576074618238" />
+    <state width="1258" height="169" key="GridCell.Tab.0.left" timestamp="1576074618238">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1258" height="169" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1576074618238" />
+    <state width="1258" height="169" key="GridCell.Tab.0.right" timestamp="1576074618238">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1258" height="169" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1576074618238" />
+    <state x="513" y="230" key="run.anything.popup" timestamp="1576072953434">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="513" y="230" key="run.anything.popup/0.40.1920.1040@0.40.1920.1040" timestamp="1576072953434" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
