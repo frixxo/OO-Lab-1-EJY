@@ -4,6 +4,8 @@ import java.awt.geom.Point2D;
 
 public class VehicleSteerer implements RotationHandler {
 
+    private int turnAngle=90;
+
     public Point2D turnLeft(int turnAngle, Point2D direction){ return rotate(360-turnAngle,direction); }
     public Point2D turnRight(int turnAngle, Point2D direction){ return rotate(turnAngle,direction); }
 
@@ -17,4 +19,7 @@ public class VehicleSteerer implements RotationHandler {
         double y = direction.getY();
         return (new Point2D.Double(x*Math.cos(angle) - y*Math.sin(angle), x*Math.sin(angle) + y*Math.cos(angle)));
     }
+
+    public int getTurnAngle(){return turnAngle;}
+    public void setTurnAngle(int angle){turnAngle = angle;}
 }

@@ -1,9 +1,7 @@
-import Graphics.*;
-import WorldObjects.Objects.Volvo240;
+import WorldObjects.Objects.MotorizedVehicle;
 import org.junit.Test;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 public class GraphicsTest {
@@ -11,13 +9,13 @@ public class GraphicsTest {
 
     @Test
     public void TestCollisionX(){
-        Volvo240 v = new Volvo240(new Point(-100,-100),new Point(0,0));
+        MotorizedVehicle v = new MotorizedVehicle(new Point(-100,-100),new Point(0,0));
         v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().x,0);
     }
     @Test
     public void TestCollisionY(){
-        Volvo240 v = new Volvo240(new Point(-100,-100),new Point(0,0));
+        MotorizedVehicle v = new MotorizedVehicle(new Point(-100,-100),new Point(0,0));
         v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().y,0);
     }

@@ -1,7 +1,6 @@
 package Fuctionality.Colliders;
 
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
-import WorldObjects.InterfaceHierarchy.Vehicle;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.Objects.WorldObject;
 

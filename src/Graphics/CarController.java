@@ -1,6 +1,6 @@
 package Graphics;
 
-import Systems.Physics;
+import Systems.Factories.VehicleFactory;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.*;
@@ -31,8 +31,6 @@ public class CarController {
     private CarView frame;
     // A list of cars, modify if needed
     List<WorldObjectView> cars = new ArrayList<>();
-
-    private Physics physics;
     //methods:
 
     public static void main(String[] args) {
@@ -41,26 +39,24 @@ public class CarController {
 
         // !no
         // TODO vehicles with container not moving
-        cc.cars.add(ObjectFactory.createVolvo240());
-        cc.cars.add(ObjectFactory.createLamborghiniGallardo(
+        cc.cars.add(VehicleFactory.CreateVolvo240());
+        cc.cars.add(VehicleFactory.CreateLamborghiniGallardo(
                 new Point(0,100),new Point (1,0)));
-        cc.cars.add(ObjectFactory.createScania(
+        cc.cars.add(VehicleFactory.CreateScania(
                 new Point(0,200),new Point(1,0)));
-        cc.cars.add(ObjectFactory.createCarTransport(
+        cc.cars.add(VehicleFactory.CreateCarTransport(
                 new Point(350,0),new Point(0,1)));
-        cc.cars.add(ObjectFactory.createSaab95(
+        cc.cars.add(VehicleFactory.CreateSaab95(
                 new Point(0,560),new Point(0,-1)));
-        cc.cars.add(ObjectFactory.createCarFerry(
+        cc.cars.add(VehicleFactory.CreateCarFerry(
                 new Point(200,0),new Point(0,1)));
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
-        cc.physics = ObjectFactory.getPhysics(cc.frame.windowSize());
-
         // Make sure cars are in frame
         for (WorldObjectView car : cc.cars) {
-            cc.physics.update(car);
+            car.UpdateCollider();
         }
 
         // Start the timer
@@ -76,7 +72,7 @@ public class CarController {
                 if(car instanceof Drivable) {
                     ((Drivable)car).move();
                 }
-                physics.update(car);
+                car.UpdateCollider();
 
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();

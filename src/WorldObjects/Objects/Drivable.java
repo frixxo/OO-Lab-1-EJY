@@ -1,21 +1,29 @@
 package WorldObjects.Objects;
 
 import Fuctionality.Colliders.StandardCollider;
-import WorldObjects.InterfaceHierarchy.Movable;
+import Fuctionality.MoveHandlers.MoveHandler;
+import Fuctionality.RotationHandler.RotationHandler;
+import WorldObjects.InterfaceHierarchy.IsWorldObject;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public abstract class Drivable extends WorldObject implements Movable {
-    protected int turnAngle=90;
+public abstract class Drivable extends WorldObject implements IsWorldObject {
 
-    protected Drivable(Point position, Point2D direction, Point size, boolean isStatic) {
+    RotationHandler rotationHandler;
+    MoveHandler moveHandler;
+
+    protected Drivable(Point position, Point2D direction, Point size, boolean isStatic, RotationHandler rotationHandler, MoveHandler moveHandler) {
         super(position, direction, size, isStatic,new StandardCollider(false));
+        this.moveHandler = moveHandler;
+        this.rotationHandler = rotationHandler;
     }
 
-    public void turnLeft(){ setDirection(getRotationHandler().turnLeft(turnAngle,getDirection())); }
-    public void turnRight(){ setDirection(getRotationHandler().turnRight(turnAngle,getDirection())); }
-    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(), getLocked())); }
-    public double getCurrentSpeed(){return getMoveHandler().getCurrentSpeed();}
-    }
+    public void turnLeft(){ setDirection(rotationHandler.turnLeft(rotationHandler.getTurnAngle(),getDirection())); }
+    public void turnRight(){ setDirection(rotationHandler.turnRight(rotationHandler.getTurnAngle(),getDirection())); }
+    public void move(){ setPosition(moveHandler.move(getPosition(),getDirection(), getLocked())); }
+    public double getCurrentSpeed(){return moveHandler.getCurrentSpeed();}
 
+    protected RotationHandler getRotationHandler() {return  rotationHandler;}
+    protected MoveHandler getMoveHandler() {return  moveHandler;}
+}

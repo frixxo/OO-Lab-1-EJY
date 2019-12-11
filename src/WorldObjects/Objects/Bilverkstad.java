@@ -2,13 +2,11 @@ package WorldObjects.Objects;
 
 import Fuctionality.Colliders.StandardCollider;
 import WorldObjects.InterfaceHierarchy.IsWorldObject;
-import WorldObjects.InterfaceHierarchy.Vehicle;
-
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 /** A representation of a car repairshop where you */
-public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject implements IsWorldObject{
+public class Bilverkstad<T extends Vehicle> extends WorldObject implements IsWorldObject{
     private Map<String, T> cars = new HashMap<String, T>();
     private int maxCars = 0;
     private final int distToCArDeadzone = 3;
@@ -17,7 +15,7 @@ public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject 
     public boolean add(T car){
         if ((numberOfCars() == getMaxCars() || getPosition().distance(car.getPosition()) > distToCArDeadzone)
                 || getPosition().distance(car.getPosition()) > distToCArDeadzone|| car.getLocked()) return false;
-        cars.put (car.getRegNr(), car);
+        cars.put (car.getID(), car);
         car.setLocked(true);
         return true;
     }

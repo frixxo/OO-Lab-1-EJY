@@ -1,6 +1,7 @@
 package Fuctionality.MoveHandlers;
 
 import Fuctionality.MoveHandlers.VehicleDriver;
+import Fuctionality.RotationHandler.RotationHandler;
 import WorldObjects.Objects.WorldObject;
 
 import java.awt.*;
@@ -9,15 +10,25 @@ import java.awt.geom.Point2D;
 public class SpoilerDriver extends VehicleDriver {
     private boolean spoilerUp=false;
     private double spoilerspeed =0;
+    private RotationHandler rotationHandler;
 
-    public SpoilerDriver() {
+    public SpoilerDriver(RotationHandler rotationHandler) {
         super();
+        this.rotationHandler = rotationHandler;
     }
 
     public void raiseSpoiler(){
-        spoilerUp=true; }
+        if (!spoilerUp) {
+        rotationHandler.setTurnAngle(rotationHandler.getTurnAngle() + 5);
+        spoilerUp=true;}
+    }
     public void lowerSpoiler(){
-        spoilerUp=false; }
+        if (spoilerUp)
+        {
+            rotationHandler.setTurnAngle(rotationHandler.getTurnAngle() -5);
+            spoilerUp=false;
+        }
+    }
 
     @Override
     public void setCurrentSpeed(double d){

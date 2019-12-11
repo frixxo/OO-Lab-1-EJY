@@ -75,5 +75,10 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     public Collider getCollider() {
         return collider;
     }
+
+    public void UpdateCollider()
+    {
+        collider.Update(this, size);
+    }
     //endregion
 }
