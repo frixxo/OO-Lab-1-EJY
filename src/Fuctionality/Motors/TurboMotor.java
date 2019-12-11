@@ -3,7 +3,7 @@ package Fuctionality.Motors;
 import Fuctionality.MoveHandlers.MoveHandler;
 import WorldObjects.LableInterfaces.IHasTurbo;
 
-public class TurboMotor extends NormalMotor implements IHasTurbo {
+public class TurboMotor extends NormalMotor{
     private boolean turboOn=false;
     public TurboMotor(double power, MoveHandler moveHandler) {
         super(power,moveHandler);
@@ -16,7 +16,6 @@ public class TurboMotor extends NormalMotor implements IHasTurbo {
         return power * 0.01 * turbo;
     }
 
-    @Override
     public void setTurbo(boolean turbo) { turboOn=turbo; }
 
 }

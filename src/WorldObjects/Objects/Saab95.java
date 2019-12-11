@@ -19,7 +19,7 @@ import java.awt.geom.Point2D;
 public class Saab95 extends Drivable implements Car,IHasTurbo {
     private MoveHandler driver=new VehicleDriver();
     private RotationHandler steerer=new VehicleSteerer();
-    private TurboMotor engine = new TurboMotor(100,driver);
+    private IMotor engine = new TurboMotor(100,driver);
     private RegNrGenerator reg = new RegNrGenerator();
     private String ModelName="Saab95";
     private String RegNr;
@@ -37,7 +37,12 @@ public class Saab95 extends Drivable implements Car,IHasTurbo {
     //endregion
     
     @Override
-    public void setTurbo(boolean turbo) {engine.setTurbo(turbo);}
+    public void setTurbo(boolean turbo) throws IllegalArgumentException{
+        if(engine instanceof TurboMotor) {
+            ((TurboMotor)engine).setTurbo(turbo);
+        }
+        else {throw new IllegalArgumentException("Saab does not have TurboMotor");}
+    }
 
     @Override
     public IMotor getMotor() { return engine; }
