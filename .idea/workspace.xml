@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/NormalFlak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/NormalFlak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Ramp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Ramp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/IHandleLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/IHandleLast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/LastHandle/LoadHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/StandardStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/StandardStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/IsWorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/IsWorldObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/WorldObjectView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/WorldObjectView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarFerry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/CarTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" afterDir="false" />
-    </list>
+    <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
