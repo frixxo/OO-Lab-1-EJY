@@ -17,23 +17,26 @@ import java.awt.geom.Point2D;
  * Represents a Volvo 240 raggarbil
  */
 public class Volvo240 extends Drivable implements Car {
-    private RotationHandler steerer= new VehicleSteerer();
-    private MoveHandler driver= new VehicleDriver();
-    private IMotor motor = new TrimmedMotor(100,1.25,driver);
-    private IDGenerator reg=new RegNrGenerator();
+    private RotationHandler steerer;
+    private MoveHandler driver;
+    private IMotor motor;
     private String modelName="Volvo240";
     private String RegNr;
 
 
     //region Constructor
-    public Volvo240(Point position, Point2D direction)
-    {
+    public Volvo240(String modelName, Point position, Point2D direction, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr) {
         super(position, direction, new Point(70,50), false);
-        RegNr=reg.generate();
+        this.modelName = modelName;
+        this.steerer = steerer;
+        this.driver = driver;
+        this.motor = motor;
+        this.RegNr = RegNr;
     }
-    public Volvo240()
+
+    public Volvo240(String modelName ,RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr)
     {
-        this(new Point(0,0),new Point(1,0));
+        this(modelName, new Point(0,0),new Point(1,0), steerer, driver, motor, RegNr);
     }
     //endregion
 
