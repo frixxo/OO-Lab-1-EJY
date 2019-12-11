@@ -49,7 +49,7 @@ public class CarView extends JFrame{
         initComponents(framename);
     }
 
-    public <T>Point getSize(T obj){ return drawPanel.getSize(obj); }
+   // public <T>Point getSize(T obj){ return drawPanel.getSize(obj); }
 
     // Sets everything in place and fits everything
     // TODO: Take a good look and make sure you understand how these methods and components work
@@ -118,54 +118,14 @@ public class CarView extends JFrame{
         this.add(stopButton);
 
        //region button functionality
-        gasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.gas(gasAmount);
-            }
-        });
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.startEngline();
-            }
-        });
-        stopButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.stopEngline();
-            }
-        });
-        brakeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.brake(gasAmount);
-            }
-        });
-        liftBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.RaiseFlak();
-            }
-        });
-        lowerBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.LowerFlak();
-            }
-        });
-        turnLeftButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.TurnLeft();
-            }
-        });
-        turnRightButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carC.TurnRight();
-            }
-        });
+        startButton.addActionListener(e -> carC.startEngline());
+        stopButton.addActionListener(e -> carC.stopEngline());
+        gasButton.addActionListener(e -> carC.gas(gasAmount));
+        brakeButton.addActionListener(e -> carC.brake(gasAmount));
+        liftBedButton.addActionListener(e -> carC.raiseFlak());
+        lowerBedButton.addActionListener(e -> carC.lowerFlak());
+        turnLeftButton.addActionListener(e -> carC.turnLeft());
+        turnRightButton.addActionListener(e -> carC.turnRight());
         //endregion
 
         // Make the frame pack all it's components by respecting the sizes if possible.

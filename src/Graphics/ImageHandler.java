@@ -5,15 +5,13 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class ImageWithSize {
+public class ImageHandler {
     protected File file=new File("pics");
     private String filePath= file.getAbsolutePath();
     private Image image;
-    private Point size;
 
-    public ImageWithSize(String picturePath, Point size) {
+    public ImageHandler(String picturePath) {
         setImage(picturePath);
-        this.size = size;
     }
 
     private void setImage(String PicturePath) {
@@ -21,7 +19,6 @@ public class ImageWithSize {
         catch (IOException e) { e.printStackTrace(); }
     }
 
-    public Point getSize() { return size; }
     public Image getImage(){ return image;}
 
 }
