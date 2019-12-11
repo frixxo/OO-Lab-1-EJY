@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public interface IsWorldObject {
-    boolean getLoaded();
-    void setLoaded(boolean set);
+    boolean getLocked();
+    void setLocked(boolean set);
     Point getPosition();
     Point2D getDirection();
     Point getSize();

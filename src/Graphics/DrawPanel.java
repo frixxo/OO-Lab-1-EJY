@@ -12,7 +12,7 @@ import javax.swing.*;
 
 public class DrawPanel extends JPanel{
     private List<WorldObjectView> worldObjects;
-    private HashMap <Object,ImageWithSize> imageMap=new HashMap<>();
+    private HashMap <Object, ImageHandler> imageMap=new HashMap<>();
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y, List<WorldObjectView> worldObjects) {
@@ -27,24 +27,25 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Image I;
+        Image image;
         Point size;
         for (WorldObjectView v : worldObjects) {
-           I=imageMap.get(v.getClass()).getImage();
-           size =imageMap.get(v.getClass()).getSize();
-            g.drawImage(I, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
+           image = imageMap.get(v.getClass()).getImage();
+           size = v.getSize();
+           g.drawImage(image, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
         }
     }
+
     private void initializeHashmap(){
-        imageMap.put(Volvo240.class,new ImageWithSize("/Volvo240.jpg",new Volvo240().getSize()));
-        imageMap.put(Saab95.class,new ImageWithSize("/Saab95.jpg",new Saab95().getSize()));
-        imageMap.put(LamborghiniGallardo.class,new ImageWithSize("/LamborghiniGallardo.jpg",new LamborghiniGallardo().getSize()));
-        imageMap.put(Scania.class,new ImageWithSize("/Scania.jpg",new Scania().getSize()));
-        imageMap.put(CarTransport.class,new ImageWithSize("/Cartransport.jpg",new CarTransport().getSize()));
-        imageMap.put(CarFerry.class,new ImageWithSize("/CarFerry.jpg",new CarFerry().getSize()));
+        imageMap.put(ObjectFactory.createVolvo240().getClass(), new ImageHandler("/Volvo240.jpg"));
+        imageMap.put(ObjectFactory.createSaab95().getClass(), new ImageHandler("/Saab95.jpg"));
+        imageMap.put(ObjectFactory.createLamborghiniGallardo().getClass(), new ImageHandler("/LamborghiniGallardo.jpg"));
+        imageMap.put(ObjectFactory.createScania().getClass(), new ImageHandler("/Scania.jpg"));
+        imageMap.put(ObjectFactory.createCarTransport().getClass(), new ImageHandler("/Cartransport.jpg"));
+        imageMap.put(ObjectFactory.createCarFerry().getClass(), new ImageHandler("/CarFerry.jpg"));
     }
 
-    public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }
+   // public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }
 
-    public HashMap<Object, ImageWithSize> getImageMap() { return imageMap; }
+    public HashMap<Object, ImageHandler> getImageMap() { return imageMap; }
 }

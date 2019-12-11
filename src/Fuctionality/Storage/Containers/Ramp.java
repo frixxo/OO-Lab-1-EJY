@@ -18,8 +18,8 @@ public class Ramp extends NormalFlak{
     }
 
     @Override
-    public void openContainer (){lowerRamp();}
+    public void openContainer (){if (canChangeState) lowerRamp();}
 
     @Override
-    public void closeContainer (){raiseRamp();}
+    public void closeContainer (){if (canChangeState) raiseRamp();}
 }

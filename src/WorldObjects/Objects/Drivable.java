@@ -15,7 +15,7 @@ public abstract class Drivable extends WorldObject implements Movable {
 
     public void turnLeft(){ setDirection(getRotationHandler().turnLeft(turnAngle,getDirection())); }
     public void turnRight(){ setDirection(getRotationHandler().turnRight(turnAngle,getDirection())); }
-    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(), getLoaded())); }
+    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection(), getLocked())); }
     public double getCurrentSpeed(){return getMoveHandler().getCurrentSpeed();}
     }
 

@@ -16,7 +16,7 @@ import java.awt.geom.Point2D;
 /**
  * Represent a Movables.Saab95
  */
-public class Saab95 extends Drivable implements Car,IHasTurbo {
+public class Saab95 extends Drivable implements Car, IHasTurbo {
     private MoveHandler driver=new VehicleDriver();
     private RotationHandler steerer=new VehicleSteerer();
     private IMotor engine = new TurboMotor(100,driver);

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * Has all the test for the vehicles
  */
 public class VehicleTester {
-
+/*
     @Test
     public void TestGallardoSpoilerDown() {
         LamborghiniGallardo x = new LamborghiniGallardo();
@@ -285,5 +285,5 @@ public class VehicleTester {
         Point x=new Point(1000,1000);
         Volvo240 v=new Volvo240(x,x);
         assertFalse(c.getStorage().load(v,c.getPosition()));
-    }
+    }*/
 }

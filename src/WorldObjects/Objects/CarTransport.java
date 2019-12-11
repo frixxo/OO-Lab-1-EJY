@@ -63,8 +63,8 @@ public class CarTransport extends Drivable implements Truk {
     public MoveHandler getMoveHandler() { return driver; }
 
     @Override
-    public boolean getLoaded()
+    public boolean getLocked()
     {
-        return storage.normalState();
+        return storage.getContainer().normalState();
     }
 }

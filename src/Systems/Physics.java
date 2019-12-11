@@ -14,11 +14,11 @@ public class Physics {
     }
 
     public void update(WorldObjectView car){
-            if(car instanceof Movable){
-                if(!((Movable) car).getCollider().getStatic()){
-                ((Movable) car).getCollider().Update((Movable)car,Worldsize);
-                }
+        if(car instanceof Movable){
+            if(!((Movable) car).getCollider().getStatic()){
+            ((Movable) car).getCollider().Update((Movable)car,Worldsize);
             }
+        }
     }
 }
 

@@ -16,9 +16,9 @@ public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject 
 
     public boolean add(T car){
         if ((numberOfCars() == getMaxCars() || getPosition().distance(car.getPosition()) > distToCArDeadzone)
-                || getPosition().distance(car.getPosition()) > distToCArDeadzone|| car.getLoaded()) return false;
+                || getPosition().distance(car.getPosition()) > distToCArDeadzone|| car.getLocked()) return false;
         cars.put (car.getRegNr(), car);
-        car.setLoaded(true);
+        car.setLocked(true);
         return true;
     }
 
@@ -29,7 +29,7 @@ public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject 
     public T get (String reg) {
 
         if(cars.containsKey(reg)) {
-            cars.get(reg).setLoaded(false);
+            cars.get(reg).setLocked(false);
             return cars.get(reg);
         }
         else {
@@ -50,7 +50,7 @@ public class Bilverkstad<T extends IsWorldObject & Vehicle> extends WorldObject 
     }
 
     @Override
-    public boolean getLoaded() {
+    public boolean getLocked() {
         return false;
     }
 }
