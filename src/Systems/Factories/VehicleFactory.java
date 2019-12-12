@@ -1,8 +1,8 @@
 package Systems.Factories;
 
+import Fuctionality.Motors.NormalMotor;
 import Systems.IDGenerator.RegNrGenerator;
 import Fuctionality.Motors.IMotor;
-import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Motors.TrimmedMotor;
 import Fuctionality.Motors.TurboMotor;
 import Fuctionality.MoveHandlers.MoveHandler;
@@ -59,7 +59,7 @@ public class VehicleFactory {
         String modelName = "LamborghiniGallardo";
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new SpoilerDriver(rh);
-        IMotor motor = new StandardMotor(320, mh);
+        IMotor motor = new NormalMotor(320, mh);
         WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
@@ -73,7 +73,7 @@ public class VehicleFactory {
         String modelName = "Scania";
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
-        IMotor motor = new StandardMotor(20, mh);
+        IMotor motor = new NormalMotor(20, mh);
         Storage storage = new StandardStorage(new Flak(), new LoadHandler<Skräp>(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
@@ -88,7 +88,7 @@ public class VehicleFactory {
         String modelName = "CarTransport";
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
-        IMotor motor = new StandardMotor(20, mh);
+        IMotor motor = new NormalMotor(20, mh);
         Storage storage =new StandardStorage<Car>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
@@ -103,7 +103,7 @@ public class VehicleFactory {
         String modelName = "CarFerry";
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
-        IMotor motor = new StandardMotor(10, mh);
+        IMotor motor = new NormalMotor(10, mh);
         Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
         WorldObjectView r = new Ferry( position, direction, new Point(140,100), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
