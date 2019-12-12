@@ -19,11 +19,14 @@ public abstract class Drivable extends WorldObject implements IsWorldObject {
         this.rotationHandler = rotationHandler;
     }
 
-    public void turnLeft(){ setDirection(rotationHandler.turnLeft(rotationHandler.getTurnAngle(),getDirection())); }
-    public void turnRight(){ setDirection(rotationHandler.turnRight(rotationHandler.getTurnAngle(),getDirection())); }
-    public void move(){ setPosition(moveHandler.move(getPosition(),getDirection(), getLocked())); }
-    public double getCurrentSpeed(){return moveHandler.getCurrentSpeed();}
+    public void turnLeft(){ setDirection(getRotationHandler().turnLeft(getRotationHandler().getTurnAngle(),getDirection())); }
+    public void turnRight(){ setDirection(getRotationHandler().turnRight(getRotationHandler().getTurnAngle(),getDirection())); }
+    public void move(){ setPosition(getMoveHandler().move(getPosition(),getDirection())); }
+    public double getCurrentSpeed(){return getMoveHandler().getCurrentSpeed();}
 
     protected RotationHandler getRotationHandler() {return  rotationHandler;}
-    protected MoveHandler getMoveHandler() {return  moveHandler;}
+    protected MoveHandler getMoveHandler() {
+        moveHandler.setLocked(getLocked());
+        return  moveHandler;
+    }
 }

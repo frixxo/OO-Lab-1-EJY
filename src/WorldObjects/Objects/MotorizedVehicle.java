@@ -21,9 +21,7 @@ public abstract class MotorizedVehicle extends Vehicle implements IHasMotor {
     }
     //endregion
 
-    public IMotor getMotor() {
-        return motor;
-    }
+    public IMotor getMotor() { return motor; }
 }
 
 
