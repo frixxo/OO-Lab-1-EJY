@@ -15,14 +15,14 @@ public class GraphicsTest {
     @Test
     public void TestCollisionX(){
         MoveHandler mh=new VehicleDriver();
-        MotorizedVehicle v = new Car("",new Point(-100,-100),new Point(0,0),new Point(20,20),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        MotorizedVehicle v = new Car(new Point(-100,-100),new Point(0,0),new Point(20,20),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().x,0);
     }
     @Test
     public void TestCollisionY(){
         MoveHandler mh=new VehicleDriver();
-        MotorizedVehicle v = new Car("",new Point(-100,-100),new Point(0,0),new Point(20,20),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        MotorizedVehicle v = new Car(new Point(-100,-100),new Point(0,0),new Point(20,20),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         v.getCollider().Update(v,new Point (100,100));
         assertEquals(v.getPosition().y,0);
     }

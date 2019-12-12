@@ -30,7 +30,7 @@ public class DrawPanel extends JPanel{
         Image image;
         Point size;
         for (WorldObjectView v : worldObjects) {
-           image = imageMap.get(v.getClass()).getImage();
+           image = imageMap.get(v.getType()).getImage();
            size = v.getSize();
            g.drawImage(image, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
         }

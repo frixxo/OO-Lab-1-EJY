@@ -32,7 +32,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         RotationHandler rh = new VehicleSteerer();
         IMotor motor = new TrimmedMotor( 100,1.25,mh);
-        WorldObjectView r = new Car(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate());
+        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
     public static WorldObjectView CreateVolvo240 ()
@@ -46,7 +46,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         RotationHandler rh = new VehicleSteerer();
         IMotor motor = new TurboMotor(100, mh);
-        WorldObjectView r = new Car(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate());
+        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
     public static WorldObjectView CreateSaab()
@@ -60,7 +60,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new SpoilerDriver(rh);
         IMotor motor = new StandardMotor(320, mh);
-        WorldObjectView r = new Car(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate());
+        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
     public static WorldObjectView CreateLamborghiniGallardo()
@@ -75,7 +75,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new StandardMotor(20, mh);
         Storage storage = new StandardStorage(new Flak(), new LoadHandler<Skräp>(10, 2,3, 3, LoadHandler.Principle.FILO));
-        WorldObjectView r = new Truck(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage);
+        WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
     public static WorldObjectView CreateScania()
@@ -90,7 +90,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new StandardMotor(20, mh);
         Storage storage =new StandardStorage<Car>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
-        WorldObjectView r = new Truck(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage);
+        WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
     public static WorldObjectView CreateCarTransport()
@@ -105,7 +105,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new StandardMotor(10, mh);
         Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
-        WorldObjectView r = new Ferry(modelName, position, direction, new Point(140,100), rh, mh,motor, regNR.generate(), storage);
+        WorldObjectView r = new Ferry( position, direction, new Point(140,100), rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
     public static WorldObjectView CreateCarFerry()

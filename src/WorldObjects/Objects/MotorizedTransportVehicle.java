@@ -12,9 +12,9 @@ import java.awt.geom.Point2D;
 public abstract class MotorizedTransportVehicle extends MotorizedVehicle implements IHasStorage {
     private Storage storage;
 
-    protected MotorizedTransportVehicle(String modelName, Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr, Storage storage)
+    protected MotorizedTransportVehicle(Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr, Storage storage,String type)
     {
-        super(modelName, position, direction, size, steerer, driver, motor, RegNr);
+        super(position, direction, size, steerer, driver, motor, RegNr, type);
         this.storage = storage;
         this.motor = motor;
     }

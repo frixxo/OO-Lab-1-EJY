@@ -10,4 +10,5 @@ public interface WorldObjectView {
     Point getSize();
     boolean getLocked();
     void UpdateCollider();
+    String getType();
 }

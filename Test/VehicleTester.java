@@ -57,7 +57,7 @@ public class VehicleTester {
     @Test
     public void TestTurnLeftX(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car(new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.turnLeft();
         assertEquals(0,x.getDirection().getX(),0.01);
@@ -65,7 +65,7 @@ public class VehicleTester {
     @Test
     public void TestTurnLeftY(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.turnLeft();
 
@@ -74,7 +74,7 @@ public class VehicleTester {
     @Test
     public void TestTurnRightX(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.turnRight();
         assertEquals(0, x.getDirection().getX(), 0.01);
@@ -82,7 +82,7 @@ public class VehicleTester {
     @Test
     public void TestTurnRightY(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.turnRight();
         assertEquals(1,x.getDirection().getY(),0.01);
@@ -90,14 +90,14 @@ public class VehicleTester {
     @Test
     public void TestVolvoSpeedFactor(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new TrimmedMotor(100,1.25,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new TrimmedMotor(100,1.25,mh),"","");
 
         assertEquals(1.25d,x.getMotor().SpeedFactor(),0.01d);
     }
     @Test
     public void TestGasHigher(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new TrimmedMotor(100,1.25,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new TrimmedMotor(100,1.25,mh),"","");
 
         x.getMotor().startEngine();
         x.getMotor().gas(10);
@@ -106,7 +106,7 @@ public class VehicleTester {
     @Test
     public void TestBrakeHigher(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.getMotor().startEngine();
         x.getMotor().gas(10);
@@ -117,7 +117,7 @@ public class VehicleTester {
     @Test
     public void TestMoveX(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.getMotor().startEngine();
         x.getMotor().gas(10);
@@ -127,7 +127,7 @@ public class VehicleTester {
     @Test
     public void TestMoveY(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         x.getMotor().startEngine();
         x.getMotor().gas(10);
@@ -155,7 +155,7 @@ public class VehicleTester {
     public void TestBilverkstadAdd(){
         MoveHandler mh=new VehicleDriver();
         Bilverkstad<Car> x=new Bilverkstad<>(new Point(0,0),5);
-        Car y=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car y=new Car(new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         assertTrue(x.add(y));
 
     }
@@ -163,7 +163,7 @@ public class VehicleTester {
     public void TestBilverkstadGet(){
         MoveHandler mh=new VehicleDriver();
         Bilverkstad<Car> x=new Bilverkstad<>(new Point(0,0),5);
-        Car y=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"hej81239");
+        Car y=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"hej81239","");
 
         x.add(y);
         assertSame(x.get(y.getID()), y);
@@ -171,18 +171,18 @@ public class VehicleTester {
     @Test
     public void TestCarTransportLoadRampDown(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
-        MotorizedTransportVehicle y= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle y= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
         y.getStorage().getContainer().openContainer();
         assertTrue(y.getStorage().getLastHandler().load(x,y.getPosition()));
     }
     @Test
     public void TestCarTransportLoadRampUp(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
-        MotorizedTransportVehicle y= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle y= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         y.getStorage().getContainer().closeContainer();
         boolean b=y.getStorage().getLastHandler().load(x,y.getPosition());
@@ -191,9 +191,9 @@ public class VehicleTester {
     @Test
     public void TestCarTransportGet(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
-        MotorizedTransportVehicle y= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle y = new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         y.getStorage().getContainer().openContainer();
         y.getStorage().getLastHandler().load(x,y.getPosition());
@@ -202,9 +202,9 @@ public class VehicleTester {
     @Test
     public void TestCarFerryLoad(){
         MoveHandler mh=new VehicleDriver();
-        Car y=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car y=new Car(new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
-        MotorizedTransportVehicle ferry= new Ferry("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle ferry= new Ferry( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         ferry.getStorage().getContainer().openContainer();
         assertTrue(ferry.getStorage().getLastHandler().load(y,ferry.getPosition()));
@@ -212,10 +212,10 @@ public class VehicleTester {
     @Test
     public void TestCarFerryGet(){
         MoveHandler mh=new VehicleDriver();
-        Car y=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car y=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
-        MotorizedTransportVehicle ferry= new Ferry("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FIFO)));
+        MotorizedTransportVehicle ferry= new Ferry( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FIFO)),"");
 
         ferry.getStorage().getContainer().openContainer();
         ferry.getStorage().getLastHandler().load(y,ferry.getPosition());
@@ -225,7 +225,7 @@ public class VehicleTester {
     @Test
     public void TestScaniaMoveRampUpX(){
         MoveHandler mh=new VehicleDriver();
-       MotorizedTransportVehicle s= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Flak(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+       MotorizedTransportVehicle s= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mh, new StandardMotor(100, mh), "", new StandardStorage(new Flak(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         s.getStorage().getContainer().closeContainer();
         Point p = s.getPosition();
@@ -237,7 +237,7 @@ public class VehicleTester {
     @Test
     public void TestScaniaMoveRampUpY(){
          MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle s= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Flak(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle s= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Flak(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         s.getStorage().getContainer().closeContainer();
         Point p = s.getPosition();
@@ -249,9 +249,9 @@ public class VehicleTester {
     @Test
     public void TestLoadHandlerUpdatePositionX(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle t= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle t= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         t.getStorage().getContainer().openContainer();
         t.getStorage().getLastHandler().load(x,t.getPosition());
@@ -263,9 +263,9 @@ public class VehicleTester {
     @Test
     public void TestLoadHandlerUpdatePositionY(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle t= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle t= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         t.getStorage().getContainer().openContainer();
         t.getStorage().getLastHandler().load(x,t.getPosition());
@@ -277,9 +277,9 @@ public class VehicleTester {
     @Test
     public void TestLoadSameCarMultipleTimes(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle t= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle t= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         t.getStorage().getContainer().openContainer();
         t.getStorage().getLastHandler().load(x,t.getPosition());
@@ -288,9 +288,9 @@ public class VehicleTester {
     @Test
     public void TestDriveLoadedCarX() {
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle t= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle t= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         t.getStorage().getContainer().openContainer();
         t.getStorage().getLastHandler().load(x,t.getPosition());
@@ -302,9 +302,9 @@ public class VehicleTester {
     @Test
     public void TestDriveLoadedCarY() {
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle t= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle t= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         t.getStorage().getContainer().openContainer();
         t.getStorage().getLastHandler().load(x,t.getPosition());
@@ -316,13 +316,13 @@ public class VehicleTester {
     @Test
     public void TestLoadCarTransportWithCargoOnFerry(){
         MoveHandler mh=new VehicleDriver();
-        Car x=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car x=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         MoveHandler mk=new VehicleDriver();
-        MotorizedTransportVehicle F= new Ferry("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle F= new Ferry( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle T= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle T= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         T.getStorage().getContainer().openContainer();
         F.getStorage().getContainer().openContainer();
@@ -332,13 +332,13 @@ public class VehicleTester {
     @Test
     public void TestMoveCarTransportWithCargoOnFerryCargoUpdateX(){
         MoveHandler mh=new VehicleDriver();
-        Car V=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car V=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         MoveHandler mk=new VehicleDriver();
-        MotorizedTransportVehicle F= new Ferry("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle F= new Ferry( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle T= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle T= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         T.getStorage().getContainer().openContainer();
         F.getStorage().getContainer().openContainer();
@@ -352,13 +352,13 @@ public class VehicleTester {
     @Test
     public void TestMoveCarTransportWithCargoOnFerryCargoUpdateY(){
         MoveHandler mh=new VehicleDriver();
-        Car V=new Car("", new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car V=new Car( new Point(0,0), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
 
         MoveHandler mk=new VehicleDriver();
-        MotorizedTransportVehicle F= new Ferry("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle F= new Ferry( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mk, new StandardMotor(100, mk), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle T= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle T= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         T.getStorage().getContainer().openContainer();
         F.getStorage().getContainer().openContainer();
@@ -372,9 +372,9 @@ public class VehicleTester {
     @Test
     public void TestLoadWhenNotInMaxLoadDistance(){
         MoveHandler mh=new VehicleDriver();
-        Car v=new Car("", new Point(1000,1000), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"");
+        Car v=new Car( new Point(1000,1000), new Point(1,0),new Point (1,1),new VehicleSteerer(),mh,new StandardMotor(100,mh),"","");
         MoveHandler mn=new VehicleDriver();
-        MotorizedTransportVehicle c= new Truck("", new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)));
+        MotorizedTransportVehicle c= new Truck( new Point(0, 0), new Point(1, 0), new Point(1, 1), new VehicleSteerer(), mn, new StandardMotor(100, mn), "", new StandardStorage(new Ramp(),new LoadHandler<Car>(5,5,5,5, LoadHandler.Principle.FILO)),"");
 
         c.getStorage().getContainer().openContainer();
         assertFalse(c.getStorage().getLastHandler().load(v,c.getPosition()));

@@ -36,7 +36,7 @@ public class Bilverkstad<T extends Vehicle> extends WorldObject implements IsWor
     }
 
     public Bilverkstad(Point location, int maxCars){
-        super(location,new Point(0, 0),new Point(200,200),false,new StandardCollider(false));
+        super(location,new Point(0, 0),new Point(200,200),false,new StandardCollider(false),"Bilverkstad");
         this.maxCars = maxCars;
     }
 

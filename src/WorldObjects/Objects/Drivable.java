@@ -13,8 +13,8 @@ public abstract class Drivable extends WorldObject implements IsWorldObject {
     RotationHandler rotationHandler;
     MoveHandler moveHandler;
 
-    protected Drivable(Point position, Point2D direction, Point size, boolean isStatic, RotationHandler rotationHandler, MoveHandler moveHandler) {
-        super(position, direction, size, isStatic,new StandardCollider(false));
+    protected Drivable(Point position, Point2D direction, Point size, boolean isStatic, RotationHandler rotationHandler, MoveHandler moveHandler,String type) {
+        super(position, direction, size, isStatic,new StandardCollider(false),type);
         this.moveHandler = moveHandler;
         this.rotationHandler = rotationHandler;
     }

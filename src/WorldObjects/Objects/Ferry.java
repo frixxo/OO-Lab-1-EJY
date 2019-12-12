@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Ferry extends MotorizedTransportVehicle{
-    public Ferry(String modelName, Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr, Storage storage) {
-        super(modelName, position, direction, size, steerer, driver, motor, RegNr, storage);
+    public Ferry(Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr, Storage storage,String type) {
+        super(position, direction, size, steerer, driver, motor, RegNr, storage, type);
     }
 }

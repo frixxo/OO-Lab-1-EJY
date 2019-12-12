@@ -15,8 +15,8 @@ public abstract class MotorizedVehicle extends Vehicle implements IHasMotor {
     protected IMotor motor;
 
     //region Constructor
-    protected MotorizedVehicle(String modelName, Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr) {
-        super(modelName, position, direction, size,false, steerer, driver, RegNr);
+    protected MotorizedVehicle( Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr,String type) {
+        super(position, direction, size,false, steerer, driver, RegNr, type);
         this.motor = motor;
     }
     //endregion

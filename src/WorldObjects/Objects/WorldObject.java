@@ -13,15 +13,17 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private Point size;
     private boolean isLocked;
     private Collider collider;
+    private String type;
 
     // region Constructor
-    protected WorldObject(Point position, Point2D direction, Point size, boolean isLoaded,Collider collider)
+    protected WorldObject(Point position, Point2D direction, Point size, boolean isLoaded,Collider collider,String type)
     {
        this.position = position;
        this.direction = direction;
        this.size = size;
        this.isLocked = isLoaded;
        this.collider=collider;
+       this.type=type;
     }
     //endregion
 
@@ -80,5 +82,7 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     {
         collider.Update(this, size);
     }
+
+    public String getType(){ return type;}
     //endregion
 }
