@@ -14,9 +14,11 @@ import java.util.List;
 public class CarSimulator {
     private List<WorldObjectView> vehicles = new ArrayList<>();
     public final int MAX_COUNT;
+    private Point worldSize;
 
-    public CarSimulator(int MAX_COUNT) {
+    public CarSimulator(Point worldSize, int MAX_COUNT) {
         this.MAX_COUNT = MAX_COUNT;
+        this.worldSize = worldSize;
         tempInit();
 
         Timer timer = new Timer(50, e -> update());
@@ -28,7 +30,7 @@ public class CarSimulator {
             if(vehicle instanceof Drivable) {
                 ((Drivable)vehicle).move();
             }
-            vehicle.UpdateCollider();
+            vehicle.UpdateCollider(worldSize);
         }
     }
 
