@@ -3,6 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/CodeGenerator.CodeStyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/CodeGenerator.CodeStyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/CodeGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/CodeGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/IDGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/IDGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/RegNrGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/RegNrGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/Fuctionality/IDGenerator/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/GraphicsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GraphicsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Systems/IDGenerator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/IDGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Systems/IDGenerator/IDGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/IDGenerator/RegNrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Systems/IDGenerator/RegNrGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Systems/Factories/VehicleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Systems/Factories/VehicleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedTransportVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedTransportVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,9 +140,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in OO-Lab-1-EJY" />
+        <item itemvalue="JUnit.VehicleTester" />
         <item itemvalue="Application.CarController" />
         <item itemvalue="JUnit.GraphicsTest" />
-        <item itemvalue="JUnit.VehicleTester" />
         <item itemvalue="JUnit.VehicleTester.TestMoveX" />
       </list>
     </recent_temporary>
@@ -170,22 +202,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
-          <line>151</line>
+          <line>198</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
-          <line>165</line>
+          <line>219</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/VehicleTester.java</url>
+          <line>298</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$VehicleTester.ic" NAME="VehicleTester Coverage Results" MODIFIED="1575625474956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$CarController.ic" NAME="CarController Coverage Results" MODIFIED="1575625463051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Graphics.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$All_in_OO_Lab_1_EJY.ic" NAME="All in OO-Lab-1-EJY Coverage Results" MODIFIED="1575625680033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/OO_Lab_1_EJY_master$VehicleTester.ic" NAME="VehicleTester Coverage Results" MODIFIED="1575625474956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

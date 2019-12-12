@@ -11,7 +11,6 @@ import java.awt.geom.Point2D;
 
 public abstract class MotorizedTransportVehicle extends MotorizedVehicle implements IHasStorage {
     private Storage storage;
-    private IMotor motor;
 
     protected MotorizedTransportVehicle(String modelName, Point position, Point2D direction, Point size, RotationHandler steerer, MoveHandler driver, IMotor motor, String RegNr, Storage storage)
     {
@@ -28,6 +27,12 @@ public abstract class MotorizedTransportVehicle extends MotorizedVehicle impleme
     @Override
     public boolean getLocked(){
         return super.getLocked() || storage.getContainer().normalState();
+    }
+
+    @Override
+    public void move(){
+        super.move();
+        getStorage().getLastHandler().updatePosition(getPosition());
     }
 
 }

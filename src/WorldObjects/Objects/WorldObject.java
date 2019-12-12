@@ -33,7 +33,7 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
 
     public void setPosition(Point position)
      {
-       if(!isLocked) this.position = position;
+       this.position = position;
     }
 
      public void setDirection(Point2D direction)

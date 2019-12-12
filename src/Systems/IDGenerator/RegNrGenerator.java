@@ -1,7 +1,5 @@
-package Fuctionality.IDGenerator;
+package Systems.IDGenerator;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class RegNrGenerator implements IDGenerator{

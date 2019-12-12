@@ -39,10 +39,10 @@ public class DrawPanel extends JPanel{
     private void initializeHashmap(){ //TODO fix
         imageMap.put("Volvo240", new ImageHandler("/Volvo240.jpg"));
         imageMap.put("Saab95", new ImageHandler("/Saab95.jpg"));
-        imageMap.put("LamborghiniGallardo"), new ImageHandler("/LamborghiniGallardo.jpg"));
-        imageMap.put(ObjectFactory.createScania().getClass(), new ImageHandler("/Scania.jpg"));
-        imageMap.put(ObjectFactory.createCarTransport().getClass(), new ImageHandler("/Cartransport.jpg"));
-        imageMap.put(ObjectFactory.createCarFerry().getClass(), new ImageHandler("/CarFerry.jpg"));
+        imageMap.put("LamborghiniGallardo", new ImageHandler("/LamborghiniGallardo.jpg"));
+        imageMap.put("Scania", new ImageHandler("/Scania.jpg"));
+        imageMap.put("CarTransport", new ImageHandler("/Cartransport.jpg"));
+        imageMap.put("CarFerry", new ImageHandler("/CarFerry.jpg"));
     }
 
    // public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }

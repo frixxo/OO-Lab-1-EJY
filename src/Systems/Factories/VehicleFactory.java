@@ -1,6 +1,6 @@
 package Systems.Factories;
 
-import Fuctionality.IDGenerator.RegNrGenerator;
+import Systems.IDGenerator.RegNrGenerator;
 import Fuctionality.Motors.IMotor;
 import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Motors.TrimmedMotor;
@@ -49,6 +49,10 @@ public class VehicleFactory {
         WorldObjectView r = new Car(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate());
         return r;
     }
+    public static WorldObjectView CreateSaab()
+    {
+        return CreateSaab95(new Point (0,0), new Point(1,0));
+    }
 
     public static WorldObjectView CreateLamborghiniGallardo(Point position, Point2D direction)
     {
@@ -58,6 +62,10 @@ public class VehicleFactory {
         IMotor motor = new StandardMotor(320, mh);
         WorldObjectView r = new Car(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate());
         return r;
+    }
+    public static WorldObjectView CreateLamborghiniGallardo()
+    {
+        return CreateLamborghiniGallardo(new Point (0,0), new Point(1,0));
     }
 
     public static WorldObjectView CreateScania(Point position, Point2D direction)
@@ -70,6 +78,10 @@ public class VehicleFactory {
         WorldObjectView r = new Truck(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage);
         return r;
     }
+    public static WorldObjectView CreateScania()
+    {
+        return CreateScania(new Point (0,0), new Point(1,0));
+    }
 
     public static WorldObjectView CreateCarTransport(Point position, Point2D direction)
     {
@@ -81,6 +93,10 @@ public class VehicleFactory {
         WorldObjectView r = new Truck(modelName, position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage);
         return r;
     }
+    public static WorldObjectView CreateCarTransport()
+    {
+        return CreateCarTransport(new Point (0,0), new Point(1,0));
+    }
 
     public static WorldObjectView CreateCarFerry(Point position, Point2D direction)
     {
@@ -91,5 +107,9 @@ public class VehicleFactory {
         Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
         WorldObjectView r = new Ferry(modelName, position, direction, new Point(140,100), rh, mh,motor, regNR.generate(), storage);
         return r;
+    }
+    public static WorldObjectView CreateCarFerry()
+    {
+        return CreateCarFerry(new Point (0,0), new Point(1,0));
     }
 }
