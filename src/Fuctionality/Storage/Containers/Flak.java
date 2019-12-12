@@ -10,8 +10,8 @@ public class Flak extends NormalFlak {
     public boolean loadState() { return getAngle() > 0; }
 
     @Override
-    public void openContainer (){raiseRamp();}
+    public void openContainer (){if (canChangeState)raiseRamp();}
 
     @Override
-    public void closeContainer (){lowerRamp();}
+    public void closeContainer (){if (canChangeState)lowerRamp();}
 }

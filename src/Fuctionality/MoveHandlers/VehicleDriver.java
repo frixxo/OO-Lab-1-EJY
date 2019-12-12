@@ -23,7 +23,7 @@ public class VehicleDriver implements MoveHandler {
     public double getCurrentSpeed() {
         return currentSpeed;
     }
-    public void setCurrentSpeed(double d) { this.currentSpeed=d; }
+    public void setCurrentSpeed(double d,boolean Static) { if(!Static) this.currentSpeed=d; }
 
     @Override
     public boolean isMoving() {

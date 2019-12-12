@@ -39,7 +39,8 @@ public class CarController {
 
         // !no
         // TODO vehicles with container not moving
-        cc.cars.add(VehicleFactory.CreateVolvo240());
+        cc.cars.add(VehicleFactory.CreateVolvo240(
+                new Point(0,0),new Point (1,0)));
         cc.cars.add(VehicleFactory.CreateLamborghiniGallardo(
                 new Point(0,100),new Point (1,0)));
         cc.cars.add(VehicleFactory.CreateScania(
@@ -56,7 +57,7 @@ public class CarController {
 
         // Make sure cars are in frame
         for (WorldObjectView car : cc.cars) {
-            car.UpdateCollider();
+            car.UpdateCollider(cc.frame.windowSize());
         }
 
         // Start the timer
@@ -72,7 +73,7 @@ public class CarController {
                 if(car instanceof Drivable) {
                     ((Drivable)car).move();
                 }
-                car.UpdateCollider();
+                car.UpdateCollider(frame.windowSize());
 
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -118,7 +119,7 @@ public class CarController {
         }
     }
 
-    void raiseFlak() {
+    void lowerFlak() {
         for (WorldObjectView car : cars) {
             if(car instanceof IHasStorage) {
                 ((IHasStorage) car).getStorage().getContainer().closeContainer();
@@ -126,7 +127,7 @@ public class CarController {
         }
     }
 
-    void lowerFlak() {
+    void raiseFlak() {
         for (WorldObjectView car : cars) {
             if(car instanceof IHasStorage) {
                 ((IHasStorage) car).getStorage().getContainer().openContainer();

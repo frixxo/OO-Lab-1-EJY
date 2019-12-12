@@ -2,7 +2,7 @@ package Fuctionality.Motors;
 
 import Fuctionality.MoveHandlers.MoveHandler;
 
-public abstract class NormalMotor implements IMotor {
+public  class NormalMotor implements IMotor {
     protected double power;
     private boolean isEngineOn = false;
     private int frameCounter = 0;
@@ -13,7 +13,9 @@ public abstract class NormalMotor implements IMotor {
         this.moveHandler = moveHandler;
     }
 
-    public abstract double SpeedFactor();
+    public double SpeedFactor() {
+        return getPower()*0.01;
+    }
 
 
     public double getPower() {

@@ -3,35 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/GraphicsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GraphicsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/VehicleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VehicleTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Systems/Factories/VehicleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Systems/Factories/VehicleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Flak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/Containers/Flak.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/CarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/WorldObjectView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/InterfaceHierarchy/WorldObjectView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Bilverkstad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Drivable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Drivable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Ferry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/MotorizedTransportVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/MotorizedTransportVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/MotorizedVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/MotorizedVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Skräp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Skräp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Truck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Vehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/WorldObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/GraphicsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/GraphicsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Systems/Factories/VehicleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Systems/Factories/VehicleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Motors/NormalMotor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Motors/StandardMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/MoveHandlers/VehicleDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Flak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuctionality/Storage/Containers/Flak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/WorldObjectView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/InterfaceHierarchy/WorldObjectView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Bilverkstad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Drivable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Ferry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Ferry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedTransportVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedTransportVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/MotorizedVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Skräp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Skräp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldObjects/Objects/WorldObject.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

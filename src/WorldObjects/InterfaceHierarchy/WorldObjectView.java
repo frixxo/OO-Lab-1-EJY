@@ -9,6 +9,6 @@ public interface WorldObjectView {
     Point2D getDirection();
     Point getSize();
     boolean getLocked();
-    void UpdateCollider();
+    void UpdateCollider(Point Worldsize);
     String getType();
 }

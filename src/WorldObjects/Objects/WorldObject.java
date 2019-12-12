@@ -78,9 +78,9 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
         return collider;
     }
 
-    public void UpdateCollider()
+    public void UpdateCollider(Point Worldsize)
     {
-        collider.Update(this, size);
+        collider.Update(this, Worldsize);
     }
 
     public String getType(){ return type;}
