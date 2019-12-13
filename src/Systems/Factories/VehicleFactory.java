@@ -16,6 +16,7 @@ import Fuctionality.Storage.LastHandle.LoadHandler;
 import Fuctionality.Storage.StandardStorage;
 import Fuctionality.Storage.Storage;
 import WorldObjects.InterfaceHierarchy.*;
+import WorldObjects.LableInterfaces.IsWorldObject;
 import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.*;
 
@@ -74,7 +75,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
-        Storage storage = new StandardStorage(new Flak(), new LoadHandler<ObjectH>(10, 2,3, 3, LoadHandler.Principle.FILO));
+        Storage storage = new StandardStorage(new Flak(), new LoadHandler<ObjectH, IsWorldObject>(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH() {}, rh, mh, motor, regNR.generate(), storage, modelName);
         return r;
     }

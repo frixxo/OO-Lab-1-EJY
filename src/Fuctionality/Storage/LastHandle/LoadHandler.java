@@ -12,14 +12,14 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler <T extends WorldObjectH> implements IHandleLast<T> {
+public class LoadHandler <objectType extends WorldObjectH, object extends IsWorldObject> implements IHandleLast<objectType, object> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out
      * */
     public enum Principle{FIFO, FILO}
 
-    protected Deque<IsWorldObject> cargoList = new LinkedList<>();
+    protected Deque<object> cargoList = new LinkedList<>();
 
     private final Principle principle;
     protected final int MAX_CARGO_LOAD;
@@ -39,9 +39,9 @@ public class LoadHandler <T extends WorldObjectH> implements IHandleLast<T> {
     
     public int getCargoCount(){ return cargoList.size(); }
 
-    public boolean load(IsWorldObject cargo, Point position) throws IllegalArgumentException{
+    public boolean load(object cargo, Point position) throws IllegalArgumentException{
         try{
-            T t = (T)cargo.getObjectType();
+            objectType t = (objectType) cargo.getObjectType();
             cargo.getObjectType().equals(t);
         } catch (ClassCastException e)
         {
@@ -58,8 +58,8 @@ public class LoadHandler <T extends WorldObjectH> implements IHandleLast<T> {
         } return false;
     }
 
-    public IsWorldObject release(){
-            IsWorldObject cargo;
+    public object release(){
+            object cargo;
             switch (principle){
                 case FILO:
                     cargo = cargoList.pollLast();
