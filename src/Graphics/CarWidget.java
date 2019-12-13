@@ -1,5 +1,7 @@
 package Graphics;
 
+import Systems.CarController;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -16,9 +18,8 @@ public class CarWidget extends JFrame{
 
     // The controller member
     Point windowSize;
-    CarApplication carC;
+    CarController cc;
 
-    DrawPanel drawPanel;
 
     JPanel controlPanel = new JPanel();
 
@@ -35,12 +36,16 @@ public class CarWidget extends JFrame{
     JButton lowerBedButton = new JButton("Lower Lift Bed");
     JButton TurboOn = new JButton("Turbo On");
     JButton TurboOff = new JButton("Turbo Off");
+    JButton AddCar= new JButton("Add Car");
+    JButton RemoveCar= new JButton("Remove Car");
 
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
     public CarWidget(String framename, Point windowSize){
+
+        this.cc=cc;
         initComponents(framename);
         this.windowSize = windowSize;
     }
@@ -55,7 +60,7 @@ public class CarWidget extends JFrame{
         this.setPreferredSize(new Dimension(windowSize.x,windowSize.y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
-        this.add(drawPanel);
+        //this.add(drawPanel);
 
 
         //Gas amount input
@@ -77,7 +82,7 @@ public class CarWidget extends JFrame{
 
         this.add(gasPanel);
 
-        controlPanel.setLayout(new GridLayout(2,4));
+        controlPanel.setLayout(new GridLayout(2,5));
 
         //original buttons
 
@@ -87,6 +92,8 @@ public class CarWidget extends JFrame{
         controlPanel.add(brakeButton, 3);
         controlPanel.add(TurboOff, 4);
         controlPanel.add(lowerBedButton, 5);
+        controlPanel.add(AddCar,6);
+        controlPanel.add(RemoveCar);
 
         /*
         controlPanel.add(gasButton, 0);
@@ -114,14 +121,15 @@ public class CarWidget extends JFrame{
         this.add(stopButton);
 
        //region button functionality
-        startButton.addActionListener(e -> carC.startEngline());
-        stopButton.addActionListener(e -> carC.stopEngline());
-        gasButton.addActionListener(e -> carC.gas(gasAmount));
-        brakeButton.addActionListener(e -> carC.brake(gasAmount));
-        liftBedButton.addActionListener(e -> carC.raiseFlak());
-        lowerBedButton.addActionListener(e -> carC.lowerFlak());
-        turnLeftButton.addActionListener(e -> carC.turnLeft());
-        turnRightButton.addActionListener(e -> carC.turnRight());
+        startButton.addActionListener(e -> cc.startEngline());
+        stopButton.addActionListener(e -> cc.stopEngline());
+        gasButton.addActionListener(e -> cc.gas(gasAmount));
+        brakeButton.addActionListener(e -> cc.brake(gasAmount));
+        liftBedButton.addActionListener(e -> cc.raiseFlak());
+        lowerBedButton.addActionListener(e -> cc.lowerFlak());
+        turnLeftButton.addActionListener(e -> cc.turnLeft());
+        AddCar.addActionListener(e -> cc.addCar());
+        RemoveCar.addActionListener(e -> cc.removeCar());
         //endregion
 
         // Make the frame pack all it's components by respecting the sizes if possible.

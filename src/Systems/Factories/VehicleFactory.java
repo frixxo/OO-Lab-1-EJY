@@ -49,7 +49,7 @@ public class VehicleFactory {
         WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
-    public static WorldObjectView CreateSaab()
+    public static WorldObjectView CreateSaab95()
     {
         return CreateSaab95(new Point (0,0), new Point(1,0));
     }
