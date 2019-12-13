@@ -30,7 +30,7 @@ public class SpeedLabel extends JLabel implements Observer {
                 sb.append("; ");
             }
         }
-        this.setText("<html><div style=\"color:pink;font-family:Comic Sans MS;\">"+ sb.toString() +"</div></html>");
+        this.setText("<html><div style=\"color:red;font-family:Comic Sans MS;\">"+ sb.toString() +"</div></html>");
         sb.delete(0, sb.length());
     }
 }
