@@ -1,26 +1,30 @@
 package Graphics;
 
+import Systems.CarSimulator;
+import WorldObjects.InterfaceHierarchy.WorldObjectView;
 import WorldObjects.Objects.Drivable;
 
 import javax.swing.*;
 import java.util.List;
 
 public class SpeedLabel extends JLabel {
-    private List<Drivable> vehicles;
+    private List<WorldObjectView> vehicles;
 
-    public SpeedLabel(List<Drivable> vehicles){
+    public SpeedLabel(CarSimulator cs){
         super();
 
-        this.vehicles = vehicles;
+        this.vehicles = cs.getVehicles();
         initText();
     }
 
     private void initText(){
         StringBuilder sb = new StringBuilder();
-        for (Drivable vehicle : vehicles){
-            sb.append(vehicle.getType()).append(": ").append(vehicle.getCurrentSpeed()).append("; ");
+        for (WorldObjectView vehicle : vehicles){
+            if (vehicle instanceof Drivable) {
+                sb.append(vehicle.getType()).append(": ").append(((Drivable)vehicle).getCurrentSpeed()).append("; ");
+            }
         }
-        this.setText(sb.toString());
+        this.setText(sb.append("awpafagfafAWFawfaeegaeegTEST").toString());
     }
 
 }
