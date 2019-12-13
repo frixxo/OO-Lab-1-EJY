@@ -1,13 +1,15 @@
 package WorldObjects.Objects;
 
 import Fuctionality.Colliders.Collider;
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.WorldObjectH;
+import WorldObjects.LableInterfaces.IsWorldObject;
+import WorldObjects.LableInterfaces.WorldObjectView;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 
 public abstract class WorldObject implements WorldObjectView, IsWorldObject {
+    private WorldObjectH objectType;
     private Point position;
     private Point2D direction;
     private Point size;
@@ -16,8 +18,9 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     private String type;
 
     // region Constructor
-    protected WorldObject(Point position, Point2D direction, Point size, boolean isLoaded,Collider collider,String type)
+    protected WorldObject(Point position, Point2D direction, Point size, WorldObjectH objectType, boolean isLoaded,Collider collider,String type)
     {
+        this.objectType = objectType;
        this.position = position;
        this.direction = direction;
        this.size = size;
@@ -84,5 +87,10 @@ public abstract class WorldObject implements WorldObjectView, IsWorldObject {
     }
 
     public String getType(){ return type;}
+
+    public WorldObjectH getObjectType() {
+        return objectType;
+    }
+
     //endregion
 }

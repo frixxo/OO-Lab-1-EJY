@@ -2,7 +2,6 @@ import Fuctionality.Motors.StandardMotor;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.VehicleSteerer;
-import WorldObjects.Objects.Car;
 import WorldObjects.Objects.MotorizedVehicle;
 import org.junit.Test;
 

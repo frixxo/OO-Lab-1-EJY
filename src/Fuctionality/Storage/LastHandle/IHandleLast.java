@@ -1,6 +1,6 @@
 package Fuctionality.Storage.LastHandle;
 
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
+import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 

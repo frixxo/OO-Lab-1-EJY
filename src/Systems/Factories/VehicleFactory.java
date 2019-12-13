@@ -15,8 +15,10 @@ import Fuctionality.Storage.Containers.Ramp;
 import Fuctionality.Storage.LastHandle.LoadHandler;
 import Fuctionality.Storage.StandardStorage;
 import Fuctionality.Storage.Storage;
-import WorldObjects.InterfaceHierarchy.LandVehicle;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import WorldObjects.InterfaceHierarchy.CarH;
+import WorldObjects.InterfaceHierarchy.FerryH;
+import WorldObjects.InterfaceHierarchy.TruckH;
+import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.*;
 
 import java.awt.*;
@@ -32,7 +34,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         RotationHandler rh = new VehicleSteerer();
         IMotor motor = new TrimmedMotor( 100,1.25,mh);
-        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
+        WorldObjectView r = new MotorizedVehicle(position, direction, new Point(70, 50), new CarH(){}, rh, mh, motor, regNR.generate(), modelName);
         return r;
     }
     public static WorldObjectView CreateVolvo240 ()
@@ -46,7 +48,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         RotationHandler rh = new VehicleSteerer();
         IMotor motor = new TurboMotor(100, mh);
-        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
+        WorldObjectView r = new MotorizedVehicle(position, direction, new Point(70, 50), new CarH(){}, rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
     public static WorldObjectView CreateSaab95()
@@ -60,7 +62,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new SpoilerDriver(rh);
         IMotor motor = new NormalMotor(320, mh);
-        WorldObjectView r = new Car(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(),modelName);
+        WorldObjectView r = new MotorizedVehicle(position, direction, new Point(70, 50), new CarH(){}, rh, mh,motor, regNR.generate(),modelName);
         return r;
     }
     public static WorldObjectView CreateLamborghiniGallardo()
@@ -75,7 +77,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
         Storage storage = new StandardStorage(new Flak(), new LoadHandler<Skräp>(10, 2,3, 3, LoadHandler.Principle.FILO));
-        WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
+        WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH() {}, rh, mh, motor, regNR.generate(), storage, modelName);
         return r;
     }
     public static WorldObjectView CreateScania()
@@ -90,7 +92,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
         Storage storage =new StandardStorage<Car>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
-        WorldObjectView r = new Truck(position, direction, new Point(70, 50), rh, mh,motor, regNR.generate(), storage,modelName);
+        WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
     public static WorldObjectView CreateCarTransport()
@@ -105,7 +107,7 @@ public class VehicleFactory {
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(10, mh);
         Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
-        WorldObjectView r = new Ferry( position, direction, new Point(140,100), rh, mh,motor, regNR.generate(), storage,modelName);
+        WorldObjectView r = new MotorizedTransportVehicle( position, direction, new Point(140,100), new FerryH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
     public static WorldObjectView CreateCarFerry()

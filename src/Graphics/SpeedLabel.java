@@ -1,12 +1,12 @@
 package Graphics;
 
 import Systems.CarSimulator;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import Systems.Observer.Observer;
+import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.Drivable;
-import WorldObjects.Objects.WorldObject;
+
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class SpeedLabel extends JLabel {
     private CarSimulator cs;
@@ -16,10 +16,26 @@ public class SpeedLabel extends JLabel {
         super();
         this.cs=cs;
         initText();
+public class SpeedLabel extends JPanel implements Observer {
+    private CarSimulator cs;
+    private JLabel label;
+    private StringBuilder sb = new StringBuilder();
+
+    public SpeedLabel(CarSimulator cs, Dimension size){
+        super();
+
+        this.cs = cs;
+
+        label = new JLabel();
+        this.add(label);
         this.setPreferredSize(size);
+        cs.addObserver(this);
+
+        update();
     }
 
-    private void initText(){
+    @Override
+    public void update() {
         for (WorldObjectView vehicle : cs.getVehicles()){
             if(vehicle instanceof Drivable){
                 sb.append(vehicle.getType()).append(": ").append(((Drivable)vehicle).getCurrentSpeed()).append("; ");
@@ -27,5 +43,4 @@ public class SpeedLabel extends JLabel {
         }
         this.setText(sb.toString());
     }
-
 }

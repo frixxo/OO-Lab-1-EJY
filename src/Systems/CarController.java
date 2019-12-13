@@ -1,6 +1,6 @@
 package Systems;
 
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.Drivable;
