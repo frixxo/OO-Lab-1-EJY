@@ -34,6 +34,8 @@ public class CarSimulator implements Observerable {
             }
             vehicle.UpdateCollider(worldSize);
         }
+        
+        notifyObservers();
     }
 
     public void tempInit() {
@@ -70,7 +72,7 @@ public class CarSimulator implements Observerable {
     public void removeObserver(Observer observer) { observers.remove(observer); }
 
     @Override
-    public void notifyObersers() {
+    public void notifyObservers() {
         for (Observer observer : observers){
             observer.update();
         }
