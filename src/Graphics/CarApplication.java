@@ -33,7 +33,7 @@ public class CarApplication {
         application.panels.add(new DrawPanel(new Dimension(application.getWindowSize().width,application.getWindowSize().height-240),application.cs));
         application.panels.add(new Buttons(new Dimension(application.getWindowSize().width,application.getWindowSize().height-640),application.cs));
         JPanel panel=new JPanel();
-        panel.add(new SpeedLabel(application.cs,new Dimension(50,10)));
+        panel.add(new SpeedLabel(application.cs,new Dimension(800,40)));
         application.panels.add(panel);
         application.frame=new Frame(application.panels,application.getWindowSize());
 
