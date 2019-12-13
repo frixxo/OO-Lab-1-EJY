@@ -8,7 +8,7 @@ import WorldObjects.Objects.Drivable;
 import javax.swing.*;
 import java.awt.*;
 
-public class SpeedLabel extends JLabel implements Observer {
+public class SpeedLabel extends JPanel implements Observer {
     private CarSimulator cs;
     private JLabel label;
     private StringBuilder sb = new StringBuilder();
