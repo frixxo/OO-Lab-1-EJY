@@ -81,7 +81,7 @@ public class CarController {
         }
     }
     public boolean addCar(){
-        sim.addVehicle();
+        return sim.addVehicle();
     }
     public void removeCar(){
         sim.popVehicle();
