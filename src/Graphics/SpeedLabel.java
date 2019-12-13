@@ -16,8 +16,7 @@ public class SpeedLabel extends JLabel implements Observer {
     public SpeedLabel(CarSimulator cs, Dimension size){
         super();
         this.cs=cs;
-        update();
-        this.setPreferredSize(new Dimension(800, 20));
+        this.setPreferredSize(new Dimension(800, 40));
         cs.addObserver(this);
         update();
     }
@@ -28,7 +27,7 @@ public class SpeedLabel extends JLabel implements Observer {
                 sb.append(vehicle.getType()).append(": ").append(((Drivable)vehicle).getCurrentSpeed()).append("; ");
             }
         }
-        this.setText(sb.toString());
+        this.setText("<html>"+ sb.toString() +"</html>");
         sb.delete(0, sb.length());
     }
 }
