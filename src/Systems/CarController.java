@@ -80,4 +80,10 @@ public class CarController {
             }
         }
     }
+    public boolean addCar(){
+        sim.addVehicle();
+    }
+    public void removeCar(){
+        sim.popVehicle();
+    }
 }

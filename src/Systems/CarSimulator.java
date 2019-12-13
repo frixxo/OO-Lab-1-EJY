@@ -48,9 +48,9 @@ public class CarSimulator {
         vehicles.add(VehicleFactory.CreateCarFerry(
                 new Point(200,0),new Point(0,1)));
     }
-    public boolean addVehicle(WorldObjectView vehicle) {
+    public boolean addVehicle() {
         if (vehicles.size() < MAX_COUNT) {
-            return vehicles.add(vehicle);
+            return vehicles.add(VehicleFactory.CreateSaab95());
         } return false;
     }
 

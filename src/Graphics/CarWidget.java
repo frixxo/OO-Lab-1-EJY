@@ -35,6 +35,8 @@ public class CarWidget extends JFrame{
     JButton lowerBedButton = new JButton("Lower Lift Bed");
     JButton TurboOn = new JButton("Turbo On");
     JButton TurboOff = new JButton("Turbo Off");
+    JButton AddCar= new JButton("Add Car");
+    JButton RemoveCar= new JButton("Remove Car");
 
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
@@ -77,7 +79,7 @@ public class CarWidget extends JFrame{
 
         this.add(gasPanel);
 
-        controlPanel.setLayout(new GridLayout(2,4));
+        controlPanel.setLayout(new GridLayout(2,5));
 
         //original buttons
 
@@ -87,6 +89,8 @@ public class CarWidget extends JFrame{
         controlPanel.add(brakeButton, 3);
         controlPanel.add(TurboOff, 4);
         controlPanel.add(lowerBedButton, 5);
+        controlPanel.add(AddCar,6);
+        controlPanel.add(RemoveCar);
 
         /*
         controlPanel.add(gasButton, 0);
@@ -121,7 +125,8 @@ public class CarWidget extends JFrame{
         liftBedButton.addActionListener(e -> cc.raiseFlak());
         lowerBedButton.addActionListener(e -> cc.lowerFlak());
         turnLeftButton.addActionListener(e -> cc.turnLeft());
-        turnRightButton.addActionListener(e -> cc.turnRight());
+        AddCar.addActionListener(e -> cc.addCar());
+        RemoveCar.addActionListener(e -> cc.removeCar());
         //endregion
 
         // Make the frame pack all it's components by respecting the sizes if possible.
