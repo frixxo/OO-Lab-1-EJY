@@ -2,7 +2,6 @@ package Graphics;
 
 import Systems.CarSimulator;
 import Systems.Observer.Observer;
-import Systems.Observer.Observerable;
 import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.Drivable;
 
@@ -16,7 +15,7 @@ public class SpeedLabel extends JLabel implements Observer {
     public SpeedLabel(CarSimulator cs, Dimension size){
         super();
         this.cs=cs;
-        this.setPreferredSize(new Dimension(800, 40));
+        this.setPreferredSize(new Dimension(size.width, size.height));
         cs.addObserver(this);
         update();
     }
@@ -27,7 +26,7 @@ public class SpeedLabel extends JLabel implements Observer {
                 sb.append(vehicle.getType()).append(": ").append(((Drivable)vehicle).getCurrentSpeed()).append("; ");
             }
         }
-        this.setText("<html>"+ sb.toString() +"</html>");
+        this.setText("<html> "+ sb.toString() +"</html>");
         sb.delete(0, sb.length());
     }
 }
