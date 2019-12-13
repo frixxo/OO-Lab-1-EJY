@@ -1,4 +1,4 @@
-import Fuctionality.Motors.StandardMotor;
+/*import Fuctionality.Motors.StandardMotor;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.VehicleDriver;
 import Fuctionality.RotationHandler.VehicleSteerer;
@@ -9,7 +9,7 @@ import java.awt.*;
 
 import static org.junit.Assert.*;
 public class GraphicsTest {
-    /** Has tests for graphics and systems*/
+    /** Has tests for graphics and systems
 
     @Test
     public void TestCollisionX(){
@@ -26,3 +26,4 @@ public class GraphicsTest {
         assertEquals(v.getPosition().y,0);
     }
 }
+*/

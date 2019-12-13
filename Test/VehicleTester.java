@@ -1,4 +1,4 @@
-import Fuctionality.Motors.StandardMotor;
+/*import Fuctionality.Motors.StandardMotor;
 import Fuctionality.Motors.TrimmedMotor;
 import Fuctionality.MoveHandlers.MoveHandler;
 import Fuctionality.MoveHandlers.SpoilerDriver;
@@ -14,7 +14,7 @@ import Systems.IDGenerator.IDGenerator;
 import Systems.IDGenerator.RegNrGenerator;
 import WorldObjects.Objects.*;
 import org.junit.Test;
-
+*/
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ import static org.junit.Assert.*;
 
 /**
  * Has all the test for the vehicles
- */
+
 public class VehicleTester {
 
 
@@ -53,7 +53,7 @@ public class VehicleTester {
         x.move();
         double d=x.getCurrentSpeed();
         assertEquals((float)2.88,(float)d,0.01);
-    }*/
+    }
     @Test
     public void TestTurnLeftX(){
         MoveHandler mh=new VehicleDriver();
@@ -380,3 +380,4 @@ public class VehicleTester {
         assertFalse(c.getStorage().getLastHandler().load(v,c.getPosition()));
     }
 }
+*/

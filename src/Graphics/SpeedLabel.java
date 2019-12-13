@@ -17,7 +17,7 @@ public class SpeedLabel extends JLabel implements Observer {
         super();
         this.cs=cs;
         update();
-        this.setPreferredSize(size);
+        this.setPreferredSize(new Dimension(800, 20));
         cs.addObserver(this);
         update();
     }
@@ -29,5 +29,6 @@ public class SpeedLabel extends JLabel implements Observer {
             }
         }
         this.setText(sb.toString());
+        sb.delete(0, sb.length());
     }
 }
