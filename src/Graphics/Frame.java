@@ -13,8 +13,8 @@ public class Frame extends JFrame{
 
     public Frame(Dimension FrameSize, CarSimulator cs, CarController cc){
         world=new DrawPanel(new Dimension(FrameSize.width,FrameSize.height-240),cs);
-        Buttons =new Buttons(cc,new Dimension(FrameSize.width,FrameSize.height-540));
-        speedLable = new SpeedLabel(cs.getVehicles());
+        Buttons =new Buttons(cc,new Dimension(FrameSize.width,FrameSize.height-640));
+        speedLable = new SpeedLabel(cs,new Dimension(50,10));
         InitializeFrame(FrameSize);
     }
 

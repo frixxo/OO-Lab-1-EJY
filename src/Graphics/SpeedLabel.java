@@ -13,6 +13,7 @@ public class SpeedLabel extends JLabel implements Observer {
     private List<WorldObjectView> vehicles;
     private CarSimulator cs;
     JLabel lable;
+    StringBuilder sb = new StringBuilder();
 
     public SpeedLabel(CarSimulator cs, Dimension size){
         super();
@@ -22,7 +23,7 @@ public class SpeedLabel extends JLabel implements Observer {
         lable=new JLabel();
         this.setPreferredSize(size);
     }
-
+    
     @Override
     public void update(){
         StringBuilder sb = new StringBuilder();
@@ -32,6 +33,7 @@ public class SpeedLabel extends JLabel implements Observer {
             }
         }
         lable.setText(sb.toString());
+        sb.delete(0,sb.length());
         this.add(lable);
     }
 
