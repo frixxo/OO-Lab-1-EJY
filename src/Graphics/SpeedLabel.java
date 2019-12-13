@@ -8,6 +8,7 @@ import WorldObjects.Objects.Drivable;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 
 public class SpeedLabel extends JLabel implements Observer {
     private CarSimulator cs;
@@ -25,7 +26,10 @@ public class SpeedLabel extends JLabel implements Observer {
     public void update() {
         for (WorldObjectView vehicle : cs.getVehicles()){
             if(vehicle instanceof Drivable){
-                sb.append(vehicle.getType()).append(": ").append(((Drivable)vehicle).getCurrentSpeed()).append("; ");
+                sb.append(vehicle.getType()).append(": ");
+                int x= (int) (((Drivable)vehicle).getCurrentSpeed()*100);
+                sb.append(((double)x)/100);
+                sb.append("; ");
             }
         }
         this.setText(sb.toString());
