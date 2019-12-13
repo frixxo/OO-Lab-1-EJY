@@ -1,6 +1,8 @@
 package Systems;
 
 import Systems.Factories.VehicleFactory;
+import Systems.Observer.Observer;
+import Systems.Observer.Observerable;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
@@ -12,8 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** */
-public class CarSimulator {
+public class CarSimulator implements Observerable {
     private List<WorldObjectView> vehicles = new ArrayList<>();
+    private List<Observer> observers = new ArrayList<>();
     private Point worldSize;
     private int MAX_COUNT;
 
@@ -61,4 +64,17 @@ public class CarSimulator {
     }
 
     public List<WorldObjectView> getVehicles(){return vehicles;}
+
+    @Override
+    public void addObserver(Observer observer) { observers.add(observer); }
+
+    @Override
+    public void removeObserver(Observer observer) { observers.remove(observer); }
+
+    @Override
+    public void notifyObersers() {
+        for (Observer observer : observers){
+            observer.update();
+        }
+    }
 }
