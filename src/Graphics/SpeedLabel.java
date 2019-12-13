@@ -21,6 +21,7 @@ public class SpeedLabel extends JPanel implements Observer {
         label = new JLabel();
         this.add(label);
         this.setPreferredSize(size);
+        cs.addObserver(this);
 
         update();
     }
