@@ -3,9 +3,7 @@ package Systems;
 import Systems.Factories.VehicleFactory;
 import Systems.Observer.Observer;
 import Systems.Observer.Observerable;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
-import WorldObjects.LableInterfaces.IHasMotor;
-import WorldObjects.LableInterfaces.IHasStorage;
+import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.Drivable;
 
 import javax.swing.*;

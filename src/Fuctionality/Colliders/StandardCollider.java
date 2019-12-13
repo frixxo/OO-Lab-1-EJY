@@ -1,8 +1,6 @@
 package Fuctionality.Colliders;
 
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
-import WorldObjects.LableInterfaces.IHasMotor;
-import WorldObjects.Objects.WorldObject;
+import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

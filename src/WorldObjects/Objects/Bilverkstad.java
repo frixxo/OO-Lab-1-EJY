@@ -1,7 +1,7 @@
 package WorldObjects.Objects;
 
 import Fuctionality.Colliders.StandardCollider;
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
+import WorldObjects.LableInterfaces.IsWorldObject;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;

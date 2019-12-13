@@ -1,12 +1,10 @@
 package Graphics;
 
 import Systems.CarSimulator;
-import WorldObjects.Objects.*;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import WorldObjects.LableInterfaces.WorldObjectView;
 
 import java.awt.*;
 import java.util.HashMap;
-import java.util.List;
 import javax.swing.*;
 
 // This panel represent the animated part of the view with the car images.

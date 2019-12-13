@@ -2,7 +2,7 @@ package Graphics;
 
 import Systems.CarSimulator;
 import Systems.Observer.Observer;
-import WorldObjects.InterfaceHierarchy.WorldObjectView;
+import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.Drivable;
 
 import javax.swing.*;

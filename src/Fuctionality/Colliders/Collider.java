@@ -1,7 +1,6 @@
 package Fuctionality.Colliders;
 
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
-import WorldObjects.Objects.WorldObject;
+import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 

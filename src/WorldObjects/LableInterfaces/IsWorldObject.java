@@ -1,4 +1,4 @@
-package WorldObjects.InterfaceHierarchy;
+package WorldObjects.LableInterfaces;
 
 import Fuctionality.Colliders.Collider;
 

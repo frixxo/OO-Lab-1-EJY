@@ -2,7 +2,7 @@ package Fuctionality.Storage;
 
 import Fuctionality.Storage.Containers.Container;
 import Fuctionality.Storage.LastHandle.IHandleLast;
-import WorldObjects.InterfaceHierarchy.IsWorldObject;
+import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 
