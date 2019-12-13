@@ -11,10 +11,11 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/** */
 public class CarSimulator {
     private List<WorldObjectView> vehicles = new ArrayList<>();
-    public final int MAX_COUNT;
     private Point worldSize;
+    private int MAX_COUNT;
 
     public CarSimulator(Point worldSize, int MAX_COUNT) {
         this.MAX_COUNT = MAX_COUNT;
@@ -47,74 +48,6 @@ public class CarSimulator {
         vehicles.add(VehicleFactory.CreateCarFerry(
                 new Point(200,0),new Point(0,1)));
     }
-
-    public void startEngline() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasMotor) {
-                ((IHasMotor) vehicle).getMotor().startEngine();
-            }
-        }
-    }
-
-    public void stopEngline() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasMotor) {
-                ((IHasMotor) vehicle).getMotor().stopEngine();
-            }
-
-        }
-    }
-
-    public void gas(int amount) {
-        double gas = ((double) amount) / 100;
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasMotor){
-                ((IHasMotor) vehicle).getMotor().gas(gas);
-            }
-        }
-    }
-
-    public void brake(int amount) {
-        double brake = ((double) amount) / 100;
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasMotor) {
-                ((IHasMotor) vehicle).getMotor().brake(brake);
-            }
-        }
-    }
-
-    public void raiseFlak() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasStorage) {
-                ((IHasStorage) vehicle).getStorage().getContainer().closeContainer();
-            }
-        }
-    }
-
-    public void lowerFlak() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof IHasStorage) {
-                ((IHasStorage) vehicle).getStorage().getContainer().openContainer();
-            }
-        }
-    }
-
-    public void turnLeft() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof Drivable) {
-                ((Drivable)vehicle).turnLeft();
-            }
-        }
-    }
-
-    public void turnRight() {
-        for (WorldObjectView vehicle : vehicles) {
-            if(vehicle instanceof Drivable) {
-                ((Drivable)vehicle).turnRight();
-            }
-        }
-    }
-
     public boolean addVehicle(WorldObjectView vehicle) {
         if (vehicles.size() < MAX_COUNT) {
             return vehicles.add(vehicle);
@@ -126,4 +59,6 @@ public class CarSimulator {
             vehicles.remove(vehicles.size() - 1);
         } catch(IndexOutOfBoundsException ignored) {}
     }
+
+    public List<WorldObjectView> getVehicles(){return vehicles;}
 }

@@ -1,18 +1,10 @@
 package Graphics;
 
 import Systems.CarSimulator;
-import Systems.Factories.VehicleFactory;
 import WorldObjects.LableInterfaces.IHasMotor;
 import WorldObjects.LableInterfaces.IHasStorage;
 import WorldObjects.Objects.*;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -20,7 +12,7 @@ import java.util.List;
 * modifying the model state and the updating the view.
  */
 
-public class CarController {
+public class CarApplication {
     // member fields:
 
     // The delay (ms) corresponds to 20 updates a sec (hz)
@@ -33,7 +25,7 @@ public class CarController {
 
     public static void main(String[] args) {
         // Instance of this class
-        CarController cc = new CarController();
+        CarApplication cc = new CarApplication();
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
         cc.cs = new CarSimulator(cc.frame.windowSize(), 10);
