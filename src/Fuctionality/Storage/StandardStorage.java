@@ -2,11 +2,12 @@ package Fuctionality.Storage;
 
 import Fuctionality.Storage.Containers.Container;
 import Fuctionality.Storage.LastHandle.IHandleLast;
+import WorldObjects.InterfaceHierarchy.WorldObjectH;
 import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 
-public class StandardStorage <T extends IsWorldObject> implements Storage<T>{
+public class StandardStorage <T extends WorldObjectH> implements Storage<T>{
     private Container container;
     private IHandleLast lasthandler;
     private boolean canChangeState =true;

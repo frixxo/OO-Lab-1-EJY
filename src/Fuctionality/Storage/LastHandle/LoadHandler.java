@@ -1,7 +1,9 @@
 package Fuctionality.Storage.LastHandle;
 
+import WorldObjects.InterfaceHierarchy.WorldObjectH;
 import WorldObjects.LableInterfaces.IsWorldObject;
 import WorldObjects.LableInterfaces.IHasStorage;
+import WorldObjects.LableInterfaces.WorldObjectView;
 
 import java.awt.*;
 import java.util.Deque;
@@ -10,14 +12,14 @@ import java.util.LinkedList;
 /**
  * simulates transportation for all kinds
  * */
-public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
+public class LoadHandler <T extends WorldObjectH> implements IHandleLast<T> {
     /**
      * FIFO = First in, first out
      * FILO = First in, last out
      * */
     public enum Principle{FIFO, FILO}
 
-    protected Deque<T> cargoList = new LinkedList<>();
+    protected Deque<IsWorldObject> cargoList = new LinkedList<>();
 
     private final Principle principle;
     protected final int MAX_CARGO_LOAD;
@@ -37,7 +39,14 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     
     public int getCargoCount(){ return cargoList.size(); }
 
-    public boolean load(T cargo,Point position){
+    public boolean load(IsWorldObject cargo, Point position) throws IllegalArgumentException{
+        try{
+            T t = (T)cargo.getObjectType();
+            cargo.getObjectType().equals(t);
+        } catch (ClassCastException e)
+        {
+            throw new IllegalArgumentException();
+        }
         if (cargoList.size() < MAX_CARGO_LOAD
                 &&!cargo.getLocked()
                 &&isBehind(cargo,position)
@@ -49,8 +58,8 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
         } return false;
     }
 
-    public T release(){
-            T cargo;
+    public IsWorldObject release(){
+            IsWorldObject cargo;
             switch (principle){
                 case FILO:
                     cargo = cargoList.pollLast();
@@ -77,7 +86,7 @@ public class LoadHandler <T extends IsWorldObject> implements IHandleLast<T> {
     }
 
     public void updatePosition(Point position){
-        for (T cargo : cargoList){
+        for (IsWorldObject cargo : cargoList){
             cargo.setPosition(position);
             if (cargo instanceof IHasStorage){                                 //ser till att alla lastade lastare uppdaterar i sin tur sina lastade saker. ex, en cartransport på en färja ska uppdatera bilarna på sig om färjan rör på sig.
                 ((IHasStorage)cargo).getStorage().updatePosition(position);

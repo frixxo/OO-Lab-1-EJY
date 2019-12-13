@@ -40,7 +40,7 @@ public class DrawPanel extends JPanel implements Observer {
     @Override
     public void update(){ repaint(); }
 
-    private void initializeHashmap(){ 
+    private void initializeHashmap(){
         imageMap.put("Volvo240", new ImageHandler("/Volvo240.jpg"));
         imageMap.put("Saab95", new ImageHandler("/Saab95.jpg"));
         imageMap.put("LamborghiniGallardo", new ImageHandler("/LamborghiniGallardo.jpg"));

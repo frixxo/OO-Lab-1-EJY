@@ -15,9 +15,7 @@ import Fuctionality.Storage.Containers.Ramp;
 import Fuctionality.Storage.LastHandle.LoadHandler;
 import Fuctionality.Storage.StandardStorage;
 import Fuctionality.Storage.Storage;
-import WorldObjects.InterfaceHierarchy.CarH;
-import WorldObjects.InterfaceHierarchy.FerryH;
-import WorldObjects.InterfaceHierarchy.TruckH;
+import WorldObjects.InterfaceHierarchy.*;
 import WorldObjects.LableInterfaces.WorldObjectView;
 import WorldObjects.Objects.*;
 
@@ -76,7 +74,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
-        Storage storage = new StandardStorage(new Flak(), new LoadHandler<Skräp>(10, 2,3, 3, LoadHandler.Principle.FILO));
+        Storage storage = new StandardStorage(new Flak(), new LoadHandler<ObjectH>(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH() {}, rh, mh, motor, regNR.generate(), storage, modelName);
         return r;
     }
@@ -91,7 +89,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
-        Storage storage =new StandardStorage<Car>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
+        Storage storage =new StandardStorage<CarH>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
@@ -106,7 +104,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(10, mh);
-        Storage storage = new StandardStorage<LandVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+        Storage storage = new StandardStorage<LandVehicleH>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
         WorldObjectView r = new MotorizedTransportVehicle( position, direction, new Point(140,100), new FerryH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
