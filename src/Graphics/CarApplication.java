@@ -18,7 +18,7 @@ public class CarApplication {
     // The delay (ms) corresponds to 20 updates a sec (hz)
     private final int delay = 50;
     // The frame that represents this instance View of the MVC pattern
-    private CarView frame;
+    private CarWidget frame;
     //methods:
 
     private CarSimulator cs;
@@ -27,7 +27,7 @@ public class CarApplication {
         // Instance of this class
         CarApplication cc = new CarApplication();
         // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+        cc.frame = new CarWidget("CarSim 1.0", cc);
         cc.cs = new CarSimulator(cc.frame.windowSize(), 10);
         //frame.drawPanel.repaint();
     }

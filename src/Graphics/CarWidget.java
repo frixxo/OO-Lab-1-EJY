@@ -12,7 +12,7 @@ import java.awt.*;
  * each of it's components.
  **/
 
-public class CarView extends JFrame{
+public class CarWidget extends JFrame{
     private static final int X = 800;
     private static final int Y = 800;
 
@@ -41,7 +41,7 @@ public class CarView extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarView(String framename){
+    public CarWidget(String framename){
         initComponents(framename);
     }
 
