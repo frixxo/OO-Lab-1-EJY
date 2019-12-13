@@ -16,10 +16,10 @@ public class DrawPanel extends JPanel{
     private CarSimulator cs;
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y, CarSimulator cs) {
+    public DrawPanel(Dimension dim, CarSimulator cs) {
         this.cs = cs;
         this.setDoubleBuffered(true);
-        this.setPreferredSize(new Dimension(x, y));
+        this.setPreferredSize(dim);
         this.setBackground(Color.green);
         initializeHashmap();
     }
