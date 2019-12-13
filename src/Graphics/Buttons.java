@@ -14,10 +14,10 @@ import java.awt.*;
  * each of it's components.
  **/
 
-public class CarWidget extends JFrame{
+public class Buttons extends JPanel{
 
     // The controller member
-    Point windowSize;
+    Dimension windowSize;
     CarController cc;
 
 
@@ -43,26 +43,17 @@ public class CarWidget extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarWidget(String framename, Point windowSize){
-
+    public Buttons(CarController cc, Dimension windowSize){
         this.cc=cc;
-        initComponents(framename);
-        this.windowSize = windowSize;
+        this.setPreferredSize(windowSize);
+        initComponents();
     }
 
    // public <T>Point getSize(T obj){ return drawPanel.getSize(obj); }
 
     // Sets everything in place and fits everything
     // TODO: Take a good look and make sure you understand how these methods and components work
-    private void initComponents(String title) {
-
-        this.setTitle(title);
-        this.setPreferredSize(new Dimension(windowSize.x,windowSize.y));
-        this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-
-        //this.add(drawPanel);
-
-
+    private void initComponents() {
         //Gas amount input
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
@@ -104,20 +95,20 @@ public class CarWidget extends JFrame{
         controlPanel.add(lowerBedButton, 5);
 
         */
-        controlPanel.setPreferredSize(new Dimension((windowSize.x/2)+4, 200));
+        controlPanel.setPreferredSize(new Dimension((windowSize.width/2)+4, windowSize.height-40));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
 
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
-        startButton.setPreferredSize(new Dimension(windowSize.y/5-15,200));
+        startButton.setPreferredSize(new Dimension(windowSize.height/5-15,windowSize.height-40));
         this.add(startButton);
 
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
-        stopButton.setPreferredSize(new Dimension(windowSize.x/5-15,200));
+        stopButton.setPreferredSize(new Dimension(windowSize.width/5-15,windowSize.height-40));
         this.add(stopButton);
 
        //region button functionality
@@ -132,16 +123,5 @@ public class CarWidget extends JFrame{
         RemoveCar.addActionListener(e -> cc.removeCar());
         //endregion
 
-        // Make the frame pack all it's components by respecting the sizes if possible.
-        this.pack();
-
-        // Get the computer screen resolution
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        // Center the frame
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
-        // Make the frame visible
-        this.setVisible(true);
-        // Make sure the frame exits when "x" is pressed
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
