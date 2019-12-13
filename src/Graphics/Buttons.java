@@ -33,8 +33,8 @@ public class Buttons extends JPanel{
     JButton brakeButton = new JButton("Brake");
     JButton turnLeftButton = new JButton("Turn Left");
     JButton turnRightButton = new JButton("Turn Right");
-    JButton liftBedButton = new JButton("Scania Lift Bed");
-    JButton lowerBedButton = new JButton("Lower Lift Bed");
+    JButton liftBedButton = new JButton("Close Containers");
+    JButton lowerBedButton = new JButton("Open Containers");
     JButton TurboOn = new JButton("Turbo On");
     JButton TurboOff = new JButton("Turbo Off");
     JButton AddCar= new JButton("Add Car");
@@ -100,11 +100,10 @@ public class Buttons extends JPanel{
         */
         controlPanel.setPreferredSize(new Dimension((windowSize.width/2)+10, windowSize.height-40));
         this.add(controlPanel);
-        controlPanel.setBackground(Color.CYAN);
 
 
-        startButton.setBackground(Color.blue);
-        startButton.setForeground(Color.green);
+        startButton.setBackground(Color.green);
+        startButton.setForeground(Color.black);
         startButton.setPreferredSize(new Dimension(windowSize.width/10-15,windowSize.height-40));
         this.add(startButton);
 

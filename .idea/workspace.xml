@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48215cfc-7d37-47c3-90d3-e506dbc27499" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/IHandleLast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$Principle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler$Principle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Fuctionality/Storage/LastHandle/LoadHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/LableInterfaces/IsWorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/LableInterfaces/IsWorldObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Skräp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/WorldObjects/Objects/Skräp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/GraphicsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/OO-Lab-1-EJY/VehicleTester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/Buttons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/Buttons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/SpeedLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OO-Lab-1-EJY/Graphics/SpeedLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/Buttons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphics/SpeedLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/SpeedLabel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +53,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.CarApplication">
     <configuration name="CarApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -117,18 +125,6 @@
         <item itemvalue="JUnit.VehicleTester.TestMoveX" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
