@@ -75,7 +75,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
-        Storage storage = new StandardStorage(new Flak(), new LoadHandler<ObjectH, IsWorldObject>(10, 2,3, 3, LoadHandler.Principle.FILO));
+        Storage storage = new StandardStorage<ObjectH, IsWorldObject>(new Flak(), new LoadHandler<ObjectH, IsWorldObject>(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH() {}, rh, mh, motor, regNR.generate(), storage, modelName);
         return r;
     }
@@ -90,7 +90,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(20, mh);
-        Storage storage =new StandardStorage<CarH>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
+        Storage storage =new StandardStorage<CarH, MotorizedVehicle>(new Ramp(), new LoadHandler(10, 2,3, 3, LoadHandler.Principle.FILO));
         WorldObjectView r = new MotorizedTransportVehicle(position, direction, new Point(70, 50), new TruckH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }
@@ -105,7 +105,7 @@ public class VehicleFactory {
         RotationHandler rh = new VehicleSteerer();
         MoveHandler mh = new VehicleDriver();
         IMotor motor = new NormalMotor(10, mh);
-        Storage storage = new StandardStorage<LandVehicleH>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
+        Storage storage = new StandardStorage<LandVehicleH, MotorizedVehicle>(new Ramp(), new LoadHandler( 20, 2, 10, 10, LoadHandler.Principle.FIFO));
         WorldObjectView r = new MotorizedTransportVehicle( position, direction, new Point(140,100), new FerryH(){}, rh, mh,motor, regNR.generate(), storage,modelName);
         return r;
     }

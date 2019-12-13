@@ -7,12 +7,12 @@ import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 
-public class StandardStorage <T extends WorldObjectH> implements Storage<T>{
+public class StandardStorage <objectType extends WorldObjectH, object extends IsWorldObject> implements Storage<objectType, object>{
     private Container container;
     private IHandleLast lasthandler;
     private boolean canChangeState =true;
 
-    public StandardStorage(Container container, IHandleLast<T> lasthandler )
+    public StandardStorage(Container container, IHandleLast<objectType, object> lasthandler )
     {
         this.container = container;
         this.lasthandler = lasthandler;

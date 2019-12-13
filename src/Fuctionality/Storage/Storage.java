@@ -7,7 +7,7 @@ import WorldObjects.LableInterfaces.IsWorldObject;
 
 import java.awt.*;
 
-public interface Storage <T extends WorldObjectH> {
+public interface Storage <objectType extends WorldObjectH, object> {
     void updatePosition(Point position);
     void setCanChangeState(boolean canChangeState);
     IHandleLast getLastHandler();
