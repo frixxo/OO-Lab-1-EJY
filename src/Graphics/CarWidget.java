@@ -1,5 +1,7 @@
 package Graphics;
 
+import Systems.CarController;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -16,10 +18,7 @@ public class CarWidget extends JFrame{
     private static final int X = 800;
     private static final int Y = 800;
 
-    // The controller member
-    CarApplication carC;
-
-    DrawPanel drawPanel;
+    CarController cc;
 
     JPanel controlPanel = new JPanel();
 
@@ -41,7 +40,8 @@ public class CarWidget extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarWidget(String framename){
+    public CarWidget(String framename,CarController cc){
+        this.cc=cc;
         initComponents(framename);
     }
 
@@ -114,14 +114,14 @@ public class CarWidget extends JFrame{
         this.add(stopButton);
 
        //region button functionality
-        startButton.addActionListener(e -> carC.startEngline());
-        stopButton.addActionListener(e -> carC.stopEngline());
-        gasButton.addActionListener(e -> carC.gas(gasAmount));
-        brakeButton.addActionListener(e -> carC.brake(gasAmount));
-        liftBedButton.addActionListener(e -> carC.raiseFlak());
-        lowerBedButton.addActionListener(e -> carC.lowerFlak());
-        turnLeftButton.addActionListener(e -> carC.turnLeft());
-        turnRightButton.addActionListener(e -> carC.turnRight());
+        startButton.addActionListener(e -> cc.startEngline());
+        stopButton.addActionListener(e -> cc.stopEngline());
+        gasButton.addActionListener(e -> cc.gas(gasAmount));
+        brakeButton.addActionListener(e -> cc.brake(gasAmount));
+        liftBedButton.addActionListener(e -> cc.raiseFlak());
+        lowerBedButton.addActionListener(e -> cc.lowerFlak());
+        turnLeftButton.addActionListener(e -> cc.turnLeft());
+        turnRightButton.addActionListener(e -> cc.turnRight());
         //endregion
 
         // Make the frame pack all it's components by respecting the sizes if possible.
