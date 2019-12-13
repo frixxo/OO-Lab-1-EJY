@@ -1,5 +1,6 @@
 package Graphics;
 
+import Systems.CarSimulator;
 import WorldObjects.Objects.*;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
@@ -11,15 +12,15 @@ import javax.swing.*;
 // This panel represent the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel{
-    private List<WorldObjectView> worldObjects;
-    private HashMap <Object, ImageHandler> imageMap=new HashMap<>();
+    private HashMap <String, ImageHandler> imageMap=new HashMap<>();
+    private CarSimulator cs;
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y, List<WorldObjectView> worldObjects) {
+    public DrawPanel(int x, int y, CarSimulator cs) {
+        this.cs = cs;
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
-        this.worldObjects = worldObjects;
         initializeHashmap();
     }
 
@@ -29,7 +30,7 @@ public class DrawPanel extends JPanel{
         super.paintComponent(g);
         Image image;
         Point size;
-        for (WorldObjectView v : worldObjects) {
+        for (WorldObjectView v : cs.getVehicles()) {
            image = imageMap.get(v.getType()).getImage();
            size = v.getSize();
            g.drawImage(image, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
@@ -47,5 +48,5 @@ public class DrawPanel extends JPanel{
 
    // public <T> Point getSize(T obj){ return imageMap.get(obj.getClass()).getSize(); }
 
-    public HashMap<Object, ImageHandler> getImageMap() { return imageMap; }
+    public HashMap<String, ImageHandler> getImageMap() { return imageMap; }
 }

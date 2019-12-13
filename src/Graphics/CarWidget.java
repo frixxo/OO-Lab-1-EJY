@@ -13,10 +13,9 @@ import java.awt.*;
  **/
 
 public class CarWidget extends JFrame{
-    private static final int X = 800;
-    private static final int Y = 800;
 
     // The controller member
+    Point windowSize;
     CarApplication carC;
 
     DrawPanel drawPanel;
@@ -41,8 +40,9 @@ public class CarWidget extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarWidget(String framename){
+    public CarWidget(String framename, Point windowSize){
         initComponents(framename);
+        this.windowSize = windowSize;
     }
 
    // public <T>Point getSize(T obj){ return drawPanel.getSize(obj); }
@@ -52,7 +52,7 @@ public class CarWidget extends JFrame{
     private void initComponents(String title) {
 
         this.setTitle(title);
-        this.setPreferredSize(new Dimension(X,Y));
+        this.setPreferredSize(new Dimension(windowSize.x,windowSize.y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
         this.add(drawPanel);
@@ -97,20 +97,20 @@ public class CarWidget extends JFrame{
         controlPanel.add(lowerBedButton, 5);
 
         */
-        controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
+        controlPanel.setPreferredSize(new Dimension((windowSize.x/2)+4, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
 
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
-        startButton.setPreferredSize(new Dimension(X/5-15,200));
+        startButton.setPreferredSize(new Dimension(windowSize.y/5-15,200));
         this.add(startButton);
 
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
-        stopButton.setPreferredSize(new Dimension(X/5-15,200));
+        stopButton.setPreferredSize(new Dimension(windowSize.x/5-15,200));
         this.add(stopButton);
 
        //region button functionality
@@ -136,8 +136,4 @@ public class CarWidget extends JFrame{
         // Make sure the frame exits when "x" is pressed
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    public Point windowSize(){
-        return new Point(X,Y-240);
-    }
-
 }
