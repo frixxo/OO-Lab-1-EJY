@@ -1,6 +1,7 @@
 package Graphics;
 
 import Systems.CarController;
+import Systems.CarSimulator;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -39,12 +40,13 @@ public class Buttons extends JPanel{
     JButton AddCar= new JButton("Add Car");
     JButton RemoveCar= new JButton("Remove Car");
 
-    JButton startButton = new JButton("Start all cars");
-    JButton stopButton = new JButton("Stop all cars");
+    JButton startButton = new JButton("Start");
+    JButton stopButton = new JButton("Stop");
 
     // Constructor
-    public Buttons(CarController cc, Dimension windowSize){
-        this.cc=cc;
+    public Buttons(Dimension windowSize, CarSimulator cs){
+        this.cc=new CarController(cs);
+        this.windowSize=windowSize;
         this.setPreferredSize(windowSize);
         initComponents();
     }
@@ -70,21 +72,22 @@ public class Buttons extends JPanel{
         gasPanel.setLayout(new BorderLayout());
         gasPanel.add(gasLabel, BorderLayout.PAGE_START);
         gasPanel.add(gasSpinner, BorderLayout.PAGE_END);
+        gasPanel.setPreferredSize(new Dimension(100,40));
+        this.add(gasPanel,new Point(10,10));
 
-        this.add(gasPanel);
-
-        controlPanel.setLayout(new GridLayout(2,5));
+        controlPanel.setLayout(new GridLayout(2,4));
 
         //original buttons
 
         controlPanel.add(gasButton, 0);
         controlPanel.add(TurboOn, 1);
         controlPanel.add(liftBedButton, 2);
-        controlPanel.add(brakeButton, 3);
-        controlPanel.add(TurboOff, 4);
-        controlPanel.add(lowerBedButton, 5);
-        controlPanel.add(AddCar,6);
-        controlPanel.add(RemoveCar);
+        controlPanel.add(AddCar,3);
+        controlPanel.add(brakeButton, 4);
+        controlPanel.add(TurboOff, 5);
+        controlPanel.add(lowerBedButton, 6);
+        controlPanel.add(RemoveCar,7);
+
 
         /*
         controlPanel.add(gasButton, 0);
@@ -95,20 +98,20 @@ public class Buttons extends JPanel{
         controlPanel.add(lowerBedButton, 5);
 
         */
-        controlPanel.setPreferredSize(new Dimension((windowSize.width/2)+4, windowSize.height-40));
+        controlPanel.setPreferredSize(new Dimension((windowSize.width/2)+10, windowSize.height-40));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
 
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
-        startButton.setPreferredSize(new Dimension(windowSize.height/5-15,windowSize.height-40));
+        startButton.setPreferredSize(new Dimension(windowSize.width/10-15,windowSize.height-40));
         this.add(startButton);
 
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
-        stopButton.setPreferredSize(new Dimension(windowSize.width/5-15,windowSize.height-40));
+        stopButton.setPreferredSize(new Dimension(windowSize.width/10-15,windowSize.height-40));
         this.add(stopButton);
 
        //region button functionality
@@ -122,6 +125,5 @@ public class Buttons extends JPanel{
         AddCar.addActionListener(e -> cc.addCar());
         RemoveCar.addActionListener(e -> cc.removeCar());
         //endregion
-
     }
 }

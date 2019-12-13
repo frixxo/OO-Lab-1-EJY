@@ -5,16 +5,14 @@ import Systems.CarSimulator;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Frame extends JFrame{
-    JPanel world;
-    JPanel Buttons;
-    JPanel speedLable;
+    List<JPanel> panels;
 
-    public Frame(Dimension FrameSize, CarSimulator cs, CarController cc){
-        world=new DrawPanel(new Dimension(FrameSize.width,FrameSize.height-240),cs);
-        Buttons =new Buttons(cc,new Dimension(FrameSize.width,FrameSize.height-640));
-        speedLable = new SpeedLabel(cs,new Dimension(50,10));
+    public Frame(List<JPanel> panels,Dimension FrameSize){
+      this.panels=panels;
         InitializeFrame(FrameSize);
     }
 
@@ -23,9 +21,10 @@ public class Frame extends JFrame{
         this.setPreferredSize(FrameSize);
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
-        this.add(world);
-        this.add(Buttons);
-
+        //Adds panels to the JFrame
+        for (JPanel panel:panels) {
+            this.add(panel);
+        }
         // Make the frame pack all it's components by respecting the sizes if possible.
         this.pack();
 
