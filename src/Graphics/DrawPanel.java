@@ -1,6 +1,7 @@
 package Graphics;
 
 import Systems.CarSimulator;
+import Systems.Observer.Observer;
 import WorldObjects.Objects.*;
 import WorldObjects.InterfaceHierarchy.WorldObjectView;
 
@@ -11,13 +12,14 @@ import javax.swing.*;
 
 // This panel represent the animated part of the view with the car images.
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements Observer {
     private HashMap <String, ImageHandler> imageMap=new HashMap<>();
     private CarSimulator cs;
 
     // Initializes the panel and reads the images
     public DrawPanel(Dimension dim, CarSimulator cs) {
         this.cs = cs;
+        cs.addObserver(this);
         this.setDoubleBuffered(true);
         this.setPreferredSize(dim);
         this.setBackground(Color.green);
@@ -36,6 +38,9 @@ public class DrawPanel extends JPanel{
            g.drawImage(image, v.getPosition().x, v.getPosition().y,size.x,size.y,null); // see javadoc for more info on the parameters
         }
     }
+
+    @Override
+    public void update(){ repaint(); }
 
     private void initializeHashmap(){ //TODO fix
         imageMap.put("Volvo240", new ImageHandler("/Volvo240.jpg"));
