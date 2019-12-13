@@ -1,5 +1,6 @@
 package Graphics;
 
+import Systems.CarController;
 import Systems.CarSimulator;
 
 import java.awt.*;
@@ -13,35 +14,27 @@ import java.awt.*;
 public class CarApplication {
     // member fields:
 
-    private Point windowSize = new Point(800, 800);
-    private Point worldSize = new Point (windowSize.x, windowSize.y-240);
+    private Dimension windowSize = new Dimension(800, 900);
     // The delay (ms) corresponds to 20 updates a sec (hz)
     private final int delay = 50;
     // The frame that represents this instance View of the MVC pattern
-    private Buttons frame;
-    private DrawPanel drawPanel;
+    private Frame frame;
     //methods:
 
     private CarSimulator cs;
+    private CarController cc;
 
     public static void main(String[] args) {
         // Instance of this class
-        CarApplication cc = new CarApplication();
-        // Start a new view and send a reference of self
-        cc.frame = new Buttons("CarSim 1.0", cc.getWindowSize());
-        cc.cs = new CarSimulator(cc.getWorldSize(), 10);
-        cc.drawPanel  = new DrawPanel(cc.getWorldSize().x, cc.getWorldSize().y, cc.cs);
-        //frame.drawPanel.repaint();
+        CarApplication application = new CarApplication();
+        application.frame=new Frame(application.getWindowSize(),application.cs,application.cc);
+        application.frame.world.repaint();
+        application.frame.speedLable.
     }
 
-    public Point getWorldSize ()
+    public Dimension getWindowSize ()
     {
-        return new Point(worldSize);
-    }
-
-    public Point getWindowSize ()
-    {
-        return new Point(worldSize);
+        return new Dimension(windowSize);
     }
 
 }
